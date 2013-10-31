@@ -1,0 +1,313 @@
+#wrapper{
+	width:960px;
+	margin:0 auto;
+}
+
+body
+{
+	margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #333;
+    filter: none;
+
+}
+
+
+.logo{
+	float:left;
+	padding-right: 101px;
+	padding-left: 9px;
+	padding-top: 10px;
+}
+
+.ban{
+	float:left;
+}
+
+#header a{
+	float:left;
+	color:#2491b3;;
+	text-decoration: none;
+	padding-left:35px;
+	padding-top: 42px; 
+}
+
+
+#header p{
+	color:black;
+	font-weight: bolder;
+	float:left;
+	padding-top: 30px; 
+	padding-left:6px;
+}
+
+#search{
+	background: url('../images/search_background.png');
+	float:left;
+	background-color:#e3e3e3 ;
+	width:100%;
+	height:105px;
+	float: left;
+	margin-top: -12px;
+	padding: 0;
+	z-index: -1;
+	position: relative;
+}
+#sea{
+	padding: 30px 20px 6px 20px;
+}
+
+#sea input{
+	width:620px;
+	height: 26px;
+	border-radius: 6px;
+}
+
+#search h2{
+	float:left;
+	width:164px;
+	padding:0;
+	margin:0;
+	font-weight: lighter;
+}
+
+#search span{
+	color:#ffaa00;
+	font-weight: lighter;
+	font-size:22px;
+
+}
+#search h2{
+	color:#fff;
+	width:148px;
+	padding-top:6px;
+}
+
+#search p{
+	color:#fff;
+	padding-left: 167px;
+	padding-top: 10px;
+	margin: 0;
+}
+
+#search a{
+	color:#fff;
+	background-color: orange;
+	text-decoration: none;
+	padding:7px;
+	border-radius:4px;
+
+}
+
+#content{
+	float:left;
+	
+
+}
+
+.slider{
+	background-image: url(../images/front18.jpg);
+	float: left;
+	border:11px solid #e3e3e3;
+	width:420px;
+	height:290px;
+	margin-top:63px;
+	margin-left:178px;
+}
+
+.list{
+	float:left;
+	height:290px;
+	width:475px;
+	border:;
+	overflow: ;
+	margin-top:63px;
+	margin-left: 41px;
+
+}
+
+.list h1{
+	margin-left:27px;
+	color: #336699;
+    font-size: 26px;
+    margin-bottom:0;
+}
+
+.list h3{
+	color:#B2B2B2;
+	margin-left: 27px;
+    font-size: medium;
+    margin-top:5px;
+}
+
+.list ul li a{
+	color:#2491b3 !important;
+	text-decoration: none !important;
+	background-color: #fff !important;
+	line-height: 25px;
+
+}
+
+
+.l1{
+	float:left;
+	width:137px;
+	list-style-type: none;
+	padding: 0 0 0 23px;
+
+}
+
+
+.l2{
+	float:left;
+	width:103px;
+	list-style-type: none;
+	padding: 0 0 0 37px;
+}
+
+.l3{
+	float:left;
+	width:106px;
+	list-style-type: none;
+	padding: 0 0 0 36px;
+
+}
+
+#content-2{
+	float:left;
+	width:420px;
+	height:135px;
+	margin-left: 178px;
+	clear: both;
+}
+
+.live{
+	float:left;
+    margin:53px 0 10px 0;
+    width:420px;
+
+}
+
+
+.pause{
+	color:#2491b3 !important;
+	text-decoration: none !important;
+	background-color: transparent !important;
+	padding-left:178px !important;
+}
+
+.live h3{
+	float:left;
+	width:200px;
+	padding:0;
+	margin:0;
+}
+
+.live span{
+	font-weight: lighter;
+	font-size:13px !important;
+}
+
+
+.section{
+	float:left;
+	margin-top: 22px;
+	width:420px;
+	height:135px;
+	border:11px solid #e3e3e3;
+	overflow: auto;
+}
+.post{
+	float: left;
+	width:305px;
+	padding-left: 20px;
+}
+
+.post h5{
+	
+	margin:20px 0 2px 0 !important;
+	padding: 0 !important;
+}
+.post p{
+	
+	color:#000 !important;
+	padding-left: 0 !important;
+	padding-top:3px !important;
+
+}
+
+.img{
+	float: left;
+    margin:20px 27px 60px 10px;
+}
+
+.sec-2{
+	float:left;
+	width:201px;
+	height:135px;
+	margin-left: 98px;
+    margin-bottom: 2px;
+    margin-top: 42px;
+}
+
+.eco{
+	float:left;
+	border:2px solid #e3e3e3;
+	width:201px;
+	height:157px;
+	margin-left: ;
+
+}
+
+.eco img{
+	float:left;
+}
+.more{
+	color:#2491b3 !important;
+	text-decoration: none !important;
+	background-color: transparent !important;
+	padding-left:178px !important;
+
+}
+
+.sec-3{
+    float:left;
+    margin-top: 42px;
+    margin-left: 98px;
+    height:135px;
+}
+
+.news{
+	border:2px solid #e3e3e3;
+	height:157px;
+	width:201px;
+	clear:both;
+
+}
+
+#con{
+	float:left;
+	clear: both;
+
+}
+
+
+#footer{
+	float:left;
+
+	width:100%;
+	margin-top:100px;
+	text-align: justify;
+	background-color: #336699;
+	color:#fff;
+	height:40px;
+
+
+}
+
+.foot{
+	padding-top: 13px !important;
+	margin-left: 366px !important;
+}

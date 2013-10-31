@@ -10,4 +10,5 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::post('dashboard',array('uses'=>'DashboardController@postIndex'));
 Route::get('dashboard',array('uses'=>'DashboardController@getIndex'));

@@ -8,5 +8,9 @@ class DashboardController extends BaseController {
 	{
 		return View::make('dashboard.index');
 	}
+	public function postIndex()
+	{
+		return "Post function";
+	}
 
 }

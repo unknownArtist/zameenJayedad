@@ -16,7 +16,7 @@
 			<!-- {{ HTML::image("assets/images/eri_logo_02.png",'',array('class'=>'logo'))}} -->
 			<img class="ban"src="/assets/images/banner_photos.png">
 			<div class="contact">
-		    <a href="#"> contact@zameenjayedad.com |  </a>
+		    <a href="#"> contact@zameenjayedad.com   </a>
 		    <p>+923225050989</p>
 		    </div>
    

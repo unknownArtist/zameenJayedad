@@ -37,7 +37,9 @@
                  <span>5 bedrooms | 7 bathrooms | 12,216 sq ft</span>
     		</li>
     	</ul>
+    	<hr>
     </div><!--detail ends-->
+
 
 
     <div id="featured">

@@ -1,14 +1,12 @@
 @extends('layouts.main')
 @section('content')
- </div>
-
     <div id="search">
-    <div id="wrapper">
+    
     <div id="sea">	
-    	<h2><span>Search</span> Listing</h2>
-    	<input type="text" >
+    	<h2>Search Listing</h2>
+    	<input type="text" placeholder="">
     	<a href="#">Search</a>
-    	<p>eg. Vancouver 2 bedroom Condos under 500K</p>
+    	
     </div><!--sea-->
     </div><!--search ends-->
 

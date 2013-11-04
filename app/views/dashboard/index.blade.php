@@ -13,6 +13,9 @@
     <div id="content">
        
        <div class="slider">
+    
+
+
        </div>
 
        <div class="list">

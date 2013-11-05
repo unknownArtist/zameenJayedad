@@ -181,6 +181,7 @@ body
 	height:290px;
 	margin-top:63px;
 	margin-left:178px;
+	border-radius: 6px;
 }
 
 .list{
@@ -298,6 +299,7 @@ body
 	height:135px;
 	border:11px solid #e3e3e3;
 	overflow: auto;
+	border-radius: 6px;
 }
 .post{
 	float: left;

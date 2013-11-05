@@ -1,8 +1,13 @@
 <!doctype HTML>
 <html>
 <head>
-	<title>Real estate listing</title>
+	<title>Zameen Jayedad</title>
 	{{ HTML::style('assets/css/style.css')}}
+	{{ HTML::style('assets/css/generic.css')}}
+	{{ HTML::style('assets/js/js-image-slider.css'); }}
+	{{ HTML::script('assets/js/js-image-slider.js'); }}
+	{{ HTML::script('assets/js/mcVideoPlugin.js'); }}
+    
 
 
 </head>

@@ -31,16 +31,21 @@ body
 	width:200px;
 	height: 47px;
 	margin-right: -141px;
-    margin-top: 47px;
+    margin-top: 38px;
 }
 
 .contact a{
 	text-decoration: none;
-	color:#2491b3;
+	color:#68beb6;
+}
+
+.contact a:hover{
+	color:#00a651;
+	font-size: 14px;
 }
 
 .contact p{
-	color:#2491b3;
+	color:#68beb6;
 	font-weight: bolder;
 
 }
@@ -49,7 +54,6 @@ body
 	background-image: url(../images/search_background.png);
 	background-repeat: repeat;
 	float:left;
-	background-color:#7a896c ;
 	width:100%;
 	height:105px;
 	float: left;
@@ -80,7 +84,7 @@ body
 }
 
 #search span{
-	color:#714141;
+	color:#00a651;
 	font-weight: lighter;
 	font-size:22px;
 
@@ -111,10 +115,10 @@ body
 }
 
 #result h2{
-	padding-left: 211px;
-	margin-top: 45px;
+	padding-left: 188px;
+    margin-top: 32px;
 	margin-right: 843px;
-	color:#714141;
+	color:#00a651;
 }
 
 
@@ -138,7 +142,7 @@ body
 }
 
 .detail span{
-  color:#714141 ;
+  color:#00a651 ;
   margin-left: 143px;
   font-size: medium;
 
@@ -170,7 +174,6 @@ body
 }
 
 .slider{
-	background-image: url(../images/front18.jpg);
 	float: left;
 	border:11px solid #e3e3e3;
 	width:420px;
@@ -181,41 +184,43 @@ body
 
 .list{
 	float:left;
-	height:290px;
-	width:475px;
-	border:;
-	overflow: ;
+	width:539px;
 	margin-top:63px;
 	margin-left: 41px;
 
 }
 
 .list h1{
-	margin-left:27px;
-	color: #714141;
+	margin-left:21px;
+	color: #00a651;
     font-size: 26px;
     margin-bottom:0;
 }
 
 .list h3{
-	color:#7a896c;
-	margin-left: 27px;
+	color:#88cb9c;
+	margin-left: 21px;
     font-size: medium;
     margin-top:5px;
 }
 
 .list ul li a{
-	color:#2491b3 !important;
-	text-decoration: none !important;
-	background-color: #fff !important;
-	line-height: 25px;
+	color:#68beb6 !important ;
+	text-decoration: none !important ;
+	line-height: 25px !important;
 
+}
+
+.list ul li a:hover{
+	color:#00a651 !important;
+	text-decoration: ;
+	font-size: 14px !important;
 }
 
 
 .l1{
 	float:left;
-	width:142px;
+	width:160px;
 	list-style-type: none;
 	padding: 0 0 0 23px;
 	letter-spacing: 1px;
@@ -225,17 +230,17 @@ body
 
 .l2{
 	float:left;
-	width:103px;
+	width: 160px;;
 	list-style-type: none;
-	padding: 0 0 0 37px;
+	padding: 0;
 	letter-spacing: 1px;
 }
 
 .l3{
 	float:left;
-	width:106px;
+	width:160px;
 	list-style-type: none;
-	padding: 0 0 0 36px;
+	padding: 0;
 	letter-spacing: 1px
 
 }
@@ -250,24 +255,25 @@ body
 
 .live{
 	float:left;
-    margin:53px 0 10px 0;
-    width:420px;
+    margin:58px 0 10px 0;
+    width:442px;
 
 }
 .live span{
-	color:#714141;
+	color:#00a651;
+
 }
 
 
 .pause{
-	color:#2491b3 !important;
-	text-decoration: none !important;
-	background-color: transparent !important;
-	padding-left:178px !important;
+	color:#68beb6 ;
+	text-decoration: none ;
+	background-color: transparent ;
+	margin-left: 202px;
 }
 
 .live h3{
-	color:#714141;
+	color:#00a651;
 	float:left;
 	width:200px;
 	padding:0;
@@ -276,13 +282,15 @@ body
 
 .live span{
 	font-weight: lighter;
-	font-size:13px !important;
+	font-size:13px ;
+	padding-left: 8px;
+	color:gray;
 }
 
 
 .section{
 	float:left;
-	margin-top: 22px;
+	margin-top: 11px;
 	width:420px;
 	height:135px;
 	border:11px solid #e3e3e3;
@@ -296,14 +304,13 @@ body
 
 .post h5{
 	
-	margin:20px 0 2px 0 !important;
-	padding: 0 !important;
+	margin:20px 0 2px 0 ;
+	padding: 0 ;
 }
 .post p{
-	
-	color:#000 !important;
-	padding-left: 0 !important;
-	padding-top:3px !important;
+	color:#000 ;
+	padding-left: 0 ;
+	padding-top:3px ;
 
 }
 
@@ -322,7 +329,7 @@ body
 }
 
 .sec-2 h3{
-    color:#714141;
+    color:#00a651;
 }
 
 .eco{
@@ -337,13 +344,6 @@ body
 .eco img{
 	float:left;
 }
-.more{
-	color:#2491b3 !important;
-	text-decoration: none !important;
-	background-color: transparent !important;
-	padding-left:178px !important;
-
-}
 
 .sec-3{
     float:left;
@@ -353,7 +353,7 @@ body
 }
 
 .sec-3 h3{
-	color:#714141;
+	color:#00a651;
 }
 
 .news{
@@ -376,11 +376,15 @@ body
 #featured{
 	float:left;
 	width:300px;
-	color: #714141;
+	color: ;
 	margin-left: 145px;
 	text-align: right;
 	letter-spacing: 1px;
 
+}
+
+#featured h2{
+	color:#00a651;
 }
 
 .featured-bottom{
@@ -423,11 +427,10 @@ body
 #footer{
 	float:left;
 	clear: both;
-
 	width:100%;
 	margin-top:100px;
 	text-align: justify;
-	background-color: #7a896c;
+	background-color: #68beb6;
 	color:#fff;
 	height:40px;
 

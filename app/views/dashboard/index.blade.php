@@ -13,7 +13,22 @@
     <div id="content">
        
        <div class="slider">
-    
+         <div id="sliderFrame">
+        <div id="slider">
+            <a href="#">
+                <img src="assets/images/slide1.png" alt="Welcome to Zameen Jayedad" />
+            </a>
+
+            <a href="#">
+                <img src="assets/images/slide2.png" alt="Welcome to Zameen Jayedad" />
+            </a>
+            
+             <a href="#">
+                <img src="assets/images/slide3.png" alt="Welcome to Zameen Jayedad" />
+            </a>
+        </div>
+    </div>
+       
 
 
        </div>
@@ -107,7 +122,7 @@
     <div class="sec-2">
 
                 <h3>eCo Listings</h3>
-                <a class="more"href="#">more</a>
+               
 
       <div class="eco">
 
@@ -124,7 +139,7 @@
     <div class="sec-3">
 
                 <h3>News & Articles</h3>
-                <a class="more"href="#">more</a>
+                
 
       <div class="news">
 

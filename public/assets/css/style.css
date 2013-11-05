@@ -71,7 +71,14 @@ body
 	height: 26px;
 	border-radius: 6px;
 	margin-top: 28px;
+	color:#00a651;
+	padding-left: 12px;
+	font-size: 16px;
+	font-weight: bold;
+	outline-color: #e3e3e3;
 }
+
+
 
 #search h2{
 	float:left;
@@ -83,12 +90,6 @@ body
 	font-weight: lighter;
 }
 
-#search span{
-	color:#00a651;
-	font-weight: lighter;
-	font-size:22px;
-
-}
 
 
 #search p{
@@ -142,7 +143,7 @@ body
 }
 
 .detail span{
-  color:#00a651 ;
+  color:#00a651;
   margin-left: 143px;
   font-size: medium;
 
@@ -268,7 +269,7 @@ body
 
 
 .pause{
-	color:#68beb6 ;
+	color:#00a651 ;
 	text-decoration: none ;
 	background-color: transparent ;
 	margin-left: 202px;
@@ -306,7 +307,7 @@ body
 
 .post h5{
 	
-	margin:20px 0 4px 0 ;
+	margin: 10px 0 4px 0;
 	padding: 0 ;
 }
 .post p{
@@ -316,9 +317,13 @@ body
 
 }
 
+.post span{
+	color:green;
+}
+
 .img{
 	float: left;
-    margin:20px 27px 11px 10px;
+    margin: 11px 27px 6px 10px;
     border: 2px solid #e3e3e3;
 }
 
@@ -357,15 +362,6 @@ body
 
 .sec-3 h3{
 	color:#00a651;
-}
-
-.news{
-
-	border:2px solid #e3e3e3;
-	height:157px;
-	width:201px;
-	clear:both;
-
 }
 
 

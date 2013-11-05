@@ -4,7 +4,7 @@
 }
 
 body
-{
+{  
 	margin: 0;
     padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -41,7 +41,7 @@ body
 
 .contact a:hover{
 	color:#00a651;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .contact p{
@@ -115,9 +115,9 @@ body
 }
 
 #result h2{
-	padding-left: 188px;
+	padding-left: 212px;
     margin-top: 32px;
-	margin-right: 843px;
+    margin-right: 819px;
 	color:#00a651;
 }
 
@@ -199,22 +199,23 @@ body
 
 .list h3{
 	color:#88cb9c;
-	margin-left: 21px;
+	margin-left:21px;
     font-size: medium;
     margin-top:5px;
 }
 
 .list ul li a{
-	color:#68beb6 !important ;
-	text-decoration: none !important ;
-	line-height: 25px !important;
+	color:#68beb6 ;
+	text-decoration: none ;
+	line-height: 25px;
 
 }
 
 .list ul li a:hover{
-	color:#00a651 !important;
+	color:#00a651;
 	text-decoration: ;
-	font-size: 14px !important;
+	font-size: 14px;
+	letter-spacing: 1px;
 }
 
 
@@ -223,7 +224,7 @@ body
 	width:160px;
 	list-style-type: none;
 	padding: 0 0 0 23px;
-	letter-spacing: 1px;
+	letter-spacing:;
 
 }
 
@@ -233,7 +234,8 @@ body
 	width: 160px;;
 	list-style-type: none;
 	padding: 0;
-	letter-spacing: 1px;
+	letter-spacing: ;
+	margin-left: 23px;
 }
 
 .l3{
@@ -241,7 +243,7 @@ body
 	width:160px;
 	list-style-type: none;
 	padding: 0;
-	letter-spacing: 1px
+	letter-spacing:;
 
 }
 
@@ -298,25 +300,26 @@ body
 }
 .post{
 	float: left;
-	width:305px;
+	width:383px;
 	padding-left: 20px;
 }
 
 .post h5{
 	
-	margin:20px 0 2px 0 ;
+	margin:20px 0 4px 0 ;
 	padding: 0 ;
 }
 .post p{
 	color:#000 ;
-	padding-left: 0 ;
-	padding-top:3px ;
+	margin: 0;
+	padding-top:0 ;
 
 }
 
 .img{
 	float: left;
-    margin:20px 27px 60px 10px;
+    margin:20px 27px 11px 10px;
+    border: 2px solid #e3e3e3;
 }
 
 .sec-2{

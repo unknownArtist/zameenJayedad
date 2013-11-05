@@ -61,8 +61,9 @@
 	font: bold 14px/20px Arial;
 	color:#EEE;
 	z-index:4;
-	text-align:center;
+	text-align:left;
     background:none;
+    margin-left: 28px;
 }
 #slider div.mc-caption a {
 	color:#FB0;

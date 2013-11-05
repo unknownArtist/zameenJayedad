@@ -36,7 +36,7 @@ body
 
 .contact a{
 	text-decoration: none;
-	color:#68beb6;
+	color:#50b1a8;
 }
 
 .contact a:hover{
@@ -45,7 +45,7 @@ body
 }
 
 .contact p{
-	color:#68beb6;
+	color:#50b1a8;
 	font-weight: bolder;
 
 }
@@ -101,7 +101,7 @@ body
 
 #search a{
    font-weight: bold;
-   color: #68beb6;
+   color: #50b1a8;
    background-color: #fff;
    text-decoration: none;
    padding: 7px;
@@ -207,7 +207,7 @@ body
 }
 
 .list ul li a{
-	color:#68beb6 ;
+	color:#50b1a8 ;
 	text-decoration: none ;
 	line-height: 25px;
 
@@ -380,7 +380,7 @@ body
 	color: ;
 	margin-left: 145px;
 	text-align: right;
-	letter-spacing: 1px;
+	
 
 }
 
@@ -397,8 +397,9 @@ body
 
 .featured-bottom h4{
 	margin-top: 20px;
-    margin-right: 41px;
-    margin-bottom: 0;
+    margin-left: 15px;
+	margin-bottom: 0;
+	margin-right: 47px;
  
 }
 
@@ -431,7 +432,7 @@ body
 	width:100%;
 	margin-top:100px;
 	text-align: justify;
-	background-color: #68beb6;
+	background-color: #50b1a8;
 	color:#fff;
 	height:40px;
 
@@ -440,6 +441,7 @@ body
 
 .foot{
 	text-align: center;
+	font-family: sans-serif;
 }
 
 

@@ -1,20 +1,36 @@
 @extends('layouts.main')
 @section('content')
- </div>
-
     <div id="search">
-    <div id="wrapper">
+    
     <div id="sea">	
-    	<h2><span>Search</span> Listing</h2>
-    	<input type="text" >
+    	<h2>Search Listing</h2>
+    	<input type="text" placeholder="">
     	<a href="#">Search</a>
-    	<p>eg. Vancouver 2 bedroom Condos under 500K</p>
+    	
     </div><!--sea-->
     </div><!--search ends-->
 
     <div id="content">
        
        <div class="slider">
+         <div id="sliderFrame">
+        <div id="slider">
+            <a href="#">
+                <img src="assets/images/slide1.png" alt="Welcome to Zameen Jayedad" />
+            </a>
+
+            <a href="#">
+                <img src="assets/images/slide2.png" alt="Welcome to Zameen Jayedad" />
+            </a>
+            
+             <a href="#">
+                <img src="assets/images/slide3.png" alt="Welcome to Zameen Jayedad" />
+            </a>
+        </div>
+    </div>
+       
+
+
        </div>
 
        <div class="list">
@@ -73,26 +89,26 @@
             <div class="post">
                 <img class="img" src="assets/images/thumb.png" width="60px" height="47px">  
                 <h5>4602 Windsor Street, Vancouver</h5>
-                  <p>$1,398,000 - 2,485 sqft, 4 Beds, 3 Baths </p>
-                  <p>1 hour ago</p>
+                  <p>$1,398,000  - 2,485 sqft, 4 Beds, 3 Baths </p>
+                  <p><span>10 min ago</span></p>
             </div>
              <div class="post">      
                 <img class="img" src="assets/images/thumb.png" width="60px" height="47px">
                 <h5>40033 Plateau Drive, Squamish</h5>
                   <p>$430,000 - 0 Beds, 0 Baths</p>
-                  <p>1 hour ago</p>
+                  <p><span>50 min ago</span></p>
              </div>
              <div class="post">
                 <img class="img" src="assets/images/thumb.png" width="60px" height="47px">
                 <h5>1-7433 16th Street, Burnaby</h5>
                   <p>$499,800 - 1,450 sqft, 3 Beds, 2 Baths</p>
-                  <p>1 hour ago</p>
+                  <p><span>1 hour ago</span></p>
              </div>
              <div class="post">
                 <img class="img" src="assets/images/thumb.png" width="60px" height="47px">
                 <h5>4602 Windsor Street, Vancouver</h5>
                   <p>$1,398,000 - 2,485 sqft, 4 Beds, 3 Baths</p>
-                  <p>1 hour ago</p>
+                  <p><span>2 hour ago</span></p>
 
             </div>
 
@@ -105,8 +121,8 @@
 
     <div class="sec-2">
 
-                <h3>eCo Listings</h3>
-                <a class="more"href="#">more</a>
+                <h3>Listings</h3>
+               
 
       <div class="eco">
 
@@ -122,15 +138,7 @@
 
     <div class="sec-3">
 
-                <h3>News & Articles</h3>
-                <a class="more"href="#">more</a>
-
-      <div class="news">
-
-             <img src="assets/images/news.jpg" width="201px" height="82px">
-
-
-      </div>    
+                
     
     </div><!--sec-3 ends-->
 

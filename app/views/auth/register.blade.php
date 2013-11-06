@@ -25,9 +25,18 @@
             {{ Form::text('email') }}
         </li>
 
+
         <li>
             {{ Form::label('password', 'Password:') }}
             {{ Form::Password('password') }}
+        </li>
+         <li>
+            {{ Form::label('first_name', 'First Name:') }}
+            {{ Form::text('first_name') }}
+        </li>
+         <li>
+            {{ Form::label('last_name', 'Last Name:') }}
+            {{ Form::text('last_name') }}
         </li>
         <li>
             {{ Form::label('password', 'Confirm Password:') }}

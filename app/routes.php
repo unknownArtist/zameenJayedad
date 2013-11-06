@@ -11,7 +11,7 @@
 |
 */
 /*------------------Authentication Routes---------------------------*/
-	Route::get('user/registration',array('uses'=>'AuthController@getRegister'));
+	Route::get('user/register',array('uses'=>'AuthController@getRegister'));
 /*------------------End of Auth Routes------------------------------*/
 
 

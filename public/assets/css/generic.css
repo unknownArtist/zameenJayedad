@@ -2,7 +2,7 @@
 /* For generic page styles. Not for sliders. */
 
 body {font:normal 0.9em Arial; margin:0; padding:0; padding-bottom:60px;}
-.div1, .div2 {width:700px;margin:0 auto;}
+.div1, .div2 {width:420px;margin:0 auto;}
 .div1 {margin-top:30px;margin-bottom:60px;text-align:center;line-height:20px;}
 .div1 P {font-size:18px;}
 .div1 a, .div2 a {color:#07C; }

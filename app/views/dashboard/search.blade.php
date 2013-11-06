@@ -45,7 +45,7 @@
     <div id="featured">
     	<h2>Featured</h2>
     	<div class="featured-bottom">
-    		<h4>205-3333 Main Street, Vancouver</h4>
+    		<h4>205-4125 Main Street, Vancouver</h4>
     		<img src="/assets/images/thumb_2604672690.png">
     		<span>$899,900</span>
     		<p>2 beds | 2 baths1,389 sq ftEco Realty Inc.</p>

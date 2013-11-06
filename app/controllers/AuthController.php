@@ -9,7 +9,11 @@ class AuthController extends BaseController {
 	 */
 	public function getRegister()
 	{
-		return "registration";
+		return View::make('auth.register');
+	}
+	public function postRegister()
+	{
+		return "post";
 	}
 
 }

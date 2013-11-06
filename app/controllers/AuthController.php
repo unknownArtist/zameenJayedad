@@ -83,6 +83,40 @@ class AuthController extends BaseController {
 
 		public function postlogin()
 				{
-				return "rameez raiz";	
+				try
+{
+      // Find the user using the user id
+    $user = Sentry::findUserById(1);
+
+    print_r($user);
+    die();
+
+    // Log the user in
+    Sentry::login($user, false);
+}
+catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
+{
+    echo 'Login field is required.';
+}
+catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
+{
+    echo 'User not activated.';
+}
+catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
+{
+    echo 'User not found.';
+}
+
+// Following is only needed if throttle is enabled
+catch (Cartalyst\Sentry\Throttling\UserSuspendedException $e)
+{
+    $time = $throttle->getSuspensionTime();
+
+    echo "User is suspended for [$time] minutes.";
+}
+catch (Cartalyst\Sentry\Throttling\UserBannedException $e)
+{
+    echo 'User is banned.';
+}
 				}		
 }

@@ -27,9 +27,9 @@
 		    </div>
    
 		</div><!--header ends-->
-	</div>
+	
 	@yield('content')
-
+</div>
     	<div id="footer">
 			<p class="foot">Copyright &copy; 2013 zameen jayedad inc | Office F-1 Rauf Tower DHA phase 2, Gate1, Islamabad</p>
   		</div>

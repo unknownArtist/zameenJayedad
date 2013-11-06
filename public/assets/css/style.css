@@ -444,4 +444,66 @@ body
 	font-family: sans-serif;
 }
 
+#form{
+	clear: both;
+	border:10px solid #e3e3e3;
+	position: relative;
+    top: 43px;
+    width: 565px;
+ 	margin: 0 auto;
+ 	background-color: #50b1a8;
+	
+}
+
+#form h1{
+	color:#fff;
+	text-align: center;
+	font-family: cursive;
+}
+
+#form h3{
+	color:#fff;
+}
+
+
+
+form ul li
+{
+	list-style: none;
+	padding-bottom: 9px;
+}
+
+form label
+{
+	display: inline-block;
+	width: 130px;
+	color:#e3e3e3;
+}
+
+form input{
+	width:200px;
+	border-radius: 3px
+}
+
+form select{
+	width:205px;
+}
+
+form span{
+	color:red;
+}
+
+form textarea{
+	width:200px;
+}
+
+
+
+
+.btn{
+	margin-left: 134px;
+	width: 204px;
+	padding: 10px;
+	font-weight: bolder;
+}
 

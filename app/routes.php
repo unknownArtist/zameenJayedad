@@ -13,6 +13,9 @@
 /*------------------Authentication Routes---------------------------*/
 	Route::get('user/register',array('uses'=>'AuthController@getRegister'));
 	Route::post('user/register',array('uses'=>'AuthController@postRegister'));
+	Route::get('user/login',array('uses'=>'AuthController@getlogin'));
+	Route::post('user/login',array('uses'=>'AuthController@postlogin'));
+
 /*------------------End of Auth Routes------------------------------*/
 
 

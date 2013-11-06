@@ -75,4 +75,14 @@ class AuthController extends BaseController {
         return "completed";
 
 }
+
+		public function getlogin()
+				{
+					return View::make('auth.login');
+				}
+
+		public function postlogin()
+				{
+				return "rameez raiz";	
+				}		
 }

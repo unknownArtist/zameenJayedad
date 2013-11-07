@@ -10,9 +10,13 @@ class AuthController extends BaseController {
 	public function getRegister()
 	{
 		return View::make('auth.register')
-					->with('countries', $countries);
+					->with('roles', Config::get('roles')) 
+					->with('cities', Config::get('cities')) 
+					->with('countries', Config::get('countries'));
+
 	}
 	public function postRegister()
+
 	{
 		try
 		{ 
@@ -21,23 +25,25 @@ class AuthController extends BaseController {
 	        'password' => Input::get('password'),
 	        'first_name' => Input::get('first_name'),
 	        'last_name' => Input::get('last_name')
+	        ));
+		}
+			
+			catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
+			{
+			    
+			    return Redirect::to('user/register')->with('errors','Login field is required');
+			}
+			catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
+			{
+			    echo 'Password field is required.';
+			}
+			catch (Cartalyst\Sentry\Users\UserExistsException $e)
+			{
+			    echo 'User with this login already exists.';
+			}
 
-    	));
-			 
-			  
-		}
-		catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
-		{
-		    echo 'Login field is required.';
-		}
-		catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
-		{
-		    echo 'Password field is required.';
-		}
-		catch (Cartalyst\Sentry\Users\UserExistsException $e)
-		{
-		    echo 'User with this login already exists.';
-		}
+
+
 
 		  $fields = array(
             'phone' => Input::get('phone'),

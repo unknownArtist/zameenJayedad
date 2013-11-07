@@ -2,7 +2,6 @@
 
 class AuthController extends BaseController {
 
-<<<<<<< HEAD
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -10,55 +9,35 @@ class AuthController extends BaseController {
 	 */
 	public function getRegister()
 	{
-		
 		return View::make('auth.register')
-				   ->with("countries",Config::get('listconfig.countries'))
-				   ->with('roles',    Config::get('listconfig.roles'))
-				   ->with('cities',    Config::get('listconfig.cities'));
+					->with('countries', $countries);
 	}
 	public function postRegister()
 	{
-		return "post";
-	}
-=======
-				/**
-				 * Display a listing of the resource.
-				 *
-				 * @return Response
-				 */
-				public function getRegister()
-				{
-					return View::make('auth.register');
-				}
-				public function postRegister()
-				{
-					try
-			{ 
-			         $Users = Sentry::getUserProvider()->create(array(
-			        'email'    => Input::get('email'),
-			        'password' => Input::get('password'),
-			        'first_name' => Input::get('first_name'),
-			        'last_name' => Input::get('last_name')
->>>>>>> 606fd12353c232bb0f3be9e79a75b52b5044fe55
+		try
+		{ 
+	         $Users = Sentry::getUserProvider()->create(array(
+	        'email'    => Input::get('email'),
+	        'password' => Input::get('password'),
+	        'first_name' => Input::get('first_name'),
+	        'last_name' => Input::get('last_name')
 
-			    ));
+    	));
 			 
 			  
-			}
-			catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
-			{
-			    echo 'Login field is required.';
-			}
-			catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
-			{
-			    echo 'Password field is required.';
-			}
-			catch (Cartalyst\Sentry\Users\UserExistsException $e)
-			{
-			    echo 'User with this login already exists.';
-			}
-
-
+		}
+		catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
+		{
+		    echo 'Login field is required.';
+		}
+		catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
+		{
+		    echo 'Password field is required.';
+		}
+		catch (Cartalyst\Sentry\Users\UserExistsException $e)
+		{
+		    echo 'User with this login already exists.';
+		}
 
 		  $fields = array(
             'phone' => Input::get('phone'),
@@ -89,54 +68,52 @@ class AuthController extends BaseController {
             $members->cell = $fields['cell'];
             $members->address = $fields['address'];
             $members->zip = $fields['zip'];
-
             $members->save();
 
         return "completed";
 
-}
+	}
+	public function getlogin()
+	{
+		return View::make('auth.login');
+	}
 
-		public function getlogin()
-				{
-					return View::make('auth.login');
-				}
+	public function postlogin()
+	{
+		try
+		{
+	      // Find the user using the user id
+	    $user = Sentry::findUserById(1);
 
-		public function postlogin()
-				{
-				try
-{
-      // Find the user using the user id
-    $user = Sentry::findUserById(1);
+	    print_r($user);
+	    die();
 
-    print_r($user);
-    die();
+	    // Log the user in
+	    Sentry::login($user, false);
+		}
+		catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
+		{
+		    echo 'Login field is required.';
+		}
+		catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
+		{
+		    echo 'User not activated.';
+		}
+		catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
+		{
+		    echo 'User not found.';
+		}
 
-    // Log the user in
-    Sentry::login($user, false);
-}
-catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
-{
-    echo 'Login field is required.';
-}
-catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
-{
-    echo 'User not activated.';
-}
-catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
-{
-    echo 'User not found.';
-}
+		// Following is only needed if throttle is enabled
+		catch (Cartalyst\Sentry\Throttling\UserSuspendedException $e)
+		{
+		    $time = $throttle->getSuspensionTime();
 
-// Following is only needed if throttle is enabled
-catch (Cartalyst\Sentry\Throttling\UserSuspendedException $e)
-{
-    $time = $throttle->getSuspensionTime();
-
-    echo "User is suspended for [$time] minutes.";
-}
-catch (Cartalyst\Sentry\Throttling\UserBannedException $e)
-{
-    echo 'User is banned.';
-}
-				}		
+		    echo "User is suspended for [$time] minutes.";
+		}
+		catch (Cartalyst\Sentry\Throttling\UserBannedException $e)
+		{
+		    echo 'User is banned.';
+		}
+	}		
 }

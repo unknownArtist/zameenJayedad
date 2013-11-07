@@ -2,7 +2,7 @@
 
 class AuthController extends BaseController {
 
-<<<<<<< HEAD
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -17,20 +17,6 @@ class AuthController extends BaseController {
 				   ->with('cities',    Config::get('listconfig.cities'));
 	}
 	public function postRegister()
-	{
-		return "post";
-	}
-=======
-				/**
-				 * Display a listing of the resource.
-				 *
-				 * @return Response
-				 */
-				public function getRegister()
-				{
-					return View::make('auth.register');
-				}
-				public function postRegister()
 				{
 					try
 			{ 
@@ -39,7 +25,7 @@ class AuthController extends BaseController {
 			        'password' => Input::get('password'),
 			        'first_name' => Input::get('first_name'),
 			        'last_name' => Input::get('last_name')
->>>>>>> 606fd12353c232bb0f3be9e79a75b52b5044fe55
+
 
 			    ));
 			 
@@ -48,6 +34,7 @@ class AuthController extends BaseController {
 			catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
 			{
 			    echo 'Login field is required.';
+			    return Redirect::to('user/register')->with('errors','Login field is required');
 			}
 			catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
 			{

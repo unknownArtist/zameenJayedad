@@ -2,7 +2,9 @@
 @section('content')
 </div>
 <div id="search">
+
    </div> 
+ {{  Session::get('errors') }}
 <div id="wrapper">
 <div id="form">
 

@@ -3,10 +3,11 @@
 </div>
 <div id="search">
    </div> 
+    {{  Session::get('errors') }}
    <div id="wrapper">
 <div id="form">
 <h1>Login </h1>
-{{ Form::open(array('url' => 'user/login')) }}
+{{ Form::open(array('url' => 'login')) }}
     <ul>
         <li>
             {{ Form::label('email', 'Email:') }}

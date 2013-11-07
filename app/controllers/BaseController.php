@@ -15,4 +15,14 @@ class BaseController extends Controller {
 		}
 	}
 
+	public function sendTo($to,$data = array())
+ 	{
+
+	  Mail::send('emails.registration',$data, function($message) use($to)
+	  {
+	   $message->to($to)
+	        ->subject('Complete');
+	  });
+	}
+
 }

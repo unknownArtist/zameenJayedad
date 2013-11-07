@@ -4,7 +4,8 @@
 <div id="search">
    </div> 
    <div id="wrapper">
-<div id="form">
+<div id="height">    
+<div id="form-wrapper">
 <h1>Login </h1>
 {{ Form::open(array('url' => 'user/login')) }}
     <ul>
@@ -24,5 +25,6 @@
         
     </ul>
     </div>
+   </div> 
 {{ Form::close() }}
 @stop

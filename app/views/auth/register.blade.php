@@ -6,7 +6,7 @@
    </div> 
  {{  Session::get('errors') }}
 <div id="wrapper">
-<div id="form">
+<div id="form-wrapper">
 
 {{ Form::open(array('url' => 'user/register')) }}
 
@@ -14,7 +14,7 @@
     <ul>
         <li>
             {{ Form::label('first_name', 'First Name') }}
-            {{ Form::text('first_name') }}
+            {{ Form::text('first_name' )}}
         </li>
 
         <li>
@@ -30,12 +30,13 @@
 
         <li>
             {{ Form::label('password', 'Password') }}
-            {{ Form::Password('password') }}
+            {{ Form::Password('password', array('class' => 'youpasswd')) }}
         </li>
         
         <li>
             {{ Form::label('password', 'Confirm Password') }}
-            {{ Form::Password('password') }}
+            {{ Form::password('password') }}
+
         </li>
        
         <li>
@@ -76,6 +77,8 @@
             {{Form::checkbox('agent')}}
             
         </li>
+
+        <div class="agent">
 
         <h3>Agency Information</h3>
         <li>
@@ -129,6 +132,8 @@
             {{ Form::text('Company Email') }}
            
         </li>
+
+    </div><!--agent ends-->
 
 
         

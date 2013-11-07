@@ -10,9 +10,9 @@ class AuthController extends BaseController {
 	public function getRegister()
 	{
 		return View::make('auth.register')
-					->with('roles', Config::get('roles')) 
-					->with('cities', Config::get('cities')) 
-					->with('countries', Config::get('countries'));
+					->with('roles', Config::get('listconfig.roles')) 
+					->with('cities', Config::get('listconfig.cities')) 
+					->with('countries', Config::get('listconfig.countries'));
 
 	}
 	public function postRegister()

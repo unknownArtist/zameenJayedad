@@ -9,7 +9,7 @@
     	
     </div><!--sea-->
     </div><!--search ends-->
-
+    <div id="wrapper">
     <div id="content">
        
        <div class="slider">

@@ -246,7 +246,7 @@ return array(
                         ),
 	'roles'  => array(
 
-		           		'own'=>'Owner/Investor',
+		        'own'=>'Owner/Investor',
                         'ten'=>'Tenant',
                         'com'=>'Company',
                         'appr'=>'Appraiser',
@@ -260,7 +260,7 @@ return array(
 		),
 
 	'cities' => array(
-		                'Astore'=>'Astore',
+		        'Astore'=>'Astore',
                         'Attock'=>'Attock',
                         'Abbottabad'=>'Abbottabad',
                         'Awaran'=>'Awaran',

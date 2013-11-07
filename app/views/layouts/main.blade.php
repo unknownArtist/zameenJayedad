@@ -7,6 +7,7 @@
 	{{ HTML::style('assets/js/js-image-slider.css'); }}
 	{{ HTML::script('assets/js/js-image-slider.js'); }}
 	{{ HTML::script('assets/js/mcVideoPlugin.js'); }}
+
     
 
 
@@ -27,6 +28,7 @@
 		    </div>
    
 		</div><!--header ends-->
+	</div>
 	
 	@yield('content')
 </div>

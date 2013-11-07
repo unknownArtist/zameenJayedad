@@ -555,8 +555,8 @@ a.hiddenanchor{
 }
 
 #form-wrapper textarea{
-	width:490px;
-}
+	width: 457px;
+	height: 79px;}
 .btn{
 	width: 200px !important;
 	cursor: pointer;
@@ -581,7 +581,7 @@ a.hiddenanchor{
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
-}
+
 
 
 
@@ -601,10 +601,10 @@ input {
 }
 
 /* all the input except submit and checkbox */
-#form-wrapper input:not([type="checkbox"]){
+#form-wrapper input,textarea:not([type="checkbox"]){
 	width: 92%;
 	margin-top: 4px;
-	padding: 10px 5px 10px 32px;	
+	padding: 10px 18px 10px 18px;	
 	border: 1px solid rgb(178, 178, 178);
 	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;

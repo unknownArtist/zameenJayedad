@@ -1,3 +1,10 @@
+@extends('layouts.main')
+@section('content')
+</div>
+<div id="search">
+   </div> 
+   <div id="wrapper">
+<div id="form">
 <h1>Login </h1>
 {{ Form::open(array('url' => 'user/login')) }}
     <ul>
@@ -12,8 +19,10 @@
             {{ Form::Password('password') }}
         </li>
         <li>
-            {{ Form::submit('Submit', array('class' => 'btn')) }}
+            {{ Form::submit('Login', array('class' => 'btn')) }}
         </li>
         
     </ul>
+    </div>
 {{ Form::close() }}
+@stop

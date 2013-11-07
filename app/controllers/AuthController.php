@@ -50,11 +50,11 @@ class AuthController extends BaseController {
             'cell' => Input::get('cell'),
             'fax' => Input::get('fax'),
             'address' => Input::get('address'),
-            'zip' => Input::get('zip')
-            // 'country' => Input::get('country'),
-            // 'roles' => Input::get('roles'),
-            // 'terms' => Input::get('terms'),
-            // 'newsletters' => Input::get('newsletters')
+            'zip' => Input::get('zip'),
+             'country' => Input::get('country'),
+             'roles' => Input::get('roles'),
+            'terms' => Input::get('terms'),
+             'newsletters' => Input::get('newsletters')
         );
 		 // print_r($fields);
 		 // die();
@@ -90,11 +90,7 @@ class AuthController extends BaseController {
 		{
 	      // Find the user using the user id
 	    $user = Sentry::findUserById(1);
-
-	    print_r($user);
-	    die();
-
-	    // Log the user in
+		// Log the user in
 	    Sentry::login($user, false);
 		}
 		catch (Cartalyst\Sentry\Users\LoginRequiredException $e)

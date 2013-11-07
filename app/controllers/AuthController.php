@@ -25,39 +25,37 @@ class AuthController extends BaseController {
 	        'password' => Input::get('password'),
 	        'first_name' => Input::get('first_name'),
 	        'last_name' => Input::get('last_name')
-	        ));
+	        
+	        ));			 
 		}
-			
-			catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
-			{
+
+		catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
+		{
 			    
 			    return Redirect::to('user/register')->with('errors','Login field is required');
-			}
-			catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
-			{
-			    echo 'Password field is required.';
-			}
-			catch (Cartalyst\Sentry\Users\UserExistsException $e)
-			{
-			    echo 'User with this login already exists.';
-			}
-
-
-
-
+		}
+		catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
+		{
+		    echo 'Password field is required.';
+		}
+		catch (Cartalyst\Sentry\Users\UserExistsException $e)
+		{
+		    echo 'User with this login already exists.';
+		}
+		$user = Sentry::findUserByLogin(Input::get('email')); 
+		$activationCode = $Users->getActivationCode();
 		  $fields = array(
-            'phone' => Input::get('phone'),
-            'cell' => Input::get('cell'),
-            'fax' => Input::get('fax'),
-            'address' => Input::get('address'),
-            'zip' => Input::get('zip'),
-             'country' => Input::get('country'),
-             'roles' => Input::get('roles'),
-            'terms' => Input::get('terms'),
-             'newsletters' => Input::get('newsletters')
+		  	'user_id' 		=> $user->id,
+            'phone' 		=> Input::get('phone'),
+            'cell' 			=> Input::get('cell'),
+            'fax' 			=> Input::get('fax'),
+            'address' 		=> Input::get('address'),
+            'zip' 			=> Input::get('zip'),
+            'country' 		=> Input::get('country'),
+            'roles' 		=> Input::get('roles'),
+            'terms' 		=> Input::get('terms'),
+            'newsletters'  => Input::get('newsletters')
         );
-		 // print_r($fields);
-		 // die();
         $rules = array(
             'phone' 	=> 'required',
             'cell'      => 'required',
@@ -65,18 +63,19 @@ class AuthController extends BaseController {
            
         );
         $v = Validator::make($fields, $rules);
-        if ($v->fails()) {
-            return "try again";
-            }
- 		 // Members::create($fields);
-            $members = new Members();
+        if ($v->fails()) 
+        {
+        	return Redirect::to('user/register')->with('errors','try again');
+        }
+ 		 	$members = new Members();
             $members->phone = $fields['phone'];
             $members->cell = $fields['cell'];
             $members->address = $fields['address'];
             $members->zip = $fields['zip'];
+            $members->user_id = $fields['user_id'];
             $members->save();
 
-        return "completed";
+       return Redirect::to('user/login');
 
 	}
 	public function getlogin()

@@ -253,5 +253,11 @@ class AuthController extends BaseController {
 		{
 		    echo 'User was not found.';
 		}
+	}
+
+	public function getchangepass()
+
+	{
+	return View::make('auth.changepass');
 	}	
 }

@@ -11,6 +11,7 @@
 |
 */
 /*------------------Authentication Routes---------------------------*/
+	Route::get('changepass',array('uses'=>'AuthController@getchangepass'));
 	Route::post('newpassword',array('uses'=>'AuthController@postnewpassword'));
 	Route::get('newpassword',array('uses'=>'AuthController@getnewpassword'));
 	Route::get("user/resetCode",array('uses'=>'AuthController@postforget'));

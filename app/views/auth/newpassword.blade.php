@@ -7,8 +7,8 @@
    <div id="wrapper">
 <div id="height">    
 <div id="form-wrapper">
-<h1>Login </h1>
-{{ Form::open(array('url' => 'login')) }}
+<h1>Reset Password </h1>
+{{ Form::open(array('url' => 'newpassword')) }}
     <ul>
         <li>
             {{ Form::label('email', 'Email:') }}
@@ -17,18 +17,18 @@
 
 
         <li>
-            {{ Form::label('password', 'Password:') }}
+            {{ Form::label('password', 'New Password:') }}
             {{ Form::Password('password') }}
         </li>
         <li>
-            {{ Form::submit('Login', array('class' => 'btn')) }}
-        </li>
-        <li>
-            {{ HTML::link('forget','Forget Password') }}
+            {{ Form::submit('Reset', array('class' => 'btn')) }}
         </li>
         
     </ul>
     </div>
+   </div> 
+{{ Form::close() }}
+</div>
    </div> 
 {{ Form::close() }}
 

@@ -26,8 +26,10 @@ class AuthController extends BaseController {
 	        'first_name' => Input::get('first_name'),
 	        'last_name' => Input::get('last_name')
 	        
-	        ));			 
+	        ));	
+	     	 
 		}
+
 
 		catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
 		{
@@ -49,7 +51,7 @@ class AuthController extends BaseController {
 			    {
 			    	$URL = 'http://'.$_SERVER['HTTP_HOST']."/user/activation?code=".$activationCode."&email=".Input::get('email');
 			    	$this->sendTo(Input::get('email'),array('activationCode'=>$URL));
-			    	return Redirect::to('user/register')->with('success','Email has been sent to you');
+			    	// return Redirect::to('user/register')->with('success','Email has been sent to you');
 			    }
 			    
 		  $fields = array(
@@ -60,10 +62,11 @@ class AuthController extends BaseController {
             'address' 		=> Input::get('address'),
             'zip' 			=> Input::get('zip'),
             'country' 		=> Input::get('country'),
-            'roles' 		=> Input::get('roles'),
-            'terms' 		=> Input::get('terms'),
-            'newsletters'  => Input::get('newsletters')
+            'roles' 		=> Input::get('roles')
+            // 'terms' 		=> Input::get('terms'),
+            // 'newsletters'  => Input::get('newsletters')
         );
+		  
         $rules = array(
             'phone' 	=> 'required',
             'cell'      => 'required',
@@ -80,10 +83,12 @@ class AuthController extends BaseController {
             $members->cell = $fields['cell'];
             $members->address = $fields['address'];
             $members->zip = $fields['zip'];
+            $members->country = $fields['country'];
+            $members->roles = $fields['roles'];
             $members->user_id = $fields['user_id'];
             $members->save();
 
-       return Redirect::to('user/login');
+       return Redirect::to('login')->with('errors','please check your mail for activation');;
 
 	}
 	public function getlogin()
@@ -102,7 +107,7 @@ class AuthController extends BaseController {
 
 			$user = Sentry::authenticate($credentials, false);
 			if($user)
-			return Redirect::to('dashboard.index');
+			return Redirect::to('dashboard');
 			{
 				
 			 }
@@ -172,5 +177,81 @@ class AuthController extends BaseController {
 			return Redirect::to('login')->with('success',"You are successfully logout");
 		}
 		
+	}
+
+	public function getforget()
+
+	{
+	return View::make('auth.forget');
+	}	
+
+	public function postforget()
+
+	{
+		
+		$email = Input::get('email');
+
+	try
+		{
+		    // Find the user using the user email address
+		    $user = Sentry::findUserByLogin(Input::get('email'));
+
+
+		    // Get the password reset code
+		    $resetCode = $user->getResetPasswordCode();
+
+		    if($resetCode)
+			    {
+			    	$URL = 'http://'.$_SERVER['HTTP_HOST']."/user/resetCode?code=".$resetCode."&email=".Input::get('email');
+			    	$this->sendTo(Input::get('email'),array('activationCode'=>$URL));
+			    	return Redirect::to('newpassword')->with('errors','Please check your mail for password reset');
+			    }
+		}
+		catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
+		{
+		    echo 'User was not found.';
+		}
+ 
+	}
+
+	public function getnewpassword()
+
+	{
+	return View::make('auth.newpassword');
+	}	
+
+	public function postnewpassword()
+
+	{
+		$user = Sentry::findUserByLogin(Input::get('email'));
+		$userid= $user->id;
+
+			try
+		{
+		    // Find the user using the user id
+		    $user = Sentry::findUserById($userid);
+		   
+		    // Check if the reset password code is valid
+		    if ($user->checkResetPasswordCode($user->reset_password_code))
+		    {
+		        // Attempt to reset the user password
+		        if ($user->attemptResetPassword($user->reset_password_code, Input::get('password')))
+		        {
+		            return Redirect::to('login')->with('errors','Password reset successfully');
+		        }
+		        else
+		        {
+		         return Redirect::to('newpassword')->with('errors','Password not set');
+		        }
+		    }
+		    else
+		    {
+		        // The provided password reset code is Invalid
+		    }
+		}
+		catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
+		{
+		    echo 'User was not found.';
+		}
 	}	
 }

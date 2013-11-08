@@ -7,28 +7,25 @@
    <div id="wrapper">
 <div id="height">    
 <div id="form-wrapper">
-<h1>Login </h1>
-{{ Form::open(array('url' => 'login')) }}
+<h1>Send Password </h1>
+{{ Form::open(array('url' => 'forget')) }}
     <ul>
         <li>
             {{ Form::label('email', 'Email:') }}
             {{ Form::text('email') }}
         </li>
-
-
+    
+       
         <li>
-            {{ Form::label('password', 'Password:') }}
-            {{ Form::Password('password') }}
+            {{ Form::submit('Send', array('class' => 'btn')) }}
         </li>
-        <li>
-            {{ Form::submit('Login', array('class' => 'btn')) }}
-        </li>
-        <li>
-            {{ HTML::link('forget','Forget Password') }}
-        </li>
+       
         
     </ul>
     </div>
+   </div> 
+{{ Form::close() }}
+</div>
    </div> 
 {{ Form::close() }}
 

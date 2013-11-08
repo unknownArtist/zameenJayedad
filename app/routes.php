@@ -11,11 +11,17 @@
 |
 */
 /*------------------Authentication Routes---------------------------*/
+	Route::post('newpassword',array('uses'=>'AuthController@postnewpassword'));
+	Route::get('newpassword',array('uses'=>'AuthController@getnewpassword'));
+	Route::get("user/resetCode",array('uses'=>'AuthController@postforget'));
+	Route::get('forget',array('uses'=>'AuthController@getforget'));
+	Route::post('forget',array('uses'=>'AuthController@postforget'));
 	Route::get("user/activation",array('uses'=>'AuthController@getActivateUser'));
 	Route::get('user/register',array('uses'=>'AuthController@getRegister'));
 	Route::post('user/register',array('uses'=>'AuthController@postRegister'));
 	Route::get('login',array('uses'=>'AuthController@getlogin'));
 	Route::post('login',array('uses'=>'AuthController@postlogin'));
+	
 
 /*------------------End of Auth Routes------------------------------*/
 

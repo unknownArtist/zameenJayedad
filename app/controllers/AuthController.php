@@ -259,5 +259,28 @@ class AuthController extends BaseController {
 
 	{
 	return View::make('auth.changepass');
-	}	
+	}
+
+	public function postchangepass()
+	{
+		 $user = Sentry::findUserByLogin(Input::get('email'));
+			$userid= $user->id;
+
+			$user = Sentry::getUserProvider()->findById($userid);
+			
+		        if( $user->checkPassword( Input::get( 'old_password' ) ) )
+			    {
+			        $user->password = Input::get('new_password');
+						        
+						         $user->save();
+					return Redirect::to('login')->with('errors','Password change successfully');
+				}
+				else
+				{
+					return Redirect::to('changepass')->with('errors','Password not change');
+				}
+								
+
 }
+}
+

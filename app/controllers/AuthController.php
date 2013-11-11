@@ -282,5 +282,22 @@ class AuthController extends BaseController {
 								
 
 }
+		public function getprofolio()
+
+			{
+					return View::make('auth.profolio')
+					->with('property_Type', Config::get('listconfig.property_Type')) 
+					->with('Type_of_Homes', Config::get('listconfig.Type_of_Homes'))
+					->with('Purpose', Config::get('listconfig.Purpose'))
+					->with('Construction_Status', Config::get('listconfig.Construction_Status')) 
+					->with('Wanted_For', Config::get('listconfig.Wanted_For')) 
+					->with('cities', Config::get('listconfig.cities'))
+					->with('Location', Config::get('listconfig.Location'))
+					->with('unit', Config::get('listconfig.unit'))
+					->with('Bedrooms', Config::get('listconfig.Bedrooms')) 
+					->with('Bathrooms', Config::get('listconfig.Bathrooms')) 
+					->with('Expires', Config::get('listconfig.Expires'));
+			
+			}			
 }
 

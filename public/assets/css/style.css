@@ -25,12 +25,25 @@ body
 	float:left;
 }
 
+.log{
+	float: left;
+    color: #fff !important;
+	margin-bottom: 15px !important;
+	border:1px solid;
+	border-radius: 6px;
+	padding:4px 9px;
+	background-color:#50b1a8; 
+}
+
+
+
 .contact{
 	float: right;
 	width:200px;
 	height: 47px;
-	margin-right: -141px;
-    margin-top: 38px;
+	margin-right: -190px;
+    padding:23px 0 0 0;
+
 }
 
 .contact a{
@@ -38,14 +51,12 @@ body
 	color:#50b1a8;
 }
 
-.contact a:hover{
-	color:#00a651;
-	font-size: 16px;
-}
+
 
 .contact p{
 	color:#50b1a8;
 	font-weight: bolder;
+	margin: 0;
 
 }
 
@@ -424,13 +435,13 @@ body
 	color:#fff;
 	height:40px;
 
-
 }
 
 .foot{
 	text-align: center;
 	font-family: sans-serif;
 }
+
 
 
 /*form*/
@@ -521,6 +532,12 @@ a.hiddenanchor{
 	background: -o-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
 	background: -ms-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
 	background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+}
+
+#form-wrapper h2{
+	position: relative;
+	top: 21px;
+	color: #50b1a8;
 }
 
 #form-wrapper p{
@@ -828,6 +845,7 @@ p.change_link{
 }
 
 #height{
-	height: 537px;
+	margin:auto 0;
+
 }
 

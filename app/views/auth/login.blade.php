@@ -4,9 +4,9 @@
 <div id="search">
    </div> 
     {{  Session::get('errors') }}
-   <div id="wrapper">
-<div id="height">    
-<div id="form-wrapper">
+    <div id="wrapper">
+    <div id="height">    
+    <div id="form-wrapper">
 <h1>Login </h1>
 {{ Form::open(array('url' => 'login')) }}
     <ul>
@@ -23,10 +23,10 @@
         <li>
             {{ Form::submit('Login', array('class' => 'btn')) }}
         </li>
-        <li>
+        <li class="link">
             {{ HTML::link('forget','Forget Password') }}
         </li>
-        <li>
+        <li class="link">
             {{ HTML::link('changepass','Change Password') }}
         </li>
         

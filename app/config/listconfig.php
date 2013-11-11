@@ -2,8 +2,9 @@
 
 return array(
 
-	'countries' => array(
 
+	'countries' => array(
+                         
                         'AF'=>'Afghanistan',
                         'AL'=>'Albania',
                         'DZ'=>'Algeria',
@@ -260,6 +261,7 @@ return array(
 		),
 
 	'cities' => array(
+                         'Please select'=>'Please select',
 		        'Astore'=>'Astore',
                         'Attock'=>'Attock',
                         'Abbottabad'=>'Abbottabad',
@@ -364,4 +366,100 @@ return array(
                         'Zhob'=>'Zhob',
                         
 		),
+        'property_Type' => array(
+                        'Please select'=>'Please select',
+                        'Homes'=>'Homes',
+                        'Plots'=>'Plots',
+                        'Commercial'=>'Commercial',
+                ),
+
+        'Type_of_Homes' => array(
+                        'Please select'=>'Please select',
+                        'House'=>'House',
+                        'Flat'=>'Flat',
+                        'Upper Portion'=>'Upper Portion',
+                        'Lower Portion'=>'Lower Portion',
+                        'Farm House'=>'Farm House',
+                        'Room'=>'Room',
+
+                ),
+
+        'Purpose' => array(
+                        'Please Select'=>'Please Select',
+                        'For Sale'=>'For Sale',
+                        'For Rent'=>'For Rent',
+                        'Wanted'=>'Wanted',
+
+                ),
+
+        'Construction_Status' => array(
+                        'Please Select'=>'Please Select',
+                        'Complete'=>'Complete',
+                        'Under Construction'=>'Under Construction',
+
+                ),
+        'Wanted_For' => array(
+                        'Please Select'=>'Please Select',
+                        'Buying'=>'Buying',
+                        'Renting'=>'Renting',
+
+                ),
+      
+        'Location' => array(
+                        'Any'=>'Any',
+                        'Azad Kashmir'=>'Azad Kashmir',
+                        'Punjab'=>'Punjab',
+                        'Sindh'=>'Sindh',
+                        'Balochistan'=>'Balochistan',
+                        'Khyber Pakhtunkhwa'=>'Khyber Pakhtunkhwa',
+                        'Gilgit Baltistan'=>'Gilgit Baltistan',
+                        'Islamabad Capital'=>'Islamabad Capital',
+
+                ),
+
+        'unit' => array(
+                        'Please select'=>'Please select',
+                        '1'=>'1',
+                        '2'=>'2',
+                        '3'=>'3',
+                        '4'=>'4',
+                        '5'=>'5',
+                        '6'=>'6',
+                        '7'=>'7',
+
+                ),
+        
+        'Bedrooms' => array(
+                        'Please select'=>'Please select',
+                        '1'=>'1',
+                        '2'=>'2',
+                        '3'=>'3',
+                        '4'=>'4',
+                        '5'=>'5',
+                        '6'=>'6',
+                        '7'=>'7',
+
+                ),
+        'Bathrooms' => array(
+                        'Please select'=>'Please select',
+                        '1'=>'1',
+                        '2'=>'2',
+                        '3'=>'3',
+                        '4'=>'4',
+                        '5'=>'5',
+                        '6'=>'6',
+                        '7'=>'7',
+
+                ),
+        'Expires' => array(
+                        'Please select'=>'Please select',
+                        '15'=>'15',
+                        '30'=>'30',
+                        '60'=>'60',
+                        '90'=>'90',
+                        '120'=>'120',
+                        '160'=>'160',
+                        '365'=>'365',
+
+                ),
 	);

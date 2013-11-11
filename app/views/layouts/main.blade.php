@@ -22,7 +22,10 @@
 			<img class="logo" src="/assets/images/eri_logo_02.png">
 			<!-- {{ HTML::image("assets/images/eri_logo_02.png",'',array('class'=>'logo'))}} -->
 			<!--<img class="ban"src="/assets/images/banner_photos.png">-->
+			
 			<div class="contact">
+			{{ HTML::link('login','LOGIN',array('class'=>'log'))}}
+			{{ HTML::link('user/register','REGISTER',array('class'=>'log'))}}
 		    <a href="#"> contact@zameenjayedad.com   </a>
 		    <p>+923225050989</p>
 		    </div>

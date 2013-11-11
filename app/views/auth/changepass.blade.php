@@ -4,11 +4,11 @@
 <div id="search">
    </div> 
     {{  Session::get('errors') }}
-   <div id="wrapper">
-<div id="height">    
-<div id="form-wrapper">
-<h1>Change Password </h1>
-{{ Form::open(array('url' => 'changepass')) }}
+    <div id="wrapper">
+    <div id="height">    
+    <div id="form-wrapper">
+        <h1>Change Password </h1>
+        {{ Form::open(array('url' => 'changepass')) }}
     <ul>
         <li>
             {{ Form::label('email', 'Email:') }}

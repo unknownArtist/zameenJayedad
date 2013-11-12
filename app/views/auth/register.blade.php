@@ -97,39 +97,39 @@
         
         <li>
             {{ Form::label('services', 'Description of Servicess*') }}
-            {{Form::textarea('agency')}}
+            {{Form::textarea('services')}}
 
         </li>
 
         <h3>Company Phone</h3>
         
          <li>
-            {{ Form::label('Company Phone ', 'Company Phone') }}
-            {{ Form::text('Company Phone ') }}
+            {{ Form::label('company_phone ', 'Company Phone') }}
+            {{ Form::text('company_phone') }}
            
         </li>
 
          <li>
-            {{ Form::label('Company Mobile', 'Company Mobile') }}
-            {{ Form::text('Company Mobile') }}
+            {{ Form::label('company_mobile', 'Company Mobile') }}
+            {{ Form::text('company_mobile') }}
            
         </li>
 
          <li>
-            {{ Form::label('Company Fax', 'Company Fax') }}
-            {{ Form::text('Company Fax') }}
+            {{ Form::label('company_fax', 'Company Fax') }}
+            {{ Form::text('company_fax') }}
            
         </li>
 
          <li>
-            {{ Form::label('Company Address', 'Company Address') }}
-            {{ Form::text('Company Address') }}
+            {{ Form::label('company_address', 'Company Address') }}
+            {{ Form::text('company_address') }}
            
         </li>
 
          <li>
-            {{ Form::label('Company Email', 'Company Email') }}
-            {{ Form::text('Company Email') }}
+            {{ Form::label('company_email', 'Company Email') }}
+            {{ Form::text('company_email') }}
            
         </li>
 

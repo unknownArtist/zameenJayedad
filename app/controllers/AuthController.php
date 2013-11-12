@@ -55,18 +55,24 @@ class AuthController extends BaseController {
 			    }
 			    
 		  $fields = array(
-		  	'user_id' 		=> $user->id,
-            'phone' 		=> Input::get('phone'),
-            'cell' 			=> Input::get('cell'),
-            'fax' 			=> Input::get('fax'),
-            'address' 		=> Input::get('address'),
-            'zip' 			=> Input::get('zip'),
-            'country' 		=> Input::get('country'),
-            'roles' 		=> Input::get('roles')
-            // 'terms' 		=> Input::get('terms'),
-            // 'newsletters'  => Input::get('newsletters')
+		  	'user_id' 		 => $user->id,
+            'phone' 		 => Input::get('phone'),
+            'cell' 			 => Input::get('cell'),
+            'fax' 			 => Input::get('fax'),
+            'address' 		 => Input::get('address'),
+            'zip' 			 => Input::get('zip'),
+            'country' 		 => Input::get('country'),
+            'roles' 		 => Input::get('roles'),
+            'city' 		     => Input::get('cities'),
+            'agency_name'    => Input::get('agency'),
+            'description'    => Input::get('services'),
+            'company_phone'  => Input::get('company_phone'),
+            'company_mobile' => Input::get('company_mobile'),
+            'company_fax'    => Input::get('company_fax'),
+            'company_address'=> Input::get('company_address'),
+            'company_email'  => Input::get('company_email')
         );
-		  
+
         $rules = array(
             'phone' 	=> 'required',
             'cell'      => 'required',
@@ -78,6 +84,7 @@ class AuthController extends BaseController {
         {
         	return Redirect::to('user/register')->with('errors',$v);
         }
+
  		 	$members = new Members();
             $members->phone = $fields['phone'];
             $members->cell = $fields['cell'];
@@ -87,8 +94,20 @@ class AuthController extends BaseController {
             $members->roles = $fields['roles'];
             $members->user_id = $fields['user_id'];
             $members->save();
+            DB::table('agent')->insert(
+			array('agent_id' => $fields['user_id'], 
+			    	 'city' => $fields['city'], 
+			    	 'agency_name' => $fields['city'],
+			    	 'description' => $fields['description'],
+			    	 'company_phone' => $fields['company_phone'],
+			    	 'company_mobile' => $fields['company_mobile'],
+			    	 'company_fax' => $fields['company_fax'],
+			    	 'company_address' => $fields['company_address'],
+			    	 'company_email' => $fields['company_email'],
+			    	 )
+			);
 
-       return Redirect::to('login')->with('errors','please check your mail for activation');;
+       return Redirect::to('login')->with('errors','please check your mail for activation');
 
 	}
 	public function getlogin()

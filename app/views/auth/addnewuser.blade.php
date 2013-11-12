@@ -8,7 +8,7 @@
 <div id="wrapper">
 <div id="form-wrapper">
 
-{{ Form::open(array('url' => 'user/register')) }}
+{{ Form::open(array('url' => 'addnewuser')) }}
 
  <h1>Registration</h1>
     <ul>
@@ -62,13 +62,13 @@
         </li>   
         <li>
             {{ Form::label('country', 'Country') }}
-            {{ Form::select('country', $countries)}}
+            {{ Form::select('country')}}
             
         </li>
 
         <li>
             {{ Form::label('roles', 'User Roles') }}
-            {{Form::select('roles', $roles);}}
+            {{Form::select('roles')}}
             
         </li>
 
@@ -83,7 +83,7 @@
         <h3>Agency Information</h3>
         <li>
         {{ Form::label('cities', 'Select Cities You Deal In*') }}
-        {{Form::select('cities', $cities);}}
+        {{Form::select('cities')}}
         </li>
         
         <li>
@@ -97,39 +97,39 @@
         
         <li>
             {{ Form::label('services', 'Description of Servicess*') }}
-            {{Form::textarea('services')}}
+            {{Form::textarea('agency')}}
 
         </li>
 
         <h3>Company Phone</h3>
         
          <li>
-            {{ Form::label('company_phone ', 'Company Phone') }}
-            {{ Form::text('company_phone') }}
+            {{ Form::label('Company Phone ', 'Company Phone') }}
+            {{ Form::text('Company Phone ') }}
            
         </li>
 
          <li>
-            {{ Form::label('company_mobile', 'Company Mobile') }}
-            {{ Form::text('company_mobile') }}
+            {{ Form::label('Company Mobile', 'Company Mobile') }}
+            {{ Form::text('Company Mobile') }}
            
         </li>
 
          <li>
-            {{ Form::label('company_fax', 'Company Fax') }}
-            {{ Form::text('company_fax') }}
+            {{ Form::label('Company Fax', 'Company Fax') }}
+            {{ Form::text('Company Fax') }}
            
         </li>
 
          <li>
-            {{ Form::label('company_address', 'Company Address') }}
-            {{ Form::text('company_address') }}
+            {{ Form::label('Company Address', 'Company Address') }}
+            {{ Form::text('Company Address') }}
            
         </li>
 
          <li>
-            {{ Form::label('company_email', 'Company Email') }}
-            {{ Form::text('company_email') }}
+            {{ Form::label('Company Email', 'Company Email') }}
+            {{ Form::text('Company Email') }}
            
         </li>
 

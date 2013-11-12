@@ -317,6 +317,12 @@ class AuthController extends BaseController {
 					->with('Bathrooms', Config::get('listconfig.Bathrooms')) 
 					->with('Expires', Config::get('listconfig.Expires'));
 			
-			}			
+			}	
+
+		public function getaddnewuser()
+
+	{
+	return View::make('auth.addnewuser');
+	}			
 }
 

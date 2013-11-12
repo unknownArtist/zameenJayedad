@@ -317,7 +317,81 @@ class AuthController extends BaseController {
 					->with('Bathrooms', Config::get('listconfig.Bathrooms')) 
 					->with('Expires', Config::get('listconfig.Expires'));
 			
-			}	
+			}
+		public function postprofolio()
+
+			{
+				$fields = array(
+		            'property_type'        => Input::get('Property_Type'),
+		            'home_type' 	       => Input::get('home_type'),
+		            'purpose' 		       => Input::get('Purpose'),
+		            'Construction_status'  => Input::get('Construction_Status'),
+		            'wanted' 			   => Input::get('Wanted_For'),
+		            'city' 			       => Input::get('city'),
+		            'location' 		       => Input::get('Location'),
+		            'w_title' 		       => Input::get('Wanted_Title'),
+		            'p_title' 		       => Input::get('Property_Title'),
+		            'Description'          => Input::get('Description'),
+		            'budget'               => Input::get('Budget'),
+		            'l_area'               => Input::get('Land_Area'),
+		            'unit'				   => Input::get('unit'),
+		            'bedroom'              => Input::get('Bedrooms'),
+		            'bathroom'             => Input::get('Bathrooms'),
+		            'expires'              => Input::get('Expires_After'),
+		            'contact_p'            => Input::get('Contact_Person'),
+		            'phone'                 => Input::get('Phone'),
+		            'cell'                 => Input::get('Cell'),
+		            'fax'                  => Input::get('Fax'),
+		            'email'				   => Input::get('E-mail'),
+		            'website'              => Input::get('Website'),
+		       
+	       		 	);
+   
+
+	       
+		        $rules = array(
+		            'property_type' => 'required',
+		            'home_type'     => 'required',
+		            'w_title' 	    => 'required'
+		           
+		        );
+		        $v = Validator::make($fields, $rules);
+			        if ($v->fails()) 
+			        {
+			        	return Redirect::to('profolio')->with('errors',$v);
+			        }
+
+			 		 	$Profolio = new Profolio();
+			            $Profolio->property_type       = $fields['property_type'];
+			            $Profolio->home_type           = $fields['home_type'];
+			            $Profolio->purpose             = $fields['purpose'];
+			            $Profolio->Construction_status = $fields['Construction_status'];
+			            $Profolio->wanted              = $fields['wanted'];
+			            $Profolio->city                = $fields['city'];
+			            $Profolio->location            = $fields['location'];
+			            $Profolio->w_title             = $fields['w_title'];
+			            $Profolio->p_title             = $fields['p_title'];
+			            $Profolio->Description         = $fields['Description'];
+			            $Profolio->budget              = $fields['budget'];
+			            $Profolio->l_area              = $fields['l_area'];
+			            $Profolio->unit                = $fields['unit'];
+			            $Profolio->bedroom             = $fields['bedroom'];
+			            $Profolio->bathroom            = $fields['bathroom'];
+			            $Profolio->expires             = $fields['expires'];
+			            $Profolio->contact_p           = $fields['contact_p'];
+			            $Profolio->phone               = $fields['phone'];
+			            $Profolio->cell                = $fields['cell'];
+			            $Profolio->fax                 = $fields['fax'];
+			            $Profolio->email               = $fields['email'];
+			            $Profolio->website             = $fields['website'];
+			            $Profolio->save();
+
+			        return Redirect::to('profolio')->with('errors','successfully Added');
+
+
+			}
+
+
 
 		public function getaddnewuser()
 

@@ -12,6 +12,7 @@
 */
 /*------------------Authentication Routes---------------------------*/
     Route::get('addnewuser',array('uses'=>'AuthController@getaddnewuser'));
+    Route::post('profolio',array('uses'=>'AuthController@postprofolio'));
     Route::get('profolio',array('uses'=>'AuthController@getprofolio'));
 	Route::post('changepass',array('uses'=>'AuthController@postchangepass'));
 	Route::get('changepass',array('uses'=>'AuthController@getchangepass'));

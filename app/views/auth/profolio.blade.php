@@ -20,8 +20,8 @@
         </li>
         
         <li>
-            {{ Form::label('Type_of_Homes', 'Type of Homes') }}
-            {{ Form::select('Type_of_Homes', $Type_of_Homes  )}}
+            {{ Form::label('home_type', 'Type of Homes') }}
+            {{ Form::select('home_type', $Type_of_Homes  )}}
         </li>
 
         <li>
@@ -47,10 +47,7 @@
             {{ Form::select('city' , $cities )}}
         </li>
 
-        <li>
-            {{ Form::label('Please Select Location', 'Please Select Location') }}
-            {{ Form::text(' Please Select Location') }} <br><br>OR
-        </li>
+        
 
 
         <li>
@@ -59,14 +56,13 @@
         </li>
          <h2>Wanted Details</h2>
         <li>
-            {{ Form::label('Wanted Title', 'Wanted Title') }}
-            {{ Form::text('Wanted Title') }}
+            {{ Form::label('Wanted_Title', 'Wanted Title') }}
+            {{ Form::text('Wanted_Title') }}
            
         </li>
-
         <li>
-            {{ Form::label('Property Title Urdu', 'Property Title Urdu') }}
-            {{ Form::text('Property Title Urdu') }}
+            {{ Form::label('Property_Title ', 'Property Title ') }}
+            {{ Form::text('Property_Title') }}
            
         </li>
        
@@ -77,17 +73,12 @@
         </li>
 
         <li>
-            {{ Form::label('Description_urdu', 'Description urdu') }}
-            {{Form::textarea('Description_urdu')}}
-
-        </li>
-        <li>
             {{ Form::label('Budget', 'Budget: (PKR)') }}
             {{ Form::text('Budget') }}
         </li>
         <li>
-            {{ Form::label('Land Area', 'Land Area') }}
-            {{ Form::text('Land Area') }}
+            {{ Form::label('Land_Area', 'Land Area') }}
+            {{ Form::text('Land_Area') }}
         </li>
         <li>
             {{ Form::label('unit', 'Unit') }}
@@ -105,13 +96,13 @@
         </li>
 
          <li>
-            {{ Form::label('Expires After', 'Expires After') }}
-            {{ Form::select('Expires After', $Expires ) }}
+            {{ Form::label('Expires_After', 'Expires After') }}
+            {{ Form::select('Expires_After', $Expires ) }}
         </li>
         <h2>Contact Details</h2>
         <li>
-            {{ Form::label('Contact Person', 'Contact Person') }}
-            {{ Form::text('Contact Person') }}
+            {{ Form::label('Contact_Person', 'Contact Person') }}
+            {{ Form::text('Contact_Person') }}
         </li>   
         
 

@@ -8,7 +8,7 @@
 <div id="wrapper">
 <div id="form-wrapper">
 
-{{ Form::open(array('url' => 'user/register')) }}
+{{ Form::open(array('url' => 'addnewuser')) }}
 
  <h1>Registration</h1>
     <ul>
@@ -62,13 +62,13 @@
         </li>   
         <li>
             {{ Form::label('country', 'Country') }}
-            {{ Form::select('country', $countries)}}
+            {{ Form::select('country')}}
             
         </li>
 
         <li>
             {{ Form::label('roles', 'User Roles') }}
-            {{Form::select('roles', $roles);}}
+            {{Form::select('roles')}}
             
         </li>
 
@@ -83,7 +83,7 @@
         <h3>Agency Information</h3>
         <li>
         {{ Form::label('cities', 'Select Cities You Deal In*') }}
-        {{Form::select('cities', $cities);}}
+        {{Form::select('cities')}}
         </li>
         
         <li>

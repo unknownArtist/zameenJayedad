@@ -569,16 +569,32 @@ a.hiddenanchor{
 #form-wrapper select{
 	width:498px;
 	height: 28px;
+	outline: none;
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing : content-box;
+	box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
 
 #form-wrapper textarea{
 	width: 457px;
-	height: 79px;}
+	height: 79px;
+	outline: none;
+}
 .btn{
 	width: 200px !important;
 	cursor: pointer;
 	background: #50b1a8;
-	
 	margin-left: 136px;
 	font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
 	color: #fff;
@@ -617,34 +633,37 @@ input {
   outline: none;
 }
 
+#form-wrapper input[type="checkbox"]{
+	width:19px;
+}
+
 /* all the input except submit and checkbox */
-#form-wrapper input,textarea:not([type="checkbox"]){
+#form-wrapper input,textarea{
 	width: 92%;
 	margin-top: 4px;
 	padding: 10px 18px 10px 18px;	
 	border: 1px solid rgb(178, 178, 178);
-	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;
-	  -moz-box-sizing : content-box;
-	       box-sizing : content-box;
+	-moz-box-sizing : content-box;
+	box-sizing : content-box;
 	-webkit-border-radius: 3px;
-	   -moz-border-radius: 3px;
-	        border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
 	-webkit-transition: all 0.2s linear;
-	   -moz-transition: all 0.2s linear;
-	     -o-transition: all 0.2s linear;
-	        transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
-#form-wrapper input:not([type="checkbox"]):active,
-#form-wrapper input:not([type="checkbox"]):focus{
+#form-wrapper input:not:active,
+#form-wrapper input:not:focus{
 	border: 1px solid rgba(91, 90, 90, 0.7);
 	background: rgba(238, 236, 240, 0.2);	
 	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
-	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
-	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+	-moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+	box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
 } 
 
 /** the magic icon trick ! **/
@@ -676,16 +695,16 @@ input {
 	-webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
 	        0px 0px 0px 3px rgb(254, 254, 254),
 	        0px 5px 3px 3px rgb(210, 210, 210);
-	   -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+	-moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
 	        0px 0px 0px 3px rgb(254, 254, 254),
 	        0px 5px 3px 3px rgb(210, 210, 210);
 	        box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
 	        0px 0px 0px 3px rgb(254, 254, 254),
 	        0px 5px 3px 3px rgb(210, 210, 210);
 	-webkit-transition: all 0.2s linear;
-	   -moz-transition: all 0.2s linear;
-	     -o-transition: all 0.2s linear;
-	        transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
 #form-wrapper p.button input:hover{
 	background: rgb(74, 179, 198);

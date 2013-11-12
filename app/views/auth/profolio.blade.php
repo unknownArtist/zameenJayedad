@@ -145,6 +145,12 @@
 
         </li>
 
+           <li>
+            {{ Form::submit('Submit', array('class' => 'btn')) }}
+        </li>
+        
+    </ul>
+
 </div>
 {{ Form::close() }}
 

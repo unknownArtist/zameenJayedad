@@ -63,7 +63,10 @@
         <li>
             {{ Form::label('Property_Title ', 'Property Title ') }}
             {{ Form::text('Property_Title') }}
-           
+
+            {{ Form::label('Property Title ', 'Property Title ') }}
+            {{ Form::text('Property Title ') }}
+
         </li>
        
         <li>

@@ -10,18 +10,9 @@
 
 {{ Form::open(array('url' => 'addnewuser')) }}
 
- <h1>Registration</h1>
+ <h1>Agency Staff </h1>
     <ul>
-        <li>
-            {{ Form::label('first_name', 'First Name') }}
-            {{ Form::text('first_name' )}}
-        </li>
-
-        <li>
-            {{ Form::label('last_name', 'Last Name') }}
-            {{ Form::text('last_name') }}
-        </li>
-
+     <h2>User Details</h2>
         <li>
             {{ Form::label('email', 'Email') }}
             {{ Form::text('email') }}
@@ -37,6 +28,11 @@
             {{ Form::label('password', 'Confirm Password') }}
             {{ Form::password('password') }}
 
+        </li>
+
+        <li>
+            {{ Form::label('name', 'Name') }}
+            {{ Form::text('name' )}}
         </li>
        
         <li>
@@ -62,81 +58,25 @@
         </li>   
         <li>
             {{ Form::label('country', 'Country') }}
-            {{ Form::select('country')}}
-            
-        </li>
+            {{ Form::select('country', $countries);}}
+        <li>
 
         <li>
-            {{ Form::label('roles', 'User Roles') }}
-            {{Form::select('roles')}}
-            
+            {{ Form::label('address', 'Address') }}
+            {{ Form::text('address') }}
         </li>
-
+         <h2>Assign Listing Quota</h2>
         <li>
-            {{ Form::label('agent', 'Are you an Agent?') }}
-            {{Form::checkbox('agent')}}
-            
-        </li>
-
-        <div class="agent">
-
-        <h3>Agency Information</h3>
-        <li>
-        {{ Form::label('cities', 'Select Cities You Deal In*') }}
-        {{Form::select('cities')}}
-        </li>
-        
-        <li>
-            {{ Form::label('agency', 'Agency Name*') }}
-            {{Form::text('agency')}}
-            
-        </li>
-
-        
-
-        
-        <li>
-            {{ Form::label('services', 'Description of Servicess*') }}
-            {{Form::textarea('agency')}}
-
-        </li>
-
-        <h3>Company Phone</h3>
-        
-         <li>
-            {{ Form::label('Company Phone ', 'Company Phone') }}
-            {{ Form::text('Company Phone ') }}
-           
-        </li>
+            {{ Form::label('listing_quota', 'Listing Quota') }}
+            {{ Form::text('listing_quota') }}
+        </li> 
 
          <li>
-            {{ Form::label('Company Mobile', 'Company Mobile') }}
-            {{ Form::text('Company Mobile') }}
-           
-        </li>
+            {{ Form::label('hot_quota', 'Hot Quota') }}
+            {{ Form::text('hot_quota') }}
+        </li>  
 
-         <li>
-            {{ Form::label('Company Fax', 'Company Fax') }}
-            {{ Form::text('Company Fax') }}
-           
-        </li>
-
-         <li>
-            {{ Form::label('Company Address', 'Company Address') }}
-            {{ Form::text('Company Address') }}
-           
-        </li>
-
-         <li>
-            {{ Form::label('Company Email', 'Company Email') }}
-            {{ Form::text('Company Email') }}
-           
-        </li>
-
-    </div><!--agent ends-->
- 
-        <li>
-            {{ Form::submit('Register', array('class' => 'btn')) }}
+            {{ Form::submit('Create User', array('class' => 'btn')) }}
         </li>
         
     </ul>

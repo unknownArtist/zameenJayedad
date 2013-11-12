@@ -538,6 +538,7 @@ a.hiddenanchor{
 	position: relative;
 	top: 21px;
 	color: #50b1a8;
+	font-weight: bold;
 }
 
 #form-wrapper p{
@@ -551,6 +552,8 @@ a.hiddenanchor{
 	position: relative;
 	padding: 27px 0 10px 0;
 }
+
+
 
 #form-wrapper ul li{
 	list-style-type: none;
@@ -615,6 +618,10 @@ a.hiddenanchor{
 	transition: all 0.2s linear;
 }
 
+.lab{
+	color: #50b1a8 !important;
+}
+
 
 
 
@@ -633,8 +640,10 @@ input {
   outline: none;
 }
 
-#form-wrapper input[type="checkbox"]{
-	width:19px;
+#form-wrapper input[type="checkbox"], #form-wrapper input[type="radio"]{
+	width:auto;
+	border:none;
+	box-shadow: none;
 }
 
 /* all the input except submit and checkbox */
@@ -867,4 +876,6 @@ p.change_link{
 	margin:auto 0;
 
 }
+
+
 

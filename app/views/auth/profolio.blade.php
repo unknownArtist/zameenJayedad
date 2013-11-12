@@ -65,8 +65,8 @@
         </li>
 
         <li>
-            {{ Form::label('Property Title Urdu', 'Property Title Urdu') }}
-            {{ Form::text('Property Title Urdu') }}
+            {{ Form::label('Property Title ', 'Property Title ') }}
+            {{ Form::text('Property Title ') }}
            
         </li>
        
@@ -76,11 +76,7 @@
 
         </li>
 
-        <li>
-            {{ Form::label('Description_urdu', 'Description urdu') }}
-            {{Form::textarea('Description_urdu')}}
 
-        </li>
         <li>
             {{ Form::label('Budget', 'Budget: (PKR)') }}
             {{ Form::text('Budget') }}

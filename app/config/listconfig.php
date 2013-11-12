@@ -4,7 +4,7 @@ return array(
 
 
 	'countries' => array(
-                         
+                        'select'=>'Please Select',
                         'AF'=>'Afghanistan',
                         'AL'=>'Albania',
                         'DZ'=>'Algeria',
@@ -462,4 +462,79 @@ return array(
                         '365'=>'365',
 
                 ),
+        'alert' => array(
+                        'Please select'=>'Please select',
+                        'ASAP'=>'ASAP',
+                        'Daily'=>'Daily',
+                        'Weekly'=>'Weekly',
+                        'Monthly'=>'Monthly',
+                ),
+        'price' => array(
+                        'Please select'=>'Please select',
+                        'any'=>'Any Price',
+                        'under'=>'Under 200,000',
+                        '20-50'=>'200,000 to 500,000',
+                        '50-75'=>'500,000 to 750,000',
+                        '75-10'=>'750,000 to 1,000,000',
+                        '100-200'=>'1,000,000 to 2,000,000',
+                        '200-500'=>'2,000,000 to 5,000,000',
+                        'over'=>'Over 5,000,000',
+                ),
+        
+        'beds' => array(
+                        'Please select'=>'Please select',
+                        'any'=>'Any bed',
+                        'studio'=>'studio',
+                        '1'=>'1',
+                        '2'=>'2',
+                        '3'=>'3',
+                        '4'=>'4',
+                        '5'=>'5',
+                        '6'=>'6',
+                ),
+        'area' => array(
+                        'Please select'=>'Please select',
+                        'any'=>'Any Coverd Area',
+                        'below'=>'Below 1 Marla',
+                        '1'=>'1 to 5 Marla',
+                        '5'=>'5 to 10 Marla',
+                        '10'=>'10 to 15 Marla',
+                        '1-2'=>'1 to 2 kanal',
+                        '2-3'=>'2 to 3 kanal',
+                        '3-4'=>'3 to 4 kanal',
+                        '4-5'=>'4 to 5 kannal',
+                        'over'=>'Over 5 Kanal',
+                ),
+        
+        'baths' => array(
+                        'Please select'=>'Please select',
+                        '1'=>'1',
+                        '2'=>'2',
+                        '3'=>'3',
+                        '4'=>'4',
+                        '5'=>'5',
+                        '6'=>'6',
+                ),
+
+        'Finance' => array(
+                        'Please select'=>'Please select',
+                        'y'=>'Yes',
+                        'n'=>'No',
+                        'ns'=>'Not Specified',
+                ),
+
+         'Occupancy' => array(
+                        'Please select'=>'Please select',
+                        'occupied'=>'Occupied',
+                        'vacant'=>'Vacant',
+                        'ns'=>'Not Specified',
+                ),
+
+         'Ownership' => array(
+                        'Please select'=>'Please select',
+                        'f_hold'=>'Free Hold',
+                        'l_hold'=>'Lease Hold',
+                        'ns'=>'Not Specified',
+                ),
+
 	);

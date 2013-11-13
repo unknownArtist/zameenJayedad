@@ -1,7 +1,4 @@
-#wrapper{
-	width:960px;
-	margin:0 auto;
-}
+
 
 body
 {  
@@ -13,16 +10,41 @@ body
     filter: none;
 }
 
+#wrapper{
+	width:947px;
+	margin:0 auto;
+}
+
+#header
+{
+	width: 100%;
+	float: left;
+}
+
 
 .logo{
 	float:left;
-	padding-right: 101px;
-	padding-left: 9px;
+	width: 168px;
+	height: 104px;
 	padding-top: 10px;
 }
 
-.ban{
-	float:left;
+.contact{
+	float: right;
+	width: 200px;
+	margin-top: 11px;
+
+}
+
+.contact a{
+	text-decoration: none;
+	color:#50b1a8;
+}
+
+.contact p{
+	color:#50b1a8;
+	font-weight: bolder;
+
 }
 
 .log{
@@ -37,28 +59,11 @@ body
 
 
 
-.contact{
-	float: right;
-	width:200px;
-	height: 47px;
-	margin-right: -190px;
-    padding:23px 0 0 0;
-
-}
-
-.contact a{
-	text-decoration: none;
-	color:#50b1a8;
-}
 
 
 
-.contact p{
-	color:#50b1a8;
-	font-weight: bolder;
-	margin: 0;
 
-}
+
 
 #search{
 	background-image: url(../images/search_background.png);
@@ -429,7 +434,6 @@ body
 	float:left;
 	clear: both;
 	width:100%;
-	margin-top:100px;
 	text-align: justify;
 	background-color: #50b1a8;
 	color:#fff;
@@ -478,8 +482,7 @@ a.hiddenanchor{
 	right: 0px;
 	margin: 0px auto;	
 	width: 500px;
-	position: relative;
-	top:18px;
+	
 
 }
 /**** Styling the form elements **/
@@ -506,8 +509,7 @@ a.hiddenanchor{
 	padding-bottom: 30px;
 	padding-left: 48px;
 	margin-top: 0;
-	position: relative;
-	top: 231px;
+	
 }
 /** For the moment only webkit supports the background-clip:text; */
 #form-wrapper h1{
@@ -535,8 +537,7 @@ a.hiddenanchor{
 }
 
 #form-wrapper h2{
-	position: relative;
-	top: 21px;
+	
 	color: #50b1a8;
 	font-weight: bold;
 }
@@ -549,7 +550,7 @@ a.hiddenanchor{
 }
 #form-wrapper label{
 	color: rgb(64, 92, 96);
-	position: relative;
+	
 	padding: 27px 0 10px 0;
 }
 
@@ -565,8 +566,7 @@ a.hiddenanchor{
 	-webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
 	-moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
 	padding: 18px;
-	position: relative;
-	top: 88px;
+	
 }
 
 #form-wrapper select{
@@ -876,6 +876,5 @@ p.change_link{
 	margin:auto 0;
 
 }
-
 
 

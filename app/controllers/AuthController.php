@@ -467,6 +467,7 @@ class AuthController extends BaseController {
 					
 	}
 
+
 		public function postemailalert()
 
 	{
@@ -540,6 +541,15 @@ class AuthController extends BaseController {
 
 			            return Redirect::to('emailalert')->with('errors','successfully Added');        		
 	}	
+
+
+		public function getreport()
+
+	{
+					return View::make('auth.report');
+
+	}						
+
 
 
 }

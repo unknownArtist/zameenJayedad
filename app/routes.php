@@ -11,7 +11,9 @@
 |
 */
 /*------------------Authentication Routes---------------------------*/
+	Route::post('emailalert',array('uses'=>'AuthController@postemailalert'));
     Route::get('emailalert',array('uses'=>'AuthController@getemailalert'));
+    Route::post('addnewuser',array('uses'=>'AuthController@postaddnewuser'));
     Route::get('addnewuser',array('uses'=>'AuthController@getaddnewuser'));
     Route::post('profolio',array('uses'=>'AuthController@postprofolio'));
     Route::get('profolio',array('uses'=>'AuthController@getprofolio'));

@@ -415,7 +415,15 @@ class AuthController extends BaseController {
 					
 				
 					
-	}		
+	}
+
+
+		public function getreport()
+
+	{
+					return View::make('auth.report');
+
+	}						
 
 
 }

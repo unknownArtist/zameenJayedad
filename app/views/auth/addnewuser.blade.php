@@ -61,10 +61,6 @@
             {{ Form::select('country', $countries);}}
         <li>
 
-        <li>
-            {{ Form::label('address', 'Address') }}
-            {{ Form::text('address') }}
-        </li>
          <h2>Assign Listing Quota</h2>
         <li>
             {{ Form::label('listing_quota', 'Listing Quota') }}

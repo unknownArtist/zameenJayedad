@@ -19,68 +19,67 @@
             {{ Form::select('receive_alert_on', $alert)}}
         </li>
         
-        
         <div id="check"> 
          <li>
             {{ Form::label('Property_Type', 'Property Type:', array('class' => 'lab')) }}
         </li>   
          <li>{{ Form::label('houses', 'Houses') }}
-            {{ Form::checkbox('houses')}}
+            {{ Form::checkbox('houses', 'houses')}}
         </li>   
         <li>  {{ Form::label('flats', 'Flats') }}
-            {{ Form::checkbox('flats')}}
+            {{ Form::checkbox('flats', 'flats')}}
         </li>
 
         <li>  {{ Form::label('upper_p', 'Upper Portions') }}
-            {{ Form::checkbox('upper_p')}}
+            {{ Form::checkbox('upper_p', 'upper_p')}}
         </li>
 
         <li>  {{ Form::label('lower_p', 'Lower Portions') }}
-            {{ Form::checkbox('lower_p')}}
+            {{ Form::checkbox('lower_p', 'lower_p')}}
         </li>
 
         <li>  {{ Form::label('f_house', 'Farm Houses') }}
-            {{ Form::checkbox('f_house')}}
+            {{ Form::checkbox('f_house', 'f_house')}}
         </li>
 
         <li>  {{ Form::label('rooms', 'rooms') }}
-            {{ Form::checkbox('rooms')}}
+            {{ Form::checkbox('rooms', 'rooms')}}
         </li>
 
         <li>  {{ Form::label('residential', 'Residential') }}
-            {{ Form::checkbox('residential')}}
+            {{ Form::checkbox('residential', 'residential')}}
         </li>
 
         <li>  {{ Form::label('agricultural_land', 'Agricultural Land') }}
-            {{ Form::checkbox('agricultural_land')}}
+            {{ Form::checkbox('agricultural_land', 'agricultural_land')}}
         </li>
 
         <li>  {{ Form::label(' commercial ', ' Commercial') }}
-            {{ Form::checkbox(' commercial ')}}
+            {{ Form::checkbox(' commercial ', 'commercial')}}
         </li>
 
         <li>  {{ Form::label('offices', 'Offices') }}
-            {{ Form::checkbox('offices')}}
+            {{ Form::checkbox('offices', 'offices')}}
         </li>
 
         <li>  {{ Form::label('shops', 'Shops') }}
-            {{ Form::checkbox('shops')}}
+            {{ Form::checkbox('shops', 'shops')}}
         </li>
 
         <li>  {{ Form::label('warehouses', 'Warehouses') }}
-            {{ Form::checkbox('warehouses')}}
+            {{ Form::checkbox('warehouses', 'warehouses')}}
         </li>
 
         <li>  {{ Form::label('factories', 'Factories') }}
-            {{ Form::checkbox('factories')}}
+            {{ Form::checkbox('factories', 'factories')}}
         </li>
 
         <li>  {{ Form::label('buildings', 'Buildings') }}
-            {{ Form::checkbox('buildings')}}
+            {{ Form::checkbox('buildings', 'buildings')}}
         </li>
 
         <li>  {{ Form::label('others', 'Others') }}
-            {{ Form::checkbox('others')}}
+            {{ Form::checkbox('others', 'others')}}
         </li>
 
         </div>

@@ -472,7 +472,7 @@ class AuthController extends BaseController {
 
 	{
 			$fields = array(
-			            'receive_alert_on'    => Input::get('receive_alert_on'),
+			            'receive_alert'    => Input::get('receive_alert_on'),
 			            'Property_Type' 	  => Input::get('houses'),
 			            						 Input::get('flats'),
 			            						 Input::get('upper_p'),
@@ -501,8 +501,9 @@ class AuthController extends BaseController {
 			            'occupanc_status'     => Input::get('occupanc_status'),
 			            'ownership_status'    => Input::get('ownership_status')
 			            );
+            
 			$rules = array(
-		            'receive_alert_on'        => 'required',
+		            'receive_alert'        => 'required',
 		            'Property_Type'           => 'required',
 		            'purpose' 	              => 'required',
 		            'beds'                    => 'required',
@@ -516,16 +517,14 @@ class AuthController extends BaseController {
 		            'ownership_status'        => 'required',
 		           
 		        );
-			print_r($fields);
-			die();
-		        
+
 		    $v = Validator::make($fields, $rules);
 			        if ($v->fails()) 
 			        {
 			        	return Redirect::to('emailalert')->with('errors',$v);
 			        }
-						$Emails = new Agency();
-			            $Emails->receive_alert_on      = $fields['receive_alert_on'];
+						$Emails = new Emails();
+			            $Emails->receive_alert      = $fields['receive_alert'];
 			            $Emails->Property_Type         = $fields['Property_Type'];
 			            $Emails->purpose               = $fields['purpose'];
 			            $Emails->beds                  = $fields['beds'];

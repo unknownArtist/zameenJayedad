@@ -14,7 +14,7 @@ class EmailAlert extends Migration {
 		Schema::create('email_alert', function($table) {
             $table->increments('id');
             $table->integer('user_id');
-			$table->string('receive_alert_on');
+			$table->string('receive_alert');
 			$table->string('Property_Type');
             $table->string('purpose');
 			$table->integer('price');

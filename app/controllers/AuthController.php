@@ -110,12 +110,12 @@ class AuthController extends BaseController {
        return Redirect::to('login')->with('errors','please check your mail for activation');
 
 	}
-	public function getlogin()
+	public function getLogin()
 	{
 		return View::make('auth.login');
 	}
 
-	public function postlogin()
+	public function postLogin()
 	{
 		try
 		{
@@ -198,13 +198,13 @@ class AuthController extends BaseController {
 		
 	}
 
-	public function getforget()
+	public function getForget()
 
 	{
 	return View::make('auth.forget');
 	}	
 
-	public function postforget()
+	public function postForget()
 
 	{
 		
@@ -233,13 +233,13 @@ class AuthController extends BaseController {
  
 	}
 
-	public function getnewpassword()
+	public function getNewPassword()
 
 	{
 	return View::make('auth.newpassword');
 	}	
 
-	public function postnewpassword()
+	public function postNewPassword()
 
 	{
 		$user = Sentry::findUserByLogin(Input::get('email'));
@@ -274,13 +274,13 @@ class AuthController extends BaseController {
 		}
 	}
 
-	public function getchangepass()
+	public function getChangePass()
 
 	{
 	return View::make('auth.changepass');
 	}
 
-	public function postchangepass()
+	public function postChangePass()
 	{
 		 $user = Sentry::findUserByLogin(Input::get('email'));
 			$userid= $user->id;
@@ -301,7 +301,7 @@ class AuthController extends BaseController {
 								
 
 }
-		public function getprofolio()
+		public function getProfolio()
 
 			{
 					return View::make('auth.profolio')
@@ -318,7 +318,7 @@ class AuthController extends BaseController {
 					->with('Expires', Config::get('listconfig.Expires'));
 			
 			}
-		public function postprofolio()
+		public function postProfolio()
 
 			{
 				$fields = array(
@@ -393,13 +393,13 @@ class AuthController extends BaseController {
 
 
 
-		public function getaddnewuser()
+		public function getAddNewuser()
 
 	{
 					return View::make('auth.addnewuser')
 					->with('countries', Config::get('listconfig.countries'));
 	}	
-		public function postaddnewuser()
+		public function postAddnewUser()
 
 	{
 			$fields = array(
@@ -450,7 +450,7 @@ class AuthController extends BaseController {
 
 			            return Redirect::to('addnewuser')->with('errors','successfully Added');        		
 	}
-		public function getemailalert()
+		public function getEmailAlert()
 
 	{
 					return View::make('auth.emailalert')
@@ -468,7 +468,7 @@ class AuthController extends BaseController {
 	}
 
 
-		public function postemailalert()
+		public function postEmailAlert()
 
 	{
 			$fields = array(
@@ -542,7 +542,7 @@ class AuthController extends BaseController {
 	}	
 
 
-		public function getreport()
+		public function getReport()
 
 	{
 					return View::make('auth.report');

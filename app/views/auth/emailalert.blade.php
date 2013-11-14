@@ -19,7 +19,7 @@
             {{ Form::select('receive_alert_on', $alert)}}
         </li>
         
-        <div id="check"> 
+        <div class="check"> 
          <li>
             {{ Form::label('Property_Type', 'Property Type:', array('class' => 'lab')) }}
         </li>   
@@ -107,7 +107,7 @@
         </div>
 
         
-        <li>
+        <li class="price">
             {{ Form::label('price', 'Price' , array('class' => 'lab')) }}
             {{ Form::select('price', $price)}}
         </li>

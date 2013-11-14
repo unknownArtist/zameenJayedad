@@ -430,6 +430,117 @@ body
 
 }
 
+#report{
+	margin: 0 auto;
+	width: 611px;
+}
+
+#report h2{
+	padding-top: 57px;
+	color: green;
+}
+
+#report h3{
+	background-color: #50b1a8;
+	color: #fff;
+	height: 26px;
+	padding-top: 7px;
+	padding-left: 38px;
+	font-weight: lighter;
+	margin-top: 50px;
+	margin-bottom: 36px;
+}
+
+#report h4{
+   background-color: #50b1a8;
+color: #fff;
+height: 26px;
+padding-top: 7px;
+padding-left: 38px;
+font-weight: lighter;
+margin-top: 50px;
+margin-bottom: 36px;
+}
+
+#report ul{
+	list-style-type: none;
+	margin-bottom: 25px;
+
+}
+
+#report p{
+	margin-left: 41px;
+}
+
+#report span{
+	font-size: small;
+}
+
+.span-1{
+	clear:left;
+}
+
+.check li label{
+	width: 109px !important;
+}
+
+.check li{
+	width:135px;
+	float: left;
+	padding-left: 25px;
+}
+
+.check li:nth-child(2), #radio li:nth-child(2)
+{
+	clear: left;
+}
+
+#radio
+{
+	clear: both;
+}
+
+#radio li
+{
+	width: 120px;
+	float: left;
+	padding-left: 25px;
+}
+
+#radio li label
+{
+	width: 52px !important;
+}
+
+.price
+{
+	clear: left;
+}
+
+.box{
+	border: 2px solid #50b1a8;
+	padding-top: 61px;
+	padding-bottom: 85px;
+	margin: 0 !important;
+	text-align: center
+}
+
+
+.list{
+	width: 200px;
+	margin: 0;
+}
+
+.list li{
+	margin-bottom: 12px;
+}
+.clearfix
+{
+	clear: both;
+}
+
+
+
 #footer{
 	float:left;
 	clear: both;
@@ -438,6 +549,7 @@ body
 	background-color: #50b1a8;
 	color:#fff;
 	height:40px;
+	margin-top: 21px;
 
 }
 

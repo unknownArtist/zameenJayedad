@@ -11,10 +11,13 @@
 |
 */
 /*------------------Authentication Routes---------------------------*/
-
+/*------------------Email alerts routes-----------------------------*/
+	Route::get('user/email/alerts',array('uses'=>'EmailController@getIndex'));
+	Route::get('user/email/alert/create',array('uses'=>'AuthController@getEmailAlert'));
 	Route::post('emailalert',array('uses'=>'AuthController@postemailalert'));
+/*------------------End of email alert routes-----------------------*/
+	
     Route::get('report',array('uses'=>'AuthController@getReport'));
-	Route::get('emailalert',array('uses'=>'AuthController@getEmailAlert'));
     Route::post('addnewuser',array('uses'=>'AuthController@postAddNewUser'));
     Route::get('addnewuser',array('uses'=>'AuthController@getAddNewUser'));
     Route::post('profolio',array('uses'=>'AuthController@postProfolio'));

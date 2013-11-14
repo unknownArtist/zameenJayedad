@@ -4,7 +4,7 @@
 <div id="search">
 
    </div> 
- {{  Session::get('errors') }}
+ {{ Session::get('errors') }}
 <div id="wrapper">
 <div id="form-wrapper">
 

@@ -11,23 +11,26 @@
 |
 */
 /*------------------Authentication Routes---------------------------*/
-    Route::get('report',array('uses'=>'AuthController@getreport'));
-    Route::get('emailalert',array('uses'=>'AuthController@getemailalert'));
-    Route::get('addnewuser',array('uses'=>'AuthController@getaddnewuser'));
-    Route::post('profolio',array('uses'=>'AuthController@postprofolio'));
-    Route::get('profolio',array('uses'=>'AuthController@getprofolio'));
-	Route::post('changepass',array('uses'=>'AuthController@postchangepass'));
-	Route::get('changepass',array('uses'=>'AuthController@getchangepass'));
-	Route::post('newpassword',array('uses'=>'AuthController@postnewpassword'));
-	Route::get('newpassword',array('uses'=>'AuthController@getnewpassword'));
-	Route::get("user/resetCode",array('uses'=>'AuthController@postforget'));
-	Route::get('forget',array('uses'=>'AuthController@getforget'));
-	Route::post('forget',array('uses'=>'AuthController@postforget'));
+
+	Route::post('emailalert',array('uses'=>'AuthController@postemailalert'));
+    Route::get('report',array('uses'=>'AuthController@getReport'));
+	Route::get('emailalert',array('uses'=>'AuthController@getEmailAlert'));
+    Route::post('addnewuser',array('uses'=>'AuthController@postAddNewUser'));
+    Route::get('addnewuser',array('uses'=>'AuthController@getAddNewUser'));
+    Route::post('profolio',array('uses'=>'AuthController@postProfolio'));
+    Route::get('profolio',array('uses'=>'AuthController@getProfolio'));
+	Route::post('changepass',array('uses'=>'AuthController@postChangePass'));
+	Route::get('changepass',array('uses'=>'AuthController@getChangePass'));
+	Route::post('newpassword',array('uses'=>'AuthController@postNewPassword'));
+	Route::get('newpassword',array('uses'=>'AuthController@getNewPassword'));
+	Route::get("user/resetCode",array('uses'=>'AuthController@postForget'));
+	Route::get('forget',array('uses'=>'AuthController@getForget'));
+	Route::post('forget',array('uses'=>'AuthController@postForget'));
 	Route::get("user/activation",array('uses'=>'AuthController@getActivateUser'));
 	Route::get('user/register',array('uses'=>'AuthController@getRegister'));
 	Route::post('user/register',array('uses'=>'AuthController@postRegister'));
-	Route::get('login',array('uses'=>'AuthController@getlogin'));
-	Route::post('login',array('uses'=>'AuthController@postlogin'));
+	Route::get('login',array('uses'=>'AuthController@getLogin'));
+	Route::post('login',array('uses'=>'AuthController@postLogin'));
 	
 
 /*------------------End of Auth Routes------------------------------*/

@@ -110,12 +110,12 @@ class AuthController extends BaseController {
        return Redirect::to('login')->with('errors','please check your mail for activation');
 
 	}
-	public function getlogin()
+	public function getLogin()
 	{
 		return View::make('auth.login');
 	}
 
-	public function postlogin()
+	public function postLogin()
 	{
 		try
 		{
@@ -198,13 +198,13 @@ class AuthController extends BaseController {
 		
 	}
 
-	public function getforget()
+	public function getForget()
 
 	{
 	return View::make('auth.forget');
 	}	
 
-	public function postforget()
+	public function postForget()
 
 	{
 		
@@ -233,13 +233,13 @@ class AuthController extends BaseController {
  
 	}
 
-	public function getnewpassword()
+	public function getNewPassword()
 
 	{
 	return View::make('auth.newpassword');
 	}	
 
-	public function postnewpassword()
+	public function postNewPassword()
 
 	{
 		$user = Sentry::findUserByLogin(Input::get('email'));
@@ -274,13 +274,13 @@ class AuthController extends BaseController {
 		}
 	}
 
-	public function getchangepass()
+	public function getChangePass()
 
 	{
 	return View::make('auth.changepass');
 	}
 
-	public function postchangepass()
+	public function postChangePass()
 	{
 		 $user = Sentry::findUserByLogin(Input::get('email'));
 			$userid= $user->id;
@@ -301,7 +301,7 @@ class AuthController extends BaseController {
 								
 
 }
-		public function getprofolio()
+		public function getProfolio()
 
 			{
 					return View::make('auth.profolio')
@@ -318,7 +318,7 @@ class AuthController extends BaseController {
 					->with('Expires', Config::get('listconfig.Expires'));
 			
 			}
-		public function postprofolio()
+		public function postProfolio()
 
 			{
 				$fields = array(
@@ -343,7 +343,7 @@ class AuthController extends BaseController {
 		            'cell'                 => Input::get('Cell'),
 		            'fax'                  => Input::get('Fax'),
 		            'email'				   => Input::get('E-mail'),
-		            'website'              => Input::get('Website'),
+		            'website'              => Input::get('Website')
 		       
 	       		 	);
    
@@ -393,14 +393,64 @@ class AuthController extends BaseController {
 
 
 
-		public function getaddnewuser()
+		public function getAddNewuser()
 
 	{
 					return View::make('auth.addnewuser')
 					->with('countries', Config::get('listconfig.countries'));
 	}	
+		public function postAddnewUser()
 
-		public function getemailalert()
+	{
+			$fields = array(
+			            'email'          => Input::get('email'),
+			            'password' 	     => Input::get('password'),
+			            'name' 		     => Input::get('name'),
+			            'phone' 		 => Input::get('phone'),
+			            'cell' 			 => Input::get('cell'),
+			            'fax' 			 => Input::get('fax'),
+			            'address' 		 => Input::get('address'),
+			            'zip' 		     => Input::get('zip'),
+			            'country' 		 => Input::get('country'),
+			            'listing_quota'  => Input::get('listing_quota'),
+			            'hot_quota'      => Input::get('hot_quota')
+			            );
+			$rules = array(
+		            'email'         => 'required',
+		            'password'      => 'required|min:6',
+		            'name' 	        => 'required',
+		            'cell'          => 'required',
+		            'address'       => 'required',
+		            'country'       => 'required',
+		            'zip' 	        => 'required',
+		            'fax'           => 'required',
+		            'listing_quota' => 'required',
+		            'hot_quota'     => 'required'
+		           
+		        );
+		        
+		    $v = Validator::make($fields, $rules);
+			        if ($v->fails()) 
+			        {
+			        	return Redirect::to('addnewuser')->with('errors',$v);
+			        }
+						$Agency = new Agency();
+			            $Agency->email              = $fields['email'];
+			            $Agency->password           = $fields['password'];
+			            $Agency->name               = $fields['name'];
+			            $Agency->phone              = $fields['phone'];
+			            $Agency->cell               = $fields['cell'];
+			            $Agency->address            = $fields['address'];
+			            $Agency->country            = $fields['country'];
+			            $Agency->zip                = $fields['zip'];
+			            $Agency->fax                = $fields['fax'];
+			            $Agency->listing_quota      = $fields['listing_quota'];
+			            $Agency->hot_quota          = $fields['hot_quota'];
+			            $Agency->save();
+
+			            return Redirect::to('addnewuser')->with('errors','successfully Added');        		
+	}
+		public function getEmailAlert()
 
 	{
 					return View::make('auth.emailalert')
@@ -418,12 +468,87 @@ class AuthController extends BaseController {
 	}
 
 
-		public function getreport()
+		public function postEmailAlert()
+
+	{
+			$fields = array(
+			            'receive_alert'    => Input::get('receive_alert_on'),
+			            'Property_Type' 	  => Input::get('houses'),
+			            						 Input::get('flats'),
+			            						 Input::get('upper_p'),
+			            						 Input::get('lower_p'),
+			            						 Input::get('f_house'),
+			            						 Input::get('rooms'),
+			            						 Input::get('residential'),
+			            						 Input::get('agricultural_land'),
+			            						 Input::get('commercial'),
+			            						 Input::get('offices'),
+			            						 Input::get('shops'),
+			            						 Input::get('warehouses'),
+			            						 Input::get('factories'),
+			            						 Input::get('buildings'),
+			            						Input::get('others'),
+
+			            'purpose' 		      => Input::get('purpose'),
+			            'price' 		      => Input::get('price'),
+			            'beds' 			      => Input::get('beds'),
+			            'location' 			  => Input::get('location'),
+			            'keyword' 		      => Input::get('keyword'),
+			            'covered_area' 		  => Input::get('covered_area'),
+			            'baths' 		      => Input::get('baths'),
+			            'estate_agent'        => Input::get('estate_agent'),
+			            'finance_available'   => Input::get('finance_available'),
+			            'occupanc_status'     => Input::get('occupanc_status'),
+			            'ownership_status'    => Input::get('ownership_status')
+			            );
+            
+			$rules = array(
+		            'receive_alert'        => 'required',
+		            'Property_Type'           => 'required',
+		            'purpose' 	              => 'required',
+		            'beds'                    => 'required',
+		            'location'                => 'required',
+		            'keyword'                 => 'required',
+		            'covered_area' 	          => 'required',
+		            'baths'                   => 'required',
+		            'estate_agent'            => 'required',
+		            'finance_available'       => 'required',
+		            'occupanc_status'         => 'required',
+		            'ownership_status'        => 'required',
+		           
+		        );
+
+		    $v = Validator::make($fields, $rules);
+			        if ($v->fails()) 
+			        {
+			        	return Redirect::to('emailalert')->with('errors',$v);
+			        }
+						$Emails = new Emails();
+			            $Emails->receive_alert      = $fields['receive_alert'];
+			            $Emails->Property_Type         = $fields['Property_Type'];
+			            $Emails->purpose               = $fields['purpose'];
+			            $Emails->beds                  = $fields['beds'];
+			            $Emails->location              = $fields['location'];
+			            $Emails->keyword               = $fields['keyword'];
+			            $Emails->covered_area          = $fields['covered_area'];
+			            $Emails->baths                 = $fields['baths'];
+			            $Emails->estate_agent          = $fields['estate_agent'];
+			            $Emails->finance_available     = $fields['finance_available'];
+			            $Emails->occupanc_status       = $fields['occupanc_status'];
+			            $Emails->ownership_status      = $fields['ownership_status'];
+			            $Emails->save();
+
+			            return Redirect::to('emailalert')->with('errors','successfully Added');        		
+	}	
+
+
+		public function getReport()
 
 	{
 					return View::make('auth.report');
 
 	}						
+
 
 
 }

@@ -13,8 +13,8 @@
 /*------------------Authentication Routes---------------------------*/
 /*------------------Email alerts routes-----------------------------*/
 	Route::get('user/email/alerts',array('uses'=>'EmailController@getIndex'));
-	Route::get('user/email/alert/create',array('uses'=>'AuthController@getEmailAlert'));
-	Route::post('emailalert',array('uses'=>'AuthController@postemailalert'));
+	Route::get('user/email/alert/create',array('uses'=>'EmailController@getEmailAlert'));
+	Route::post('user/email/alert/emailalert',array('uses'=>'EmailController@postemailalert'));
 /*------------------End of email alert routes-----------------------*/
 	
     Route::get('report',array('uses'=>'AuthController@getReport'));

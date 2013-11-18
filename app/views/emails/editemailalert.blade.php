@@ -8,7 +8,7 @@
 <div id="wrapper">
 <div id="form-wrapper">
 
-{{ Form::open(array('url' => 'editemailalert')) }}
+{{ Form::open(array('url' => 'user/email/alert/{emailAlertId}/edit')) }}
 
  <h1> Create Email Alert </h1>
 

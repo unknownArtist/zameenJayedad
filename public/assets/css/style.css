@@ -59,12 +59,6 @@ body
 
 
 
-
-
-
-
-
-
 #search{
 	background-image: url(../images/search_background.png);
 	background-repeat: repeat;
@@ -223,7 +217,6 @@ body
 	color:#00a651;
 	text-decoration: ;
 	font-size: 14px;
-	letter-spacing: 1px;
 }
 
 

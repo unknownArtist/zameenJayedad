@@ -127,7 +127,7 @@ class AuthController extends BaseController {
 
 			$user = Sentry::authenticate($credentials, false);
 			if($user)
-			return Redirect::to('dashboard');
+			return Redirect::to('user/email/alert/create');
 			{
 				
 			 }
@@ -454,10 +454,9 @@ class AuthController extends BaseController {
 		
 
 
-		}
+	
 
-
-		public function getReport()
+public function getReport()
 
 	{
 					return View::make('auth.report');

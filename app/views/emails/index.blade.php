@@ -50,7 +50,7 @@
 
    	</ul>
 
-   	<ul>
+   	<ul >
    		<li> <a href="#">Edit</a> </li>
    		<li> <a href="#">Pause</a> </li>
    		<li> <a href="#"> Delete</a></li>

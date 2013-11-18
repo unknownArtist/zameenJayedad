@@ -13,4 +13,10 @@ class EmailController extends BaseController {
 	}
 
 
+	public function geteditemailalert()
+	{
+		return View::make('emails.editemailalert');
+	}
+
+
 }

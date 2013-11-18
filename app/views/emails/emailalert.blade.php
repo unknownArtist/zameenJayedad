@@ -8,6 +8,8 @@
 <div id="wrapper">
 <div id="form-wrapper">
 
+    {{ HTML::link('user/email/alerts','Manage Email ALerts') }}
+
 {{ Form::open(array('url' => 'user/email/alert/emailalert')) }}
 
  <h1> Create Email Alert </h1>

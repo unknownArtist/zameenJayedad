@@ -12,7 +12,7 @@
 */
 /*------------------Authentication Routes---------------------------*/
 /*------------------Email alerts routes-----------------------------*/
-    Route::get('user/email/alert/{emailAlertId}/edit',array('uses'=>'EmailController@geteditemailalert'));
+    Route::get('user/email/alert/(:num)',array('uses'=>'EmailController@geteditemailalert'));
 	Route::get('user/email/alerts',array('uses'=>'EmailController@getIndex'));
 	Route::get('user/email/alert/create',array('uses'=>'EmailController@getEmailAlert'));
 	Route::post('user/email/alert/emailalert',array('uses'=>'EmailController@postEmailAlert'));

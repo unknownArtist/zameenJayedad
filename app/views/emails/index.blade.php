@@ -1,6 +1,7 @@
 @extends('layouts.main')
 @section('content')
 </div>
+
 <div id="search">
 
    </div> 
@@ -10,13 +11,19 @@
 
  	<div id="alerts">
  		<div id="section">
+    
+     
  		
-       <p class="total">Total Alerts : 4</p>
+       <p class="total">Total Alerts : {{count($records)}}</p>
         <h3 class="alerts">Alerts Description</h3>
+        @foreach ($records as $record)  
         <div class="post-1">
-        	<h4 >Properties For Rent in 2 Locations</h4>
-        	<p>Price: PKR 50000 to 100000; Beds: 4;</p>
+        	<h4 >Properties For Rent in {{$record->location }} </h4>
+        	<p>Price:{{$record->price }}; Beds: {{$record->beds }};</p>
         </div>
+     
+        {{ HTML::link('user/email/alert/'.$record->id,'Edit') }}
+        @endforeach
         <div class="post-2">
         	<h4>Properties For Sale</h4>
         	<p>Estate Agents: AGP PAKISTAN;</p>
@@ -29,9 +36,10 @@
         <div class="post-2">
         <h4>Properties For Sale in Khyber Pakhtunkhwa, Abbottabad</h4>
         <p>Price: PKR 200000 to 500000; Area: 225 to 1125 Sq ft;Beds: 2; Baths: 1; Finance Available: yes; Occupancy Status: Occupied; Ownership Status: Freehold</p>
+          
         </div>
    </div>
-
+    
    <div class="control">
 
    	<h3>Controls</h3>

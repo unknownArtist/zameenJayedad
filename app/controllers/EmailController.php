@@ -9,7 +9,14 @@ class EmailController extends BaseController {
 	 */
 	public function getIndex()
 	{
-		return View::make('emails.index');
+		$user_id = Sentry::getUser()->id;
+
+		$records = DB::table('email_alert')->where('user_id', $user_id)->get();
+
+
+        return View::make('emails.index', compact('records'));
+
+		
 	}
 
 	public function getEmailAlert()
@@ -30,8 +37,9 @@ class EmailController extends BaseController {
 	}
 
 	public function postEmailAlert()
-
 	{
+		
+		
 			$fields = array(
 			            'receive_alert'    => Input::get('receive_alert_on'),
 			            'Property_Type' 	  => Input::get('houses'),
@@ -84,12 +92,12 @@ class EmailController extends BaseController {
 			        {
 			        	return Redirect::to('emailalert')->with('errors',$v);
 			        }
-			        $user_id=Sentry::getUser()->id;
-			        print_r($user_id);
-			        die();
+			        $user_id = Sentry::getUser()->id;
+			         
 			        
 						$Emails = new Emails();
-			            $Emails->receive_alert      = $fields['receive_alert'];
+						$Emails->user_id               = $user_id;
+			            $Emails->receive_alert         = $fields['receive_alert'];
 			            $Emails->Property_Type         = $fields['Property_Type'];
 			            $Emails->purpose               = $fields['purpose'];
 			            $Emails->beds                  = $fields['beds'];
@@ -103,12 +111,13 @@ class EmailController extends BaseController {
 			            $Emails->ownership_status      = $fields['ownership_status'];
 			            $Emails->save();
 
-			            return Redirect::to('emailalert')->with('errors','successfully Added');        		
+			            return Redirect::to('user/email/alert/create')->with('errors','successfully Added');        		
 	}	
 
 
 	public function geteditemailalert()
 	{
+		
 		return View::make('emails.editemailalert');
 	}
 

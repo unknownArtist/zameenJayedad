@@ -11,8 +11,12 @@
 |
 */
 /*------------------Authentication Routes---------------------------*/
+/*------------------Search routes-----------------------------*/
+   Route::get('user/email/search',array('uses'=>'SearchController@getIndex'));
+/*------------------End of Search routes-----------------------------*/
+
 /*------------------Email alerts routes-----------------------------*/
-    Route::get('user/email/alert/(:num)',array('uses'=>'EmailController@geteditemailalert'));
+    Route::get('/user/email/{id}/alert',array('uses'=>'EmailController@getEditEmailAlert'));
 	Route::get('user/email/alerts',array('uses'=>'EmailController@getIndex'));
 	Route::get('user/email/alert/create',array('uses'=>'EmailController@getEmailAlert'));
 	Route::post('user/email/alert/emailalert',array('uses'=>'EmailController@postEmailAlert'));

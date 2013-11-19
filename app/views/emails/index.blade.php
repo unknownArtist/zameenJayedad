@@ -22,7 +22,8 @@
         	<p>Price:{{$record->price }}; Beds: {{$record->beds }};</p>
         </div>
      
-        {{ HTML::link('user/email/alert/'.$record->id,'Edit') }}
+        {{ HTML::link('user/email/'.$record->id.'/alert/','Edit') }}
+        {{ HTML::link('user/email/'.$record->id.'/alert/','Delete') }}
         @endforeach
         <div class="post-2">
         	<h4>Properties For Sale</h4>

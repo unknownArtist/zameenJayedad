@@ -15,9 +15,9 @@ class EmailAlert extends Migration {
             $table->increments('id');
             $table->integer('user_id');
 			$table->string('receive_alert');
-			$table->string('Property_Type');
+			
             $table->string('purpose');
-			$table->integer('price');
+			$table->string('price');
 			$table->string('beds');
 			$table->string('location');
 			$table->string('keyword');

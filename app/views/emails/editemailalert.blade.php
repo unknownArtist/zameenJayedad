@@ -1,6 +1,7 @@
 @extends('layouts.main')
 @section('content')
 </div>
+
 <div id="search">
 
    </div> 
@@ -14,9 +15,10 @@
 
     <ul>
         <h2>Basic Alert Criteria</h2>
+        @foreach ($records as $record)
         <li>
             {{ Form::label('receive_alert_on', 'Receive alert on') }}
-            {{ Form::select('receive_alert_on', $alert)}}
+            {{ Form::select('receive_alert_on', $alert,$record->receive_alert )}}
         </li>
         
         <div class="check"> 
@@ -24,7 +26,7 @@
             {{ Form::label('Property_Type', 'Property Type:', array('class' => 'lab')) }}
         </li>   
          <li>{{ Form::label('houses', 'Houses') }}
-            {{ Form::checkbox('houses', 'houses')}}
+            {{ Form::checkbox('houses',$record->Property_Type )}}
         </li>   
         <li>  {{ Form::label('flats', 'Flats') }}
             {{ Form::checkbox('flats', 'flats')}}
@@ -106,64 +108,66 @@
 
         </div>
 
-        
+
         <li class="price">
             {{ Form::label('price', 'Price' , array('class' => 'lab')) }}
-            {{ Form::select('price', $price)}}
+            {{ Form::select('price',$price,$record->price)}}
         </li>
 
         <li>
             {{ Form::label('beds', 'Beds') }}
-            {{ Form::select('beds', $beds)}}
+            {{ Form::select('beds',$beds,$record->beds)}}
         </li>
 
         <h2>Location Preferences</h2>
 
         <li>
             {{ Form::label('location', 'Location' ) }}
-            {{ Form::text('location') }}
+            {{ Form::text('location', $record->location)}}
+       
         </li>
 
          <h2>Other Specifications</h2>
         <li>
             {{ Form::label('keyword', 'Keyword') }}
-            {{ Form::text('keyword') }}
+            {{ Form::text('keyword',$record->keyword) }}
            
         </li>
 
         <li>
             {{ Form::label('covered_area', 'Covered Area') }}
-            {{ Form::select('covered_area', $area) }}
+            {{ Form::select('covered_area',$area, $record->covered_area) }}
            
         </li>
        
         <li>
             {{ Form::label('baths', 'Baths') }}
-            {{Form::select('baths', $baths)}}
+            {{Form::select('baths',$baths,$record->baths )}}
 
         </li>
 
         <li>
             {{ Form::label('estate_agent', 'Estate Agent') }}
-            {{Form::text('estate_agent')}}
+            {{Form::text('estate_agent', $record->estate_agent)}}
 
         </li>
         <li>
             {{ Form::label('finance_available', 'Finance Available') }}
-            {{ Form::select('finance_available', $Finance)}}
+            {{ Form::select('finance_available',$Finance ,$record->finance_available)}}
         </li>
         <li>
             {{ Form::label('occupancy_status', 'Occupancy Status') }}
-            {{ Form::select('occupanc_status', $Occupancy) }}
+            {{ Form::select('occupanc_status',$Occupancy ,$record->occupanc_status) }}
         </li>
         <li>
             {{ Form::label('ownership_status', 'Ownership Status') }}
-            {{ Form::select('ownership_status', $Ownership) }}
+            {{ Form::select('ownership_status',$Ownership ,$record->ownership_status) }}
         </li>
 
         <li>
             {{ Form::submit('Add Alert', array('class' => 'btn')) }}
         </li>
+        @endforeach
         
     </ul>
 

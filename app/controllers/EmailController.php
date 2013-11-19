@@ -29,6 +29,8 @@ class EmailController extends BaseController {
 					
 	}
 
+
+
 	public function postEmailAlert()
 
 	{
@@ -109,7 +111,15 @@ class EmailController extends BaseController {
 
 	public function geteditemailalert()
 	{
-		return View::make('emails.editemailalert');
+					return View::make('emails.editemailalert')
+					->with('alert', Config::get('listconfig.alert'))
+					->with('price', Config::get('listconfig.price'))
+					->with('beds', Config::get('listconfig.beds'))
+					->with('area', Config::get('listconfig.area'))
+					->with('baths', Config::get('listconfig.baths'))
+					->with('Finance', Config::get('listconfig.Finance'))
+					->with('Occupancy', Config::get('listconfig.Occupancy'))
+					->with('Ownership', Config::get('listconfig.Ownership'));
 	}
 
 

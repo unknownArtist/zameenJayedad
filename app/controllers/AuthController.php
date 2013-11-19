@@ -461,7 +461,8 @@ public function getReport()
 	{
 					return View::make('auth.report');
 
-	}						
+	}	
+
 
 
 

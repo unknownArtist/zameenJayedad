@@ -10,13 +10,13 @@
  <div id="report">
  	<h2>Your performance in 30 days <span>(14 Oct, 2013 to 12 Nov, 2013)</span></h2>
  	<h3>Current Number of Listings</h3>
- 	<ul class="list">
+ 	<ul class="list-1">
  		<li>For Sale</li>
  		<li>To Rent</li>
  		<li>Total</li>
  	</ul>
 
- 	<ul class="list">
+ 	<ul class="list-1">
  		<li>0</li>
  		<li>0</li>
  		<li>0</li>
@@ -28,12 +28,12 @@
  	<h3>Traffic Report <span> (14 Oct, 2013 to 12 Nov, 2013)</span></h3>
 
 
- 	<ul class="list">
+ 	<ul class="list-1">
  		<li>Property Views</li>
  		<li>Property Visits</li>
  	</ul>
 
- 	<ul class="list">
+ 	<ul class="list-1">
  		<li>0</li>
  		<li>0</li>
  	</ul>
@@ -44,13 +44,13 @@
 
  	<h3 >Leads Report<span> (14 Oct, 2013 to 12 Nov, 2013)</span></h3>
 
- 	<ul class="list">
+ 	<ul class="list-1">
  		<li>Phone Views</li>
  		<li>Email Leads</li>
  		<li>Total Leads</li>
  	</ul>
 
- 	<ul class="list">
+ 	<ul class="list-1">
  		<li>0</li>
  		<li>0</li>
  		<li>0</li>

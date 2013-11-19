@@ -186,7 +186,7 @@ body
 
 .list{
 	float: left;
-	width: 463px;
+	width: 464px;
 	margin-top: 63px;
 	margin-left: 41px;
 
@@ -519,7 +519,7 @@ margin-bottom: 36px;
 }
 
 
-.list{
+.list-1{
 	width: 200px;
 	margin: 0;
 }
@@ -638,7 +638,7 @@ margin-bottom: 36px;
 	background-color: #50b1a8;
 	color:#fff;
 	height:40px;
-	margin-top: 21px;
+	margin-top: 93px;
 
 }
 
@@ -710,6 +710,8 @@ a.hiddenanchor{
 	padding-bottom: 30px;
 	padding-left: 48px;
 	margin-top: 0;
+	position: relative;
+	top: 27px;
 	
 }
 /** For the moment only webkit supports the background-clip:text; */

@@ -65,7 +65,7 @@ class EmailController extends BaseController {
 			            'occupanc_status'     => Input::get('occupanc_status'),
 			            'ownership_status'    => Input::get('ownership_status')
 			            );
-            
+           
 			$rules = array(
 		            'receive_alert'        => 'required',
 		            'purpose' 	             => 'required',
@@ -81,6 +81,7 @@ class EmailController extends BaseController {
 		            'ownership_status'        => 'required',
 		           
 		        );
+			
 			// $properyType = Input::get('Property_Type');
 			// foreach($properyType as $key=>$value)
 			// {
@@ -105,8 +106,7 @@ class EmailController extends BaseController {
 			         		                   							'finance_available'=>$fields['finance_available'],
 			         		                   							'occupanc_status'=>$fields['occupanc_status']
 			         		                   							));
-			         	print_r($id);
-			         	die();
+			         	
 	
 						// $Emails = new Emails();
 						// $Emails->user_id               = $user_id;

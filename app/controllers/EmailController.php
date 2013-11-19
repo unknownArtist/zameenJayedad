@@ -38,7 +38,8 @@ class EmailController extends BaseController {
 
 	public function postEmailAlert()
 	{
-			$properyType = Input::get('Property_Type');
+
+			// $properyType = Input::get('Property_Type');
 			// foreach($properyType as $key=>$value)
 			// {
 			// 	DB::table('emailAlert_property_type')->insert(
@@ -69,6 +70,7 @@ class EmailController extends BaseController {
 		            'receive_alert'        => 'required',
 		            'purpose' 	             => 'required',
 		            'beds'                    => 'required',
+		            'price'                   => 'required',
 		            'location'                => 'required',
 		            'keyword'                 => 'required',
 		            'covered_area' 	          => 'required',
@@ -87,7 +89,7 @@ class EmailController extends BaseController {
 		    $v = Validator::make($fields, $rules);
 			        if ($v->fails()) 
 			        {
-			        	return Redirect::to('user/email/alert/create')->with('errors',$v);
+			        	return Redirect::to('user/email/alert/create')->withErrors('errors',$v);
 			        }
 			        $user_id = Sentry::getUser()->id;
 			         	$id = DB::table('email_alert')->insertGetId(array('user_id'=>$user_id,
@@ -103,6 +105,8 @@ class EmailController extends BaseController {
 			         		                   							'finance_available'=>$fields['finance_available'],
 			         		                   							'occupanc_status'=>$fields['occupanc_status']
 			         		                   							));
+			         	print_r($id);
+			         	die();
 	
 						// $Emails = new Emails();
 						// $Emails->user_id               = $user_id;
@@ -120,7 +124,7 @@ class EmailController extends BaseController {
 			   //          $Emails->ownership_status      = $fields['ownership_status'];
 			   //          $Emails->save();
 
-			            return Redirect::to('user/email/alert/create')->with('errors','successfully Added');        		
+			            return Redirect::to('user/email/alert/create')->with('message','successfully Added');        		
 	}	
 
 

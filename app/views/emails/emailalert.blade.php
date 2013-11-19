@@ -69,7 +69,7 @@
         </li>
 
         <li>  {{ Form::label('warehouses', 'Warehouses') }}
-            {{ Form::checkbox('Property_Type[]')}}
+            {{ Form::checkbox('Property_Type[]','warehouses')}}
         </li>
 
         <li>  {{ Form::label('factories', 'Factories') }}

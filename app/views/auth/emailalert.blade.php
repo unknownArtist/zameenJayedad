@@ -8,7 +8,10 @@
 <div id="wrapper">
 <div id="form-wrapper">
 
+
 {{ Form::open(array('url' => 'user/email/alert/emailalert')) }}
+
+
 
  <h1> Create Email Alert </h1>
 
@@ -169,5 +172,7 @@
 
 </div>
 {{ Form::close() }}
+
+
 
 @stop

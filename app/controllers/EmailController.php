@@ -9,7 +9,14 @@ class EmailController extends BaseController {
 	 */
 	public function getIndex()
 	{
-		return View::make('emails.index');
+		$user_id =Sentry::getUser()->id;
+
+		$records = DB::table('email_alert')->where('user_id', $user_id)->get();
+
+
+        return View::make('emails.index', compact('records'));
+
+		
 	}
 
 	public function getEmailAlert()
@@ -32,26 +39,21 @@ class EmailController extends BaseController {
 
 
 	public function postEmailAlert()
-
 	{
+			$properyType = Input::get('Property_Type');
+			// foreach($properyType as $key=>$value)
+			// {
+			// 	DB::table('emailAlert_property_type')->insert(
+			// 		array(
+			// 			'email_alert_id'	=>   $id,
+			// 			'pt'	=> $value
+			// 			)
+			// 		);
+			// }
+			// echo $pt;
+			// die();
 			$fields = array(
 			            'receive_alert'    => Input::get('receive_alert_on'),
-			            'Property_Type' 	  => Input::get('houses'),
-			            						 Input::get('flats'),
-			            						 Input::get('upper_p'),
-			            						 Input::get('lower_p'),
-			            						 Input::get('f_house'),
-			            						 Input::get('rooms'),
-			            						 Input::get('residential'),
-			            						 Input::get('agricultural_land'),
-			            						 Input::get('commercial'),
-			            						 Input::get('offices'),
-			            						 Input::get('shops'),
-			            						 Input::get('warehouses'),
-			            						 Input::get('factories'),
-			            						 Input::get('buildings'),
-			            						Input::get('others'),
-
 			            'purpose' 		      => Input::get('purpose'),
 			            'price' 		      => Input::get('price'),
 			            'beds' 			      => Input::get('beds'),
@@ -67,8 +69,7 @@ class EmailController extends BaseController {
             
 			$rules = array(
 		            'receive_alert'        => 'required',
-		            'Property_Type'           => 'required',
-		            'purpose' 	              => 'required',
+		            'purpose' 	             => 'required',
 		            'beds'                    => 'required',
 		            'location'                => 'required',
 		            'keyword'                 => 'required',
@@ -80,41 +81,67 @@ class EmailController extends BaseController {
 		            'ownership_status'        => 'required',
 		           
 		        );
-
+			// $properyType = Input::get('Property_Type');
+			// foreach($properyType as $key=>$value)
+			// {
+			// 	echo $value."<br>"; 
+			// }
 		    $v = Validator::make($fields, $rules);
 			        if ($v->fails()) 
 			        {
-			        	return Redirect::to('emailalert')->with('errors',$v);
+			        	return Redirect::to('user/email/alert/create')->withErrors($v);
 			        }
-			        $user_id=Sentry::getUser()->id;
-			        print_r($user_id);
-			        die();
-			        
-						$Emails = new Emails();
-			            $Emails->receive_alert      = $fields['receive_alert'];
-			            $Emails->Property_Type         = $fields['Property_Type'];
-			            $Emails->purpose               = $fields['purpose'];
-			            $Emails->beds                  = $fields['beds'];
-			            $Emails->location              = $fields['location'];
-			            $Emails->keyword               = $fields['keyword'];
-			            $Emails->covered_area          = $fields['covered_area'];
-			            $Emails->baths                 = $fields['baths'];
-			            $Emails->estate_agent          = $fields['estate_agent'];
-			            $Emails->finance_available     = $fields['finance_available'];
-			            $Emails->occupanc_status       = $fields['occupanc_status'];
-			            $Emails->ownership_status      = $fields['ownership_status'];
-			            $Emails->save();
+			        $user_id = Sentry::getUser()->id;
+			         	$id = DB::table('email_alert')->insertGetId(array('user_id'=>$user_id,
+			         													'receive_alert' => $fields['receive_alert'],
+			         		                   							'purpose'=>$fields['purpose'],
+			         		                   							'beds'=>$fields['beds'],
+			         		                   							'location'=>$fields['location'],
+			         		                   							'keyword'=>$fields['keyword'],
+			         		                   							'covered_area'=>$fields['covered_area'],
+			         		                   							'finance_available'=>$fields['finance_available'],
+			         		                   							'occupanc_status'=>$fields['occupanc_status'],
+			         		                   							'ownership_status'=>$fields['ownership_status'],
+			         		                   							'finance_available'=>$fields['finance_available'],
+			         		                   							'occupanc_status'=>$fields['occupanc_status']
+			         		                   							));
+			         	  return Redirect::to('user/email/alert/create')->with('message','successfully Added');
+	
+						// $Emails = new Emails();
+						// $Emails->user_id               = $user_id;
+			   //          $Emails->receive_alert         = $fields['receive_alert'];
+			   //          $Emails->Property_Type         = $fields['Property_Type'];
+			   //          $Emails->purpose               = $fields['purpose'];
+			   //          $Emails->beds                  = $fields['beds'];
+			   //          $Emails->location              = $fields['location'];
+			   //          $Emails->keyword               = $fields['keyword'];
+			   //          $Emails->covered_area          = $fields['covered_area'];
+			   //          $Emails->baths                 = $fields['baths'];
+			   //          $Emails->estate_agent          = $fields['estate_agent'];
+			   //          $Emails->finance_available     = $fields['finance_available'];
+			   //          $Emails->occupanc_status       = $fields['occupanc_status'];
+			   //          $Emails->ownership_status      = $fields['ownership_status'];
+			   //          $Emails->save();
 
-			            return Redirect::to('emailalert')->with('errors','successfully Added');        		
+			                    		
 	}	
 
 
-	public function geteditemailalert()
+	public function getEditEmailAlert($id)
 	{
+
 					return View::make('emails.editemailalert')
 					->with('alert', Config::get('listconfig.alert'))
 					->with('price', Config::get('listconfig.price'))
-					->with('beds', Config::get('listconfig.beds'))
+					->with('beds', Config::get('listconfig.beds'));
+
+                $records = DB::table('email_alert')->where('id', $id)->get();
+                
+                    return View::make('emails.editemailalert', compact('records'))
+                    ->with('alert', Config::get('listconfig.alert'))
+					->with('price', Config::get('listconfig.price'))
+				    ->with('beds', Config::get('listconfig.beds'))
+
 					->with('area', Config::get('listconfig.area'))
 					->with('baths', Config::get('listconfig.baths'))
 					->with('Finance', Config::get('listconfig.Finance'))

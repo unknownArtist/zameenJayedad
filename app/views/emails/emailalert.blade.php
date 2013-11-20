@@ -26,46 +26,46 @@
             {{ Form::label('Property_Type', 'Property Type:', array('class' => 'lab')) }}
         </li>   
          <li>{{ Form::label('houses', 'Houses') }}
-            {{ Form::checkbox('Property_Type[]')}}
+            {{ Form::checkbox('Property_Type[]','houses')}}
         </li>   
         <li>  {{ Form::label('flats', 'Flats') }}
-            {{ Form::checkbox('Property_Type[]')}}
+            {{ Form::checkbox('Property_Type[]','flats')}}
         </li>
 
         <li>  {{ Form::label('upper_p', 'Upper Portions') }}
-            {{ Form::checkbox('Property_Type[]')}}
+            {{ Form::checkbox('Property_Type[]','upper_p')}}
         </li>
 
         <li>  {{ Form::label('lower_p', 'Lower Portions') }}
-            {{ Form::checkbox('Property_Type[]')}}
+            {{ Form::checkbox('Property_Type[]','lower_p')}}
         </li>
 
         <li>  {{ Form::label('f_house', 'Farm Houses') }}
-            {{ Form::checkbox('Property_Type[]')}}
+            {{ Form::checkbox('Property_Type[]','f_house')}}
         </li>
 
         <li>  {{ Form::label('rooms', 'rooms') }}
-            {{ Form::checkbox('Property_Type[]')}}
+            {{ Form::checkbox('Property_Type[]','rooms')}}
         </li>
 
         <li>  {{ Form::label('residential', 'Residential') }}
-            {{ Form::checkbox('Property_Type[]')}}
+            {{ Form::checkbox('Property_Type[]','residential')}}
         </li>
 
         <li>  {{ Form::label('agricultural_land', 'Agricultural Land') }}
-            {{ Form::checkbox('Property_Type[]')}}
+            {{ Form::checkbox('Property_Type[]','agricultural_land')}}
         </li>
 
-        <li>  {{ Form::label(' commercial ', ' Commercial') }}
-            {{ Form::checkbox(' Property_Type[]')}}
+        <li>  {{ Form::label('commercial', ' Commercial') }}
+            {{ Form::checkbox(' Property_Type[]','commercial')}}
         </li>
 
         <li>  {{ Form::label('offices', 'Offices') }}
-            {{ Form::checkbox('Property_Type[]')}}
+            {{ Form::checkbox('Property_Type[]','offices')}}
         </li>
 
         <li>  {{ Form::label('shops', 'Shops') }}
-            {{ Form::checkbox('Property_Type[]')}}
+            {{ Form::checkbox('Property_Type[]','shops')}}
         </li>
 
         <li>  {{ Form::label('warehouses', 'Warehouses') }}

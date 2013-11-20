@@ -37,19 +37,14 @@ class EmailController extends BaseController {
 	}
 
 	public function postEmailAlert()
-	{
-
+	{      
+			
 			// $properyType = Input::get('Property_Type');
-			// foreach($properyType as $key=>$value)
-			// {
-			// 	DB::table('emailAlert_property_type')->insert(
-			// 		array(
-			// 			'email_alert_id'	=>   $id,
-			// 			'pt'	=> $value
-			// 			)
-			// 		);
+			//  foreach($properyType as $key=>$value)
+			//  {
+			// 	echo $value; 
+				
 			// }
-			// echo $pt;
 			// die();
 			$fields = array(
 			            'receive_alert'    => Input::get('receive_alert_on'),
@@ -82,11 +77,6 @@ class EmailController extends BaseController {
 		           
 		        );
 			
-			// $properyType = Input::get('Property_Type');
-			// foreach($properyType as $key=>$value)
-			// {
-			// 	echo $value."<br>"; 
-			// }
 		    $v = Validator::make($fields, $rules);
 			        if ($v->fails()) 
 			        {
@@ -106,23 +96,17 @@ class EmailController extends BaseController {
 			         		                   							'finance_available'=>$fields['finance_available'],
 			         		                   							'occupanc_status'=>$fields['occupanc_status']
 			         		                   							));
-			         	
-	
-						// $Emails = new Emails();
-						// $Emails->user_id               = $user_id;
-			   //          $Emails->receive_alert         = $fields['receive_alert'];
-			   //          $Emails->Property_Type         = $fields['Property_Type'];
-			   //          $Emails->purpose               = $fields['purpose'];
-			   //          $Emails->beds                  = $fields['beds'];
-			   //          $Emails->location              = $fields['location'];
-			   //          $Emails->keyword               = $fields['keyword'];
-			   //          $Emails->covered_area          = $fields['covered_area'];
-			   //          $Emails->baths                 = $fields['baths'];
-			   //          $Emails->estate_agent          = $fields['estate_agent'];
-			   //          $Emails->finance_available     = $fields['finance_available'];
-			   //          $Emails->occupanc_status       = $fields['occupanc_status'];
-			   //          $Emails->ownership_status      = $fields['ownership_status'];
-			   //          $Emails->save();
+					 $properyType = Input::get('Property_Type');
+					  foreach($properyType as $key=>$value)
+					  {
+					  	
+						$ptr=DB::table('Emailalert_pt')->insert(
+								array(
+									'email_alert_id'	=>   $id,
+										'Emailalert_pt'	=> $value)
+							 		);
+							 }
+						
 
 			            return Redirect::to('user/email/alert/create')->with('message','successfully Added');        		
 	}	

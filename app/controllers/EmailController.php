@@ -40,7 +40,8 @@ class EmailController extends BaseController {
 
 	public function postEmailAlert()
 	{
-			$properyType = Input::get('Property_Type');
+
+			// $properyType = Input::get('Property_Type');
 			// foreach($properyType as $key=>$value)
 			// {
 			// 	DB::table('emailAlert_property_type')->insert(
@@ -66,11 +67,12 @@ class EmailController extends BaseController {
 			            'occupanc_status'     => Input::get('occupanc_status'),
 			            'ownership_status'    => Input::get('ownership_status')
 			            );
-            
+           
 			$rules = array(
 		            'receive_alert'        => 'required',
 		            'purpose' 	             => 'required',
 		            'beds'                    => 'required',
+		            'price'                   => 'required',
 		            'location'                => 'required',
 		            'keyword'                 => 'required',
 		            'covered_area' 	          => 'required',
@@ -81,6 +83,7 @@ class EmailController extends BaseController {
 		            'ownership_status'        => 'required',
 		           
 		        );
+			
 			// $properyType = Input::get('Property_Type');
 			// foreach($properyType as $key=>$value)
 			// {
@@ -89,7 +92,11 @@ class EmailController extends BaseController {
 		    $v = Validator::make($fields, $rules);
 			        if ($v->fails()) 
 			        {
+<<<<<<< HEAD
 			        	return Redirect::to('user/email/alert/create')->withErrors($v);
+=======
+			        	return Redirect::to('user/email/alert/create')->withErrors('errors',$v);
+>>>>>>> 85d1ecc24048f6c839a98dac0708397df8d932cf
 			        }
 			        $user_id = Sentry::getUser()->id;
 			         	$id = DB::table('email_alert')->insertGetId(array('user_id'=>$user_id,
@@ -105,7 +112,11 @@ class EmailController extends BaseController {
 			         		                   							'finance_available'=>$fields['finance_available'],
 			         		                   							'occupanc_status'=>$fields['occupanc_status']
 			         		                   							));
+<<<<<<< HEAD
 			         	  return Redirect::to('user/email/alert/create')->with('message','successfully Added');
+=======
+			         	
+>>>>>>> 85d1ecc24048f6c839a98dac0708397df8d932cf
 	
 						// $Emails = new Emails();
 						// $Emails->user_id               = $user_id;
@@ -123,7 +134,11 @@ class EmailController extends BaseController {
 			   //          $Emails->ownership_status      = $fields['ownership_status'];
 			   //          $Emails->save();
 
+<<<<<<< HEAD
 			                    		
+=======
+			            return Redirect::to('user/email/alert/create')->with('message','successfully Added');        		
+>>>>>>> 85d1ecc24048f6c839a98dac0708397df8d932cf
 	}	
 
 

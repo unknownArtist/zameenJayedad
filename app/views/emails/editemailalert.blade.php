@@ -26,7 +26,7 @@
             {{ Form::label('Property_Type', 'Property Type:', array('class' => 'lab')) }}
         </li>   
          <li>{{ Form::label('houses', 'Houses') }}
-            {{ Form::checkbox('houses',$record->Property_Type )}}
+            {{ Form::checkbox('houses')}}
         </li>   
         <li>  {{ Form::label('flats', 'Flats') }}
             {{ Form::checkbox('flats', 'flats')}}

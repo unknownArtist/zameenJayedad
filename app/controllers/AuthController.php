@@ -463,6 +463,13 @@ public function getReport()
 
 	}	
 
+public function getProfile()
+
+	{
+					return View::make('auth.profile')
+					->with('countries', Config::get('listconfig.countries'));
+
+	}	
 
 
 

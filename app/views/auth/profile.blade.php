@@ -14,11 +14,6 @@
  <h1>My Profile</h1>
     <ul>
 
-         <li>
-            {{ Form::label('email', 'Email') }}
-            {{ Form::text('email') }}
-        </li>
-
         <li>
             {{ Form::label('name', 'Name') }}
             {{ Form::text('name' )}}

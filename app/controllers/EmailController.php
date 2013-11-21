@@ -83,7 +83,7 @@ class EmailController extends BaseController {
 			        if ($v->fails()) 
 			        {
 
-			        	return Redirect::to('user/email/alert/create')->withErrors($v);
+			        	
 
 			        	return Redirect::to('user/email/alert/create')->withErrors('errors',$v);
 
@@ -117,28 +117,7 @@ class EmailController extends BaseController {
 
 			         	  return Redirect::to('user/email/alert/create')->with('message','successfully Added');
 
-			         	
-
-	
-						// $Emails = new Emails();
-						// $Emails->user_id               = $user_id;
-			   //          $Emails->receive_alert         = $fields['receive_alert'];
-			   //          $Emails->Property_Type         = $fields['Property_Type'];
-			   //          $Emails->purpose               = $fields['purpose'];
-			   //          $Emails->beds                  = $fields['beds'];
-			   //          $Emails->location              = $fields['location'];
-			   //          $Emails->keyword               = $fields['keyword'];
-			   //          $Emails->covered_area          = $fields['covered_area'];
-			   //          $Emails->baths                 = $fields['baths'];
-			   //          $Emails->estate_agent          = $fields['estate_agent'];
-			   //          $Emails->finance_available     = $fields['finance_available'];
-			   //          $Emails->occupanc_status       = $fields['occupanc_status'];
-			   //          $Emails->ownership_status      = $fields['ownership_status'];
-			   //          $Emails->save();
-
 			                    		
-
-			            return Redirect::to('user/email/alert/create')->with('message','successfully Added');        		
 
 	}	
 
@@ -146,14 +125,9 @@ class EmailController extends BaseController {
 	public function getEditEmailAlert($id)
 	{
 
-					return View::make('emails.editemailalert')
-					->with('alert', Config::get('listconfig.alert'))
-					->with('price', Config::get('listconfig.price'))
-					->with('beds', Config::get('listconfig.beds'));
-
                 $records = DB::table('email_alert')->where('id', $id)->get();
-                
-                    return View::make('emails.editemailalert', compact('records'))
+
+                return View::make('emails.editemailalert', compact('records'))
                     ->with('alert', Config::get('listconfig.alert'))
 					->with('price', Config::get('listconfig.price'))
 				    ->with('beds', Config::get('listconfig.beds'))

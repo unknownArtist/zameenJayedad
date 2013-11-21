@@ -59,6 +59,7 @@ class AuthController extends BaseController {
 		  	'user_id' 		 => $user->id,
             'phone' 		 => Input::get('phone'),
             'cell' 			 => Input::get('cell'),
+            'name' 			 => Input::get('name'),
             'fax' 			 => Input::get('fax'),
             'address' 		 => Input::get('address'),
             'zip' 			 => Input::get('zip'),
@@ -94,6 +95,8 @@ class AuthController extends BaseController {
             $members->country = $fields['country'];
             $members->roles = $fields['roles'];
             $members->user_id = $fields['user_id'];
+            $members->fax = $fields['fax'];
+            $members->name = $fields['name'];
             $members->save();
             DB::table('agent')->insert(
 			array('agent_id' => $fields['user_id'], 

@@ -14,6 +14,7 @@ class Registration extends Migration {
 		Schema::create('registration', function($table) {
             $table->increments('id');
             $table->integer('user_id');
+            $table->integer('name');
 			$table->integer('phone');
 			$table->integer('cell');
             $table->string('fax');

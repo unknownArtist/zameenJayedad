@@ -103,6 +103,7 @@ class EmailController extends BaseController {
 			         		                   							'occupanc_status'=>$fields['occupanc_status']
 			         		                   							));
 
+
 					 $properyType = Input::get('Property_Type');
 					  foreach($properyType as $key=>$value)
 					  {
@@ -116,8 +117,6 @@ class EmailController extends BaseController {
 						
 
 			         	  return Redirect::to('user/email/alert/create')->with('message','successfully Added');
-
-			                    		
 
 	}	
 

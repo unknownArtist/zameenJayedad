@@ -1,7 +1,6 @@
 @extends('layouts.main')
 @section('content')
 </div>
-
 <div id="search">
 
    </div> 
@@ -11,11 +10,15 @@
 
 {{ Form::open(array('url' => 'user/email/alert/{emailAlertId}/edit')) }}
 
+
+
  <h1> Create Email Alert </h1>
 
     <ul>
         <h2>Basic Alert Criteria</h2>
         @foreach ($records as $record)
+           {{ $checked = $record->purpose == 'forsale' ? ' checked="checked"':''}}
+           {{$checked}}
         <li>
             {{ Form::label('receive_alert_on', 'Receive alert on') }}
             {{ Form::select('receive_alert_on', $alert,$record->receive_alert )}}
@@ -91,20 +94,19 @@
         <li>
             {{ Form::label('Purpose', 'Purpose:', array('class' => 'lab')) }} <br>
         </li>
-        <li>    
+        <li>
+            
+        
             {{ Form::label('purpose', 'Forsale') }}
-           <?php echo Form::radio('purpose',if($record->purpose =="forsale")
-                { echo'checked="checked"';) 
-        }
-        ?>
+           {{  Form::radio('purpose' )  }}
          </li>
         <li>    
             {{ Form::label('purpose', 'For rent') }}
-            {{ Form::radio('purpose', ($record->purpose == 'for rent')  , )}}
+            {{ Form::radio('purpose' )}}
         </li>
         <li>    
             {{ Form::label('purpose', 'Wanted') }}
-            {{ Form::radio('purpose', $record->purpose == 'wanted' )}}
+            {{ Form::radio('purpose') }}
 
         </li>    
         </li>

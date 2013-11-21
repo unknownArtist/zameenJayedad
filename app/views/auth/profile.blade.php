@@ -4,6 +4,7 @@
 <div id="search">
 
    </div> 
+   {{dd($records);}}
  {{  Session::get('errors') }}
 <div id="wrapper">
 <div id="form-wrapper">

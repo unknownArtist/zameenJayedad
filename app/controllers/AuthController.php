@@ -466,7 +466,9 @@ public function getReport()
 public function getProfile()
 
 	{
-					return View::make('auth.profile')
+					$user_id = Sentry::getUser()->id;
+					$records = DB::table('registration')->where('user_id', $user_id)->get();
+					return View::make('auth.profile', compact('records'))
 					->with('countries', Config::get('listconfig.countries'));
 
 	}	

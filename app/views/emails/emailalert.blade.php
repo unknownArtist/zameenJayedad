@@ -9,6 +9,7 @@
 <div id="form-wrapper">
 
     {{ HTML::link('user/email/alerts','Manage Email ALerts') }}
+    {{ HTML::link('profile','profile') }}
 
 {{ Form::open(array('url' => 'user/email/alert/emailalert')) }}
 

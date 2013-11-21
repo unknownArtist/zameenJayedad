@@ -39,19 +39,14 @@ class EmailController extends BaseController {
 
 
 	public function postEmailAlert()
-	{
-
+	{      
+			
 			// $properyType = Input::get('Property_Type');
-			// foreach($properyType as $key=>$value)
-			// {
-			// 	DB::table('emailAlert_property_type')->insert(
-			// 		array(
-			// 			'email_alert_id'	=>   $id,
-			// 			'pt'	=> $value
-			// 			)
-			// 		);
+			//  foreach($properyType as $key=>$value)
+			//  {
+			// 	echo $value; 
+				
 			// }
-			// echo $pt;
 			// die();
 			$fields = array(
 			            'receive_alert'    => Input::get('receive_alert_on'),
@@ -84,11 +79,6 @@ class EmailController extends BaseController {
 		           
 		        );
 			
-			// $properyType = Input::get('Property_Type');
-			// foreach($properyType as $key=>$value)
-			// {
-			// 	echo $value."<br>"; 
-			// }
 		    $v = Validator::make($fields, $rules);
 			        if ($v->fails()) 
 			        {
@@ -113,6 +103,21 @@ class EmailController extends BaseController {
 			         		                   							'occupanc_status'=>$fields['occupanc_status']
 			         		                   							));
 
+<<<<<<< HEAD
+=======
+					 $properyType = Input::get('Property_Type');
+					  foreach($properyType as $key=>$value)
+					  {
+					  	
+						$ptr=DB::table('Emailalert_pt')->insert(
+								array(
+									'email_alert_id'	=>   $id,
+										'Emailalert_pt'	=> $value)
+							 		);
+							 }
+						
+
+>>>>>>> a7a0c2aacb1cead6bb0641e6cb525c8fae196643
 			         	  return Redirect::to('user/email/alert/create')->with('message','successfully Added');
 
 			         	
@@ -134,7 +139,10 @@ class EmailController extends BaseController {
 			   //          $Emails->ownership_status      = $fields['ownership_status'];
 			   //          $Emails->save();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a7a0c2aacb1cead6bb0641e6cb525c8fae196643
 			                    		
 
 			            return Redirect::to('user/email/alert/create')->with('message','successfully Added');        		

@@ -87,21 +87,24 @@
         </div>
 
         <div id="radio">
-
+       
         <li>
             {{ Form::label('Purpose', 'Purpose:', array('class' => 'lab')) }} <br>
         </li>
         <li>    
             {{ Form::label('purpose', 'Forsale') }}
-            {{ Form::radio('purpose', 'forsale')}}
-        </li>
+           <?php echo Form::radio('purpose',if($record->purpose =="forsale")
+                { echo'checked="checked"';) 
+        }
+        ?>
+         </li>
         <li>    
             {{ Form::label('purpose', 'For rent') }}
-            {{ Form::radio('purpose', 'for rent')}}
+            {{ Form::radio('purpose', ($record->purpose == 'for rent')  , )}}
         </li>
         <li>    
             {{ Form::label('purpose', 'Wanted') }}
-            {{ Form::radio('purpose', 'wanted')}}
+            {{ Form::radio('purpose', $record->purpose == 'wanted' )}}
 
         </li>    
         </li>

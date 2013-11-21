@@ -13,14 +13,10 @@
  <h1>Registration</h1>
     <ul>
         <li>
-            {{ Form::label('first_name', 'First Name') }}
-            {{ Form::text('first_name' )}}
+            {{ Form::label('name', 'Name') }}
+            {{ Form::text('name' )}}
         </li>
 
-        <li>
-            {{ Form::label('last_name', 'Last Name') }}
-            {{ Form::text('last_name') }}
-        </li>
 
         <li>
             {{ Form::label('email', 'Email') }}

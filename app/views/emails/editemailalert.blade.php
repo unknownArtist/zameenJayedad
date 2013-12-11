@@ -17,8 +17,7 @@
     <ul>
         <h2>Basic Alert Criteria</h2>
         @foreach ($records as $record)
-           {{ $checked = $record->purpose == 'forsale' ? ' checked="checked"':''}}
-           {{$checked}}
+           
         <li>
             {{ Form::label('receive_alert_on', 'Receive alert on') }}
             {{ Form::select('receive_alert_on', $alert,$record->receive_alert )}}
@@ -28,85 +27,105 @@
          <li>
             {{ Form::label('Property_Type', 'Property Type:', array('class' => 'lab')) }}
         </li>   
-         <li>{{ Form::label('houses', 'Houses') }}
-            {{ Form::checkbox('houses')}}
-        </li>   
-        <li>  {{ Form::label('flats', 'Flats') }}
-            {{ Form::checkbox('flats', 'flats')}}
+        
+            <li>{{ Form::label('houses', 'Houses') }}
+          
+             {{ Form::checkbox('Property_Type[]','houses','checked')}}
+    
+            {{ Form::checkbox('Property_Type[]','houses')}}
+
+            <li> 
+             {{ Form::label('flats', 'Flats') }}
+        
+            {{ Form::checkbox('Property_Type[]','flats','checked')}}
+       
+        {{ Form::checkbox('Property_Type[]','flats')}}
+     
         </li>
 
         <li>  {{ Form::label('upper_p', 'Upper Portions') }}
-            {{ Form::checkbox('upper_p', 'upper_p')}}
+            {{ Form::checkbox('Property_Type[]','upper_p')}}
         </li>
 
         <li>  {{ Form::label('lower_p', 'Lower Portions') }}
-            {{ Form::checkbox('lower_p', 'lower_p')}}
+            {{ Form::checkbox('Property_Type[]','lower_p')}}
         </li>
 
         <li>  {{ Form::label('f_house', 'Farm Houses') }}
-            {{ Form::checkbox('f_house', 'f_house')}}
+            {{ Form::checkbox('Property_Type[]','f_house')}}
         </li>
 
         <li>  {{ Form::label('rooms', 'rooms') }}
-            {{ Form::checkbox('rooms', 'rooms')}}
+            {{ Form::checkbox('Property_Type[]','rooms')}}
         </li>
 
         <li>  {{ Form::label('residential', 'Residential') }}
-            {{ Form::checkbox('residential', 'residential')}}
+            {{ Form::checkbox('Property_Type[]','residential')}}
         </li>
 
         <li>  {{ Form::label('agricultural_land', 'Agricultural Land') }}
-            {{ Form::checkbox('agricultural_land', 'agricultural_land')}}
+            {{ Form::checkbox('Property_Type[]','agricultural_land')}}
         </li>
 
-        <li>  {{ Form::label(' commercial ', ' Commercial') }}
-            {{ Form::checkbox(' commercial ', 'commercial')}}
+        <li>  {{ Form::label('commercial', ' Commercial') }}
+            {{ Form::checkbox(' Property_Type[]','commercial')}}
         </li>
 
         <li>  {{ Form::label('offices', 'Offices') }}
-            {{ Form::checkbox('offices', 'offices')}}
+            {{ Form::checkbox('Property_Type[]','offices')}}
         </li>
 
         <li>  {{ Form::label('shops', 'Shops') }}
-            {{ Form::checkbox('shops', 'shops')}}
+            {{ Form::checkbox('Property_Type[]','shops')}}
         </li>
 
         <li>  {{ Form::label('warehouses', 'Warehouses') }}
-            {{ Form::checkbox('warehouses', 'warehouses')}}
+            {{ Form::checkbox('Property_Type[]','warehouses')}}
         </li>
 
         <li>  {{ Form::label('factories', 'Factories') }}
-            {{ Form::checkbox('factories', 'factories')}}
+            {{ Form::checkbox('Property_Type[]','factories')}}
         </li>
 
         <li>  {{ Form::label('buildings', 'Buildings') }}
-            {{ Form::checkbox('buildings', 'buildings')}}
+            {{ Form::checkbox('Property_Type[]','buildings')}}
         </li>
 
         <li>  {{ Form::label('others', 'Others') }}
-            {{ Form::checkbox('others', 'others')}}
+            {{ Form::checkbox('Property_Type[]','others')}}
         </li>
 
         </div>
-
-        <div id="radio">
+    <div id="radio">
        
         <li>
             {{ Form::label('Purpose', 'Purpose:', array('class' => 'lab')) }} <br>
         </li>
         <li>
-            
+
+         {{ Form::label('purpose', 'Forsale') }}
         
-            {{ Form::label('purpose', 'Forsale') }}
-           {{  Form::radio('purpose' )  }}
+            @if($record->purpose=='forsale')           
+           {{  Form::radio('purpose','forsale','checked' )  }}
+           @else
+            {{  Form::radio('purpose','forsale' )  }}
+            @endif
          </li>
         <li>    
             {{ Form::label('purpose', 'For rent') }}
-            {{ Form::radio('purpose' )}}
+            @if($record->purpose=='for rent')
+            {{ Form::radio('purpose' ,'for rent','checked')}}
+            @else
+            {{  Form::radio('purpose','for rent' )  }}
+            @endif
         </li>
         <li>    
             {{ Form::label('purpose', 'Wanted') }}
-            {{ Form::radio('purpose') }}
+             @if($record->purpose=='wanted')
+            {{ Form::radio('purpose','wanted','checked') }}
+            @else
+            {{  Form::radio('purpose','wanted' )  }}
+            @endif
 
         </li>    
         </li>

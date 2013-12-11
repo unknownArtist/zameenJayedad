@@ -1,3 +1,4 @@
+{{print_r($record); die();}}
 @extends('layouts.main')
 @section('content')
 

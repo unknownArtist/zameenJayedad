@@ -1,14 +1,19 @@
-@extends('layouts.main')
+@extends('layouts.login')
 @section('content')
+ {{ Form::open(array('url' => 'user/email/search')) }}
     <div id="search">
-    
+   
     <div id="sea">	
     	<h2>Search Listing</h2>
-    	<input type="text" placeholder="">
-    	<a href="#">Search</a>
+    	{{ Form::text('search','',array('class'=>'span6','placeholder'=>'search by city')) }}
+    	
+       {{ Form::submit('Search', array('class' => 'button')) }}
+
     	
     </div><!--sea-->
-    </div><!--search ends-->
+    </div>
+    {{ Form::close() }}
+    <!--search ends-->
     <div id="wrapper">
     <div id="content">
        
@@ -32,44 +37,22 @@
 
 
        </div>
+      
+
 
        <div class="list">
        	<h1>Listings</h1>
        	<h3>Greater Vancouver - by Region</h3>
        	<ul class="l1">
-       		 <li><a href="#">Vancouver West</a></li>
-       		 <li><a href="#">Vancouver East</a></li>
-       		 <li><a href="#">Downtown Vancouver</a></li>
-       		 <li><a href="#">North Vancouver</a></li>
-       		 <li><a href="#">West Vancouver</a></li>
-       		 <li><a href="#">Burnaby</a></li>
-       		 <li><a href="#">New Westminster</a></li>
-       		 <li><a href="#">Coquitlam</a></li>
+           @foreach($users as $user)
+       		 <li><a href="#">{{$user->property_type}} {{$user->city}} </a></li>
+       		  @endforeach
        	</ul>
 
-       	<ul class="l2">
-         		<li><a href="#">Port Moody</a></li>
-         		<li><a href="#">Port Coquitlam</a></li>
-         		<li><a href="#">Pitt Meadows</a></li>
-         		<li><a href="#">Maple Ridge</a></li>
-         		<li><a href="#">Mission</a></li>
-         		<li><a href="#">Abbotsford</a></li>
-         		<li><a href="#">Chilliwack</a></li>
-         		<li><a href="#">Langley</a></li>
-       	</ul>
-
-       	<ul class="l3">
-         		<li><a href="#">Surrey</a></li>
-         		<li><a href="#">White Rock</a></li>
-         		<li><a href="#">Delta</a></li>
-         		<li><a href="#">Richmond</a></li>
-         		<li><a href="#">Tsawwassen</a></li>
-         		<li><a href="#">Sunshine Coast</a></li>
-         		<li><a href="#">Whistler</a></li>
-         		<li><a href="#">Squamish</a></li>
-       	</ul>
+       
 
        </div>
+
 
     </div><!--content ends-->
 

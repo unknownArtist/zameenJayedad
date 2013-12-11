@@ -1,6 +1,21 @@
 @extends('layouts.main')
 @section('content')
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+
+$('#agentshow').click(function() {
+    if( $(this).is(':checked')) {
+        $("#agent").show();
+    } else {
+        $("#agent").hide();
+    }
+}); 
+
+
+  });
+</script>
 <div id="search">
 
    </div> 
@@ -64,17 +79,17 @@
 
         <li>
             {{ Form::label('roles', 'User Roles') }}
-            {{Form::select('roles', $roles);}}
+            {{Form::select('roles', $roles)}}
             
         </li>
 
         <li>
             {{ Form::label('agent', 'Are you an Agent?') }}
-            {{Form::checkbox('agent')}}
+            <input type="checkbox" id="agentshow">
             
         </li>
 
-        <div class="agent">
+        <div class="agent" id ="agent" style="display:none;">
 
         <h3>Agency Information</h3>
         <li>

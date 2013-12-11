@@ -6,18 +6,20 @@ class DashboardController extends BaseController {
 
 	public function getIndex()
 	{
-		$user = "Rameez Riaz";
+		
+		$users = DB::table('property')
+                    ->orderBy('id', 'desc')
+          			->get();
+		
 		return View::make('dashboard.index')
-				   ->with('user',$user);
+		->with('users', $users);
+				   
 	}
 	public function postIndex()
 	{
 		return "Post function";
 	}
 
-	public function getSearch()
-	{
-		return View::make('dashboard.search');
-	}
+	
 
 }

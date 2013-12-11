@@ -7,10 +7,14 @@ class SearchController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function getIndex()
+	public function postIndex()
 	{
-		return "search";
+		
+	$records = Profolio::where('city', 'LIKE', Input::get('search'))->get();
+	return View::make('dashboard.search')
+					->with('record',$records);
 	}
+	
 
 	
 

@@ -1,6 +1,7 @@
 @extends('layouts.main')
 @section('content')
 </div>
+
 <div id="search">
 
    </div> 
@@ -8,18 +9,18 @@
 <div id="wrapper">
 <div id="form-wrapper">
 
-{{ Form::open(array('url' => 'user/register')) }}
+{{ Form::open(array('url' =>'profile')) }}
 
  <h1>My Profile</h1>
     <ul>
-
- @foreach ($records as $record)
-         <li>
+ <li>
+           @foreach ($users as $user )
             {{ Form::label('email', 'Email') }}
-            {{ Form::text('email') }}
+            {{ Form::text('email',$user->email) }}
+       @endforeach
         </li>
 
-
+ @foreach ($records as $record)
         <li>
             {{ Form::label('name', 'Name') }}
             {{ Form::text('name',$record->name )}}
@@ -57,11 +58,11 @@
             {{ Form::label('country', 'Country') }}
             {{ Form::select('country', $countries,$record->country)}}
 
-
+@endforeach
         <li>
             {{ Form::submit('Modify', array('class' => 'btn')) }}
         </li>
-        @endforeach
+        
     </ul>
 </div>
 {{ Form::close() }}

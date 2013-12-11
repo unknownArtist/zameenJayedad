@@ -76,7 +76,7 @@ body
 }
 
 #sea input{
-	width:620px;
+	width:511px;
 	height: 26px;
 	border-radius: 6px;
 	margin-top: 28px;
@@ -108,14 +108,15 @@ body
 	margin: 0;
 }
 
-#search a{
+.button{
    font-weight: bold;
    color: #50b1a8;
    background-color: #fff;
    text-decoration: none;
-   padding: 7px;
+   padding: 3px!important;
    margin-left: 12px;
    border-radius: 4px;
+   width: 100px!important;
 
 }
 
@@ -222,7 +223,7 @@ body
 
 .l1{
 	float:left;
-	width:137px;
+	
 	list-style-type: none;
 	padding: 0 0 0 23px;
 	letter-spacing:;

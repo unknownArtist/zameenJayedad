@@ -112,7 +112,7 @@
         
         <li class="price">
             {{ Form::label('price', 'Price' , array('class' => 'lab')) }}
-            {{ Form::select('price', $price)}}
+            {{ Form::select('price',$price)}}
         </li>
 
         <li>

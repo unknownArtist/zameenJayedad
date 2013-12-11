@@ -130,7 +130,7 @@ class AuthController extends BaseController {
 
 			$user = Sentry::authenticate($credentials, false);
 			if($user)
-			return Redirect::to('user/email/alert/create');
+			return Redirect::to('dashboard');
 			{
 				
 			 }
@@ -364,8 +364,9 @@ class AuthController extends BaseController {
 			        {
 			        	return Redirect::to('profolio')->with('errors',$v);
 			        }
-
+			        	
 			 		 	$Profolio = new Profolio();
+			 		 	$Profolio->agent_id				=Sentry::getUser()->id;
 			            $Profolio->property_type       = $fields['property_type'];
 			            $Profolio->home_type           = $fields['home_type'];
 			            $Profolio->purpose             = $fields['purpose'];
@@ -471,7 +472,8 @@ public function getProfile()
 	{
 					$user_id = Sentry::getUser()->id;
 					$records = DB::table('registration')->where('user_id', $user_id)->get();
-					return View::make('auth.profile', compact('records'))
+					$users = DB::table('users')->where('id', $user_id)->get();
+					return View::make('auth.profile', compact('records','users'))
 					->with('countries', Config::get('listconfig.countries'));
 
 	}	

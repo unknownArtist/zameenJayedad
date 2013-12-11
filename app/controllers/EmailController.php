@@ -89,22 +89,26 @@ class EmailController extends BaseController {
 
 			        }
 			        $user_id = Sentry::getUser()->id;
-			         	$id = DB::table('email_alert')->insertGetId(array('user_id'=>$user_id,
-			         													'receive_alert' => $fields['receive_alert'],
-			         		                   							'purpose'=>$fields['purpose'],
-			         		                   							'beds'=>$fields['beds'],
-			         		                   							'location'=>$fields['location'],
-			         		                   							'keyword'=>$fields['keyword'],
-			         		                   							'covered_area'=>$fields['covered_area'],
-			         		                   							'finance_available'=>$fields['finance_available'],
-			         		                   							'occupanc_status'=>$fields['occupanc_status'],
-			         		                   							'ownership_status'=>$fields['ownership_status'],
-			         		                   							'finance_available'=>$fields['finance_available'],
-			         		                   							'occupanc_status'=>$fields['occupanc_status']
-			         		                   							));
+			      $id = DB::table('email_alert')->insertGetId(array('user_id'=>$user_id,
+			         							'receive_alert' => $fields['receive_alert'],
+			         		                   	'purpose'=>$fields['purpose'],
+			         		                   	'beds'=>$fields['beds'],
+			         		                   	'baths'=>$fields['baths'],
+			         		                   	'estate_agent'=>$fields['estate_agent'],
+			         		                   	'location'=>$fields['location'],
+			         		                   	'price'=>$fields['price'],
+			         		                   	'keyword'=>$fields['keyword'],
+			         		                   	'covered_area'=>$fields['covered_area'],
+			         		                   	'finance_available'=>$fields['finance_available'],
+			         		                   	'occupanc_status'=>$fields['occupanc_status'],
+			         		                   	'ownership_status'=>$fields['ownership_status'],
+			         		                   	'finance_available'=>$fields['finance_available'],
+			         		                   	'occupanc_status'=>$fields['occupanc_status']
+			         		                   	));
 
 
 					 $properyType = Input::get('Property_Type');
+					
 					  foreach($properyType as $key=>$value)
 					  {
 					  	
@@ -116,7 +120,7 @@ class EmailController extends BaseController {
 							 }
 						
 
-			         	  return Redirect::to('user/email/alert/create')->with('message','successfully Added');
+			         	  return Redirect::to('user/email/alerts')->with('message','successfully Added');
 
 	}	
 
@@ -135,8 +139,18 @@ class EmailController extends BaseController {
 					->with('baths', Config::get('listconfig.baths'))
 					->with('Finance', Config::get('listconfig.Finance'))
 					->with('Occupancy', Config::get('listconfig.Occupancy'))
+					->with('property_type',Emailpt::where('email_alert_id',$id)->get())
 					->with('Ownership', Config::get('listconfig.Ownership'));
 	}
-
-
+	public function postEditEmailAlert($id)
+	{
+		echo $id;
+		die();
+	}
+	public function getDeleteEmailAlert($id)
+	{
+		$emailalert = Emails::find($id);
+		$emailalert->delete();
+		return Redirect::to('user/email/alerts');
+	}
 }

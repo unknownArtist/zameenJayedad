@@ -12,10 +12,13 @@
 */
 /*------------------Authentication Routes---------------------------*/
 /*------------------Search routes-----------------------------*/
-   Route::get('user/email/search',array('uses'=>'SearchController@getIndex'));
+	// Route::get('dashboard/search',array('uses'=>'SearchController@getSearch'));
+   Route::post('user/email/search',array('uses'=>'SearchController@postIndex'));
 /*------------------End of Search routes-----------------------------*/
 
 /*------------------Email alerts routes-----------------------------*/
+	Route::get('/user/email/{id}/alert/delete',array('uses'=>'EmailController@getDeleteEmailAlert'));
+	Route::post('/user/email/{id}/alert',array('uses'=>'EmailController@postEditEmailAlert'));
     Route::get('/user/email/{id}/alert',array('uses'=>'EmailController@getEditEmailAlert'));
 	Route::get('user/email/alerts',array('uses'=>'EmailController@getIndex'));
 	Route::get('user/email/alert/create',array('uses'=>'EmailController@getEmailAlert'));
@@ -45,6 +48,6 @@
 /*------------------End of Auth Routes------------------------------*/
 
 
-	Route::get('dashboard/search',array('uses'=>'DashboardController@getSearch'));
+	
 	Route::post('dashboard',array('uses'=>'DashboardController@postIndex'));
 	Route::get('dashboard',array('uses'=>'DashboardController@getIndex'));

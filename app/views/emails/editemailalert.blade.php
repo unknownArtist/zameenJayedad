@@ -24,7 +24,9 @@
         </li>
         
         <div class="check"> 
+            
          <li>
+            
             {{ Form::label('Property_Type', 'Property Type:', array('class' => 'lab')) }}
         </li>   
         

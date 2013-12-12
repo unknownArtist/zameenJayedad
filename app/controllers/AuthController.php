@@ -325,7 +325,8 @@ class AuthController extends BaseController {
 		public function postProfolio()
 
 			{
-				$fields = array(
+			
+			$fields = array(
 		            'property_type'        => Input::get('Property_Type'),
 		            'home_type' 	       => Input::get('home_type'),
 		            'purpose' 		       => Input::get('Purpose'),
@@ -333,6 +334,7 @@ class AuthController extends BaseController {
 		            'wanted' 			   => Input::get('Wanted_For'),
 		            'city' 			       => Input::get('city'),
 		            'location' 		       => Input::get('Location'),
+		            'photo'				   => $this->ImageCrop('photo','photos','200','200',''),
 		            'w_title' 		       => Input::get('Wanted_Title'),
 		            'p_title' 		       => Input::get('Property_Title'),
 		            'Description'          => Input::get('Description'),
@@ -356,6 +358,7 @@ class AuthController extends BaseController {
 		        $rules = array(
 		            'property_type' => 'required',
 		            'home_type'     => 'required',
+		            'photo'         => 'required',
 		            'w_title' 	    => 'required'
 		           
 		        );
@@ -374,6 +377,7 @@ class AuthController extends BaseController {
 			            $Profolio->wanted              = $fields['wanted'];
 			            $Profolio->city                = $fields['city'];
 			            $Profolio->location            = $fields['location'];
+			            $Profolio->photo            = $fields['photo'];
 			            $Profolio->w_title             = $fields['w_title'];
 			            $Profolio->p_title             = $fields['p_title'];
 			            $Profolio->Description         = $fields['Description'];

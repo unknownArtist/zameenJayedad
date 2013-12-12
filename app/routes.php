@@ -48,6 +48,6 @@
 /*------------------End of Auth Routes------------------------------*/
 
 
-	
+	Route::get('dashboard/listing/{id}',array('uses'=>'DashboardController@getListing'));
 	Route::post('dashboard',array('uses'=>'DashboardController@postIndex'));
 	Route::get('dashboard',array('uses'=>'DashboardController@getIndex'));

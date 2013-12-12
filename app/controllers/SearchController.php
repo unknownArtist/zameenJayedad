@@ -9,9 +9,10 @@ class SearchController extends \BaseController {
 	 */
 	public function postIndex()
 	{
-		
-	$records = Profolio::where('city', 'LIKE', Input::get('search'))->get();
+	$name=Input::get('search');
+	$records = Profolio::where('city', 'LIKE', Input::get('search'))->orWhere('property_type', 'LIKE',Input::get('search'))->get();
 	return View::make('dashboard.search')
+					->with('name',$name)
 					->with('record',$records);
 	}
 

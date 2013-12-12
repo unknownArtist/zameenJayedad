@@ -23,7 +23,7 @@ class Property extends Migration {
 			$table->string('location');
 			$table->string('w_title');
 			$table->string('p_title');
-			$table->string('Description');
+			$table->string('Description',1500);
 			$table->string('budget');
 			$table->string('l_area');
 			$table->string('unit');

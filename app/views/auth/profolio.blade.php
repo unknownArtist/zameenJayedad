@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.login')
 @section('content')
 <script>
     $(document).ready(function(){
@@ -28,7 +28,7 @@
 <div id="wrapper">
 <div id="form-wrapper">
 
-{{ Form::open(array('url' => 'profolio')) }}
+{{ Form::open(array('url' => 'profolio','files' => true)) }}
 
  <h1>Post New Listings</h1>
 
@@ -37,6 +37,10 @@
         <li>
             {{ Form::label('Property_Type', 'Property Type') }}
             {{ Form::select('Property_Type', $property_Type )}}
+        </li>
+        <li>
+            {{ Form::label('photo', 'Photo') }}
+            {{ Form::file('photo')}}
         </li>
         
         <li id="homeType">

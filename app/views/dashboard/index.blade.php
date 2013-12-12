@@ -45,7 +45,7 @@
        	<h3>Greater Vancouver - by Region</h3>
        	<ul class="l1">
            @foreach($users as $user)
-       		 <li><a href="#">{{$user->property_type}} {{$user->city}} </a></li>
+       		 <li><a href="dashboard/listing/{{$user->id}}">{{$user->property_type}} {{$user->city}} </a></li>
        		  @endforeach
        	</ul>
 

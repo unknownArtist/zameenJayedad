@@ -23,6 +23,11 @@
 			<img  src="/assets/images/eri_logo_02.png">
 			
 			</div><!--logo-img ends-->
+			<div class="contact">
+			
+		    <a href="#"> contact@zameenjayedad.com   </a>
+		    <p>+923225050989</p>
+		    </div>
 			
 			
    

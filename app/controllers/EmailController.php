@@ -129,7 +129,9 @@ class EmailController extends BaseController {
 	{
 
                 $records = DB::table('email_alert')->where('id', $id)->get();
-
+               
+                
+              
                 return View::make('emails.editemailalert', compact('records'))
                     ->with('alert', Config::get('listconfig.alert'))
 					->with('price', Config::get('listconfig.price'))

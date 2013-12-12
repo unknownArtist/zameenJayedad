@@ -460,12 +460,7 @@ class AuthController extends BaseController {
 
 	
 
-public function getReport()
 
-	{
-					return View::make('auth.report');
-
-	}	
 
 public function getProfile()
 

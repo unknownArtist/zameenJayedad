@@ -26,7 +26,7 @@
 /*------------------End of email alert routes-----------------------*/
 
 	Route::get('profile',array('uses'=>'AuthController@getProfile'));
-    Route::get('report',array('uses'=>'AuthController@getReport'));
+    Route::get('dashboard/reports',array('uses'=>'ReportController@getReport'));
     Route::post('addnewuser',array('uses'=>'AuthController@postAddNewUser'));
     Route::get('addnewuser',array('uses'=>'AuthController@getAddNewUser'));
     Route::post('profolio',array('uses'=>'AuthController@postProfolio'));

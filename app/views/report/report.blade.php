@@ -11,9 +11,10 @@
  	<h2>Your performance in 30 days <span>(14 Oct, 2013 to 12 Nov, 2013)</span></h2>
  	<h3>Current Number of Listings</h3>
  	<ul class="list-1">
- 		<li>For Sale</li>
- 		<li>To Rent</li>
- 		<li>Total</li>
+ 		<li>For Sale: {{ $forSale }} </li>
+ 		
+ 		<li>To Rent: {{ $forRent }}</li>
+ 		<li>Total: {{ $total }} </li>
  	</ul>
 
  	<ul class="list-1">

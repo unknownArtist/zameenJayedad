@@ -419,14 +419,11 @@ return array(
 
         'unit' => array(
                         'Please select'=>'Please select',
-                        '1'=>'1',
-                        '2'=>'2',
-                        '3'=>'3',
-                        '4'=>'4',
-                        '5'=>'5',
-                        '6'=>'6',
-                        '7'=>'7',
-
+                        'Kanal'=>'Kanal',
+                        'Marla'=>'Marla',
+                        'Square Feet'=>'Square Feet',
+                        'Square Meter'=>'Square Meter',
+                        'Square Yards'=>'Square Yards'
                 ),
         
         'Bedrooms' => array(

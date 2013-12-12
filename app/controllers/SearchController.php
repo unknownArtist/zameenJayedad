@@ -14,7 +14,7 @@ class SearchController extends \BaseController {
 	return View::make('dashboard.search')
 					->with('record',$records);
 	}
-	
+
 
 	
 

@@ -1,12 +1,10 @@
 @extends('layouts.login')
 @section('content')
 </div>
-
-<div id="search">
-
-   </div> 
+ 
  {{  Session::get('errors') }}
 <div id="wrapper">
+<div id="content">
 <div id="form-wrapper">
 
 {{ Form::open(array('url' =>'profile')) }}
@@ -57,7 +55,7 @@
         <li>
             {{ Form::label('country', 'Country') }}
             {{ Form::select('country', $countries,$record->country)}}
-
+		</li>
 @endforeach
         <li>
             {{ Form::submit('Modify', array('class' => 'btn')) }}
@@ -66,5 +64,7 @@
     </ul>
 </div>
 {{ Form::close() }}
+
+</div>
 
 @stop

@@ -1,18 +1,20 @@
-@extends('layouts.main')
+@extends('layouts.login')
 @section('content')
-</div>
-<div id="search">
 
-   </div> 
- {{ Session::get('errors') }}
 <div id="wrapper">
+<div id="content">
 <div id="form-wrapper">
+
+
+ {{ Session::get('errors') }}
+
 @foreach($record as $records)
 {{ Form::open(array('url' =>'dashboard/agencystaff/'.$records->id.'/edit','POST')) }}
 
  <h1>Agency Staff </h1>
  
     <ul>
+    
      <h2>User Details</h2>
         <li>
             {{ Form::label('email', 'Email') }}
@@ -31,6 +33,7 @@
             {{ Form::text('phone',$records->phone) }}
            
         </li>
+        
         <li>
             {{ Form::label('cell', 'Cell/mobile') }}
             {{ Form::text('cell',$records->cell) }}
@@ -50,25 +53,37 @@
         <li>
             {{ Form::label('country', 'Country') }}
             {{ Form::select('country', $countries,$records->country);}}
+            </li>
         <li>
 
          <h2>Assign Listing Quota</h2>
+         </li>
+         
         <li>
             {{ Form::label('listing_quota', 'Listing Quota') }}
             {{ Form::text('listing_quota',$records->listing_quota) }}
         </li> 
-
+		
          <li>
             {{ Form::label('hot_quota', 'Hot Quota') }}
             {{ Form::text('hot_quota',$records->hot_quota) }}
         </li>  
+        
+        <li>
 
             {{ Form::submit('Modify User', array('class' => 'btn')) }}
         </li>
         
+        
     </ul>
+    
+   
     @endforeach
 </div>
 {{ Form::close() }}
+</div>
+</div>
+
+
 
 @stop

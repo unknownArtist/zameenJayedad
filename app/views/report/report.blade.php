@@ -1,9 +1,7 @@
 @extends('layouts.main')
 @section('content')
 </div>
-<div id="search">
 
-   </div> 
 </div>
  {{  Session::get('errors') }}
  <div id="wrapper" class="clearfix">

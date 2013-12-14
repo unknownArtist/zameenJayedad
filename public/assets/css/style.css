@@ -1,4 +1,4 @@
-
+@import url(http://fonts.googleapis.com/css?family=Capriola);
 
 body
 {  
@@ -39,6 +39,8 @@ body
 .contact a{
 	text-decoration: none;
 	color:#50b1a8;
+	margin-top:30px;
+	display:block;
 }
 
 .contact p{
@@ -72,7 +74,7 @@ body
 	position: relative;
 }
 #sea{
-	padding:35px 20px 6px 169px;
+	padding:50px 0 0 20px;
 }
 
 #sea input{
@@ -85,6 +87,66 @@ body
 	font-size: 16px;
 	font-weight: bold;
 	outline-color: #e3e3e3;
+}
+
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  font-family: 'Capriola', sans-serif;
+}
+#cssmenu:before,
+#cssmenu:after,
+#cssmenu > ul:before,
+#cssmenu > ul:after {
+  content: '';
+  display: table;
+}
+#cssmenu:after,
+#cssmenu > ul:after {
+  clear: both;
+}
+#cssmenu {
+  zoom: 1;
+  height: 50px;
+  margin-top:7px;
+  border-radius: 2px;
+  width: auto;
+}
+#cssmenu ul {
+ 
+  height: 50px;
+}
+#cssmenu ul li {
+  float: left;
+  list-style: none;
+}
+#cssmenu ul li a {
+  display: block;
+  margin: 26px 0 0 30px;
+  
+  border-radius: 2px 2px 0 0;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+  font-weight: 400;
+  opacity: .9;
+}
+#cssmenu ul li:first-child a {
+  margin: 4px 2px 0 0;
+}
+#cssmenu ul li a:hover,
+#cssmenu ul li.active a {
+  
+  display: block;
+  margin-top: 0px;
+  padding-top: 26px;
+  color: #00a651;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.55);
+  opacity: 1;
 }
 
 
@@ -171,9 +233,15 @@ body
 }
 
 #content{
-	float:left;
+	width:100%;
 	
 
+}
+
+.sliderlive
+{
+	width:100%;
+	clear:both;
 }
 
 .slider{
@@ -183,6 +251,12 @@ body
 	height: 290px;
 	margin-top: 63px;
 	border-radius: 6px
+}
+
+.liverecords
+{
+	width:100%;
+	float:left;
 }
 
 .list{
@@ -249,17 +323,11 @@ body
 
 }
 
-#content-2{
-	float:left;
-	width:420px;
-	height:135px;
-	clear: both;
-}
-
 .live{
 	float:left;
-    margin:58px 0 10px 0;
-    width:442px;
+    width:440px;
+	margin-left:60px;
+	margin-top:33px;
 
 }
 .live span{
@@ -295,15 +363,23 @@ body
 	float:left;
 	margin-top: 11px;
 	width:420px;
-	height:135px;
+	height:290px;
 	border:11px solid #e3e3e3;
-	overflow: auto;
 	border-radius: 6px;
+	overflow:hidden;
 }
+
+.recordshow ul, .recordshow ul li
+{
+	list-style:none;
+	padding:0px 10px;
+}
+
 .post{
 	float: left;
 	width:383px;
-	padding-left: 20px;
+	margin-left: 20px;
+	border-bottom:1px solid #ccc;
 }
 
 .post h5{

@@ -33,6 +33,29 @@
    
 		</div><!--header ends-->
 	</div>
+    
+    <div id="search">
+   
+   <div id="wrapper">
+    <div id="sea">	
+    	<!--<h2>Search Listing</h2>
+    	{{ Form::text('search','',array('class'=>'span6','placeholder'=>'search by city')) }}
+    	
+       {{ Form::submit('Search', array('class' => 'button')) }}-->
+       <div id='cssmenu'>
+       <ul>
+       <li class="active"><a href="{{URL::to('dashboard')}}">Dashboard</a></li>
+       <li><a href="#">Agency Staff</a></li>
+       <li><a href="{{URL::to('profile')}}">My Accounts & Profile</a></li>
+       <li><a href="{{URL::to('dashboard/reports')}}">Reports</a></li>
+       <li class="last"><a href="#">Property Management</a></li>
+       </ul>
+       </div>
+
+    	
+    </div><!--sea-->
+    </div>
+    </div>
 	
 	@yield('content')
 </div>

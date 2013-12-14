@@ -9,6 +9,7 @@
 	{{ HTML::script('assets/js/js-image-slider.js') }}
 	{{ HTML::script('assets/js/jquery.js') }}
 	{{ HTML::script('assets/js/mcVideoPlugin.js'); }}
+	{{ HTML::script('assets/js/Chart.min.js'); }}
 
     
 

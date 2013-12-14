@@ -11,7 +11,7 @@ class AgencyController extends \BaseController {
 	{
 	
 	$records = Agency::all();
-	$total= DB::table('agencystaff')
+	$total= DB::table('Agencystaff')
           			->count();
 		
 	return View::make('agencystaff.index')

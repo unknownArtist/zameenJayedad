@@ -7,6 +7,6 @@ Class Agency extends Eloquent {
          *
          * @var string
          */
-        protected $table ='agencystaff';
+        protected $table ='Agencystaff';
         
 }

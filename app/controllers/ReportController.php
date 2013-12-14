@@ -24,6 +24,7 @@ class ReportController extends \BaseController {
             $data[] = $value->totalHits;
         }
         $data = str_replace('"',"",json_encode($data));
+        // dd($data);
         return View::make('report.report')
                    ->with('total',$total)
                    ->with('date',$propertyDate->lists('hits_on'))

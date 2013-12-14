@@ -136,7 +136,7 @@ body
   opacity: .9;
 }
 #cssmenu ul li:first-child a {
-  margin: 4px 2px 0 0;
+ 
 }
 #cssmenu ul li a:hover,
 #cssmenu ul li.active a {
@@ -234,7 +234,7 @@ body
 
 #content{
 	width:100%;
-	
+	float:left;
 
 }
 
@@ -502,12 +502,13 @@ body
 
 #report{
 	margin: 0 auto;
-	width: 611px;
+	width: 100%;
 }
 
 #report h2{
 	padding-top: 57px;
 	color: green;
+	text-align:center;
 }
 
 #report h3{
@@ -1166,6 +1167,34 @@ p.change_link{
     padding-left: 4px;
     padding-right: 4px;
     border-radius: 3px;
+}
+
+.reportview
+{
+	width:45%;
+	float:left;
+	margin:0 15px;
+}
+
+.agencynew
+{
+	float:right;
+}
+
+.agencynew a
+{
+	text-decoration:none !important;
+	color:#50b1a8 !important;
+	font-size:16px;
+	font-weight:bold;
+	border:2px solid #50b1a8;
+	border-radius:5px;
+	padding:4px 10px;
+}
+
+.agencynew a:hover
+{
+	
 }
 
 

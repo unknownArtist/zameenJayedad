@@ -1,8 +1,8 @@
 @extends('layouts.login')
 @section('content')
- {{ Form::open(array('url' => 'user/email/search')) }}
     
-    {{ Form::close() }}
+
+ 
     <!--search ends-->
     <div id="wrapper">
     <div id="content">
@@ -35,7 +35,7 @@
 
         <div class="section">
 
-        <marquee direction="up" behavior="scroll" height="300" scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();">
+        
             <!--<div class="post">
                 <img class="img" src="assets/images/thumb.png" width="60px" height="47px">  
                 <h5>4602 Windsor Street, Vancouver</h5>
@@ -46,20 +46,25 @@
                   
                   <div class="recordshow">
     	<ul>
+         <marquee direction="up" behavior="scroll" height="285" scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();">
             @foreach($users as $user)
-    		<li>{{Form::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidth'));}}
+    		<li>
+           
+            {{Form::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidth'));}}
              <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
                  <h2> {{$user->budget}} - {{$user->location}}</h2>
                  <p>{{$user->Description}} </p>
                  <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user-> l_area}}</span>
+                
     		 </li>
              <hr>
              @endforeach
+              </marquee>
     	</ul>
     	
     </div>
 
-		</marquee>
+		
 
       </div><!--section ends-->
       </div><!--live-->

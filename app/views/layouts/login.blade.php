@@ -9,6 +9,42 @@
 	{{ HTML::script('assets/js/mcVideoPlugin.js'); }}
 
     
+    <script type="text/javascript">
+function GetCurrentPageName() { 
+//method to get Current page name from url. 
+var PageURL = document.location.href; 
+var PageName = PageURL.substring(PageURL.lastIndexOf('/') + 1); 
+ 
+return PageName.toLowerCase() ;
+}
+ 
+$(document).ready(function(){
+var CurrPage = GetCurrentPageName();
+ 
+switch(CurrPage){
+case 'dashboard':
+ $('#li_home').addClass('active') ;
+ break;
+case 'agencystaff':
+ $('#li_agency').addClass('active') ;
+ break;
+case 'profile':
+ $('#li_profile').addClass('active') ;
+ break;
+ case 'reports':
+ $('#li_reports').addClass('active') ;
+ break;
+ case 'property':
+ $('#li_property').addClass('active') ;
+ break;
+
+
+}
+
+});
+
+</script> 
+
 
 
 </head>
@@ -44,11 +80,11 @@
        {{ Form::submit('Search', array('class' => 'button')) }}-->
        <div id='cssmenu'>
        <ul>
-       <li class="active"><a href="{{URL::to('dashboard')}}">Dashboard</a></li>
-       <li><a href="#">Agency Staff</a></li>
-       <li><a href="{{URL::to('profile')}}">My Accounts & Profile</a></li>
-       <li><a href="{{URL::to('dashboard/reports')}}">Reports</a></li>
-       <li class="last"><a href="#">Property Management</a></li>
+       <li id="li_home"><a href="{{URL::to('dashboard')}}">Dashboard</a></li>
+       <li id="li_agency"><a href="{{URL::to('dashboard/agencystaff')}}">Agency Staff</a></li>
+       <li id="li_profile"><a href="{{URL::to('profile')}}">My Accounts & Profile</a></li>
+       <li id="li_reports"><a href="{{URL::to('dashboard/reports')}}">Reports</a></li>
+       <li id="li_property"><a href="{{URL::to('profolio')}}">Property Management</a></li>
        </ul>
        </div>
 

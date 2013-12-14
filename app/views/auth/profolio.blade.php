@@ -20,13 +20,13 @@
     });
 
 </script>
-</div>
-<div id="search">
 
-   </div> 
- {{  Session::get('errors') }}
 <div id="wrapper">
+<div id="content">
 <div id="form-wrapper">
+
+ {{  Session::get('errors') }}
+
 
 {{ Form::open(array('url' => 'profolio','files' => true)) }}
 
@@ -171,5 +171,8 @@
 
 </div>
 {{ Form::close() }}
+</div>
+</div>
+
 
 @stop

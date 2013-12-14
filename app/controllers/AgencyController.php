@@ -29,25 +29,30 @@ class AgencyController extends \BaseController {
 	public function postEdit($id)
 	{
 		$fields = array(
-			'email'=>Input::get('team'),
+			'email'=>Input::get('email'),
 		   'name' => Input::get('name'),
-		   'phone' => Input::get('player_nickname'),
-		   'cell' => Input::get('age'),
-		   'fax' => Input::get('weight'),
-		   'address' => Input::get('height'),
-		   'zip' => Input::get('position'),
-		   'country' => Input::get('shoots'),
-		   'statistic' => Input::get('statistic'),
-		   'hot_quota' => Input::get('achievements')
+		   'phone' => Input::get('phone'),
+		   'cell' => Input::get('cell'),
+		   'fax' => Input::get('fax'),
+		   'address' => Input::get('address'),
+		   'zip' => Input::get('zip'),
+		   'country' => Input::get('country'),
+		   'listing_quota' => Input::get('listing_quota'),
+		   'hot_quota' => Input::get('hot_quota')
 		   );
 
-		  DB::table('player_profile')
-            ->where('id','=',Request::segment(2))
+		  DB::table('agencystaff')
+            ->where('id','=',$id)
             ->update($fields);
 		
-	
+		return Redirect::to('dashboard/agencystaff');
 	}
 
-	
+	public function getDelete($id)
+	{
+	$agencystaff = Agency::find($id);
+		$agencystaff->delete();
+		return Redirect::to('dashboard/agencystaff');
+	}
 
 }

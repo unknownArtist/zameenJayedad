@@ -1,5 +1,25 @@
 @extends('layouts.login')
 @section('content')
+<script>
+    $(document).ready(function(){
+        $('#Property_Type').change(function(){
+
+            if($('#Property_Type').val() == "Plots")
+            {
+                $('#homeType').hide();
+                $('#bedRooms').hide();
+                $('#bathRooms').hide();
+
+            }else
+            {
+                $('#homeType').show();
+                $('#bedRooms').show();
+                $('#bathRooms').show();
+            }
+        });
+    });
+
+</script>
 </div>
 <div id="search">
 
@@ -23,7 +43,7 @@
             {{ Form::file('photo')}}
         </li>
         
-        <li>
+        <li id="homeType">
             {{ Form::label('home_type', 'Type of Homes') }}
             {{ Form::select('home_type', $Type_of_Homes  )}}
         </li>
@@ -92,12 +112,12 @@
             {{ Form::select('unit', $unit) }}
         </li>
 
-         <li>
+         <li id="bedRooms">
             {{ Form::label('Bedrooms', 'Bedrooms') }}
             {{ Form::select('Bedrooms', $Bedrooms ) }}
         </li>
 
-         <li>
+         <li id="bathRooms">
             {{ Form::label('Bathrooms', 'Bathrooms') }}
             {{ Form::select('Bathrooms', $Bathrooms ) }}
         </li>

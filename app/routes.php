@@ -1,5 +1,7 @@
 <?php
 
+
+Route::get('/',array('uses'=>'DashboardController@getIndex'));
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -9,6 +11,8 @@
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the Closure to execute when that URI is requested.
 |
+
+
 */
 /*------------------Authentication Routes---------------------------*/
 
@@ -30,7 +34,7 @@ Route::get('dashboard/agencystaff/{id}/edit',array('uses'=>'AgencyController@get
 /*------------------End of email alert routes-----------------------*/
 
 	Route::get('profile',array('uses'=>'AuthController@getProfile'));
-    Route::get('report',array('uses'=>'AuthController@getReport'));
+    Route::get('dashboard/reports',array('uses'=>'ReportController@getReport'));
     Route::post('addnewuser',array('uses'=>'AuthController@postAddNewUser'));
     Route::get('addnewuser',array('uses'=>'AuthController@getAddNewUser'));
     Route::post('profolio',array('uses'=>'AuthController@postProfolio'));

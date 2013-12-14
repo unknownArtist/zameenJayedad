@@ -2,10 +2,12 @@
 <html>
 <head>
 	<title>Zameen Jayedad</title>
+
 	{{ HTML::style('assets/css/style.css')}}
 	{{ HTML::style('assets/css/generic.css')}}
-	{{ HTML::style('assets/js/js-image-slider.css'); }}
-	{{ HTML::script('assets/js/js-image-slider.js'); }}
+	{{ HTML::style('assets/js/js-image-slider.css') }}
+	{{ HTML::script('assets/js/js-image-slider.js') }}
+	{{ HTML::script('assets/js/jquery.js') }}
 	{{ HTML::script('assets/js/mcVideoPlugin.js'); }}
 
     

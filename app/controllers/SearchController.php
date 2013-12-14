@@ -15,7 +15,7 @@ class SearchController extends \BaseController {
 					->with('name',$name)
 					->with('record',$records);
 	}
-	
+
 
 	
 

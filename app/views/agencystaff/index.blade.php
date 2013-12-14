@@ -1,16 +1,5 @@
 @extends('layouts.login')
 @section('content')
-
-<style>
-tr, td
-{
-	width:20%;
-}
-
-
-</style>
-
-
 <div id="wrapper">
 <div id="content">
 
@@ -47,7 +36,10 @@ tr, td
                         <i class="icon-edit"></i> Edit
                     </a>
 
-                    <a href="{{URL::to('admin/team/'.$records->id.'/delete')}}" class="" alt="Delete" onclick="return confirm('Are you sure?')">
+
+                    
+
+                    <a href="{{URL::to('dashboard/agencystaff/'.$records->id.'/delete')}}" class="btn btn-mini" alt="Delete" onclick="return confirm('Are you sure?')">
                         <i class="icon-remove"></i> Delete
                     </a>
                 </div>

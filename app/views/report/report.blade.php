@@ -91,6 +91,7 @@
 		datasets:[{
 			data: <?php echo $totalHits ?>,
 			strokeColor : "rgba(151,187,205,1)",
+			
 		}],
 
 

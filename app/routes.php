@@ -18,6 +18,7 @@ Route::get('/',array('uses'=>'DashboardController@getIndex'));
 
 /*------------------Search routes-----------------------------*/
 	// Route::get('dashboard/search',array('uses'=>'SearchController@getSearch'));
+Route::get('dashboard/agencystaff/{id}/delete',array('uses'=>'AgencyController@getDelete'));
 Route::post('dashboard/agencystaff/{id}/edit',array('uses'=>'AgencyController@postEdit'));
 Route::get('dashboard/agencystaff/{id}/edit',array('uses'=>'AgencyController@getEdit'));
  Route::get('dashboard/agencystaff',array('uses'=>'AgencyController@getIndex'));

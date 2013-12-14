@@ -1,6 +1,6 @@
 @extends('layouts.login')
 @section('content')
- {{ Form::open(array('url' => 'user/email/search')) }}
+ {{ Form::open(array('url' => 'dashboard/search')) }}
     <div id="search">
    
     <div id="sea">	

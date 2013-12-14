@@ -28,16 +28,7 @@
 
  	<h3>Traffic Report <span> (14 Oct, 2013 to 12 Nov, 2013)</span></h3>
 
-
- 	<ul class="list-1">
- 		<li>Property Views</li>
- 		<li>Property Visits</li>
- 	</ul>
-
- 	<ul class="list-1">
- 		<li>0</li>
- 		<li>0</li>
- 	</ul>
+ 	<canvas id="daily-reports" width="600" height="300"></canvas>
 
  	<h4 class="span-1">Trafic by Location</h4>
  	<p class="box">Sorry, no data received within your selected date range.</p>
@@ -71,4 +62,24 @@
 </div>
 {{ Form::close() }}
 
+<script>
+(function(){
+	var ctx = document.getElementById('daily-reports').getContext('2d');
+
+	var chart = {
+
+		labels: <?php echo json_encode($date) ?>,
+		datasets:[{
+			data: <?php echo $totalHits ?>,
+			strokeColor : "rgba(151,187,205,1)",
+		}],
+
+
+	};
+	new Chart(ctx).Line(chart);
+})();
+	
+</script>
+
 @stop
+

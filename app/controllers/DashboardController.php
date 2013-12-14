@@ -6,7 +6,7 @@ class DashboardController extends BaseController {
 
 	public function getIndex()
 	{
-		
+
 		$users = DB::table('property')
                     ->orderBy('id', 'desc')
                     ->take(10)

@@ -1,5 +1,7 @@
 <?php
 
+
+Route::get('/',array('uses'=>'DashboardController@getIndex'));
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -9,6 +11,8 @@
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the Closure to execute when that URI is requested.
 |
+
+
 */
 /*------------------Authentication Routes---------------------------*/
 /*------------------Search routes-----------------------------*/

@@ -5,13 +5,11 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.0.*",
-<<<<<<< HEAD
 		"cartalyst/sentry": "2.0.*",
-        "way/generators": "dev-master"
-=======
-		 "cartalyst/sentry": "2.0.*",
-		 "intervention/image": "dev-master"
->>>>>>> a41a7ac8d9e8347e9867b338a40a6ba36d9e2e80
+        "way/generators": "dev-master",
+     	"cartalyst/sentry": "2.0.*",
+		"intervention/image": "dev-master"
+
 	},
 	"autoload": {
 		"classmap": [

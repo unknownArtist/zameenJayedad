@@ -78,7 +78,7 @@ body
 }
 
 #sea input{
-	width:511px;
+	width:100px;
 	height: 26px;
 	border-radius: 6px;
 	margin-top: 28px;
@@ -87,6 +87,7 @@ body
 	font-size: 16px;
 	font-weight: bold;
 	outline-color: #e3e3e3;
+	float:left;
 }
 
 #cssmenu ul,
@@ -111,9 +112,9 @@ body
 #cssmenu {
   zoom: 1;
   height: 50px;
-  margin-top:7px;
   border-radius: 2px;
-  width: auto;
+  width: 750px;
+  float:left;
 }
 #cssmenu ul {
  
@@ -149,6 +150,27 @@ body
   opacity: 1;
 }
 
+.searchlist
+{
+	margin:0px;
+	padding:0px;
+}
+
+.searchlist input
+{
+	width:240px;
+	height: 25px;
+	border-radius: 6px;
+	margin-top:18px;
+	color:#50b1a8;
+	text-indent:8px;
+	line-height:21px;
+	font-size: 16px;
+	outline-color: #e3e3e3;
+	float:left;
+	border:none;
+	margin-left:15px;
+}
 
 
 #search h2{
@@ -171,15 +193,21 @@ body
 }
 
 .button{
-   font-weight: bold;
-   color: #50b1a8;
-   background-color: #fff;
-   text-decoration: none;
-   padding: 3px!important;
-   margin-left: 12px;
-   border-radius: 4px;
-   width: 100px!important;
+height: 26px !important;
+margin-top: 18px !important;
+color: #50b1a8 !important;
+background-color: #f6f6f6;
+text-decoration: none;
+margin-left: 12px;
+width: 70px!important;
+text-indent: 0px !important;
+cursor:pointer;
 
+}
+
+.button:hover
+{
+	background:#fff;
 }
 
 #result{
@@ -373,6 +401,11 @@ body
 {
 	list-style:none;
 	padding:0px 10px;
+}
+
+.recordshow ul
+{
+	margin:0px;
 }
 
 .post{

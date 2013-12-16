@@ -34,12 +34,9 @@
                 <div class="btn-group">
                     <a href="{{URL::to('dashboard/agencystaff/'.$records->id.'/edit')}}" class="" alt="Edit">
                         <i class="icon-edit"></i> Edit
-                    </a>
+                    </a>                    
 
-
-                    
-
-                    <a href="{{URL::to('dashboard/agencystaff/'.$records->id.'/delete')}}" class="btn btn-mini" alt="Delete" onclick="return confirm('Are you sure?')">
+                    <a href="{{URL::to('dashboard/agencystaff/'.$records->id.'/delete')}}" class="" alt="Delete" onclick="return confirm('Are you sure?')">
                         <i class="icon-remove"></i> Delete
                     </a>
                 </div>

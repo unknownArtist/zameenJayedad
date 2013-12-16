@@ -1,20 +1,7 @@
 @extends('layouts.login')
 @section('content')
 
-    {{ Form::open(array('url' => 'dashboard/search')) }}
-    <div id="search">
-   
-    <div id="sea">  
-        <h2>Search Listing</h2>
-        {{ Form::text('search','',array('class'=>'span6','placeholder'=>'search here')) }}
-        
-       {{ Form::submit('Search', array('class' => 'button')) }}
 
-        
-    </div><!--sea-->
-    </div>
-    {{ Form::close() }}
-    </div><!--search ends-->
 
     <div id="result">
     	<h2>Search Results for {{$name}}</h2>

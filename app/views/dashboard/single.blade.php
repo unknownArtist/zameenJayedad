@@ -1,20 +1,8 @@
 @extends('layouts.login')
 @section('content')
 
-    {{ Form::open(array('url' => 'user/email/search')) }}
-    <div id="search">
-   
-    <div id="sea">  
-        <h2>Search Listing</h2>
-        {{ Form::text('search','',array('class'=>'span6','placeholder'=>'search here')) }}
-        
-       {{ Form::submit('Search', array('class' => 'button')) }}
-
-        
-    </div><!--sea-->
-    </div>
-    {{ Form::close() }}
-    </div><!--search ends-->
+<div class="wrapper">
+<div class="content">
 
     <!--result-->
     
@@ -54,4 +42,7 @@
         <p>2 beds | 2 baths1,389 sq ftEco Realty Inc.</p>
       </div><!--featured bottom ends-->
     </div><!--featured ends-->
+    
+    </div>
+    </div>
 @stop

@@ -3,10 +3,11 @@
 </div>
 <div id="search">
    </div> 
-    {{  Session::get('errors') }}
+   
     <div id="wrapper">
     <div id="height">    
     <div id="form-wrapper">
+     {{  Session::get('errors') }}
 <h1>Login </h1>
 {{ Form::open(array('url' => 'login')) }}
     <ul>

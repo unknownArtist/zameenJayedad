@@ -104,5 +104,6 @@
     </div>
 
   </div><!--content ends-->
+  </div>
 
 @stop

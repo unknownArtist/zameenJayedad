@@ -7,7 +7,12 @@
 	{{ HTML::style('assets/js/js-image-slider.css'); }}
 	{{ HTML::script('assets/js/js-image-slider.js'); }}
 	{{ HTML::script('assets/js/mcVideoPlugin.js'); }}
+<<<<<<< HEAD
 	{{ HTML::script('assets/js/Chart.min.js'); }}
+=======
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+>>>>>>> 02665c3338bc11742498f413c68ee49dce3d1eb6
 
     
     <script type="text/javascript">
@@ -88,14 +93,27 @@ case 'profile':
        <li id="li_property"><a href="{{URL::to('profolio')}}">Property Management</a></li>
        </ul>
        </div>
-
-    	
-    </div><!--sea-->
     </div>
     </div>
 	
+    <div class="searchlist">
+     {{ Form::open(array('url' => 'dashboard/search')) }}
+   
+   
+    
+       <!-- <h2>Search Listing</h2>-->
+        {{ Form::text('search','',array('class'=>'span6','placeholder'=>'Search Listings...')) }}
+        
+       {{ Form::submit('Search', array('class' => 'button')) }}
+
+   
+    {{ Form::close() }}
+   
+    	</div>
+    </div><!--search-->
+    
 	@yield('content')
-</div>
+
     	<div id="footer">
 			<p class="foot">Copyright &copy; 2013 zameen jayedad inc | Office F-1 Rauf Tower DHA phase 2, Gate1, Islamabad</p>
   		</div>

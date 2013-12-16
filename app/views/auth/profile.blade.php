@@ -2,10 +2,12 @@
 @section('content')
 </div>
  
- {{  Session::get('errors') }}
+ 
 <div id="wrapper">
 <div id="content">
 <div id="form-wrapper">
+
+{{  Session::get('errors') }}
 
 {{ Form::open(array('url' =>'profile')) }}
 

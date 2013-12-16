@@ -7,12 +7,12 @@
 	{{ HTML::style('assets/js/js-image-slider.css'); }}
 	{{ HTML::script('assets/js/js-image-slider.js'); }}
 	{{ HTML::script('assets/js/mcVideoPlugin.js'); }}
-<<<<<<< HEAD
+
 	{{ HTML::script('assets/js/Chart.min.js'); }}
-=======
+
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
->>>>>>> 02665c3338bc11742498f413c68ee49dce3d1eb6
+
 
     
     <script type="text/javascript">

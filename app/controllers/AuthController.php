@@ -457,7 +457,7 @@ class AuthController extends BaseController {
 			            $Agency->hot_quota          = $fields['hot_quota'];
 			            $Agency->save();
 
-			            return Redirect::to('addnewuser')->with('errors','successfully Added');        		
+			            return Redirect::to('dashboard/agencystaff')->with('success','successfully Added');        		
 	}
 		
 

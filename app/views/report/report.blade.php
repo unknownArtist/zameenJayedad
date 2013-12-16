@@ -32,7 +32,7 @@
 	<div class="reportview">
  	<h3>Traffic Report <span> (14 Oct, 2013 to 12 Nov, 2013)</span></h3>
 
- 	<canvas id="daily-reports" width="600" height="300"></canvas>
+ 	<canvas id="daily-reports" width="450" height="300"></canvas>
     </div>
     
     <div class="reportview">

@@ -116,6 +116,7 @@ return array(
 		'Cartalyst\Sentry\SentryServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
+		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 
 	),
 

@@ -41,7 +41,7 @@ class AgencyController extends \BaseController {
 		   'hot_quota' => Input::get('hot_quota')
 		   );
 
-		  DB::table('agencystaff')
+		  DB::table('Agencystaff')
             ->where('id','=',$id)
             ->update($fields);
 		

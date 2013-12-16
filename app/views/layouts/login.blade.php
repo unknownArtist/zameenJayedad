@@ -16,6 +16,7 @@
 
     
     <script type="text/javascript">
+	
 function GetCurrentPageName() { 
 //method to get Current page name from url. 
 var PageURL = document.location.href; 
@@ -50,6 +51,28 @@ case 'profile':
 });
 
 </script> 
+
+<script type="text/javascript">
+
+jQuery(function(){
+        $("#searchbtn").click(function(){
+        $(".error").hide();
+        var hasError = false;
+        var searchReg = /^[a-zA-Z0-9-]+$/;
+        var searchVal = $("#searchtxt").val();
+        if(searchVal == '') {
+            $("#searchtxt").after('<span class="error">Please enter a search term.</span>');
+            hasError = true;
+        } else if(!searchReg.test(searchVal)) {
+            $("#searchtxt").after('<span class="error">Enter valid text.</span>');
+            hasError = true;
+        }
+        if(hasError == true) {return false;}
+    });
+});
+
+
+</script>
 
 
 
@@ -90,7 +113,7 @@ case 'profile':
        <li id="li_agency"><a href="{{URL::to('dashboard/agencystaff')}}">Agency Staff</a></li>
        <li id="li_profile"><a href="{{URL::to('profile')}}">My Accounts & Profile</a></li>
        <li id="li_reports"><a href="{{URL::to('dashboard/reports')}}">Reports</a></li>
-       <li id="li_property"><a href="{{URL::to('profolio')}}">Property Management</a></li>
+       <li id="li_property"><a href="{{URL::to('profolio/listing')}}">Property Management</a></li>
        </ul>
        </div>
     </div>
@@ -102,9 +125,9 @@ case 'profile':
    
     
        <!-- <h2>Search Listing</h2>-->
-        {{ Form::text('search','',array('class'=>'span6','placeholder'=>'Search Listings...')) }}
+        {{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'Search Listings...')) }}
         
-       {{ Form::submit('Search', array('class' => 'button')) }}
+       {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn')) }}
 
    
     {{ Form::close() }}
@@ -113,10 +136,12 @@ case 'profile':
     </div><!--search-->
     
 	@yield('content')
-
+		
+        <div class="footerheight">
     	<div id="footer">
 			<p class="foot">Copyright &copy; 2013 zameen jayedad inc | Office F-1 Rauf Tower DHA phase 2, Gate1, Islamabad</p>
   		</div>
+        </div>
 
 </body>
 </html>

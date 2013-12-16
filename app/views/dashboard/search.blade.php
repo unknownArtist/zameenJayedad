@@ -14,9 +14,13 @@
             @foreach($record as $records)
     		<li>{{Form::image('uploads/photos/'.$records->photo, '', array('class'=>'imagewidth'));}}
              <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
-                 <h2> <a href="{{URL::to('dashboard/listing/'.$records->id)}}">{{$records->budget}} - {{$records->location}}</a></h2>
+                 <h2> <a href="{{URL::to('dashboard/listing/'.$records->id)}}">{{$records->budget}} - {{$records->city}}</a></h2>
                  <p>{{$records->Description}} </p>
                  <span>{{$records->bedroom}} bedrooms | {{$records->bathroom}} bathrooms | {{$records-> l_area}}</span>
+
+                            
+
+
     		 </li>
              <hr>
              @endforeach

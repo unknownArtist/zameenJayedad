@@ -1,20 +1,8 @@
 @extends('layouts.login')
 @section('content')
 
-    {{ Form::open(array('url' => 'user/email/search')) }}
-    <div id="search">
-   
-    <div id="sea">  
-        <h2>Search Listing</h2>
-        {{ Form::text('search','',array('class'=>'span6','placeholder'=>'search here')) }}
-        
-       {{ Form::submit('Search', array('class' => 'button')) }}
-
-        
-    </div><!--sea-->
-    </div>
-    {{ Form::close() }}
-    </div><!--search ends-->
+<div class="wrapper">
+<div class="content">
 
     <!--result-->
     
@@ -24,9 +12,18 @@
             @foreach($record as $records)
         <li>{{Form::image('uploads/photos/'.$records->photo, '', array('class'=>'imagewidth'));}}
              <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
-                 <h2> {{$records->budget}} - {{$records->location}}</h2>
+                 <h2> {{$records->property_type}}</h2>
                  <p>{{$records->Description}} </p>
                  <span>{{$records->bedroom}} bedrooms | {{$records->bathroom}} bathrooms | {{$records-> l_area}}</span>
+
+                 <span>budget {{$records->budget}}  | city {{$records->city}} </span> 
+                 <span> Construction_status {{$records->Construction_status}}</span>
+                 <span> Contact No {{$records->cell}}</span></br>
+                <span> Fax {{$records->fax}}</span></br>
+                <span> Email {{$records->email}}</span>
+         </li>
+
+         </li>
          </li>
              <hr>
              @endforeach
@@ -45,4 +42,7 @@
         <p>2 beds | 2 baths1,389 sq ftEco Realty Inc.</p>
       </div><!--featured bottom ends-->
     </div><!--featured ends-->
+    
+    </div>
+    </div>
 @stop

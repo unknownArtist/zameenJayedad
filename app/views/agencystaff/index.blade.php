@@ -1,5 +1,22 @@
 @extends('layouts.login')
 @section('content')
+
+<style>
+th
+{
+	background:#50b1a8;
+	color:#f6f6f6;
+}
+
+td
+{
+	text-align:center;
+	color:#50b1a8;
+	font-size:15px;
+}
+
+
+</style>
 <div id="wrapper">
 <div id="content">
 
@@ -9,9 +26,9 @@
 <a href="{{URL::to('addnewuser')}}">Add New</a>
 </div>
 
-    <h2>Total User({{$total}}) </h2>
+    <h2 style="color:#50b1a8;">Total Users&nbsp;({{$total}}) </h2>
     
-<table cellpadding="5" cellspacing="10" border="0" class="table table-hover table-bordered margin-top15" id="companies" style="margin-bottom:15px;">
+<table width="100%" cellpadding="10" cellspacing="0" border="0" class="table table-hover table-bordered margin-top15" id="companies" style="margin-bottom:15px;">
     <thead>
 
         <tr>
@@ -32,13 +49,11 @@
             <td>
 
                 <div class="btn-group">
-                    <a href="{{URL::to('dashboard/agencystaff/'.$records->id.'/edit')}}" class="" alt="Edit">
+                    <a href="{{URL::to('dashboard/agencystaff/'.$records->id.'/edit')}}" class="editbtn" alt="Edit">
                         <i class="icon-edit"></i> Edit 
                     </a> 
-                    &nbsp;
-                    /     
-					&nbsp;
-                    <a href="{{URL::to('dashboard/agencystaff/'.$records->id.'/delete')}}" class="" alt="Delete" onclick="return confirm('Are you sure?')">
+                 &nbsp;
+                    <a href="{{URL::to('dashboard/agencystaff/'.$records->id.'/delete')}}" class="editbtn" alt="Delete" onclick="return confirm('Are you sure?')">
                         <i class="icon-remove"></i> Delete
                     </a>
                 </div>

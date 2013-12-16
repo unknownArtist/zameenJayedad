@@ -271,7 +271,6 @@ cursor:pointer;
 #content{
 	width:100%;
 	float:left;
-
 }
 
 .sliderlive
@@ -1220,6 +1219,7 @@ p.change_link{
 .agencynew
 {
 	float:right;
+	margin:5px;
 }
 
 .agencynew a
@@ -1233,9 +1233,20 @@ p.change_link{
 	padding:4px 10px;
 }
 
-.agencynew a:hover
+.editbtn
 {
-	
+	text-decoration:none !important;
+	color:#50b1a8 !important;
+	font-size:12px;
+	font-weight:bold;
+	border:2px solid #50b1a8;
+	border-radius:5px;
+	padding:4px 10px;
 }
 
+.editbtn:hover, .agencynew a:hover
+{
+	color:#fff !important;
+	background:#50b1a8;
+}
 

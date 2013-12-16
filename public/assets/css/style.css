@@ -156,6 +156,14 @@ body
 	padding:0px;
 }
 
+.error
+{
+	width:200px;
+	color:red;
+	position:absolute;
+	right:135px;
+}
+
 .searchlist input
 {
 	width:240px;

@@ -12,6 +12,7 @@
 
     
     <script type="text/javascript">
+	
 function GetCurrentPageName() { 
 //method to get Current page name from url. 
 var PageURL = document.location.href; 
@@ -46,6 +47,28 @@ case 'profile':
 });
 
 </script> 
+
+<script type="text/javascript">
+
+jQuery(function(){
+        $("#searchbtn").click(function(){
+        $(".error").hide();
+        var hasError = false;
+        var searchReg = /^[a-zA-Z0-9-]+$/;
+        var searchVal = $("#searchtxt").val();
+        if(searchVal == '') {
+            $("#searchtxt").after('<span class="error">Please enter a search term.</span>');
+            hasError = true;
+        } else if(!searchReg.test(searchVal)) {
+            $("#searchtxt").after('<span class="error">Enter valid text.</span>');
+            hasError = true;
+        }
+        if(hasError == true) {return false;}
+    });
+});
+
+
+</script>
 
 
 
@@ -98,9 +121,9 @@ case 'profile':
    
     
        <!-- <h2>Search Listing</h2>-->
-        {{ Form::text('search','',array('class'=>'span6','placeholder'=>'Search Listings...')) }}
+        {{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'Search Listings...')) }}
         
-       {{ Form::submit('Search', array('class' => 'button')) }}
+       {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn')) }}
 
    
     {{ Form::close() }}

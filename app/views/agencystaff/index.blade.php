@@ -3,7 +3,7 @@
 <div id="wrapper">
 <div id="content">
 
-<div id="form-wrapper">
+<div id="">
 
 <div class="agencynew">
 <a href="{{URL::to('addnewuser')}}">Add New</a>
@@ -11,7 +11,7 @@
 
     <h2>Total User({{$total}}) </h2>
     
-<table cellpadding="5" cellspacing="10" border="1" class="table table-hover table-bordered margin-top15" id="companies" style="margin-bottom:15px;">
+<table cellpadding="5" cellspacing="10" border="0" class="table table-hover table-bordered margin-top15" id="companies" style="margin-bottom:15px;">
     <thead>
 
         <tr>
@@ -33,9 +33,11 @@
 
                 <div class="btn-group">
                     <a href="{{URL::to('dashboard/agencystaff/'.$records->id.'/edit')}}" class="" alt="Edit">
-                        <i class="icon-edit"></i> Edit
-                    </a>                    
-
+                        <i class="icon-edit"></i> Edit 
+                    </a> 
+                    &nbsp;
+                    /     
+					&nbsp;
                     <a href="{{URL::to('dashboard/agencystaff/'.$records->id.'/delete')}}" class="" alt="Delete" onclick="return confirm('Are you sure?')">
                         <i class="icon-remove"></i> Delete
                     </a>

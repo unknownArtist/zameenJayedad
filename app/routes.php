@@ -38,6 +38,7 @@ Route::get('dashboard/agencystaff/{id}/edit',array('uses'=>'AgencyController@get
     Route::get('dashboard/reports',array('uses'=>'ReportController@getReport'));
     Route::post('addnewuser',array('uses'=>'AuthController@postAddNewUser'));
     Route::get('addnewuser',array('uses'=>'AuthController@getAddNewUser'));
+    Route::get('profolio/listing',array('uses'=>'AuthController@getlisting'));
     Route::post('profolio',array('uses'=>'AuthController@postProfolio'));
     Route::get('profolio',array('uses'=>'AuthController@getProfolio'));
 	Route::post('changepass',array('uses'=>'AuthController@postChangePass'));

@@ -109,7 +109,7 @@ jQuery(function(){
        <li id="li_agency"><a href="{{URL::to('dashboard/agencystaff')}}">Agency Staff</a></li>
        <li id="li_profile"><a href="{{URL::to('profile')}}">My Accounts & Profile</a></li>
        <li id="li_reports"><a href="{{URL::to('dashboard/reports')}}">Reports</a></li>
-       <li id="li_property"><a href="{{URL::to('profolio')}}">Property Management</a></li>
+       <li id="li_property"><a href="{{URL::to('profolio/listing')}}">Property Management</a></li>
        </ul>
        </div>
     </div>

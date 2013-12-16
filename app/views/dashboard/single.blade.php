@@ -24,9 +24,18 @@
             @foreach($record as $records)
         <li>{{Form::image('uploads/photos/'.$records->photo, '', array('class'=>'imagewidth'));}}
              <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
-                 <h2> {{$records->budget}} - {{$records->location}}</h2>
+                 <h2> {{$records->property_type}}</h2>
                  <p>{{$records->Description}} </p>
                  <span>{{$records->bedroom}} bedrooms | {{$records->bathroom}} bathrooms | {{$records-> l_area}}</span>
+
+                 <span>budget {{$records->budget}}  | city {{$records->city}} </span> 
+                 <span> Construction_status {{$records->Construction_status}}</span>
+                 <span> Contact No {{$records->cell}}</span></br>
+                <span> Fax {{$records->fax}}</span></br>
+                <span> Email {{$records->email}}</span>
+         </li>
+
+         </li>
          </li>
              <hr>
              @endforeach

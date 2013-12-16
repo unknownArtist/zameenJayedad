@@ -17,7 +17,7 @@ class Property extends Migration {
 			$table->string('property_type');
 			$table->string('home_type');
             $table->string('purpose');
-			$table->integer('Construction_status');
+			$table->string('Construction_status');
 			$table->string('wanted');
 			$table->string('city');
 			$table->string('location');

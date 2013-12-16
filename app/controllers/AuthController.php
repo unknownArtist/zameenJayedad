@@ -476,6 +476,14 @@ public function getProfile()
 					->with('countries', Config::get('listconfig.countries'));
 
 	}	
+	public function getlisting()
+
+	{
+		$user_id = Sentry::getUser()->id;
+					$records = DB::table('property')->where('agent_id', $user_id)->get();
+					$users = DB::table('property')->where('agent_id', $user_id)->count();
+					return View::make('auth.listing', compact('records','users'));
+	}
 
 
 

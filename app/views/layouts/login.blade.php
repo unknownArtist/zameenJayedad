@@ -41,7 +41,7 @@ case 'profile':
  case 'reports':
  $('#li_reports').addClass('active') ;
  break;
- case 'property':
+ case 'listing':
  $('#li_property').addClass('active') ;
  break;
 
@@ -80,7 +80,7 @@ jQuery(function(){
 <body>
 
 
-	<div id="wrapper">
+	<div id="wrapperheader">
   
 
 		<div id="header">
@@ -101,7 +101,7 @@ jQuery(function(){
     
     <div id="search">
    
-   <div id="wrapper">
+   <div id="wrapperheader">
     <div id="sea">	
     	<!--<h2>Search Listing</h2>
     	{{ Form::text('search','',array('class'=>'span6','placeholder'=>'search by city')) }}

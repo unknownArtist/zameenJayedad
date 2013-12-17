@@ -1,5 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Capriola);
 
+html
+{
+	height:100%;
+}
+
 body
 {  
 	margin: 0;
@@ -8,11 +13,26 @@ body
     font-size: 13px;
     color: #333;
     filter: none;
+	height: 100%;
+}
+
+#wrapperheader
+{
+	width:947px;
+	margin:0 auto;
 }
 
 #wrapper{
 	width:947px;
 	margin:0 auto;
+	position: relative;
+min-height: 63%;
+clear:both;
+}
+
+* html #wrapper
+{
+	height:100%;
 }
 
 #header
@@ -70,7 +90,6 @@ body
 	float: left;
 	margin-top: -12px;
 	padding: 0;
-	z-index: -1;
 	position: relative;
 }
 #sea{
@@ -270,13 +289,8 @@ cursor:pointer;
 
 #content{
 	width:100%;
+	padding-bottom: 1em;
 	float:left;
-}
-
-.sliderlive
-{
-	width:100%;
-	clear:both;
 }
 
 .slider{
@@ -297,7 +311,7 @@ cursor:pointer;
 .list{
 	float: left;
 	width: 464px;
-	margin-top: 63px;
+	margin-top: 50px;
 	margin-left: 41px;
 
 }
@@ -447,7 +461,6 @@ cursor:pointer;
 .sec-2{
 	float:left;
 	width:201px;
-	height:135px;
 	margin-left: 98px;
     margin-bottom: 2px;
     margin-top: 42px;
@@ -461,8 +474,6 @@ cursor:pointer;
 	float:left;
 	border:2px solid #e3e3e3;
 	width:201px;
-	height:157px;
-	margin-left: ;
 
 }
 
@@ -756,7 +767,7 @@ margin-bottom: 36px;
 	background-color: #50b1a8;
 	color:#fff;
 	height:40px;
-	margin-top: 93px;
+	position: relative;
 
 }
 
@@ -1241,7 +1252,7 @@ p.change_link{
 	font-weight:bold;
 	border:2px solid #50b1a8;
 	border-radius:5px;
-	padding:4px 10px;
+	padding:2px 5px;
 }
 
 .editbtn:hover, .agencynew a:hover

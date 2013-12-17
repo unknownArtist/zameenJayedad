@@ -17,8 +17,20 @@ padding-bottom: 10px;
 border-bottom: 1px solid #50b1a8;
 }
 
+tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
 
 </style>
+<script type="text/javascript">
+$(document).ready(function()
+{
+  $("tr:even").css("background-color", "#ccc;");
+});
+
+</script>
+
 <div id="wrapper">
 <div id="content">
 

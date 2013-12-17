@@ -28,6 +28,7 @@ class AgencyController extends \BaseController {
 	}
 	public function postEdit($id)
 	{
+		
 		$fields = array(
 			'email'=>Input::get('email'),
 		   'name' => Input::get('name'),
@@ -44,6 +45,12 @@ class AgencyController extends \BaseController {
 		  DB::table('Agencystaff')
             ->where('id','=',$id)
             ->update($fields);
+            $fieldsname = array(
+            	       'agency_name' => Input::get('agency_name')
+		                );
+            DB::table('agencies')
+            ->where('user_id','=',$id)
+            ->update($fieldsname);
 		
 		return Redirect::to('dashboard/agencystaff');
 	}

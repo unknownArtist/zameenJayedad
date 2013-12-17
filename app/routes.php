@@ -14,7 +14,9 @@ Route::get('/',array('uses'=>'DashboardController@getIndex'));
 
 
 */
-/*------------------Authentication Routes---------------------------*/
+/*------------------Message Routes---------------------------*/
+Route::get('dashboard/message/compose', array('uses'=>'MessageCentreController@getmessagecompose'));
+Route::get('dashboard/messages', array('uses'=>'MessageCentreController@getIndex')); 
 
 /*------------------Search routes-----------------------------*/
 	// Route::get('dashboard/search',array('uses'=>'SearchController@getSearch'));
@@ -38,6 +40,9 @@ Route::get('dashboard/agencystaff/{id}/edit',array('uses'=>'AgencyController@get
     Route::get('dashboard/reports',array('uses'=>'ReportController@getReport'));
     Route::post('addnewuser',array('uses'=>'AuthController@postAddNewUser'));
     Route::get('addnewuser',array('uses'=>'AuthController@getAddNewUser'));
+    Route::get('profolio/listing/{id}/delete',array('uses'=>'AuthController@getdeletelisting'));
+    Route::post('profolio/listing/{id}/edit',array('uses'=>'AuthController@posteditlisting'));
+    Route::get('profolio/listing/{id}/edit',array('uses'=>'AuthController@geteditlisting'));
     Route::get('profolio/listing',array('uses'=>'AuthController@getlisting'));
     Route::post('profolio',array('uses'=>'AuthController@postProfolio'));
     Route::get('profolio',array('uses'=>'AuthController@getProfolio'));

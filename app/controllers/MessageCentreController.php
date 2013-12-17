@@ -8,8 +8,10 @@ class MessageCentreController extends BaseController {
 	 */
 	public function getIndex()
 	{
+		return View::make('message.index');
+
 		$user = Sentry::getUser();
-		$events = Calender::all(); 
+		
 		$inbox = Inbox::where('to_user','=',$user->id)
 	                  ->where('read_status','=',1)
 	                  ->orderBy('id','DESC')
@@ -70,28 +72,38 @@ class MessageCentreController extends BaseController {
 
 	public function getmessagecompose()
 	{
-		$team = Sentry::getUser()->id;
-		 
-		 $teams_id = Profile::where('user_id','=',$team)->get();
-		 foreach ($teams_id as $team_id)
-		 	{
-		 		$my_teamid= $team_id->team_id;
-		 		
-		 	}
+
+		$nam = Sentry::getUser()->id;
 		 	
 		 
-		$profiles = Profile::where('team_id','=',$my_teamid)->get();
-		$events = Calender::all(); 
+		$teams_id = Agency::where('agency_id','=',$nam)->get();
+		 
+		foreach ($teams_id as $team_id)
+		 	{
+		 		$my_teamid= $team_id->agency_id;
+		 		
+		 	
+	}
+		 	
+		 
+$profiles = AgencyName::where('id','=',$my_teamid)->get();
+print_r($profiles);
+die();
+
 		$allTeamsMember = array();
 		foreach($profiles as $profile)
 		{
 			if($profile->user_id != Sentry::getUser()->id)
 			{
-				$allTeamsMember[$profile->user_id] = $profile->name;
+				$allTeamsMember[$profile->user_id] = $profile->agency_name;
+				
 			}
+			print_r($allTeamsMember) ;
+			die();
+
 				
 		}
-        return View::make('message.messagecompose')->with('teams',$allTeamsMember)->with('events',$events);
+        return View::make('message.messagecompose')->with('teams',$allTeamsMember);
 	}
 
 	 public  function postsendMessage()

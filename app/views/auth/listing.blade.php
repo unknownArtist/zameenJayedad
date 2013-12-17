@@ -9,13 +9,28 @@ th
 
 td
 {
- text-align:center;
- color:#50b1a8;
- font-size:15px;
+ text-align: center;
+color: #50b1a8;
+font-size: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-bottom: 1px solid #50b1a8;
+}
+
+tr:nth-child(even) {
+    background-color: #f0f0f0;
 }
 
 
 </style>
+<script type="text/javascript">
+$(document).ready(function()
+{
+  $("tr:even").css("background-color", "#ccc;");
+});
+
+</script>
+
 <div id="wrapper">
 <div id="content">
 
@@ -25,9 +40,9 @@ td
 <a href="{{URL::to('profolio')}}">Add New</a>
 </div>
 
-    <h2>Total User({{$users}}) </h2>
+    <h2 style="color:#50b1a8;">Total Users&nbsp;({{$users}}) </h2>
     
-<table cellpadding="5" cellspacing="10" border="0" class="table table-hover table-bordered margin-top15" id="companies" style="margin-bottom:15px;">
+<table width="100%" cellpadding="5" cellspacing="0" border="0" class="table table-hover table-bordered margin-top15" id="companies" style="margin-bottom:15px;">
     <thead>
 
         <tr>
@@ -67,10 +82,17 @@ td
                     <a href="{{URL::to('profolio/listing/'.$record->id.'/edit')}}" class="editbtn" alt="Edit">
                         <i class="icon-edit"></i> Edit 
                     </a> 
+
                     &nbsp;
                     /     
 					&nbsp;
                     <a href="{{URL::to('profolio/listing/'.$record->id.'/delete')}}" class="editbtn" alt="Delete" onclick="return confirm('Are you sure?')">
+
+                  <br />
+                  <br />            
+                   
+                    <a href="{{URL::to('dashboard/agencystaff/'.$record->id.'/delete')}}" class="editbtn" alt="Delete" onclick="return confirm('Are you sure?')">
+
                         <i class="icon-remove"></i> Delete
                     </a>
                 </div>

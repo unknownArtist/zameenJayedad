@@ -6,8 +6,6 @@
     <!--search ends-->
     <div id="wrapper">
     <div id="content">
-    
-    <div class="sliderlive">
        
        <div class="slider">
          <div id="sliderFrame">
@@ -67,13 +65,7 @@
 		
 
       </div><!--section ends-->
-      </div><!--live-->
-
-       
-       
-       </div>    
-
-    <div class="liverecords">
+      </div><!--live-->   
 		
         <div class="list">
        	<h1>Listings</h1>
@@ -97,10 +89,13 @@
               <img src="assets/images/260528737.jpg">
               <img src="assets/images/260570453.jpg">
               <img src="assets/images/260592693.jpg">
+             
+              </div>
 
-      </div>    
+    
     
     </div><!--sec-2 ends-->
+    
     </div>
 
   </div><!--content ends-->

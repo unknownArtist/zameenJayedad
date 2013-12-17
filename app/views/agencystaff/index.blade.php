@@ -13,6 +13,7 @@ td
 	text-align:center;
 	color:#50b1a8;
 	font-size:15px;
+	border-bottom:1px solid #50b1a8;
 }
 
 

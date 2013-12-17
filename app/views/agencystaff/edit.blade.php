@@ -25,7 +25,11 @@
 
         <li>
             {{ Form::label('name', 'Name') }}
-            {{ Form::text('name',$records->name )}}
+            {{ Form::text('name', $records->getName($records->id))}}
+        </li>
+        <li>
+            {{ Form::label('agency_name', ' Agency Name') }}
+            {{ Form::text('agency_name', $records->getAgencyName($records->id) )}}
         </li>
        
         <li>

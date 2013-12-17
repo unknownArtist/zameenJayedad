@@ -443,19 +443,25 @@ class AuthController extends BaseController {
 			        {
 			        	return Redirect::to('addnewuser')->with('errors',$v);
 			        }
-						$Agency = new Agency();
-			            $Agency->email              = $fields['email'];
-			            $Agency->password           = $fields['password'];
-			            $Agency->name               = $fields['name'];
-			            $Agency->phone              = $fields['phone'];
-			            $Agency->cell               = $fields['cell'];
-			            $Agency->address            = $fields['address'];
-			            $Agency->country            = $fields['country'];
-			            $Agency->zip                = $fields['zip'];
-			            $Agency->fax                = $fields['fax'];
-			            $Agency->listing_quota      = $fields['listing_quota'];
-			            $Agency->hot_quota          = $fields['hot_quota'];
-			            $Agency->save();
+
+			        $id=DB::table('Agencystaff')->insertGetId(array(
+											'agency_id' => Sentry::getUser()->id,
+											'email'     => Input::get('email'),
+											'password'  => Input::get('password'),  // it was $id i changed it to $userId.
+											'phone'     =>  Input::get('phone'),
+											'cell'      => Input::get('cell'),
+											'fax'       => Input::get('fax'),
+											'address'   => Input::get('address'),
+											'zip'       => Input::get('zip'),
+											'country'   => Input::get('country'),
+											'listing_quota' => Input::get('listing_quota'),
+											'hot_quota' => Input::get('hot_quota')));
+
+				DB::table('agencies')->insert(array(
+				'user_id'     => $id,
+				'agency_name' => Input::get('agency_name')	,
+				'name'		=>Input::get('name'),
+				));
 
 			            return Redirect::to('dashboard/agencystaff')->with('success','successfully Added');        		
 	}
@@ -485,7 +491,66 @@ public function getProfile()
 					return View::make('auth.listing', compact('records','users'));
 	}
 
+	public function geteditlisting($id)
 
+	{
+		$records = DB::table('property')->where('id', $id)->get();
+		return View::make('auth.editlisting')
+					->with('records',$records)
+					->with('property_Type', Config::get('listconfig.property_Type')) 
+					->with('Type_of_Homes', Config::get('listconfig.Type_of_Homes'))
+					->with('Purpose', Config::get('listconfig.Purpose'))
+					->with('Construction_Status', Config::get('listconfig.Construction_Status')) 
+					->with('Wanted_For', Config::get('listconfig.Wanted_For')) 
+					->with('cities', Config::get('listconfig.cities'))
+					->with('Location', Config::get('listconfig.Location'))
+					->with('unit', Config::get('listconfig.unit'))
+					->with('Bedrooms', Config::get('listconfig.Bedrooms')) 
+					->with('Bathrooms', Config::get('listconfig.Bathrooms')) 
+					->with('Expires', Config::get('listconfig.Expires'));
+
+	}
+public function posteditlisting($id)
+
+	{
+		$fields = array(
+			'property_type'=>Input::get('Property_Type'),
+		   'home_type' => Input::get('home_type'),
+		   'purpose' => Input::get('Purpose'),
+		   'Construction_status' => Input::get('Construction_Status'),
+		   'wanted' => Input::get('Wanted_For'),
+		   'city' => Input::get('city'),
+		   'location' => Input::get('Location'),
+		   'w_title' => Input::get('Wanted_Title'),
+		   'Description' => Input::get('Description'),
+	       'budget' => Input::get('Budget'),
+		   'l_area' => Input::get('Land_Area'),
+		   'unit' => Input::get('unit'),
+		   'bedroom' => Input::get('Bedrooms'),
+		    'bathroom' => Input::get('Bathrooms'),
+	       'expires' => Input::get('Expires_After'),
+		   'contact_p' => Input::get('Contact_Person'),
+		   'phone' => Input::get('Phone'),
+		   'cell' => Input::get('Cell'),
+		   'fax' => Input::get('Fax'),
+		    'email' => Input::get('E-mail'),
+	       'website' => Input::get('Website')
+		   );
+
+		  DB::table('property')
+            ->where('id','=',$id)
+            ->update($fields);
+            return Redirect::to('profolio/listing');
+
+		}
+
+		public function getdeletelisting($id)
+
+	{
+		$profile = Profolio::find($id);
+		 $profile->delete();
+		 return Redirect::to('profolio/listing');
+	}
 
 }
 

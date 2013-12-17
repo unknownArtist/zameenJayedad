@@ -55,7 +55,7 @@ $(document).ready(function()
         <tr class="odd gradeX">
         @foreach($record as $records)
            
-            <td>{{ $records->name }}</td>
+            <td>{{ $records->getName($records->id)}}</td>
             <td>{{ $records->email }}</td>
             <td>{{ $records->listing_quota }}</td>
             <td>

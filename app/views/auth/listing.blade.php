@@ -79,13 +79,20 @@ $(document).ready(function()
             <td>
 
                 <div class="btn-group">
-                    <a href="{{URL::to('dashboard/agencystaff/'.$record->id.'/edit')}}" class="editbtn" alt="Edit">
+                    <a href="{{URL::to('profolio/listing/'.$record->id.'/edit')}}" class="editbtn" alt="Edit">
                         <i class="icon-edit"></i> Edit 
                     </a> 
+
+                    &nbsp;
+                    /     
+					&nbsp;
+                    <a href="{{URL::to('profolio/listing/'.$record->id.'/delete')}}" class="editbtn" alt="Delete" onclick="return confirm('Are you sure?')">
+
                   <br />
                   <br />            
                    
                     <a href="{{URL::to('dashboard/agencystaff/'.$record->id.'/delete')}}" class="editbtn" alt="Delete" onclick="return confirm('Are you sure?')">
+
                         <i class="icon-remove"></i> Delete
                     </a>
                 </div>

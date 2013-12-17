@@ -47,6 +47,8 @@ clear:both;
 	width: 168px;
 	height: 104px;
 	padding-top: 10px;
+	position:relative;
+	z-index:1;
 }
 
 .contact{

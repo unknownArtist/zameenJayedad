@@ -56,6 +56,7 @@
                 
     		 </li>
              <hr>
+             &nbsp;
              @endforeach
               </marquee>
     	</ul>

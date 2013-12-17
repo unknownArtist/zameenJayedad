@@ -26,7 +26,7 @@ tr:nth-child(even) {
 <script type="text/javascript">
 $(document).ready(function()
 {
-  $("tr:even").css("background-color", "#ccc;");
+  $("tr:even").css("background-color", "#f0f0f0;");
 });
 
 </script>

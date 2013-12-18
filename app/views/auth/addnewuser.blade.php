@@ -8,7 +8,7 @@
 <div id="wrapper">
 <div id="form-wrapper">
 
-{{ Form::open(array('url' => 'addnewuser')) }}
+{{ Form::open(array('url' => 'dashboard/agencies/view/addnewuser')) }}
 
  <h1>Agency Staff </h1>
     <ul>
@@ -34,6 +34,10 @@
             {{ Form::label('name', 'Name') }}
             {{ Form::text('name' )}}
         </li>
+        <!-- <li>
+            {{ Form::label('agency_name', 'Agency Name') }}
+            {{ Form::text('agency_name' )}}
+        </li> -->
        
         <li>
             {{ Form::label('phone', 'Phone') }}

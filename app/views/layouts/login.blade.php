@@ -32,7 +32,7 @@ switch(CurrPage){
 case 'dashboard':
  $('#li_home').addClass('active') ;
  break;
-case 'agencystaff':
+case 'agencies':
  $('#li_agency').addClass('active') ;
  break;
 case 'profile':
@@ -41,7 +41,7 @@ case 'profile':
  case 'reports':
  $('#li_reports').addClass('active') ;
  break;
- case 'property':
+ case 'listing':
  $('#li_property').addClass('active') ;
  break;
 
@@ -80,7 +80,7 @@ jQuery(function(){
 <body>
 
 
-	<div id="wrapper">
+	<div id="wrapperheader">
   
 
 		<div id="header">
@@ -101,7 +101,7 @@ jQuery(function(){
     
     <div id="search">
    
-   <div id="wrapper">
+   <div id="wrapperheader">
     <div id="sea">	
     	<!--<h2>Search Listing</h2>
     	{{ Form::text('search','',array('class'=>'span6','placeholder'=>'search by city')) }}
@@ -110,7 +110,7 @@ jQuery(function(){
        <div id='cssmenu'>
        <ul>
        <li id="li_home"><a href="{{URL::to('dashboard')}}">Dashboard</a></li>
-       <li id="li_agency"><a href="{{URL::to('dashboard/agencystaff')}}">Agency Staff</a></li>
+       <li id="li_agency"><a href="{{URL::to('dashboard/agencies')}}">Agency</a></li>
        <li id="li_profile"><a href="{{URL::to('profile')}}">My Accounts & Profile</a></li>
        <li id="li_reports"><a href="{{URL::to('dashboard/reports')}}">Reports</a></li>
        <li id="li_property"><a href="{{URL::to('profolio/listing')}}">Property Management</a></li>

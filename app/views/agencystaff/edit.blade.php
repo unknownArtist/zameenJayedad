@@ -9,7 +9,7 @@
  {{ Session::get('errors') }}
 
 @foreach($record as $records)
-{{ Form::open(array('url' =>'dashboard/agencystaff/'.$records->id.'/edit','POST')) }}
+{{ Form::open(array('url' =>'dashboard/agencystaff/'.$records->agency_id.'/edit','POST')) }}
 
  <h1>Agency Staff </h1>
  
@@ -25,8 +25,12 @@
 
         <li>
             {{ Form::label('name', 'Name') }}
-            {{ Form::text('name',$records->name )}}
+            {{ Form::text('name', $records->name)}}
         </li>
+        <!-- <li>
+            {{ Form::label('agency_name', ' Agency Name') }}
+            {{ Form::text('agency_name' )}}
+        </li> -->
        
         <li>
             {{ Form::label('phone', 'Phone') }}

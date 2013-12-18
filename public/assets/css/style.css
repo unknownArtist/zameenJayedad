@@ -1,5 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Capriola);
 
+html
+{
+	height:100%;
+}
+
 body
 {  
 	margin: 0;
@@ -8,11 +13,26 @@ body
     font-size: 13px;
     color: #333;
     filter: none;
+	height: 100%;
+}
+
+#wrapperheader
+{
+	width:947px;
+	margin:0 auto;
 }
 
 #wrapper{
 	width:947px;
 	margin:0 auto;
+	position: relative;
+min-height: 63%;
+clear:both;
+}
+
+* html #wrapper
+{
+	height:100%;
 }
 
 #header
@@ -27,6 +47,8 @@ body
 	width: 168px;
 	height: 104px;
 	padding-top: 10px;
+	position:relative;
+	z-index:1;
 }
 
 .contact{
@@ -70,7 +92,6 @@ body
 	float: left;
 	margin-top: -12px;
 	padding: 0;
-	z-index: -1;
 	position: relative;
 }
 #sea{
@@ -235,48 +256,61 @@ cursor:pointer;
 .detail{
 	float:left;
 	width:600px;
-	margin-left: 169px;
-}
-
-.detail h2{
-	margin-left: 143px;
-	margin-top: -78px;
-}
-
-.detail p{
-	margin-left: 143px;	
-}
-
-.detail span{
-  	color:#00a651;
-  	margin-left: 143px;
-  	font-size: medium;
 }
 
 .detail ul li{
-	list-style-type: none;
-	padding-bottom: 58px;
+list-style:none;
+display:block;
 }
 
-.detail img{
+.detail ul hr
+{
+	position:relative;
+	top:10px;
+}
+
+.deatilimg{
 	
-	margin-right: 10px;
-    border: 2px solid #e3e3e3;
-    padding: 2px;
-    padding-left: 4px;
-    padding-right: 4px;
-    border-radius: 3px;
+	width:120px;
+	float:left;	
+}
+
+.deatillist
+{
+	width:430px;
+	float:left;
+	padding-left:10px;	
+}
+
+.detail h2{
+	color:#00a651;
+	margin:0px;
+	padding:0px;
+}
+
+.detail h3{
+	color:#50b1a8;
+	margin:0px;
+	padding:5px;
+}
+
+.detail p{
+	margin:0px;
+	padding:5px;
+	padding-left:15px;
+	color:#50b1a8;
+	font-size:15px;	
+	text-align:justify;
+}
+
+.detail span{
+  
 }
 
 #content{
 	width:100%;
+	padding-bottom: 1em;
 	float:left;
-}
-
-.sliderlive
-{
-	width:100%;
-	clear:both;
 }
 
 .slider{
@@ -297,7 +331,7 @@ cursor:pointer;
 .list{
 	float: left;
 	width: 464px;
-	margin-top: 63px;
+	margin-top: 50px;
 	margin-left: 41px;
 
 }
@@ -415,6 +449,14 @@ cursor:pointer;
 	margin:0px;
 }
 
+.recordshow ul li h2
+{
+	color:#50b1a8;
+	margin-bottom:10px;
+}
+
+
+
 .post{
 	float: left;
 	width:383px;
@@ -447,7 +489,6 @@ cursor:pointer;
 .sec-2{
 	float:left;
 	width:201px;
-	height:135px;
 	margin-left: 98px;
     margin-bottom: 2px;
     margin-top: 42px;
@@ -461,8 +502,6 @@ cursor:pointer;
 	float:left;
 	border:2px solid #e3e3e3;
 	width:201px;
-	height:157px;
-	margin-left: ;
 
 }
 
@@ -490,12 +529,8 @@ cursor:pointer;
 }
 
 #featured{
-	float:left;
+	float:right;
 	width:300px;
-	color: ;
-	margin-left: 145px;
-	text-align: right;
-	
 
 }
 
@@ -756,9 +791,22 @@ margin-bottom: 36px;
 	background-color: #50b1a8;
 	color:#fff;
 	height:40px;
-	margin-top: 93px;
+	position: relative;
 
 }
+
+@-moz-document url-prefix() 
+{
+	#footer
+	{
+		height:auto;
+	}
+	#wrapper
+	{
+		min-height:61%;
+	}
+}
+
 
 .foot{
 	text-align: center;
@@ -1202,11 +1250,13 @@ p.change_link{
 	width: 100px;
 	height: 78px;
 	margin-right: 10px;
+	margin-bottom:10px;
     border: 2px solid #e3e3e3;
     padding: 2px;
     padding-left: 4px;
     padding-right: 4px;
     border-radius: 3px;
+	float:left;
 }
 
 .reportview
@@ -1241,7 +1291,7 @@ p.change_link{
 	font-weight:bold;
 	border:2px solid #50b1a8;
 	border-radius:5px;
-	padding:4px 10px;
+	padding:2px 5px;
 }
 
 .editbtn:hover, .agencynew a:hover

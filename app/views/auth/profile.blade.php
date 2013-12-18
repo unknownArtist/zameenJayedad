@@ -7,11 +7,10 @@
 <div id="content">
 <div id="form-wrapper">
 
-{{  Session::get('errors') }}
-
-{{ Form::open(array('url' =>'profile')) }}
+{{ Form::open(array('url' =>'profile/update')) }}
 
  <h1>My Profile</h1>
+ {{  Session::get('errors') }}
     <ul>
  <li>
            @foreach ($users as $user )
@@ -68,5 +67,8 @@
 {{ Form::close() }}
 
 </div>
+
+</div>
+
 
 @stop

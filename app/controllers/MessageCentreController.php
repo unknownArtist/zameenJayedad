@@ -8,90 +8,54 @@ class MessageCentreController extends BaseController {
 	 */
 	public function getIndex()
 	{
+		
+
 		$user = Sentry::getUser();
-		$events = Calender::all(); 
+
+		
 		$inbox = Inbox::where('to_user','=',$user->id)
 	                  ->where('read_status','=',1)
 	                  ->orderBy('id','DESC')
                       ->get();
 
             
-     if ($inbox->isEmpty() )
-		{
-			
-			return Redirect::to('user/message/create');
-		}
-        
-            
-         
-          foreach($inbox as $inboxs)
-		 {     $tem=$inboxs->from_user;
-
-		 	}
-		 	
-		$emails=Profile::where('user_id','=',$tem)
-               ->get();
-               
-            foreach($emails as $email)
-		 	{    
-		 	 $name=$email->name;
-
-		 		$plid=$email->id;
-				}
-
-		 	$plimg=ProfileImage::where('player_profile_id','=',$plid)
-               ->get();
-               
-              if($plimg->isEmpty())
-              {
-              	$pic='download.jpg';
-              }
-              else
-              {
-                foreach($plimg as $plimgs)
-		 	{     
-
-		 	$pic=$plimgs->player_profile_videos;
-
-			 }
-			 }
-		 	$notification = Inbox::where('to_user','=',$user->id)
-	                  ->where('notification','=',1)
-	                  ->orderBy('id','DESC')
-                      ->count();
+    
                       return View::make('message.index')
-					->with('inboxs',$inbox)
-					->with('email',$name)
-					->with('events',$events)
-					->with('pic',$pic)
-					->with('notifications',$notification);
+					->with('inboxs',$inbox);
+					
 			
 	}
 
 	public function getmessagecompose()
 	{
-		$team = Sentry::getUser()->id;
-		 
-		 $teams_id = Profile::where('user_id','=',$team)->get();
-		 foreach ($teams_id as $team_id)
-		 	{
-		 		$my_teamid= $team_id->team_id;
-		 		
-		 	}
+
+		$user_id = Sentry::getUser()->id;
+		$staffs = Agency::all();
 		 	
-		 
-		$profiles = Profile::where('team_id','=',$my_teamid)->get();
-		$events = Calender::all(); 
+		// $agencies = DB::table('agencystaff')->where('agency_id',$user_id)
+		//   ->join('agencies','agencies.user_id','=','agencystaff.agency_id')
+		//   ->distinct()
+		//   ->select('agencies.name','agencies.user_id','agencystaff.agency_id')
+		//   ->get();
+		//   print_r($agencies);
+		//   die();
+		
 		$allTeamsMember = array();
-		foreach($profiles as $profile)
+		foreach($staffs as $staff)
 		{
-			if($profile->user_id != Sentry::getUser()->id)
+
+			
+			if($staff->agency_id != Sentry::getUser()->id)
 			{
-				$allTeamsMember[$profile->user_id] = $profile->name;
+				
+				$allTeamsMember[$staff->agency_id] = $staff->name;
+				
 			}
+			
+
 				
 		}
-        return View::make('message.messagecompose')->with('teams',$allTeamsMember)->with('events',$events);
+        return View::make('message.messagecompose')->with('teams',$allTeamsMember);
 	}
 
 	 public  function postsendMessage()
@@ -110,22 +74,21 @@ class MessageCentreController extends BaseController {
     {
       return Redirect::to('user/messages/'.$fields['from_user'].'/detail/'.Input::get('id'));
     }
- 	return Redirect::to('user/messages');
+ 	return Redirect::to('dashboard/messages');
   }
  
   public function  getReadmessage($id)
   {	
   	$inbox = Inbox::where('id','=',$id)
 	                	->get();
-						$events = Calender::all(); 
+						
 
 	DB::table('inbox')
             ->where('to_user', Sentry::getUser()->id)
             ->where('id', $id)
             ->update(array('notification' => 0));
   	 return View::make('message.readmessage')
-	 				->with('events',$events)
-  	 				->with('inboxs',$inbox);
+	 				->with('inboxs',$inbox);
   }
   public function getReply()
   { 

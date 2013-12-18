@@ -6,8 +6,6 @@
     <!--search ends-->
     <div id="wrapper">
     <div id="content">
-    
-    <div class="sliderlive">
        
        <div class="slider">
          <div id="sliderFrame">
@@ -52,12 +50,16 @@
            
             {{Form::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidth'));}}
              <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
-                 <h2> {{$user->budget}} - {{$user->location}}</h2>
-                 <p>{{$user->Description}} </p>
+                 
+                 <h2> {{$user->property_type}} in {{$user->city}}</h2>
+                 <span> {{$user->budget}}RS</span><br />
+               <!--  <p>{{$user->Description}} </p>-->
                  <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user-> l_area}}</span>
                 
+                
     		 </li>
-             <hr>
+             <hr style="clear:both;">
+             &nbsp;
              @endforeach
               </marquee>
     	</ul>
@@ -67,13 +69,7 @@
 		
 
       </div><!--section ends-->
-      </div><!--live-->
-
-       
-       
-       </div>    
-
-    <div class="liverecords">
+      </div><!--live-->   
 		
         <div class="list">
        	<h1>Listings</h1>
@@ -97,13 +93,15 @@
               <img src="assets/images/260528737.jpg">
               <img src="assets/images/260570453.jpg">
               <img src="assets/images/260592693.jpg">
+             
+              </div>
 
-      </div>    
+    
     
     </div><!--sec-2 ends-->
+    
     </div>
 
   </div><!--content ends-->
-  </div>
 
 @stop

@@ -29,7 +29,7 @@ $('#agentshow').click(function() {
     <ul>
         <li>
             {{ Form::label('name', 'Name') }}
-            {{ Form::text('name' )}}
+            {{ Form::text('name')}}
         </li>
 
 
@@ -85,7 +85,8 @@ $('#agentshow').click(function() {
 
         <li>
             {{ Form::label('agent', 'Are you an Agent?') }}
-            <input type="checkbox" id="agentshow">
+            <input type="checkbox" id="agentshow" name="check"/>
+             
             
         </li>
 

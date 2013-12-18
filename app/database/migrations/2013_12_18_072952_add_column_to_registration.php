@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class DropColumnFormAgencystaff extends Migration {
+class AddColumnToRegistration extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,9 @@ class DropColumnFormAgencystaff extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('agencystaff', function(Blueprint $table) {
+		Schema::table('registration', function(Blueprint $table) {
+			$table->string('name')->after('user_id')->unsigned('');
 			
-			$table->dropColumn('name');
 		});
 	}
 
@@ -25,7 +25,8 @@ class DropColumnFormAgencystaff extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('agencystaff', function(Blueprint $table) {
+		Schema::table('registration', function(Blueprint $table) {
+			$table->dropColumn('name');
 			
 		});
 	}

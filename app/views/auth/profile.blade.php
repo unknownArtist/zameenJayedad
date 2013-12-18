@@ -7,7 +7,7 @@
 <div id="content">
 <div id="form-wrapper">
 
-{{ Form::open(array('url' =>'profile')) }}
+{{ Form::open(array('url' =>'profile/update')) }}
 
  <h1>My Profile</h1>
  {{  Session::get('errors') }}

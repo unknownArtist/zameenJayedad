@@ -18,6 +18,7 @@ class AuthController extends BaseController {
 	public function postRegister()
 
 	{
+
 		try
 		{ 
 	         $Users = Sentry::getUserProvider()->create(array(
@@ -98,6 +99,7 @@ class AuthController extends BaseController {
             $members->fax = $fields['fax'];
             $members->name = $fields['name'];
             $members->save();
+            
             DB::table('agent')->insert(
 			array('agent_id' => $fields['user_id'], 
 			    	 'city' => $fields['city'], 
@@ -482,6 +484,32 @@ public function getProfile()
 					->with('countries', Config::get('listconfig.countries'));
 
 	}	
+	public function postProfile()
+
+	{
+		$fields = array(
+			
+		   'name' => Input::get('name'),
+		   'phone' => Input::get('phone'),
+		   'cell' => Input::get('cell'),
+		   'fax' => Input::get('fax'),
+		   'address' => Input::get('address'),
+		   'zip' => Input::get('zip'),
+		   'country' => Input::get('country')
+		   );
+
+		  DB::table('registration')
+            ->where('id','=',Sentry::getUser()->id)
+            ->update($fields);
+         $fieldsname = array(
+            	       'email' => Input::get('email')
+		                );
+            DB::table('users')
+            ->where('id','=',Sentry::getUser()->id)
+            ->update($fieldsname);
+            return Redirect::to('profile');
+	}
+
 	public function getlisting()
 
 	{

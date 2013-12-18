@@ -35,7 +35,7 @@ Route::get('dashboard/agencystaff/{id}/edit',array('uses'=>'AgencyController@get
 	Route::get('user/email/alert/create',array('uses'=>'EmailController@getEmailAlert'));
 	Route::post('user/email/alert/emailalert',array('uses'=>'EmailController@postEmailAlert'));
 /*------------------End of email alert routes-----------------------*/
-
+	Route::post('profile/update',array('uses'=>'AuthController@postProfile'));
 	Route::get('profile',array('uses'=>'AuthController@getProfile'));
     Route::get('dashboard/reports',array('uses'=>'ReportController@getReport'));
     Route::post('addnewuser',array('uses'=>'AuthController@postAddNewUser'));

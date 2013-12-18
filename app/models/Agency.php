@@ -25,6 +25,7 @@ Class Agency extends Eloquent {
          
           public function getName($id)
         {  
+            
         $record = AgencyName::where('user_id','=',$id)->get();
          foreach($record as $records )
         {

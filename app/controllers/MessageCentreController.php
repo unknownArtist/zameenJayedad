@@ -73,33 +73,29 @@ class MessageCentreController extends BaseController {
 	public function getmessagecompose()
 	{
 
-		$nam = Sentry::getUser()->id;
+		$user_id = Sentry::getUser()->id;
 		 	
-		 
-		$teams_id = Agency::where('agency_id','=',$nam)->get();
-		 
-		foreach ($teams_id as $team_id)
-		 	{
-		 		$my_teamid= $team_id->agency_id;
-		 		
-		 	
-	}
-		 	
-		 
-$profiles = AgencyName::where('id','=',$my_teamid)->get();
-print_r($profiles);
-die();
-
+		$agencies = DB::table('agencystaff')->where('agency_id',$user_id)
+		  ->join('agencies','agencies.user_id','=','agencystaff.agency_id')
+		  ->distinct()
+		  ->select('agencies.name','agencies.user_id','agencystaff.agency_id')
+		  ->get();
+		  print_r($agencies);
+		  die();
+		
 		$allTeamsMember = array();
-		foreach($profiles as $profile)
+		foreach($agencies as $agency)
 		{
-			if($profile->user_id != Sentry::getUser()->id)
+
+			
+			if($agency->agency_id != Sentry::getUser()->id)
 			{
-				$allTeamsMember[$profile->user_id] = $profile->agency_name;
+				echo $agency->name;
+			die();
+				$allTeamsMember[$agency->user_id] = $agency->name;
 				
 			}
-			print_r($allTeamsMember) ;
-			die();
+			
 
 				
 		}

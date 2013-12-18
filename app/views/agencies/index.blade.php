@@ -24,7 +24,7 @@ td
 <div id="">
 
 <div class="agencynew">
-<a href="{{URL::to('dashboard/agencies/view/addnewuser')}}">Add New</a>
+<a href="{{URL::to('dashboard/agencies/addnew')}}">Add New</a>
 </div>
 
     <h2 style="color:#50b1a8;">Total Users&nbsp;({{$total}}) </h2>
@@ -33,9 +33,8 @@ td
     <thead>
 
         <tr>
-        	<th>Contact Person</th>
-            <th>E-mail</th>
-            <th> Listings </th>
+        	<th>Agency Owner</th>
+            <th>Agency Name</th>
             <th>Controls</th>
         </tr>
     </thead>
@@ -44,21 +43,25 @@ td
         <tr class="odd gradeX">
         @foreach($record as $records)
            
-            <td>{{ $records->name}}</td>
-            <td>{{ $records->email }}</td>
-            <td>{{ $records->listing_quota }}</td>
+            <td>{{ $records->agency_owner}}</td>
+            <td>{{ $records->agency_name }}</td>
+           
             <td>
-               
 
                 <div class="btn-group">
-                    <a href="{{ URL::to('dashboard/agencystaff/'.$records->id.'/edit') }}" class="editbtn" alt="Edit">
-                
+
+                    <a href="{{URL::to('dashboard/agencies/view')}}" class="editbtn" alt="View">
+                        <i class="icon-remove"></i> view
+                    </a>
+                    &nbsp;
+                    <a href="{{URL::to('dashboard/agencies/'.$records->id.'/edit')}}" class="editbtn" alt="Edit">
                         <i class="icon-edit"></i> Edit 
                     </a> 
                  &nbsp;
-                    <a href="{{URL::to('dashboard/agencystaff/'.$records->id.'/delete')}}" class="editbtn" alt="Delete" onclick="return confirm('Are you sure?')">
+                    <a href="{{URL::to('dashboard/agencies/'.$records->id.'/delete')}}" class="editbtn" alt="Delete" onclick="return confirm('Are you sure?')">
                         <i class="icon-remove"></i> Delete
                     </a>
+                   
                 </div>
             </td>
         </tr>               

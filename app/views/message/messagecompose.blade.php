@@ -12,7 +12,7 @@
   <div class="col-xs-12 widget-header">
   <h4>Compose Message</h4>
 </div>
-   {{ Form::open(array('url'=>'user/message/compose','POST','files'=>true))}}
+   {{ Form::open(array('url'=>'dashboard/message/compose','POST','files'=>true))}}
     <div class="col-xs-12 margin-top15">
   	{{ Form::label('send_to', 'Send To') }}
     <div class="controls">

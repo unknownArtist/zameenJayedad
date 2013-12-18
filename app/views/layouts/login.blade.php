@@ -32,7 +32,7 @@ switch(CurrPage){
 case 'dashboard':
  $('#li_home').addClass('active') ;
  break;
-case 'agencystaff':
+case 'agencies':
  $('#li_agency').addClass('active') ;
  break;
 case 'profile':
@@ -110,7 +110,7 @@ jQuery(function(){
        <div id='cssmenu'>
        <ul>
        <li id="li_home"><a href="{{URL::to('dashboard')}}">Dashboard</a></li>
-       <li id="li_agency"><a href="{{URL::to('dashboard/agencystaff')}}">Agency Staff</a></li>
+       <li id="li_agency"><a href="{{URL::to('dashboard/agencies')}}">Agency</a></li>
        <li id="li_profile"><a href="{{URL::to('profile')}}">My Accounts & Profile</a></li>
        <li id="li_reports"><a href="{{URL::to('dashboard/reports')}}">Reports</a></li>
        <li id="li_property"><a href="{{URL::to('profolio/listing')}}">Property Management</a></li>

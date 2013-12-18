@@ -395,7 +395,7 @@ class AuthController extends BaseController {
 			            $Profolio->website             = $fields['website'];
 			            $Profolio->save();
 
-			        return Redirect::to('profolio')->with('errors','successfully Added');
+			        return Redirect::to('profolio/listing')->with('errors','successfully Added');
 
 
 			}

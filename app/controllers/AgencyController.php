@@ -45,14 +45,14 @@ class AgencyController extends \BaseController {
             ->where('id','=',$id)
             ->update($fields);
 		
-		return Redirect::to('dashboard/agencystaff');
+		return Redirect::to('profolio/listing');
 	}
 
 	public function getDelete($id)
 	{
 	$agencystaff = Agency::find($id);
 		$agencystaff->delete();
-		return Redirect::to('dashboard/agencystaff');
+		return Redirect::to('profolio/listing');
 	}
 
 }

@@ -1,8 +1,8 @@
 @extends('layouts.login')
 @section('content')
 
-<div class="wrapper">
-<div class="content">
+<div id="wrapper">
+<div id="content">
 
     <!--result-->
     
@@ -10,20 +10,35 @@
     <div class="detail">
       <ul>
             @foreach($record as $records)
-        <li>{{Form::image('uploads/photos/'.$records->photo, '', array('class'=>'imagewidth'));}}
+            
+        <li>
+        
+        <div class="deatilimg">
+        {{Form::image('uploads/photos/'.$records->photo, '', array('class'=>'imagewidth'));}}
              <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
-                 <h2> {{$records->property_type}}</h2>
+             </div>
+             <div class="deatillist">
+                 <h2> {{$records->property_type}} in </h2>
+                 <h3>{{$records->city}}</h3>
+                 
+                 <h2 style="margin-top:20px;">Description</h2>
                  <p>{{$records->Description}} </p>
-                 <span>{{$records->bedroom}} bedrooms | {{$records->bathroom}} bathrooms | {{$records-> l_area}}</span>
+                 
+                 <h2 style="margin-top:20px;">Other Info</h2>
+                 <p>No of Bedrooms:&nbsp;&nbsp;{{$records->bedroom}} </p>
+                 <p>No of Bathrooms:&nbsp;&nbsp;{{$records->bathroom}}</p> 
+                 <p>Area Covered:&nbsp;&nbsp;{{$records-> l_area}}&nbsp;{{$records-> unit}} </p>
 
-                 <span>budget {{$records->budget}}  | city {{$records->city}} </span> 
-                 <span> Construction_status {{$records->Construction_status}}</span>
-                 <span> Contact No {{$records->cell}}</span></br>
-                <span> Fax {{$records->fax}}</span></br>
-                <span> Email {{$records->email}}</span>
-         </li>
-
-         </li>
+                 <p style="font-weight:bold">Price:&nbsp;&nbsp;&nbsp;&nbsp; {{$records->budget}}RS </p> 
+               <!--  <p> Construction_status {{$records->Construction_status}}</p>-->
+                 
+                 
+                 <h2 style="margin-top:20px">Contact Info</h2>
+                 <p> Cell:&nbsp;&nbsp; {{$records->cell}}</p>
+                <p> Fax: &nbsp;&nbsp; {{$records->fax}}</p>
+                <p> Email: &nbsp; {{$records->email}}</p>
+                </div>
+                
          </li>
              <hr>
              @endforeach

@@ -26,7 +26,7 @@ tr:nth-child(even) {
 <script type="text/javascript">
 $(document).ready(function()
 {
-  $("tr:even").css("background-color", "#ccc;");
+  $("tr:even").css("background-color", "#f0f0f0;");
 });
 
 </script>
@@ -46,18 +46,18 @@ $(document).ready(function()
     <thead>
 
         <tr>
-        	<th>property_type</th>
-            <th>purpose</th>
-            <th> wanted </th>
-            <th>city</th>
-            <th>budget</th>
-            <th>l_area</th>
-             <th>bedroom</th>
-            <th>bathroom</th>
-            <th>contact_p</th>
-            <th>cell</th>
-            <th> email </th>
-             <th> controls </th>
+        	<th>Property Type</th>
+            <th>Purpose</th>
+            <th>Wanted </th>
+            <th>City</th>
+            <th>Budget</th>
+            <th>Area</th>
+             <th>Bedrooms</th>
+            <th>Bathrooms</th>
+            <th>Contact</th>
+            <th>Cell</th>
+            <th> Email </th>
+             <th> Controls </th>
         </tr>
     </thead>
     <tbody>
@@ -82,16 +82,9 @@ $(document).ready(function()
                     <a href="{{URL::to('profolio/listing/'.$record->id.'/edit')}}" class="editbtn" alt="Edit">
                         <i class="icon-edit"></i> Edit 
                     </a> 
-
-                    &nbsp;
-                    /     
-					&nbsp;
+					<br />
+                    <br />
                     <a href="{{URL::to('profolio/listing/'.$record->id.'/delete')}}" class="editbtn" alt="Delete" onclick="return confirm('Are you sure?')">
-
-                  <br />
-                  <br />            
-                   
-                    <a href="{{URL::to('dashboard/agencystaff/'.$record->id.'/delete')}}" class="editbtn" alt="Delete" onclick="return confirm('Are you sure?')">
 
                         <i class="icon-remove"></i> Delete
                     </a>

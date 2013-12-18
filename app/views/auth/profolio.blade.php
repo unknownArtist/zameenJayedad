@@ -25,13 +25,10 @@
 <div id="content">
 <div id="form-wrapper">
 
- {{  Session::get('errors') }}
-
-
 {{ Form::open(array('url' => 'profolio','files' => true)) }}
 
  <h1>Post New Listings</h1>
-
+{{  Session::get('errors') }}
     <ul>
         <h2>Type and Purpose</h2>
         <li>
@@ -65,19 +62,17 @@
         </li>
 
         <h2>Address and Location</h2>
+        
+         <li>
+            {{ Form::label('Location', 'Choose Location') }}
+            {{ Form::select('Location', $Location ) }}
+        </li>
 
         <li>
             {{ Form::label('city', 'City ') }}
             {{ Form::select('city' , $cities )}}
         </li>
-
         
-
-
-        <li>
-            {{ Form::label('Location', 'Choose Location') }}
-            {{ Form::select('Location', $Location ) }}
-        </li>
          <h2>Wanted Details</h2>
         <li>
             {{ Form::label('Wanted_Title', 'Wanted Title') }}

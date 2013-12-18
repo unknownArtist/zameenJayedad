@@ -368,8 +368,8 @@ return array(
 		),
         'property_Type' => array(
                         'Please select'=>'Please select',
-                        'Homes'=>'Homes',
-                        'Plots'=>'Plots',
+                        'Home'=>'Home',
+                        'Plot'=>'Plot',
                         'Commercial'=>'Commercial',
                 ),
 

@@ -50,12 +50,15 @@
            
             {{Form::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidth'));}}
              <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
-                 <h2> {{$user->budget}} - {{$user->location}}</h2>
-                 <p>{{$user->Description}} </p>
+                 
+                 <h2> {{$user->property_type}} in {{$user->city}}</h2>
+                 <span> {{$user->budget}}RS</span><br />
+               <!--  <p>{{$user->Description}} </p>-->
                  <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user-> l_area}}</span>
                 
+                
     		 </li>
-             <hr>
+             <hr style="clear:both;">
              &nbsp;
              @endforeach
               </marquee>
@@ -100,6 +103,5 @@
     </div>
 
   </div><!--content ends-->
-  </div>
 
 @stop

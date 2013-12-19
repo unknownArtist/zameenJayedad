@@ -57,7 +57,7 @@ class AgencyController extends \BaseController {
 		   return Redirect::to('dashboard/agencies/view/addnewuser')->withInput()->with('errors','User with this login already exists');
 		}
 
-		$URL = 'email:'.' '.Input::get('email').'<br/>'.'password:'.' '.Input::get('password').'<br/>'.'link:'.' '.'http://'.$_SERVER['HTTP_HOST'];
+		$URL = 'Email:'.' '.Input::get('email').'<br/><br/>'.'Password:'.' '.Input::get('password').'<br/><br/>'.'Link:'.' '.'http://'.$_SERVER['HTTP_HOST'];
 			    	$this->sendTo(Input::get('email'),array('activationCode'=>$URL));
 		
 			

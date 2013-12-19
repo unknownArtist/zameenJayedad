@@ -17,7 +17,7 @@
 <div class="col-xs-8 padding-bottom15">
 
  
-{{ HTML::link('user/messages','Return to Inbox',array('class'=>'btn btn-success pull-right'))}}
+{{ HTML::link('dashboard/messages','Return to Inbox',array('class'=>'btn btn-success pull-right'))}}
 
 </div>
 

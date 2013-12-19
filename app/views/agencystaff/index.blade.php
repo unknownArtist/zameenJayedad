@@ -78,6 +78,7 @@ $(document).ready(function()
     
     </tbody>
     </table>  
+    {{ HTML::link('dashboard/agencies','Back',array('class'=>'editbtn'))}}
     </div>
 </div>
 </div>

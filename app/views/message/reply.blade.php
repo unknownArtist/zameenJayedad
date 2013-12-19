@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.login')
 @section('content')
 
 <div id="main-content" class="container-fluid">
@@ -12,7 +12,7 @@
   <h4>Reply Message</h4>
 </div>
 
-   {{ Form::open(array('url'=>'user/messages/{id}/reply','POST','files'=>true))}}
+   {{ Form::open(array('url'=>'dashboard/message/{id}/reply','POST','files'=>true))}}
    
   	
   	{{ Form::hidden('to',Request::segment(3))}}
@@ -32,55 +32,4 @@
                   </div>
               </div>
               </div>
-              
-              <div class="col-xs-3 statistic-box widget widget-simple padding-left10 padding-right10">
-  
- <div class="widget-header col-xs-12 margin-bottom15">
- <h4 style="text-align:center; float:none;">Upcoming Events</h4>
- 
- </div>
- <div id='calendar' class="well well-black"></div>
-@foreach($events as $event)
-
-@endforeach
- 
- </div>
-              
-              </div>
-              </div>
-              </div>
-              
-<script>
-
-	$(document).ready(function() {
-	
-		var date = new Date();
-		var d = date.getDate();
-		var m = date.getMonth();
-		var y = date.getFullYear();
-		
-		$('#calendar').fullCalendar({
-			editable: true,
-			events: [
-
-			<?php foreach($events as $event): ?>
-
-				{
-					
-				title:'<?php echo " ".$event->ev_name." "."at"." ".$event->ev_place ?>',
-					start: '<?php echo $event->ev_time  ?>',
-					
-					allDay: false
-					
-					
-				},
-
-			<?php endforeach; ?>
-				
-			]
-		});
-		
-	});
-
-</script>
 @stop

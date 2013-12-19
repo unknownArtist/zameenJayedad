@@ -30,31 +30,40 @@ class MessageCentreController extends BaseController {
 	{
 
 		$user_id = Sentry::getUser()->id;
-		$staffs = Agency::all();
+		$agencies_id = Agency::where('staff_id','=',$user_id)->get();
+		 foreach ($agencies_id as $agency_id)
+		 	{
+		 		$my_agencyid= $agency_id->agency_id;
+		 		
+		 	}
 		 	
-		// $agencies = DB::table('agencystaff')->where('agency_id',$user_id)
-		//   ->join('agencies','agencies.user_id','=','agencystaff.agency_id')
+		 
+		$profiles = Agency::where('agency_id','=',$my_agencyid)->get(); 
+		$allTeamsMember = array();
+		foreach($profiles as $profile)
+		{
+			if($profile->staff_id != Sentry::getUser()->id)
+			{
+				$allTeamsMember[$profile->staff_id] = $profile->name;
+			}
+				
+		}
+
+
+
+
+
+
+
+
+		// $agencies = DB::table('agencies')->where('user_id',$user_id)
+		//   ->join('agencystaff','agencystaff.agency_id','=','agencies.id')
 		//   ->distinct()
-		//   ->select('agencies.name','agencies.user_id','agencystaff.agency_id')
+		//   ->select('agencystaff.name','agencystaff.staff_id','agencystaff.agency_id')
 		//   ->get();
 		//   print_r($agencies);
 		//   die();
 		
-		$allTeamsMember = array();
-		foreach($staffs as $staff)
-		{
-
-			
-			if($staff->agency_id != Sentry::getUser()->id)
-			{
-				
-				$allTeamsMember[$staff->agency_id] = $staff->name;
-				
-			}
-			
-
-				
-		}
         return View::make('message.messagecompose')->with('teams',$allTeamsMember);
 	}
 
@@ -96,9 +105,8 @@ class MessageCentreController extends BaseController {
     $inbox_id=Request::segment(4);
     
 
-    $profiles = Profile::where('user_id','=',$id)
+    $profiles = Agency::where('staff_id','=',$id)
                ->get();
-			   $events = Calender::all(); 
 		$allTeamsMember = array();
 		foreach($profiles as $profile)
 		{
@@ -114,7 +122,7 @@ class MessageCentreController extends BaseController {
   //           ->update(array('notification' => 0));
 
 		
- 		return View::make('message.reply')->with('teams',$allTeamsMember)->with('events',$events);
+ 		return View::make('message.reply')->with('teams',$allTeamsMember);
   }
    public function postReply()
   { 
@@ -127,7 +135,7 @@ class MessageCentreController extends BaseController {
  		);
 
    DB::table('inbox')->insert($fields);
-   return Redirect::to('user/messages');
+   return Redirect::to('dashboard/messages');
   }
   public function getDelete()
 	{
@@ -135,7 +143,7 @@ class MessageCentreController extends BaseController {
 		 $inbox = Inbox::find($id);
 		 $inbox->delete();
 			//DB::table('rinks')->where('id','=',Request::segment(3))->delete();
-		return Redirect::to('user/messages')->with('message','Record deleted successfully');
+		return Redirect::to('dashboard/messages')->with('message','Record deleted successfully');
 	}
 	public function getmessagecreate()
 

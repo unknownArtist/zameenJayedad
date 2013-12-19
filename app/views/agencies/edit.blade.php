@@ -28,7 +28,7 @@
        
             {{ Form::submit('Create Agency', array('class' => 'btn')) }}
         </li>
-        
+        <li>{{ HTML::link('dashboard/agencies','Back',array('class'=>'editbtn'))}}</li> 
     </ul>
    
     @endforeach

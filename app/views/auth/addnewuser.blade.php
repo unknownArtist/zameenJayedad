@@ -77,6 +77,7 @@
 
             {{ Form::submit('Create User', array('class' => 'btn')) }}
         </li>
+        <li>{{ HTML::link('dashboard/agencies/view','Back',array('class'=>'editbtn'))}}</li> 
         
     </ul>
 </div>

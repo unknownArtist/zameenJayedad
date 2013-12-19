@@ -1,8 +1,6 @@
 @extends('layouts.main')
 @section('content')
 </div>
-<div id="search">
-   </div> 
    
     <div id="wrapper">
     <div id="height">    

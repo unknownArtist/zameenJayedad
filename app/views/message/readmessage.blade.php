@@ -13,8 +13,10 @@
 
 <div class="createnewbtn">
  
-{{ HTML::link('user/messages','Return to Inbox',array('class'=>'editbtn'))}}
+
+{{ HTML::link('dashboard/messages','Return to Inbox',array('class'=>'editbtn'))}}
 </div>
+
 </div>
 
 <hr class="userchathr" />

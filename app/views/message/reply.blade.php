@@ -25,7 +25,7 @@
    	{{ Form::textarea('body','',array('class'=>'form-control textareaheight')) }}
 
 	<div class="btnfloat">
-   	{{ HTML::link('user/messages','Return to inbox',array('class'=>'editbtn '))}}
+   	{{ HTML::link('dashboard/messages','Return to inbox',array('class'=>'editbtn '))}}
                 {{ Form::submit('Send Message',array('class'=>'editbtn submtbtn'))}}
                 </div>
                 {{ Form::close() }}

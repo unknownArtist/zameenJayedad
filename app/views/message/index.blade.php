@@ -13,7 +13,7 @@
 <div class="createnewbtn">
 
  
-{{ HTML::link('dashboard/message/compose','Create new',array('class'=>'editbtn'))}}
+({{ MessageCentreController::getUnreadMessages() }}) {{ HTML::link('dashboard/message/compose','Create new',array('class'=>'editbtn'))}}
 
 </div>
 

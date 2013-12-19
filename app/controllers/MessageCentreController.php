@@ -145,12 +145,12 @@ class MessageCentreController extends BaseController {
 			//DB::table('rinks')->where('id','=',Request::segment(3))->delete();
 		return Redirect::to('dashboard/messages')->with('message','Record deleted successfully');
 	}
-	public function getmessagecreate()
+	// public function getmessagecreate()
 
-	{
-		$events = Calender::all(); 
-	return View::make('message.create')->with('events',$events);
-	}
+	// {
+	// 	$events = Calender::all(); 
+	// return View::make('message.create')->with('events',$events);
+	// }
 
 	public static function getUnreadMessages()
 	{

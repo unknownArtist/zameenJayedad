@@ -61,14 +61,14 @@ clear:both;
 .contact a{
 	text-decoration: none;
 	color:#50b1a8;
-	margin-top:30px;
+	margin-top:15px;
 	display:block;
 }
 
 .contact p{
 	color:#50b1a8;
 	font-weight: bolder;
-
+	margin-top:2px;
 }
 
 .log{
@@ -96,6 +96,25 @@ clear:both;
 }
 #sea{
 	padding:50px 0 0 20px;
+}
+
+#sealog
+{
+	margin-top:35px;
+	margin-left:50px;
+}
+
+#sealog input
+{
+	width:430px;
+	height: 26px;
+	border-radius: 6px;
+	margin-top: 28px;
+	color:#00a651;
+	text-indent:12px;
+	font-size: 16px;
+	outline-color: #e3e3e3;
+	float:left;
 }
 
 #sea input{
@@ -231,6 +250,7 @@ margin-left: 12px;
 width: 70px!important;
 text-indent: 0px !important;
 cursor:pointer;
+border:0;
 
 }
 
@@ -1294,6 +1314,7 @@ p.change_link{
 	border-radius:5px !important;
 	padding:2px 5px !important;
 	box-shadow:none !important;
+	transition:.3s;
 }
 
 .editbtn:hover, .agencynew a:hover
@@ -1354,5 +1375,72 @@ p.change_link{
 	float:left;
 	margin-top:25px;
 	margin-bottom:10px;
+}
+
+.comingmessageview
+{
+	width:100%;
+	float:left;
+}
+
+.subjectwidth
+{
+	width:auto;
+	float:left;
+}
+
+.inboxwidth
+{
+	width:78%;
+	text-align:center;
+	float:left;
+}
+
+.readmsg p a
+{
+	color:#50b1a8;
+	text-decoration:none;
+	font-weight:400;
+}
+
+.unreadmessage p a
+{
+	font-weight:bold !important;
+	text-decoration:none !important;
+	color:#00a651 !important;
+}
+
+.mesgbtns
+{
+	width:auto;
+	float:right;
+	margin-top:14px;
+}
+
+.userchathr
+{
+	border:.1em solid #50b1a8;	
+}
+
+.hrpad
+{
+	clear:both;
+	position:relative;
+	top:10px;
+}
+
+.msgreadbtn
+{
+	float:right;
+}
+
+.msgreadbtna
+{
+	float:left;
+}
+
+.readmsgheight
+{
+	min-height:290px;
 }
 

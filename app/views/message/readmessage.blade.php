@@ -1,27 +1,23 @@
-@extends('layouts.main')
+@extends('layouts.login')
 @section('content')
 
-<div id="main-content" class="container-fluid">
+<div id="wrapper">
+<div id="content">
 
-<div id="page-content" class="page-content">
-<div class="row-fluid margin-top20">
-<div class="col-xs-9 grider">
-<div class="widget widget-simple">
+<div class="messageswidth">
 
-<div class="col-xs-12">
+<div class="comingmessages">  
 
-<div class="col-xs-4 comingmessages padding-bottom15">  
-
-<h4>Message</h4>
+<h3>Message</h3>
 </div>
-<div class="col-xs-8 padding-bottom15">
 
+<div class="createnewbtn">
  
-{{ HTML::link('user/messages','Return to Inbox',array('class'=>'btn btn-success pull-right'))}}
-
+{{ HTML::link('user/messages','Return to Inbox',array('class'=>'editbtn'))}}
+</div>
 </div>
 
-<hr class="hrheight" />
+<hr class="userchathr" />
 
 
 <div class="">
@@ -29,16 +25,16 @@
 
 @foreach($inboxs as $inbox)
 
-<div class="col-sm-12">
-  {{ HTML::link('dashboard/message/'.$inbox->from_user.'/'.$inbox->id.'/reply','Reply',array('class'=>'pull-right padding-bottom15'))}}
-   {{ HTML::link('dashboard/message/'.$inbox->id.'/delete','Delete',array('class'=>'padding-bottom15'))}}
+<div class="">
+  {{ HTML::link('dashboard/message/'.$inbox->from_user.'/'.$inbox->id.'/reply','Reply',array('class'=>'editbtn msgreadbtna'))}}
+   {{ HTML::link('dashboard/message/'.$inbox->id.'/delete','Delete',array('class'=>'editbtn msgreadbtn'))}}
   </div> 
 
-<hr class="userchathr" />
+<hr class="hrpad" />
 
 
 
-<div class="col-sm-12">
+<div class="readmsgheight">
     
     <p>{{$inbox->body}}</p>
      </div> 
@@ -51,12 +47,12 @@
     
 </div>
 
-<hr class="hrheight hrpadding" />
+<hr class="userchathr" />
 
 </div>
 
 </div>
+</div>
 
-</div>
-</div>
+
 @stop

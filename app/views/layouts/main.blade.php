@@ -36,6 +36,21 @@
    
 		</div><!--header ends-->
 	</div>
+    
+    <div id="search">
+   
+   <div id="wrapperheader">
+    <div id="sealog">	
+    	{{ Form::open(array('url' => 'dashboard/search')) }}
+    	<h2>Search Listings:</h2>
+    	{{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'Search here...')) }}
+    	
+       {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn','style'=>'margin-top:30px !important;')) }}
+   
+    {{ Form::close() }}
+   
+    	</div>
+    </div>
 	
 	@yield('content')
 </div>

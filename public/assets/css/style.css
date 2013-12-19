@@ -939,8 +939,9 @@ a.hiddenanchor{
 }
 
 #form-wrapper select{
-	width:498px;
+	width:485px;
 	height: 28px;
+	padding: 4px 5px 4px 5px;
 	outline: none;
 	border: 1px solid rgb(178, 178, 178);
 	-webkit-box-sizing: content-box;
@@ -1289,14 +1290,69 @@ p.change_link{
 	color:#50b1a8 !important;
 	font-size:12px;
 	font-weight:bold;
-	border:2px solid #50b1a8;
-	border-radius:5px;
-	padding:2px 5px;
+	border:2px solid #50b1a8 !important;
+	border-radius:5px !important;
+	padding:2px 5px !important;
+	box-shadow:none !important;
 }
 
 .editbtn:hover, .agencynew a:hover
 {
 	color:#fff !important;
 	background:#50b1a8;
+}
+
+.compose h3
+{
+	color:#50b1a8;
+	margin:0px;
+	padding:0px;
+	margin-top:15px;
+}
+
+.textareaheight
+{
+	height:400px !important;
+}
+
+.submtbtn
+{
+	width:auto !important;
+	background:none;
+	height:auto !important;
+	cursor:pointer;
+}
+
+.btnfloat
+{
+	float:right;
+	padding-top:10px;
+}
+
+.createnewbtn
+{
+	width:auto;
+	float:right;	
+}
+
+.comingmessages
+{
+	width:auto;
+	float:left;
+	color:#50b1a8;
+}
+
+.comingmessages h3
+{
+	margin:0px;
+	padding:0px;
+}
+
+.messageswidth
+{
+	width:100%;
+	float:left;
+	margin-top:25px;
+	margin-bottom:10px;
 }
 

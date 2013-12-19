@@ -1,29 +1,25 @@
-@extends('layouts.main')
+@extends('layouts.login')
 @section('content')
-<div id="main-content" class="container-fluid">
+<div id="wrapper">
+<div id="content">
 
-<div id="page-content" class="page-content">
-<div class="row-fluid margin-top20">
-<div class="col-xs-9 grider">
-<div class="widget widget-simple">
+<div class="messageswidth">
 
+<div class="comingmessages">  
 
-
-<div class="col-xs-12">
-
-<div class="col-xs-4 comingmessages padding-bottom15">  
-
-<h4>Messages</h4>
+<h3>Messages</h3>
 </div>
 
-<div class="col-xs-8 padding-bottom15">
+<div class="createnewbtn">
 
  
-{{ HTML::link('dashboard/message/compose','Create new',array('class'=>'btn btn-success pull-right'))}}
+{{ HTML::link('dashboard/message/compose','Create new',array('class'=>'editbtn'))}}
 
 </div>
 
-<hr class="hrheight" />
+</div>
+
+<hr />
 
 <div class="">
 <div class="userchatinbox">
@@ -72,9 +68,6 @@
 <hr class="hrheight hrpadding" />
 
 </div>
-
-</div>
-
 </div>
 </div>
 @stop

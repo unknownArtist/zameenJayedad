@@ -34,10 +34,10 @@
             {{ Form::label('name', 'Name') }}
             {{ Form::text('name' )}}
         </li>
-        <!-- <li>
-            {{ Form::label('agency_name', 'Agency Name') }}
-            {{ Form::text('agency_name' )}}
-        </li> -->
+        <li>
+            {{ Form::label('agency_name', ' Please Select Agency') }}
+            {{ Form::select('agency_name', $allTeamsMember)}}
+        </li>
        
         <li>
             {{ Form::label('phone', 'Phone') }}

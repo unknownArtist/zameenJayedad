@@ -9,13 +9,58 @@ class AgencyController extends \BaseController {
 	 */
 	public function getAddNewuser()
 
-	{			
+	{		 $staffs = AgencyName::all();	
+					$allTeamsMember = array();
+					foreach($staffs as $staff)
+					{
+
+							
+					$allTeamsMember[$staff->id] = $staff->agency_name;
+						
+							
+						}	
 					return View::make('auth.addnewuser')
-					->with('countries', Config::get('listconfig.countries'));
+					->with('countries', Config::get('listconfig.countries'))
+					->with('allTeamsMember',$allTeamsMember);
 	}	
 		public function postAddnewUser()
 
-	{
+	{	
+		
+
+		try
+		{ 
+	         $Users = Sentry::getUserProvider()->create(array(
+	        'email'    => Input::get('email'),
+	        'password' => Input::get('password'),
+	        'activated'=> 1
+
+	        
+	        ));	
+	         $staff_id=$Users->id;
+
+	     	 
+		}
+
+
+		catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
+		{
+			    
+			return Redirect::to('dashboard/agencies/view/addnewuser')->with('errors','email field is required');
+		}
+		catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
+		{
+		    return Redirect::to('dashboard/agencies/view/addnewuser')->with('errors','Password field is required');
+		}
+		catch (Cartalyst\Sentry\Users\UserExistsException $e)
+		{
+		   return Redirect::to('dashboard/agencies/view/addnewuser')->withInput()->with('errors','User with this login already exists');
+		}
+
+		$URL = 'email:'.' '.Input::get('email').'<br/>'.'password:'.' '.Input::get('password').'<br/>'.'link:'.' '.'http://'.$_SERVER['HTTP_HOST'];
+			    	$this->sendTo(Input::get('email'),array('activationCode'=>$URL));
+		
+			
 			$fields = array(
 			            'email'          => Input::get('email'),
 			            'password' 	     => Input::get('password'),
@@ -49,11 +94,12 @@ class AgencyController extends \BaseController {
 			        	return Redirect::to('addnewuser')->with('errors',$v);
 			        }
 
-			        DB::table('Agencystaff')->insertGetId(array(
-											'agency_id' => Sentry::getUser()->id,
+			       
+					 DB::table('Agencystaff')->insertGetId(array(
+					 						'agency_id' =>Input::get('agency_name'),
+											'staff_id'  =>$staff_id,
 											'email'     => Input::get('email'),
 											'name'		=> Input::get('name'),
-											'password'  => Input::get('password'),  // it was $id i changed it to $userId.
 											'phone'     =>  Input::get('phone'),
 											'cell'      => Input::get('cell'),
 											'fax'       => Input::get('fax'),
@@ -109,11 +155,8 @@ class AgencyController extends \BaseController {
 		  DB::table('Agencystaff')
             ->where('id','=',$id)
             ->update($fields);
-		
 
-		return Redirect::to('profolio/listing');
-
-		return Redirect::to('dashboard/agencies/'.$id.'/view');
+		return Redirect::to('dashboard/agencies/view');
 
 	}
 
@@ -122,7 +165,7 @@ class AgencyController extends \BaseController {
 		$agencystaff = Agency::find($id);
 		$agencystaff->delete();
 
-		return Redirect::to('profolio/listing');
+		return Redirect::to('dashboard/agencies/view');
 
 
 	}

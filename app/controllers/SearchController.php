@@ -8,28 +8,20 @@ class SearchController extends \BaseController {
 	 * @return Response
 	 */
 	public function postIndex()
-	{	$fields = array(
-			            'search'    => Input::get('search'),
-			             );
+	{	
            
-			$rules = array(
-		            'search'        => 'required',
-		            );
-		    $v = Validator::make($fields, $rules);
-			        if ($v->fails()) 
-			        {
+	$q =Input::get('search');
 
-			        	
-
-			        	return 'please type for search';
-
-			        }
-
-	$name=Input::get('search');
-	$records = Profolio::where('city', 'LIKE', '%'. $fields['search'].'%')
-					->orWhere('property_type', 'LIKE', $fields['search'])->get();
+	$records = Profolio::where('city', 'LIKE', '%'.$q.'%')
+					   ->orWhere('property_type', 'LIKE','%'.$q.'%')
+					   ->orWhere('purpose','LIKE', '%'.$q.'%')
+					   ->orWhere('wanted','LIKE', '%'.$q.'%')
+					   ->orWhere('location','LIKE', '%'.$q.'%')
+					   ->orWhere('p_title','LIKE', '%'.$q.'%')
+					   ->orWhere('unit','LIKE', '%'.$q.'%')
+					   ->get();
 	return View::make('dashboard.search')
-					->with('name',$name)
+					->with('name',$q)
 					->with('record',$records);
 	}
 

@@ -1,17 +1,16 @@
 @extends('layouts.login')
 @section('content')
 
-<div id="main-content" class="container-fluid">
-
-<div id="page-content" class="page-content">
-<div class="row-fluid margin-top20">
-<div class="col-xs-9 grider">
-<div class="widget widget-simple padding-bottom15">
+<div id="wrapper">
+<div id="content">
 
     
-  <div class="col-xs-12 widget-header">
-  <h4>Compose Message</h4>
+  <div class="compose">
+  <h3>Compose Message</h3>
+  <hr />
 </div>
+	
+    <div id="form-wrapper">
    {{ Form::open(array('url'=>'dashboard/message/compose','POST','files'=>true))}}
     <div class="col-xs-12 margin-top15">
   	{{ Form::label('send_to', 'Send To') }}
@@ -26,17 +25,18 @@
 
 <div class="col-xs-12">
 	{{ Form::label('msg', 'Message') }}
-   	{{ Form::textarea('body','',array('class'=>'form-control')) }}
+   	{{ Form::textarea('body','',array('class'=>'form-control textareaheight')) }}
 
-
-   	{{ HTML::link('dashboard/messages','Return to inbox',array('class'=>'btn btn-success '))}}
-                {{ Form::submit('Send Message',array('class'=>'btn btn-primary pull-right'))}}
+	<div class="btnfloat">
+   	{{ HTML::link('dashboard/messages','Return to inbox',array('class'=>'editbtn'))}}
+   
+                {{ Form::submit('Send Message',array('class'=>'editbtn submtbtn'))}}
+                </div>
                 {{ Form::close() }}
+                           
                   </div>
               </div>
               </div>
+              </div>
               
-            
-              </div>
-              </div>
 @stop

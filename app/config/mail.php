@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.gmail.com',
+	'host' => 'mail.zameenjayedad.com.pk',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return array(
 	|
 	*/
 
-	'port' => 587,
+	'port' => 25,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'rameez.ahmad013@gmail.com', 'name' => 'Rameez Ahmad'),
+	'from' => array('address' => 'no-reply@zameenjayedad.com.pk', 'name' => 'Account Confirmation'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'rameez.ahmad013@gmail.com',
+	'username' => 'no-reply@zameenjayedad.com.pk',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'Rdeveloper1',
+	'password' => 'z@m33n',
 
 	/*
 	|--------------------------------------------------------------------------

@@ -78,3 +78,8 @@ Route::post('dashboard/search',array('uses'=>'SearchController@postIndex'));
 	Route::get('dashboard/listing/{id}',array('uses'=>'DashboardController@getListing'));
 	Route::post('dashboard',array('uses'=>'DashboardController@postIndex'));
 	Route::get('dashboard',array('uses'=>'DashboardController@getIndex'));
+	Route::get('user/logout',function(){
+
+		Sentry::logout();
+		return Redirect::to('dashboard');
+	});

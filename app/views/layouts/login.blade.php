@@ -44,6 +44,9 @@ case 'profile':
  case 'listing':
  $('#li_property').addClass('active') ;
  break;
+ case 'messages':
+ $('#li_message').addClass('active') ;
+ break;
 
 
 }
@@ -117,7 +120,7 @@ jQuery(function(){
        <li id="li_profile"><a href="{{URL::to('profile')}}">My Accounts & Profile</a></li>
        <li id="li_reports"><a href="{{URL::to('dashboard/reports')}}">Reports</a></li>
        <li id="li_property"><a href="{{URL::to('profolio/listing')}}">Property Management</a></li>
-       <li id="li_message"><a href="{{URL::to('dashboard/messages')}}">Messages Center</a></li>
+       <li id="li_message"><a href="{{URL::to('dashboard/messages')}}">Message Center</a></li>
        </ul>
        </div>
      

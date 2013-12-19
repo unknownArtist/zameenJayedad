@@ -16,6 +16,16 @@ class DashboardController extends BaseController {
 		->with('users', $users);
 				   
 	}
+	public function getGuest()
+	{
+		$users = DB::table('property')
+                    ->orderBy('id', 'desc')
+                    ->take(10)
+          			->get();
+		return View::make('dashboard.guest')
+		->with('users', $users);	
+		
+	}
 	public function postIndex()
 	{
 		return "Post function";

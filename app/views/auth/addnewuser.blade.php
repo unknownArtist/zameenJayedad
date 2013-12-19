@@ -1,16 +1,15 @@
 @extends('layouts.main')
 @section('content')
 </div>
-<div id="search">
 
-   </div> 
- {{ Session::get('errors') }}
+ 
 <div id="wrapper">
 <div id="form-wrapper">
 
 {{ Form::open(array('url' => 'dashboard/agencies/view/addnewuser')) }}
 
  <h1>Agency Staff </h1>
+ {{ Session::get('errors') }}
     <ul>
      <h2>User Details</h2>
         <li>

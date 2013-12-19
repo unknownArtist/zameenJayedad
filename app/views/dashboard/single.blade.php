@@ -40,7 +40,7 @@
                 </div>
                 
          </li>
-             <hr>
+           
              @endforeach
       </ul>
       

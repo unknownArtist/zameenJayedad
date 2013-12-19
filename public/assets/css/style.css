@@ -166,7 +166,7 @@ clear:both;
 }
 #cssmenu ul li a {
   display: block;
-  margin: 26px 0 0 30px;
+  margin: 26px 0 0 13px;
   
   border-radius: 2px 2px 0 0;
   text-decoration: none;
@@ -177,7 +177,7 @@ clear:both;
   opacity: .9;
 }
 #cssmenu ul li:first-child a {
- 
+  margin: 26px 0 0 0px;
 }
 #cssmenu ul li a:hover,
 #cssmenu ul li.active a {
@@ -261,13 +261,12 @@ border:0;
 
 #result{
 	float:left;
+	width:100%;
 
 }
 
 #result h2{
-	padding-left: 212px;
-    margin-top: 32px;
-    margin-right: 819px;
+	
 	color:#00a651;
 }
 
@@ -276,17 +275,20 @@ border:0;
 .detail{
 	float:left;
 	width:600px;
+	margin-top:15px;
 }
 
 .detail ul li{
 list-style:none;
 display:block;
+margin-top:20px;
 }
 
 .detail ul hr
 {
 	position:relative;
 	top:10px;
+	clear:both;
 }
 
 .deatilimg{
@@ -302,8 +304,15 @@ display:block;
 	padding-left:10px;	
 }
 
-.detail h2{
+.detail h2 a{
 	color:#00a651;
+	margin:0px;
+	padding:0px;
+}
+
+.detail h2
+{
+	
 	margin:0px;
 	padding:0px;
 }

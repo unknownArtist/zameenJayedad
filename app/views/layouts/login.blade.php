@@ -89,12 +89,9 @@ jQuery(function(){
 			
 			</div><!--logo-img ends-->
 			<div class="contact">
-    @if(!isset(Sentry::getUser()->id))
-      {{ HTML::link('login','LOGIN',array('class'=>'log'))}}
-      {{ HTML::link('user/register','REGISTER',array('class'=>'log'))}}
-    @else
+    
       {{ HTML::link('user/logout','Logout',array('class'=>'log'))}}
-    @endif
+    
         <a href="#"> contact@zameenjayedad.com   </a>
         <p>+923225050989</p>
         </div>
@@ -112,7 +109,7 @@ jQuery(function(){
     	{{ Form::text('search','',array('class'=>'span6','placeholder'=>'search by city')) }}
     	
        {{ Form::submit('Search', array('class' => 'button')) }}-->
-      @if(isset(Sentry::getUser()->id))
+    
        <div id='cssmenu'>
        <ul>
        <li id="li_home"><a href="{{URL::to('dashboard')}}">Dashboard</a></li>
@@ -122,7 +119,7 @@ jQuery(function(){
        <li id="li_property"><a href="{{URL::to('profolio/listing')}}">Property Management</a></li>
        </ul>
        </div>
-       @endif
+     
     </div>
     </div>
 	

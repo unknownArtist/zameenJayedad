@@ -293,15 +293,35 @@ margin-top:20px;
 
 .deatilimg{
 	
-	width:120px;
+	width:220px;
 	float:left;	
+}
+
+.deatilimg img
+{
+ 	 border: 2px solid #e3e3e3;
+	 border-radius:4px;
+	 padding:2px;
+}
+
+.propername
+{
+	width:330px;
+	float:left;
 }
 
 .deatillist
 {
-	width:430px;
+	width:100%;
 	float:left;
 	padding-left:10px;	
+}
+
+.propername span
+{
+	color:#666;
+	position:relative;
+	top:40px;
 }
 
 .detail h2 a{
@@ -312,7 +332,7 @@ margin-top:20px;
 
 .detail h2
 {
-	
+	color:#666;
 	margin:0px;
 	padding:0px;
 }
@@ -1472,5 +1492,14 @@ p.change_link{
 .link a:hover
 {
 	text-decoration:none !important;
+}
+
+.image-row a img
+{
+	margin-top:25px !important;
+	margin-left:15px;
+	border: 2px solid #e3e3e3;
+	 border-radius:4px;
+	 padding:2px;
 }
 

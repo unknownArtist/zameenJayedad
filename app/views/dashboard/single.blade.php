@@ -14,15 +14,22 @@
         <li>
         
         <div class="deatilimg">
-        {{Form::image('uploads/photos/'.$records->photo, '', array('class'=>'imagewidth'));}}
+        {{HTML::image('uploads/photos/'.$records->photo, '', array('class'=>''));}}
              <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
              </div>
-             <div class="deatillist">
-                 <h2> {{$records->property_type}} in </h2>
+             <div class="propername">
+             <h2> {{$records->property_type}} in </h2>
                  <h3>{{$records->city}}</h3>
+                 <span class="otherinfo">Bedrooms:&nbsp;{{$records->bedroom}} | Bathrooms:&nbsp;{{$records->bathroom}} |
+                  Land Area:&nbsp;{{$records-> l_area}}&nbsp;{{$records-> unit}}</span><br />
+                  <span style="font-weight:bold;">Price: {{$records->budget}}RS </span> 
+             </div>
+             <div class="deatillist">                 
                  
                  <h2 style="margin-top:20px;">Description</h2>
                  <p>{{$records->Description}} </p>
+                 
+                 <!--<div class="otherinfo">
                  
                  <h2 style="margin-top:20px;">Other Info</h2>
                  <p>No of Bedrooms:&nbsp;&nbsp;{{$records->bedroom}} </p>
@@ -31,12 +38,14 @@
 
                  <p style="font-weight:bold">Price:&nbsp;&nbsp;&nbsp;&nbsp; {{$records->budget}}RS </p> 
                <!--  <p> Construction_status {{$records->Construction_status}}</p>-->
+                <!-- </div>-->
                  
                  
                  <h2 style="margin-top:20px">Contact Info</h2>
                  <p> Cell:&nbsp;&nbsp; {{$records->cell}}</p>
                 <p> Fax: &nbsp;&nbsp; {{$records->fax}}</p>
                 <p> Email: &nbsp; {{$records->email}}</p>
+               
                 </div>
                 
          </li>
@@ -44,7 +53,11 @@
              @endforeach
       </ul>
       
+     
+      
     </div><!--detail ends-->
+    
+    
 
 
 
@@ -57,6 +70,16 @@
         <p>2 beds | 2 baths1,389 sq ftEco Realty Inc.</p>
       </div><!--featured bottom ends-->
     </div><!--featured ends-->
+    
+     <div class="image-row" style="clear:both;">
+			<div class="image-set">
+           
+				<a class="example-image-link" href="assets/images/slide1.png" data-lightbox="example-set" title="Click on the right side of the image to move forward.">{{HTML::image('assets/images/slide1.png', 'Welcome to Zameen Jayedad', array('style'=>'width:150px; height:150px;'));}}</a>
+				<a class="example-image-link" href="img/demopage/image-4.jpg" data-lightbox="example-set" title="Or press the right arrow on your keyboard.">{{HTML::image('assets/images/slide2.png', 'Welcome to Zameen Jayedad', array('style'=>'width:150px; height:150px;'));}}</a>
+				<a class="example-image-link" href="img/demopage/image-5.jpg" data-lightbox="example-set" title="The script preloads the next image in the set as you're viewing.">{{HTML::image('assets/images/slide3.png', 'Welcome to Zameen Jayedad', array('style'=>'width:150px; height:150px;'));}}</a>
+				
+			</div>
+		</div>
     
     </div>
     </div>

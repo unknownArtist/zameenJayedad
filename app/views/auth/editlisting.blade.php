@@ -25,13 +25,12 @@
 <div id="content">
 <div id="form-wrapper">
 
- {{  Session::get('errors') }}
 @foreach($records as $record)
 
 {{ Form::open(array('url' => 'profolio/listing/'.$record->id.'/edit','files' => true)) }}
 
  <h1>Post New Listings</h1>
-
+<p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
         <h2>Type and Purpose</h2>
         <li>
@@ -164,6 +163,5 @@
 @endforeach
 </div>
 </div>
-
 
 @stop

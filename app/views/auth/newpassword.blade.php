@@ -1,14 +1,12 @@
 @extends('layouts.main')
 @section('content')
-</div>
-<div id="search">
-   </div> 
-    {{  Session::get('errors') }}
+   
    <div id="wrapper">
-<div id="height">    
+<div id="content">    
 <div id="form-wrapper">
 <h1>Reset Password </h1>
 {{ Form::open(array('url' => 'newpassword')) }}
+<p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
         <li>
            

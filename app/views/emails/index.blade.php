@@ -1,18 +1,14 @@
 @extends('layouts.login')
 @section('content')
-</div>
 
-<div id="search">
-
-   </div> 
-</div>
- {{  Session::get('errors') }}
+ 
  <div id="wrapper" class="clearfix">
+ <div id="content">
 
  	<div id="alerts">
  		<div id="section">
     
-     
+     <p class="erorclas"> {{ Session::get('errors') }}</p>
  		
        <p class="total">Total Alerts : {{count($records)}}</p>
         <h3 class="alerts">Alerts Description</h3>
@@ -36,5 +32,6 @@
 </div>
 </div>
 {{ Form::close() }}
+</div>
 
 @stop

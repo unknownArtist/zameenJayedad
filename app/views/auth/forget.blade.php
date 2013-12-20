@@ -1,14 +1,13 @@
 @extends('layouts.main')
 @section('content')
-</div>
-<div id="search">
-   </div> 
-    {{  Session::get('errors') }}
+
+   
    <div id="wrapper">
-<div id="height">    
+<div id="content">    
 <div id="form-wrapper">
 <h1>Enter Email </h1>
 {{ Form::open(array('url' => 'forget')) }}
+<p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
         <li>
             {{ Form::label('email', 'Email:') }}
@@ -25,9 +24,5 @@
     </div>
    </div> 
 {{ Form::close() }}
-</div>
-   </div> 
-{{ Form::close() }}
-
-       
+</div>       
 @stop

@@ -1,14 +1,12 @@
 @extends('layouts.login')
 @section('content')
-</div>
-<div id="search">
-   </div> 
-    {{  Session::get('errors') }}
+
     <div id="wrapper">
-    <div id="height">    
+    <div id="content">    
     <div id="form-wrapper">
         <h1>Change Password </h1>
         {{ Form::open(array('url' => 'changepass')) }}
+        <p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
         <li>
             {{ Form::label('email', 'Email:') }}
@@ -34,12 +32,10 @@
         </li>
         
     </ul>
-    </div>
-   </div> 
+   
 {{ Form::close() }}
+ </div>
+   </div> 
 </div>
-   </div> 
-{{ Form::close() }}
-
        
 @stop

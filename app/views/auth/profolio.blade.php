@@ -28,7 +28,7 @@
 {{ Form::open(array('url' => 'profolio','files' => true)) }}
 
  <h1>Post New Listings</h1>
-{{  Session::get('errors') }}
+<p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
         <h2>Type and Purpose</h2>
         <li>

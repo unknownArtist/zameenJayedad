@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-</div>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript"></script>
 <script>
 $(document).ready(function() {
@@ -17,13 +17,14 @@ $('#agentshow').click(function() {
   });
 </script>
 
- {{  Session::get('errors') }}
+ 
 <div id="wrapper">
 <div id="form-wrapper">
 
 {{ Form::open(array('url' => 'user/register')) }}
 
  <h1>Registration</h1>
+ <p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
         <li>
             {{ Form::label('name', 'Name') }}

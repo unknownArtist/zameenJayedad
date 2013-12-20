@@ -227,9 +227,9 @@ class AuthController extends BaseController {
 
 		    if($resetCode)
 			    {
-			    	$URL = 'http://'.$_SERVER['HTTP_HOST']."/user/resetCode?code=".$resetCode."&email=".Input::get('email');
+			    	$URL = 'http://'.$_SERVER['HTTP_HOST']."/newpassword/resetCode?code=".$resetCode."&email=".Input::get('email');
 			    	$this->sendTo(Input::get('email'),array('activationCode'=>$URL));
-			    	return Redirect::to('newpassword')->with('errors','Please check your mail for password reset');
+			    	return Redirect::to('login')->with('errors','Please check your mail for password reset');
 			    }
 		}
 		catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
@@ -242,12 +242,15 @@ class AuthController extends BaseController {
 	public function getNewPassword()
 
 	{
-	return View::make('auth.newpassword');
+		$email=Input::get('email');
+		
+	return View::make('auth.newpassword')->with('email',$email);
 	}	
 
 	public function postNewPassword()
 
 	{
+
 		$user = Sentry::findUserByLogin(Input::get('email'));
 		$userid= $user->id;
 

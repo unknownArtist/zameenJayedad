@@ -7,7 +7,7 @@
    <div id="wrapper">
 <div id="height">    
 <div id="form-wrapper">
-<h1>Send Password </h1>
+<h1>Enter Email </h1>
 {{ Form::open(array('url' => 'forget')) }}
     <ul>
         <li>

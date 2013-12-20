@@ -16,9 +16,7 @@ $('#agentshow').click(function() {
 
   });
 </script>
-<div id="search">
 
-   </div> 
  {{  Session::get('errors') }}
 <div id="wrapper">
 <div id="form-wrapper">

@@ -11,14 +11,19 @@
 {{ Form::open(array('url' => 'newpassword')) }}
     <ul>
         <li>
-            {{ Form::label('email', 'Email:') }}
-            {{ Form::text('email') }}
+           
+            {{ Form::hidden('email',$email) }}
         </li>
 
 
         <li>
             {{ Form::label('password', 'New Password:') }}
             {{ Form::Password('password') }}
+        </li>
+        <li>
+            {{ Form::label('password', 'Confirm Password') }}
+            {{ Form::password('password') }}
+
         </li>
         <li>
             {{ Form::submit('Reset', array('class' => 'btn')) }}

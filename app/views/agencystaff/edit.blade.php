@@ -6,13 +6,13 @@
 <div id="form-wrapper">
 
 
- {{ Session::get('errors') }}
+ 
 
 @foreach($record as $records)
 {{ Form::open(array('url' =>'dashboard/agencystaff/'.$records->agency_id.'/edit','POST')) }}
 
  <h1>Agency Staff </h1>
- 
+ <p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
     
      <h2>User Details</h2>

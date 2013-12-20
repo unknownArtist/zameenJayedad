@@ -1,18 +1,15 @@
 @extends('layouts.main')
 @section('content')
-</div>
 
-<div id="search">
-
-   </div> 
- {{  Session::get('errors') }}
+ 
 <div id="wrapper">
+<div id="content">
 <div id="form-wrapper">
 
 {{ Form::open(array('url' => 'user/email/alert/{emailAlertId}/edit')) }}
 
  <h1> Create Email Alert </h1>
-
+<p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
         <h2>Basic Alert Criteria</h2>
         @foreach ($records as $record)
@@ -104,7 +101,6 @@
             {{ Form::radio('purpose', 'wanted')}}
 
         </li>    
-        </li>
 
         </div>
 
@@ -173,5 +169,7 @@
 
 </div>
 {{ Form::close() }}
+</div>
+</div>
 
 @stop

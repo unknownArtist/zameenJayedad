@@ -10,7 +10,7 @@
 {{ Form::open(array('url' =>'profile/update')) }}
 
  <h1>My Profile</h1>
- {{  Session::get('errors') }}
+<p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
  <li>
            @foreach ($users as $user )

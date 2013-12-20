@@ -19,13 +19,14 @@ $('#agentshow').click(function() {
 <div id="search">
 
    </div> 
- {{  Session::get('errors') }}
+ 
 <div id="wrapper">
 <div id="form-wrapper">
 
 {{ Form::open(array('url' => 'user/register')) }}
 
  <h1>Registration</h1>
+ <p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
         <li>
             {{ Form::label('name', 'Name') }}

@@ -1,11 +1,9 @@
 @extends('layouts.login')
 @section('content')
-</div>
-<div id="search">
 
-   </div> 
- {{  Session::get('errors') }}
+ 
 <div id="wrapper">
+<div id="content">
 <div id="form-wrapper">
 
     {{ HTML::link('user/email/alerts','Manage Email ALerts') }}
@@ -14,7 +12,7 @@
 {{ Form::open(array('url' => 'user/email/alert/emailalert')) }}
 
  <h1> Create Email Alert </h1>
-
+<p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
         <h2>Basic Alert Criteria</h2>
         <li>
@@ -105,8 +103,7 @@
             {{ Form::radio('purpose', 'wanted')}}
 
         </li>    
-        </li>
-
+       
         </div>
 
         
@@ -172,5 +169,7 @@
 
 </div>
 {{ Form::close() }}
+</div>
+</div>
 
 @stop

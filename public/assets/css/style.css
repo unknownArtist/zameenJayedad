@@ -1458,3 +1458,19 @@ p.change_link{
 	min-height:320px;
 }
 
+.erorclas
+{
+	color:red;
+	text-align:center;
+}
+
+.link a
+{
+	color:#50b1a8 !important;
+}
+
+.link a:hover
+{
+	text-decoration:none !important;
+}
+

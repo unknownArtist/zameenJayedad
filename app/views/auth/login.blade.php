@@ -1,13 +1,13 @@
 @extends('layouts.main')
 @section('content')
-</div>
    
     <div id="wrapper">
-    <div id="height">    
+    <div id="content">    
     <div id="form-wrapper">
-     {{  Session::get('errors') }}
+     
 <h1>Login </h1>
 {{ Form::open(array('url' => 'login')) }}
+<p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
         <li>
             {{ Form::label('email', 'Email:') }}
@@ -22,10 +22,10 @@
         <li>
             {{ Form::submit('Login', array('class' => 'btn')) }}
         </li>
+        <br />
         <li class="link">
-            {{ HTML::link('forget','Forget Password') }}
-        </li>
-        <li class="link">
+            {{ HTML::link('forget','Forgot Password',array('style'=>'float:right;')) }}
+        
             {{ HTML::link('changepass','Change Password') }}
         </li>
         
@@ -33,6 +33,7 @@
     </div>
    </div> 
 {{ Form::close() }}
+</div>
 
        
 @stop

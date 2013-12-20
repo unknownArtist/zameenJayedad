@@ -3,7 +3,7 @@
 <div id="wrapper">
  <div id="content">
  
- {{  Session::get('errors') }}
+ <p class="erorclas"> {{ Session::get('errors') }}</p>
  
  <div id="report">
  	<h2>Your performance in 30 days <span>(14 Oct, 2013 to 12 Nov, 2013)</span></h2>

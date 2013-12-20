@@ -1,11 +1,9 @@
 @extends('layouts.main')
 @section('content')
-</div>
-<div id="search">
 
-   </div> 
- {{  Session::get('errors') }}
+ 
 <div id="wrapper">
+<div id="content">
 <div id="form-wrapper">
 
 
@@ -14,7 +12,7 @@
 
 
  <h1> Create Email Alert </h1>
-
+<p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
         <h2>Basic Alert Criteria</h2>
         <li>
@@ -105,7 +103,7 @@
             {{ Form::radio('purpose', 'wanted')}}
 
         </li>    
-        </li>
+       
 
         </div>
 
@@ -119,13 +117,14 @@
             {{ Form::label('beds', 'Beds') }}
             {{ Form::select('beds', $beds)}}
         </li>
-
+		<br />
         <h2>Location Preferences</h2>
 
         <li>
             {{ Form::label('location', 'Location' ) }}
             {{ Form::text('location') }}
         </li>
+        <br />
 
          <h2>Other Specifications</h2>
         <li>
@@ -172,6 +171,8 @@
 
 </div>
 {{ Form::close() }}
+</div>
+</div>
 
 
 

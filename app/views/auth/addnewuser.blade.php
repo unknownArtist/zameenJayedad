@@ -1,7 +1,5 @@
-@extends('layouts.main')
+@extends('layouts.login')
 @section('content')
-</div>
-
  
 <div id="wrapper">
 <div id="form-wrapper">
@@ -9,7 +7,7 @@
 {{ Form::open(array('url' => 'dashboard/agencies/view/addnewuser')) }}
 
  <h1>Agency Staff </h1>
- {{ Session::get('errors') }}
+<p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
      <h2>User Details</h2>
         <li>
@@ -62,9 +60,10 @@
         <li>
             {{ Form::label('country', 'Country') }}
             {{ Form::select('country', $countries);}}
-        <li>
-
-         <h2>Assign Listing Quota</h2>
+            
+        </li>
+		<br />
+         <li><h2>Assign Listing Quota</h2></li>
         <li>
             {{ Form::label('listing_quota', 'Listing Quota') }}
             {{ Form::text('listing_quota') }}
@@ -75,12 +74,14 @@
             {{ Form::text('hot_quota') }}
         </li>  
 
-            {{ Form::submit('Create User', array('class' => 'btn')) }}
+            <li>{{ Form::submit('Create User', array('class' => 'btn')) }}
         </li>
         <li>{{ HTML::link('dashboard/agencies/view','Back',array('class'=>'editbtn'))}}</li> 
         
     </ul>
 </div>
 {{ Form::close() }}
+
+</div>
 
 @stop

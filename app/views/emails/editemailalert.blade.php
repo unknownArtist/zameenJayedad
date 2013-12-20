@@ -1,11 +1,9 @@
 @extends('layouts.main')
 @section('content')
-</div>
-<div id="search">
 
-   </div> 
- {{  Session::get('errors') }}
+ 
 <div id="wrapper">
+<div id="content">
 <div id="form-wrapper">
 
 {{ Form::open(array('url' => 'user/email/alert/{emailAlertId}/edit')) }}
@@ -13,7 +11,7 @@
 
 
  <h1> Create Email Alert </h1>
-
+<p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
         <h2>Basic Alert Criteria</h2>
         @foreach ($records as $record)
@@ -34,7 +32,7 @@
           
              {{ Form::checkbox('Property_Type[]','houses','checked')}}
     
-            {{ Form::checkbox('Property_Type[]','houses')}}
+            {{ Form::checkbox('Property_Type[]','houses')}}</li>
 
             <li> 
              {{ Form::label('flats', 'Flats') }}
@@ -130,7 +128,7 @@
             @endif
 
         </li>    
-        </li>
+       
 
         </div>
 
@@ -199,5 +197,7 @@
 
 </div>
 {{ Form::close() }}
+</div>
+</div>
 
 @stop

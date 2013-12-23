@@ -2,19 +2,7 @@
 <html>
 <head>
 	<title>Zameen Jayedad</title>
-  <STYLE TYPE="text/css">
-  .innermenu
-  {
-    display: none;
-  }
-
-  #li_profile:hover ul.innermenu
-  {
-    display: block;
-
-  }
-
-  </STYLE>
+ 
 	{{ HTML::style('assets/css/style.css')}}
 	{{ HTML::style('assets/css/generic.css')}}
 	{{ HTML::style('assets/js/js-image-slider.css'); }}
@@ -59,6 +47,9 @@ case 'agencies':
  $('#li_agency').addClass('active') ;
  break;
 case 'profile':
+ $('#li_profile').addClass('active') ;
+ break;
+ case 'changepass':
  $('#li_profile').addClass('active') ;
  break;
  case 'reports':
@@ -140,8 +131,12 @@ jQuery(function(){
        <ul>
        <li id="li_home"><a href="{{URL::to('dashboard')}}">Dashboard</a></li>
        <li id="li_agency"><a href="{{URL::to('dashboard/agencies')}}">Agency</a></li>
-       <li id="li_profile"><a href="{{URL::to('profile')}}">My Accounts & Profile</a>
-        <ul class="innermenu" style=""><li id="li_changepass"><a href="{{URL::to('changepass')}}">Change Password</a></li></ul></li>
+       <li id="li_profile"><a href="">My Account</a>
+        <ul class="innermenu" style="">
+         <li id="li_changepass"><a href="{{URL::to('profile')}}">Profile</a></li>
+        <li id="li_changepass"><a href="{{URL::to('changepass')}}">Change Password</a></li>        
+        </ul>
+        </li>
        <li id="li_reports"><a href="{{URL::to('dashboard/reports')}}">Reports</a></li>
        <li id="li_property"><a href="{{URL::to('profolio/listing')}}">Property Management</a></li>
        <li id="li_message"><a href="{{URL::to('dashboard/messages')}}">Message Center</a></li>

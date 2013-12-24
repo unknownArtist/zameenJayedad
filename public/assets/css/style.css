@@ -154,7 +154,7 @@ clear:both;
   zoom: 1;
   height: 50px;
   border-radius: 2px;
-  width: 820px;
+  width: 750px;
   float:left;
 }
 #cssmenu ul {
@@ -165,18 +165,6 @@ clear:both;
   float: left;
   list-style: none;
 }
-
-#cssmenu ul li a {
-display: block;
-margin: 26px 0 0 10px;
-border-radius: 2px 2px 0 0;
-text-decoration: none;
-font-size: 15px;
-color: white;
-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
-font-weight: 400;
-opacity: .9;
-
 #cssmenu ul li a, #cssmenu ul li ul.innermenu li a {
   display: inline-block;
   margin: 26px 0 0 25px;  
@@ -187,7 +175,6 @@ opacity: .9;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
   font-weight: 400;
   opacity: .9;
-
 }
 #cssmenu ul li:first-child a {
   margin: 26px 0 0 0px;
@@ -254,6 +241,7 @@ opacity: .9;
 {
 	margin: 10px 0 0 10px;
 	padding-top:0;
+	width:155px;
 }
 
 #cssmenu ul li ul.innermenu li a:hover
@@ -277,7 +265,7 @@ opacity: .9;
 
 .searchlist input
 {
-	width:200px;
+	width:240px;
 	height: 25px;
 	border-radius: 6px;
 	margin-top:18px;
@@ -1034,7 +1022,6 @@ a.hiddenanchor{
 
 #form-wrapper p{
 	margin-bottom:15px;
-	color: red;
 }
 #form-wrapper p:first-child{
 	margin: 0px;

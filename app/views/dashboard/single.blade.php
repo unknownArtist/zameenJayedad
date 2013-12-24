@@ -81,19 +81,7 @@
       </div><!--featured bottom ends-->
     </div><!--featured ends-->
     
-<<<<<<< HEAD
-     <div class="image-row" style="clear:both;">
-			<div class="image-set">
-          
-				<a class="example-image-link" href="{{URL::to('assets/images/slide1.png')}}" data-lightbox="example-set" title="Click on the right side of the image to move forward.">{{HTML::image('assets/images/slide1.png', 'Welcome to Zameen Jayedad', array('style'=>'width:150px; height:150px;'));}}</a>
-				<a class="example-image-link" href="{{URL::to('assets/images/slide2.png')}}" data-lightbox="example-set" title="Click on the right side of the image to move forward.">{{HTML::image('assets/images/slide2.png', 'Welcome to Zameen Jayedad', array('style'=>'width:150px; height:150px;'));}}</a>
-				<a class="example-image-link" href="{{URL::to('assets/images/slide3.png')}}" data-lightbox="example-set" title="Click on the right side of the image to move forward.">{{HTML::image('assets/images/slide3.png', 'Welcome to Zameen Jayedad', array('style'=>'width:150px; height:150px;'));}}</a>
-				
-			</div>
-		</div>
-=======
-     
->>>>>>> 8e178f877acc31e81f1e9c98bdfc368a68f01192
+
     
     </div>
     </div>

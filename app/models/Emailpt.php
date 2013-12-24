@@ -7,6 +7,6 @@ Class Emailpt extends Eloquent {
          *
          * @var string
          */
-        protected $table ='Emailalert_pt';
+        protected $table ='emailalert_pt';
         
 }

@@ -45,7 +45,7 @@
     	<h2>Search Listings:</h2>
     	{{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'Search here...')) }}
     	
-       {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn','style'=>'margin-top:30px !important;')) }}
+       {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn','style'=>'margin-top:29px !important; height:28px !important;')) }}
    
     {{ Form::close() }}
    

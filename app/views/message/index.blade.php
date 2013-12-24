@@ -10,10 +10,13 @@
 <h3>Messages</h3>
 </div>
 
+<div class="messagequantity">
+<p>You have <span>{{ MessageCentreController::getUnreadMessages() }}</span> unread messages.</p>
+</div>
+
 <div class="createnewbtn">
 
- 
-({{ MessageCentreController::getUnreadMessages() }}) {{ HTML::link('dashboard/message/compose','Create new',array('class'=>'editbtn'))}}
+ {{ HTML::link('dashboard/message/compose','Create new',array('class'=>'editbtn'))}}
 
 </div>
 

@@ -26,7 +26,7 @@
              </div>
              <div class="deatillist">                 
                  
-                 <h2 style="margin-top:20px;">Description</h2>
+                 <h2 style="margin-top:20px;">Description:</h2>
                  <p>{{$records->Description}} </p>
                  
                  <!--<div class="otherinfo">
@@ -41,12 +41,26 @@
                 <!-- </div>-->
                  
                  
-                 <h2 style="margin-top:20px">Contact Info</h2>
+                 <h2 style="margin-top:20px">Contact Info:</h2>
                  <p> Cell:&nbsp;&nbsp; {{$records->cell}}</p>
                 <p> Fax: &nbsp;&nbsp; {{$records->fax}}</p>
                 <p> Email: &nbsp; {{$records->email}}</p>
+                
+                <div class="image-row">
+                
+			<div class="image-set">
+           		<h2 style="margin-top:20px;">More Pictures:</h2>
+                <a class="example-image-link" href="/assets/images/home1.jpg" data-lightbox="example-set" title="Outer View">
+                {{HTML::image('assets/images/home1.jpg','', array('style'=>'width:150px; height:150px;'));}}</a>
+				<a class="example-image-link" href="/assets/images/kitchen2.jpg" data-lightbox="example-set" title="Kicthen View">
+                {{HTML::image('assets/images/kitchen2.jpg','', array('style'=>'width:150px; height:150px;'));}}</a>
+				<a class="example-image-link" href="/assets/images/slide3.png" data-lightbox="example-set" title="Bedroom">
+                {{HTML::image('assets/images/slide3.png','', array('style'=>'width:150px; height:150px;'));}}</a>
+				
+			</div>
+		</div>
                
-                </div>
+                </div>              
                 
          </li>
            
@@ -56,10 +70,6 @@
      
       
     </div><!--detail ends-->
-    
-    
-
-
 
     <div id="featured">
       <h2>Featured</h2>
@@ -67,10 +77,11 @@
         <h4>205-4125 Main Street, Vancouver</h4>
         <img src="/assets/images/thumb_2604672690.png">
         <span>$899,900</span>
-        <p>2 beds | 2 baths1,389 sq ftEco Realty Inc.</p>
+        <p>2 beds | 2 baths<br />1,389 sq ft<br />Zameen Jayedad Inc.</p>
       </div><!--featured bottom ends-->
     </div><!--featured ends-->
     
+<<<<<<< HEAD
      <div class="image-row" style="clear:both;">
 			<div class="image-set">
           
@@ -80,6 +91,9 @@
 				
 			</div>
 		</div>
+=======
+     
+>>>>>>> 8e178f877acc31e81f1e9c98bdfc368a68f01192
     
     </div>
     </div>

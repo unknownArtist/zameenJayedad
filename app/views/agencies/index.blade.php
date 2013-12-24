@@ -16,6 +16,9 @@ td
 	border-bottom:1px solid #50b1a8;
 }
 
+tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
 
 </style>
 <div id="wrapper">

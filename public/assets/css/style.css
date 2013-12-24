@@ -51,6 +51,14 @@ clear:both;
 	z-index:1;
 }
 
+.threeimages
+{
+	width:300px;
+	float:left;
+	padding-left:131px;
+	padding-top:25px;
+}
+
 .contact{
 	float: right;
 	width: 200px;
@@ -90,7 +98,6 @@ clear:both;
 	width:100%;
 	height:105px;
 	float: left;
-	margin-top: -12px;
 	padding: 0;
 	position: relative;
 	border-bottom:1px solid #666;
@@ -101,14 +108,14 @@ clear:both;
 
 #sealog
 {
-	margin-top:35px;
+	margin-top:28px;
 	margin-left:50px;
 }
 
 #sealog input
 {
 	width:430px;
-	height: 24px;
+	height: 23px;
 	border-radius: 6px;
 	margin-top: 28px;
 	color:#00a651;
@@ -116,6 +123,17 @@ clear:both;
 	font-size: 16px;
 	outline-color: #e3e3e3;
 	float:left;
+}
+
+#sealog p
+{
+	width:68%;
+	float:left;
+	padding-top:2px !important;
+	font-style:italic;
+	text-align:center;
+	padding-left:0px !important;
+	font-size:12px;
 }
 
 #sea input{
@@ -154,7 +172,7 @@ clear:both;
   zoom: 1;
   height: 50px;
   border-radius: 2px;
-  width: 750px;
+  width: 770px;
   float:left;
 }
 #cssmenu ul {
@@ -165,9 +183,9 @@ clear:both;
   float: left;
   list-style: none;
 }
-#cssmenu ul li a, #cssmenu ul li ul.innermenu li a {
+#cssmenu ul li a {
   display: inline-block;
-  margin: 26px 0 0 25px;  
+  margin: 26px 0 0 13px;  
   border-radius: 2px 2px 0 0;
   text-decoration: none;
   font-size: 15px;
@@ -198,8 +216,7 @@ clear:both;
 
 #li_changepass
 {
-	background:#68BEB6;
-	width:155px;
+	background:#68BEB6;	
 	border:1px solid #666;
 	border-top:none;
 }
@@ -207,9 +224,11 @@ clear:both;
 #cssmenu ul li ul.innermenu {
     display:none;
     position: absolute;
-    left: 15px;
-    width: 100px;
-	top:14px;	
+    left: 0;
+    width: 80px;
+	top:30px;
+	margin-left:-10px !important;
+	padding-left:0px !important;	
 }
 
 #cssmenu ul li ul.innermenu li
@@ -223,8 +242,13 @@ clear:both;
 	z-index:3;
 }
 
-#cssmenu ul li ul.innermenu li:first-child a {
-   margin: 10px 0 10px 10px;
+#cssmenu ul li ul.innermenu li:first-child  {
+   margin: 5px 0 16px 0px;
+}
+
+#cssmenu ul li ul.innermenu li:first-child  a{
+   margin: 5px 0 0 8px;
+   padding-bottom:10px;
 }
 
 #cssmenu ul li ul.innermenu li:last-child a
@@ -239,9 +263,9 @@ clear:both;
 
 #cssmenu ul li ul.innermenu li a
 {
-	margin: 10px 0 0 10px;
+	margin: 10px 0 0 8px;
 	padding-top:0;
-	width:155px;
+	width:145px;
 }
 
 #cssmenu ul li ul.innermenu li a:hover
@@ -265,17 +289,17 @@ clear:both;
 
 .searchlist input
 {
-	width:240px;
-	height: 25px;
-	border-radius: 6px;
-	margin-top:18px;
-	color:#68BEB6;
-	text-indent:8px;
-	line-height:21px;
-	font-size: 16px;
-	outline-color: #e3e3e3;
-	float:left;
-	border:none;
+	width: 240px;
+height: 20px;
+border-radius: 6px;
+margin-top: 21px;
+color: #68BEB6;
+text-indent: 8px;
+line-height: 20px;
+font-size: 13px;
+outline-color: #e3e3e3;
+float: left;
+border: none;
 }
 
 
@@ -299,12 +323,12 @@ clear:both;
 }
 
 .button{
-height: 26px !important;
-margin-top: 18px !important;
+height: 21px !important;
+margin-top: 21px !important;
 color: #68BEB6 !important;
 background-color: #f6f6f6;
 text-decoration: none;
-margin-left: 12px;
+margin-left: 10px;
 width: 70px!important;
 text-indent: 0px !important;
 cursor:pointer;
@@ -439,8 +463,6 @@ margin-top:20px;
 	float: left;
 	width: 464px;
 	margin-top: 50px;
-	margin-left: 41px;
-
 }
 
 .list h1{
@@ -455,39 +477,36 @@ margin-top:20px;
 	margin-left:21px;
     font-size: medium;
     margin-top:5px;
+	margin-bottom:0px;
 }
 
 .list ul li a{
 	color:#68BEB6 ;
 	text-decoration: none ;
 	line-height: 25px;
-
+	border-bottom:1px dotted #68BEB6;
 }
 
 .list ul li a:hover{
 	color:#00a651;
 	text-decoration: ;
 	font-size: 14px;
+	border-bottom:1px dotted #00a651;
 }
 
 
 .l1{
-	float:left;
-	
+	float:left;	
 	list-style-type: none;
-	padding: 0 0 0 23px;
-	letter-spacing:;
-
 }
 
 
 .l2{
 	float:left;
-	width: 115px;;
+	
 	list-style-type: none;
 	padding: 0;
-	letter-spacing: ;
-	margin-left: 23px;
+	margin-left: 50px;
 }
 
 .l3{
@@ -898,10 +917,51 @@ margin-bottom: 36px;
 	text-align: justify;
 	background-color: #68BEB6;
 	color:#fff;
-	height:40px;
 	position: relative;
 	border-top:1px solid #666;
 
+}
+
+.footerlist1
+{
+	width:30%;
+	float:left;
+	margin-top:30px;
+}
+
+.footerlist1 h2
+{
+	padding-left:10px;
+	text-shadow:1px 1px #666;
+	font-weight:normal;
+}
+
+.footerlist1 hr
+{
+	
+}
+
+.footerlist1 ul
+{
+	padding-left:22px;
+}
+
+.footerlist1 ul li a
+{
+	color:#fff;
+	text-decoration:none;
+	line-height:25px;
+	font-size:13px;
+}
+
+.footerlist1 ul li a:hover
+{
+	text-decoration:underline;
+}
+
+.footermargin
+{
+	margin-left:40px;
 }
 
 @-moz-document url-prefix() 
@@ -919,7 +979,9 @@ margin-bottom: 36px;
 
 .foot{
 	text-align: center;
+	clear:both;
 	font-family: sans-serif;
+	padding:30px 0 10px 0;
 }
 
 

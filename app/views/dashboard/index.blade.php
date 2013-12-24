@@ -73,11 +73,30 @@
 		
         <div class="list">
        	<h1>Listings</h1>
-       	<h3>Greater Vancouver - by Region</h3>
+       	<h3>Rawalpindi / Islamabad</h3>
        	<ul class="l1">
            @foreach($users as $user)
-       		 <li><a href="dashboard/listing/{{$user->id}}">{{$user->property_type}} {{$user->city}} </a></li>
+       		<!-- <li><a href="dashboard/listing/{{$user->id}}">{{$user->property_type}} {{$user->city}} </a></li>-->
        		  @endforeach
+              <li><a href="#">Bahria town Phase 1</a></li>
+               <li><a href="#">Bahria town Phase 2</a></li>
+                <li><a href="#">Bahria town Phase 3</a></li>
+                 <li><a href="#">Bahria town Phase 4</a></li>
+                  <li><a href="#">Bahria town Phase 5</a></li>
+                   <li><a href="#">Bahria town Phase 6</a></li>
+                   
+       	</ul>   
+        
+        <ul class="l2">
+           @foreach($users as $user)
+       		<!-- <li><a href="dashboard/listing/{{$user->id}}">{{$user->property_type}} {{$user->city}} </a></li>-->
+       		  @endforeach
+              <li><a href="#">Bahria town Phase 7</a></li>
+               <li><a href="#">Bahria town Phase 8</a></li>
+                <li><a href="#">DHA 1</a></li>
+                 <li><a href="#">DHA 2</a></li>
+                 
+                   
        	</ul>     
 
        </div>  

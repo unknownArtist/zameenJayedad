@@ -1,9 +1,13 @@
 @extends('layouts.login')
 @section('content')
 
+
  
  <div id="wrapper" class="clearfix">
  <div id="content">
+    <div class="agencynew">
+<a href="{{URL::to('user/email/alert/create')}}">Add New</a>
+</div>
 
  	<div id="alerts">
  		<div id="section">

@@ -81,7 +81,7 @@
       </div><!--featured bottom ends-->
     </div><!--featured ends-->
     
-     
+
     
     </div>
     </div>

@@ -291,9 +291,9 @@ class AuthController extends BaseController {
 
 	public function postChangePass()
 	{
-		 $user = Sentry::findUserByLogin(Input::get('email'));
+		 // $user = Sentry::findUserByLogin(Input::get('email'));
+		$user = Sentry::getUser();
 			$userid= $user->id;
-
 			$user = Sentry::getUserProvider()->findById($userid);
 			
 		        if( $user->checkPassword( Input::get( 'old_password' ) ) )

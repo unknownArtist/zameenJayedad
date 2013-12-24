@@ -25,8 +25,6 @@
         <br />
         <li class="link">
             {{ HTML::link('forget','Forgot Password',array('style'=>'float:right;')) }}
-        
-            {{ HTML::link('changepass','Change Password') }}
         </li>
         
     </ul>

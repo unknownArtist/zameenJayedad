@@ -49,21 +49,6 @@ class MessageCentreController extends BaseController {
 				
 		}
 
-
-
-
-
-
-
-
-		// $agencies = DB::table('agencies')->where('user_id',$user_id)
-		//   ->join('agencystaff','agencystaff.agency_id','=','agencies.id')
-		//   ->distinct()
-		//   ->select('agencystaff.name','agencystaff.staff_id','agencystaff.agency_id')
-		//   ->get();
-		//   print_r($agencies);
-		//   die();
-		
         return View::make('message.messagecompose')->with('teams',$allTeamsMember);
 	}
 

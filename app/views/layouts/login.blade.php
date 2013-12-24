@@ -6,6 +6,19 @@
   .innermenu
   {
     display: none;
+   /* position: relative;
+    top: -24px;*/
+   margin-left: 11px ! important;
+   margin-bottom: 0px ! important;
+   
+   background: #68beb6;
+
+  }
+  .innermenu li{
+    background: #68beb6;
+   margin-top: -16px !important;
+    clear: both;
+    margin-left: 16px ! important;
   }
 
   #li_profile:hover ul.innermenu
@@ -69,6 +82,9 @@ case 'profile':
  break;
  case 'messages':
  $('#li_message').addClass('active') ;
+ break;
+  case 'alerts':
+ $('#li_email').addClass('active') ;
  break;
 
 
@@ -145,6 +161,7 @@ jQuery(function(){
        <li id="li_reports"><a href="{{URL::to('dashboard/reports')}}">Reports</a></li>
        <li id="li_property"><a href="{{URL::to('profolio/listing')}}">Property Management</a></li>
        <li id="li_message"><a href="{{URL::to('dashboard/messages')}}">Message Center</a></li>
+       <li id="li_email"><a href="{{URL::to('user/email/alerts')}}">Email Alerts</a></li>
        </ul>
        </div>
      

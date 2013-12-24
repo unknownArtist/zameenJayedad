@@ -8,10 +8,7 @@
         {{ Form::open(array('url' => 'changepass')) }}
         <p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
-        <li>
-            {{ Form::label('email', 'Email:') }}
-            {{ Form::text('email') }}
-        </li>
+       
       
         <li>
             {{ Form::label('old_password', 'Old Password:') }}

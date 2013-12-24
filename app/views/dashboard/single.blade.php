@@ -73,10 +73,10 @@
     
      <div class="image-row" style="clear:both;">
 			<div class="image-set">
-           
-				<a class="example-image-link" href="assets/images/slide1.png" data-lightbox="example-set" title="Click on the right side of the image to move forward.">{{HTML::image('assets/images/slide1.png', 'Welcome to Zameen Jayedad', array('style'=>'width:150px; height:150px;'));}}</a>
-				<a class="example-image-link" href="img/demopage/image-4.jpg" data-lightbox="example-set" title="Or press the right arrow on your keyboard.">{{HTML::image('assets/images/slide2.png', 'Welcome to Zameen Jayedad', array('style'=>'width:150px; height:150px;'));}}</a>
-				<a class="example-image-link" href="img/demopage/image-5.jpg" data-lightbox="example-set" title="The script preloads the next image in the set as you're viewing.">{{HTML::image('assets/images/slide3.png', 'Welcome to Zameen Jayedad', array('style'=>'width:150px; height:150px;'));}}</a>
+          
+				<a class="example-image-link" href="{{URL::to('assets/images/slide1.png')}}" data-lightbox="example-set" title="Click on the right side of the image to move forward.">{{HTML::image('assets/images/slide1.png', 'Welcome to Zameen Jayedad', array('style'=>'width:150px; height:150px;'));}}</a>
+				<a class="example-image-link" href="{{URL::to('assets/images/slide2.png')}}" data-lightbox="example-set" title="Click on the right side of the image to move forward.">{{HTML::image('assets/images/slide2.png', 'Welcome to Zameen Jayedad', array('style'=>'width:150px; height:150px;'));}}</a>
+				<a class="example-image-link" href="{{URL::to('assets/images/slide3.png')}}" data-lightbox="example-set" title="Click on the right side of the image to move forward.">{{HTML::image('assets/images/slide3.png', 'Welcome to Zameen Jayedad', array('style'=>'width:150px; height:150px;'));}}</a>
 				
 			</div>
 		</div>

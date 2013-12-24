@@ -1,7 +1,9 @@
 <?php
 
 
-Route::get('/',array('uses'=>'DashboardController@getIndex'));
+Route::get('/',function(){
+	return Redirect::to('dashboard/guest');
+	});
 /*
 |--------------------------------------------------------------------------
 | Application Routes

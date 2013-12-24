@@ -165,7 +165,7 @@ clear:both;
   float: left;
   list-style: none;
 }
-<<<<<<< HEAD
+
 #cssmenu ul li a {
 display: block;
 margin: 26px 0 0 10px;
@@ -176,7 +176,7 @@ color: white;
 text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
 font-weight: 400;
 opacity: .9;
-=======
+
 #cssmenu ul li a, #cssmenu ul li ul.innermenu li a {
   display: inline-block;
   margin: 26px 0 0 25px;  
@@ -187,7 +187,7 @@ opacity: .9;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
   font-weight: 400;
   opacity: .9;
->>>>>>> 8e178f877acc31e81f1e9c98bdfc368a68f01192
+
 }
 #cssmenu ul li:first-child a {
   margin: 26px 0 0 0px;

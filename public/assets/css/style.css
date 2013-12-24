@@ -241,6 +241,7 @@ clear:both;
 {
 	margin: 10px 0 0 10px;
 	padding-top:0;
+	width:155px;
 }
 
 #cssmenu ul li ul.innermenu li a:hover

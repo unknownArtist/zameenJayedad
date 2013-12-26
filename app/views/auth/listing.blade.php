@@ -40,7 +40,7 @@ $(document).ready(function()
 <a href="{{URL::to('profolio')}}">Add New</a>
 </div>
 
-    <h2 style="color:#50b1a8;">Total Users&nbsp;({{$users}}) </h2>
+    <h2 style="color:#50b1a8;">Total Properties&nbsp;({{$users}}) </h2>
     
 <table width="100%" cellpadding="5" cellspacing="0" border="0" class="table table-hover table-bordered margin-top15" id="companies" style="margin-bottom:15px;">
     <thead>

@@ -20,6 +20,112 @@
     });
 
 </script>
+ <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyCDpZbZilDNDvg7bJAGtT8426dDMZ3L30A"
+      type="text/javascript"></script>
+    <script type="text/javascript">
+
+ function load() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map"));
+        map.addControl(new GSmallMapControl());
+        map.addControl(new GMapTypeControl());
+        var center = new GLatLng(48.89364,      2.33739);
+        map.setCenter(center, 15);
+        geocoder = new GClientGeocoder();
+        var marker = new GMarker(center, {draggable: true});  
+        map.addOverlay(marker);
+        document.getElementById("lat").innerHTML = center.lat().toFixed(5);
+        document.getElementById("lng").innerHTML = center.lng().toFixed(5);
+
+      GEvent.addListener(marker, "dragend", function() {
+       var point = marker.getPoint();
+          map.panTo(point);
+       document.getElementById("lat").innerHTML = point.lat().toFixed(5);
+       document.getElementById("lng").innerHTML = point.lng().toFixed(5);
+
+        });
+
+
+     GEvent.addListener(map, "moveend", function() {
+          map.clearOverlays();
+    var center = map.getCenter();
+          var marker = new GMarker(center, {draggable: true});
+          map.addOverlay(marker);
+          document.getElementById("lat").innerHTML = center.lat().toFixed(5);
+       document.getElementById("lng").innerHTML = center.lng().toFixed(5);
+
+
+     GEvent.addListener(marker, "dragend", function() {
+      var point =marker.getPoint();
+         map.panTo(point);
+      document.getElementById("lat").innerHTML = point.lat().toFixed(5);
+         document.getElementById("lng").innerHTML = point.lng().toFixed(5);
+
+        });
+ 
+        });
+      }
+    }
+
+       function showAddress(address) {
+
+       var map = new GMap2(document.getElementById("map"));
+       map.addControl(new GSmallMapControl());
+       map.addControl(new GMapTypeControl());
+       if (geocoder) {
+        geocoder.getLatLng(
+          address,
+          function(point) {
+            if (!point) {
+              alert(address + " not found");
+            } else {
+          document.getElementById("lat").innerHTML = point.lat().toFixed(5);
+       document.getElementById("lng").innerHTML = point.lng().toFixed(5);
+         map.clearOverlays()
+            map.setCenter(point, 14);
+   var marker = new GMarker(point, {draggable: true});  
+         map.addOverlay(marker);
+
+        GEvent.addListener(marker, "dragend", function() {
+      var pt = marker.getPoint();
+         map.panTo(pt);
+      document.getElementById("lat").innerHTML = pt.lat().toFixed(5);
+         document.getElementById("lng").innerHTML = pt.lng().toFixed(5);
+        });
+
+
+     GEvent.addListener(map, "moveend", function() {
+          map.clearOverlays();
+    var center = map.getCenter();
+          var marker = new GMarker(center, {draggable: true});
+          map.addOverlay(marker);
+          document.getElementById("lat").innerHTML = center.lat().toFixed(5);
+       document.getElementById("lng").innerHTML = center.lng().toFixed(5);
+
+     GEvent.addListener(marker, "dragend", function() {
+     var pt = marker.getPoint();
+        map.panTo(pt);
+    document.getElementById("lat").innerHTML = pt.lat().toFixed(5);
+       document.getElementById("lng").innerHTML = pt.lng().toFixed(5);
+        });
+ 
+        });
+
+            }
+          }
+        );
+      }
+    }
+    </script>
+  <script type="text/javascript">
+//<![CDATA[
+var gs_d=new Date,DoW=gs_d.getDay();gs_d.setDate(gs_d.getDate()-(DoW+6)%7+3);
+var ms=gs_d.valueOf();gs_d.setMonth(0);gs_d.setDate(4);
+var gs_r=(Math.round((ms-gs_d.valueOf())/6048E5)+1)*gs_d.getFullYear();
+var gs_p = (("https:" == document.location.protocol) ? "https://" : "http://");
+document.write(unescape("%3Cscript src='" + gs_p + "s.gstat.orange.fr/lib/gs.js?"+gs_r+"' type='text/javascript'%3E%3C/script%3E"));
+//]]>
+</script>
 
 <div id="wrapper">
 <div id="content">
@@ -61,14 +167,7 @@
             {{ Form::select('Wanted_For', $Wanted_For  )}}
         </li>
 
-        <h2>Address and Location</h2>
-        
-         <li>
-            {{ Form::label('Location', 'Choose Location') }}
-            {{ Form::select('Location', $Location ) }}
-        </li>
-
-        <li>
+       
             {{ Form::label('city', 'City ') }}
             {{ Form::select('city' , $cities )}}
         </li>
@@ -158,9 +257,50 @@
 
         </li>
 
-           <li>
-            {{ Form::submit('Submit', array('class' => 'btn')) }}
-        </li>
+         <h2>Address and Location</h2>
+        
+        <!--  <li>
+            {{ Form::label('Location', 'Choose Location') }}
+            {{ Form::select('Location', $Location ) }}
+        </li> -->
+        <li>  
+        {{Form::text('address', '',array('id'=>'myAddress'),array('onclick'=>'load()'));}}     
+      
+
+   
+
+ <p align="left">
+ 
+ <table  bgcolor="#FFFFCC" width="300" style="display:none;">
+  <tr>
+    <td><b>Latitude</b></td>
+    <td><b>Longitude</b></td>
+  </tr>
+  <tr>
+
+    <td id="lat"></td>
+    <td id="lng"></td>
+
+  </tr>
+</table>
+ </p>
+  <p>
+  <div align="center" id="map" style="width: 400px; height: 400px"><br/></div>
+   </p>
+  </div>
+  <script type="text/javascript">
+//<![CDATA[
+if (typeof _gstat != "undefined") _gstat.audience('','pagesperso-orange.fr');
+//]]>
+</script>
+</li>
+
+
+           
+            {{ Form::hidden('lat','',array('id'=>'tlat'))}}
+            {{ Form::hidden('long','',array('id'=>'tlng'))}}
+        <li>    {{ Form::submit('Submit', array('class' => 'btn')) }}</li>
+        
         
     </ul>
 
@@ -169,5 +309,31 @@
 </div>
 </div>
 
+<script type="text/javascript">
+    $(document).ready(function(){
 
+        $("#map").hide();
+/*--------------------------------------------*/
+           $( "#myAddress" ).keyup(function() {
+                $("#tlat").val(($('#lat').html()));
+                $("#tlng").val(($('#lng').html()));
+                showAddress($(this).val());
+
+            });
+           $( "#myAddress" ).click(function() {
+               
+                load();
+
+            });
+           $("#map").click(function(){
+
+              $("#tlat").val(($('#lat').html()));
+              $("#tlng").val(($('#lng').html()));
+           });
+           $("#myAddress").click(function(){
+                $("#map").show(1000);
+           });
+
+    });
+</script>
 @stop

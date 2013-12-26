@@ -338,7 +338,7 @@ class AuthController extends BaseController {
 		            'Construction_status'  => Input::get('Construction_Status'),
 		            'wanted' 			   => Input::get('Wanted_For'),
 		            'city' 			       => Input::get('city'),
-		            'location' 		       => Input::get('Location'),
+		            'location' 		       => Input::get('address'),
 		            'photo'				   => $this->ImageCrop('photo','photos','200','200',''),
 		            'w_title' 		       => Input::get('Wanted_Title'),
 		            'p_title' 		       => Input::get('Property_Title'),
@@ -354,13 +354,12 @@ class AuthController extends BaseController {
 		            'cell'                 => Input::get('Cell'),
 		            'fax'                  => Input::get('Fax'),
 		            'email'				   => Input::get('E-mail'),
-		            'website'              => Input::get('Website')
+		            'website'              => Input::get('Website'),
+		           	'latitude'			   => Input::get('lat'),
+		            'longitude'            => Input::get('long'),
 		       
 	       		 	);
-   
-
-	       
-		        $rules = array(
+$rules = array(
 		            'property_type' => 'required',
 		            'home_type'     => 'required',
 		            'photo'         => 'required',
@@ -398,6 +397,8 @@ class AuthController extends BaseController {
 			            $Profolio->fax                 = $fields['fax'];
 			            $Profolio->email               = $fields['email'];
 			            $Profolio->website             = $fields['website'];
+			            $Profolio->latitude               = $fields['latitude'];
+			            $Profolio->longitude             = $fields['longitude'];
 			            $Profolio->save();
 
 			        return Redirect::to('profolio/listing')->with('errors','successfully Added');

@@ -45,5 +45,20 @@ class DashboardController extends BaseController {
 
 		->with('record', $record);
 	}
+	
+	public function getListingguest($id)
+	
+	{
+		$record = DB::table('property')->where('id',$id)
+                 	->get();
+        PropertyHits::insert(array(
+        	'property_id'	=> $id,
+        	'hits_on'		=> date('Y-m-d')
+        	));
+
+		return View::make('dashboard.singleguest')
+
+		->with('record', $record);
+	}
 
 }

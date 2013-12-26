@@ -1,8 +1,6 @@
 @extends('layouts.login')
 @section('content')
-    
 
- 
     <!--search ends-->
     <div id="wrapper">
     <div id="content">
@@ -43,11 +41,10 @@
             
                   
                   <div class="recordshow">
-    	<ul>
-         <marquee direction="up" behavior="scroll" height="285" scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();">
+                  <div id="example">
+    	<ul>        
             @foreach($users as $user)
-    		<li>
-           
+    		<li>           
             {{Form::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidth'));}}
              <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
                  
@@ -55,15 +52,15 @@
                  <span> {{$user->budget}}RS</span><br />
                <!--  <p>{{$user->Description}} </p>-->
                  <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user-> l_area}}</span>
-                
+                 <hr style="clear:both;">
                 
     		 </li>
-             <hr style="clear:both;">
+            
              &nbsp;
              @endforeach
-              </marquee>
+              
     	</ul>
-    	
+    	</div>
     </div>
 
 		
@@ -122,5 +119,7 @@
     </div>
 
   </div><!--content ends-->
+  
+  
 
 @stop

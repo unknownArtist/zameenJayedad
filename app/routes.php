@@ -41,6 +41,8 @@ Route::post('dashboard/agencystaff/{id}/edit',array('uses'=>'AgencyController@po
 Route::get('dashboard/agencystaff/{id}/edit',array('uses'=>'AgencyController@getEdit'));
 Route::get('dashboard/agencies/view',array('uses'=>'AgencyController@getIndex'));
 Route::post('dashboard/search',array('uses'=>'SearchController@postIndex'));
+Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsearch'));
+
 /*------------------End of Search routes-----------------------------*/
 
 /*------------------Email alerts routes-----------------------------*/
@@ -78,6 +80,7 @@ Route::post('dashboard/search',array('uses'=>'SearchController@postIndex'));
 
 
 	Route::get('dashboard/listing/{id}',array('uses'=>'DashboardController@getListing'));
+	Route::get('dashboard/listing/{id}',array('uses'=>'DashboardController@getListingguest'));
 	Route::post('dashboard',array('uses'=>'DashboardController@postIndex'));
 	Route::get('dashboard',array('uses'=>'DashboardController@getIndex'));
 	Route::get('dashboard/guest',array('uses'=>'DashboardController@getGuest'));

@@ -10,8 +10,40 @@
 	{{ HTML::script('assets/js/jquery.js') }}
 	{{ HTML::script('assets/js/mcVideoPlugin.js'); }}
 	{{ HTML::script('assets/js/Chart.min.js'); }}
-
     
+   
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    
+    {{ HTML::script('assets/js/vticker.js'); }}
+
+    <script type="text/javascript">
+
+jQuery(function(){
+        $("#searchbtn").click(function(){
+        $(".errormain").hide();
+        var hasError = false;
+        var searchReg = /^[a-zA-Z0-9-]+$/;
+        var searchVal = $("#searchtxt").val();
+        if(searchVal == '') {
+            $("#searchtxt").after('<span class="errormain">Please enter a search term.</span>');
+            hasError = true;
+        } else if(!searchReg.test(searchVal)) {
+            $("#searchtxt").after('<span class="errormain">Enter valid text.</span>');
+            hasError = true;
+        }
+        if(hasError == true) {return false;}
+    });
+});
+
+
+</script>
+
+<script type="text/javascript">
+$(function() {
+  $('#example').vTicker();
+});
+</script>
 
 
 </head>
@@ -23,7 +55,7 @@
 
 		<div id="header">
 			<div class="logo">
-			<img  src="/assets/images/eri_logo_02.png">
+			<a href="{{URL::to('dashboard/guest')}}"><img  src="/assets/images/eri_logo_02.png"></a>
 			
 			</div><!--logo-img ends-->
             
@@ -45,9 +77,9 @@
    
    <div id="wrapperheader">
     <div id="sealog">	
-    	{{ Form::open(array('url' => 'dashboard/search')) }}
+    	{{ Form::open(array('url' => 'dashboard/searchguest')) }}
     	<h2>Search Listings:</h2>
-    	{{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'Search By City, Property-Type')) }}
+    	{{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'Search By City, Property-Type', 'onfocus'=>'this.placeholder = ""', 'onBlur'=>'this.placeholder = "Search By City, Property-Type"')) }}
     	
        {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn','style'=>'margin-top:29px !important; height:27px !important;')) }}
    

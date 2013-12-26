@@ -226,9 +226,8 @@ clear:both;
     position: absolute;
     left: 0;
     width: 80px;
-	top:30px;
-	margin-left:-10px !important;
-	padding-left:0px !important;	
+	top:9px;
+	margin-left:7px;
 }
 
 #cssmenu ul li ul.innermenu li
@@ -243,7 +242,7 @@ clear:both;
 }
 
 #cssmenu ul li ul.innermenu li:first-child  {
-   margin: 5px 0 16px 0px;
+   margin: 5px 0 0 0px;
 }
 
 #cssmenu ul li ul.innermenu li:first-child  a{
@@ -285,6 +284,14 @@ clear:both;
 	color:red;
 	position:absolute;
 	right:135px;
+}
+
+.errormain
+{
+	color:red;
+	position:absolute;
+	right:185px;
+	top:63px;
 }
 
 .searchlist input
@@ -572,7 +579,7 @@ margin-top:20px;
 
 .recordshow ul
 {
-	margin:0px;
+	margin:0px auto;
 }
 
 .recordshow ul li h2

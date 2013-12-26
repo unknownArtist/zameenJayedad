@@ -4,29 +4,7 @@
 	<title>Zameen Jayedad</title>
 
   <STYLE TYPE="text/css">
-  .innermenu
-  {
-    display: none;
-   /* position: relative;
-    top: -24px;*/
-   margin-left: 11px ! important;
-   margin-bottom: 0px ! important;
-   
-   background: #68beb6;
-
-  }
-  .innermenu li{
-    background: #68beb6;
-   margin-top: -16px !important;
-    clear: both;
-    margin-left: 16px ! important;
-  }
-
-  #li_profile:hover ul.innermenu
-  {
-    display: block;
-
-  }
+  
 
   </STYLE>
 
@@ -50,8 +28,8 @@
 
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-
-
+    
+    {{ HTML::script('assets/js/vticker.js'); }}    
     
     <script type="text/javascript">
 	
@@ -121,6 +99,12 @@ jQuery(function(){
 
 </script>
 
+<script type="text/javascript">
+var $j = jQuery.noConflict();
+$j(function() {
+  $j('#example').vTicker();
+});
+</script>
 
 
 </head>
@@ -132,11 +116,11 @@ jQuery(function(){
 
 		<div id="header">
 			<div class="logo">
-			<img  src="/assets/images/eri_logo_02.png">
+			 <a href="{{URL::to('dashboard')}}"><img  src="/assets/images/eri_logo_02.png"></a>
 			
 			</div><!--logo-img ends-->
             <div class="threeimages">
-            <img src="/assets/images/banner_photos_2.png">
+           <img src="/assets/images/banner_photos_2.png">
             </div>
             
 			<div class="contact">
@@ -187,7 +171,7 @@ jQuery(function(){
    
     
        <!-- <h2>Search Listing</h2>-->
-        {{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'City, Property-type...')) }}
+        {{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'City, Property-type...', 'onfocus'=>'this.placeholder = ""', 'onBlur'=>'this.placeholder = "City, Property-type..."')) }}
         
        {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn')) }}
 
@@ -250,7 +234,6 @@ jQuery(function(){
 			<p class="foot">Copyright &copy; 2013 Zameen Jayedad Inc. All Rights Reserved</p>
   		</div>
         </div>
-       
         
         {{ HTML::script('assets/js/jquery-1.10.2.min.js'); }}  
         {{ HTML::script('assets/js/lightbox-2.6.min.js'); }}      

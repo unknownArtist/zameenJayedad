@@ -41,8 +41,9 @@
             
                   
                   <div class="recordshow">
+                  <div id="example">
     	<ul>
-         <marquee direction="up" behavior="scroll" height="285" scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();">
+         
             @foreach($users as $user)
     		<li>
            
@@ -53,15 +54,15 @@
                  <span> {{$user->budget}}RS</span><br />
                <!--  <p>{{$user->Description}} </p>-->
                  <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user-> l_area}}</span>
-                
+                 <hr style="clear:both;">
                 
     		 </li>
-             <hr style="clear:both;">
+            
              &nbsp;
              @endforeach
-              </marquee>
+              
     	</ul>
-    	
+    	</div>
     </div>
 
 		

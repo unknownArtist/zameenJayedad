@@ -89,6 +89,7 @@ $j(function() {
    
     {{ Form::close() }}<br/>
     <p>e.g Islamabad, Homes, etc</p>
+  	<p style="width:29%;">Search by <a href="{{URL::to('dashboard/searchmap')}}">Map</a></p>
    
     	</div>
     </div>

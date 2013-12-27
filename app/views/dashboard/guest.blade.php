@@ -106,12 +106,15 @@
                
 
       <div class="eco">
-				 {{HTML::image('assets/images/260333193.jpg');}}
+				 <!--{{HTML::image('assets/images/260333193.jpg');}}
                   {{HTML::image('assets/images/260528737.jpg');}}
                    {{HTML::image('assets/images/260570453.jpg');}}
-                    {{HTML::image('assets/images/260592693.jpg');}}
-              
-             
+                    {{HTML::image('assets/images/260592693.jpg');}}-->
+          @foreach($users as $user)           
+    <a href="{{URL::to('dashboard/listing/'.$user->id)}}" title="{{$user->budget}}RS"> 
+    {{HTML::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidthlist'));}}
+    </a>             
+             @endforeach  
               </div>
 
     

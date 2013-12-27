@@ -40,6 +40,7 @@ Route::get('dashboard/agencystaff/{id}/delete',array('uses'=>'AgencyController@g
 Route::post('dashboard/agencystaff/{id}/edit',array('uses'=>'AgencyController@postEdit'));
 Route::get('dashboard/agencystaff/{id}/edit',array('uses'=>'AgencyController@getEdit'));
 Route::get('dashboard/agencies/view',array('uses'=>'AgencyController@getIndex'));
+Route::get('dashboard/searchmap',array('uses'=>'SearchController@getsearchmap'));
 Route::post('dashboard/search',array('uses'=>'SearchController@postIndex'));
 Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsearch'));
 

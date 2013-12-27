@@ -10,12 +10,8 @@
 
 	{{ HTML::style('assets/css/style.css')}}
 	{{ HTML::style('assets/css/generic.css')}}
-	{{ HTML::style('assets/js/js-image-slider.css'); }}
-    
-    
-    {{ HTML::style('assets/css/lightbox.css')}}
-    
-    
+	{{ HTML::style('assets/js/js-image-slider.css'); }}      
+    {{ HTML::style('assets/css/lightbox.css')}}   
 	{{ HTML::script('assets/js/js-image-slider.js'); }}
 	{{ HTML::script('assets/js/mcVideoPlugin.js'); }}
 

@@ -410,7 +410,7 @@ margin-top:20px;
 {
 	color:#666;
 	position:relative;
-	top:40px;
+	top:34px;
 }
 
 .detail h2 a{
@@ -588,7 +588,10 @@ margin-top:20px;
 	margin-bottom:10px;
 }
 
-
+.recordshow a
+{
+	color:#68BEB6;
+}
 
 .post{
 	float: left;

@@ -44,6 +44,10 @@ class SearchController extends \BaseController {
 	}
 
 
-	
+	public function getsearchmap()
+	{	$records = Profolio::all();
+		return View::make('dashboard.searchmap')-> with('records',$records);
+	}
+
 
 }

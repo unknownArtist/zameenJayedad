@@ -170,11 +170,11 @@ document.write(unescape("%3Cscript src='" + gs_p + "s.gstat.orange.fr/lib/gs.js?
             {{ Form::select('Wanted_For', $Wanted_For  )}}
         </li>
 
-       
+       <li>
             {{ Form::label('city', 'City ') }}
             {{ Form::select('city' , $cities )}}
         </li>
-        
+        <br />
          <h2>Wanted Details</h2>
         <li>
             {{ Form::label('Wanted_Title', 'Wanted Title') }}
@@ -184,10 +184,6 @@ document.write(unescape("%3Cscript src='" + gs_p + "s.gstat.orange.fr/lib/gs.js?
         <li>
             {{ Form::label('Property_Title ', 'Property Title ') }}
             {{ Form::text('Property_Title') }}
-
-            {{ Form::label('Property Title ', 'Property Title ') }}
-            {{ Form::text('Property Title ') }}
-
         </li>
        
         <li>
@@ -223,6 +219,7 @@ document.write(unescape("%3Cscript src='" + gs_p + "s.gstat.orange.fr/lib/gs.js?
             {{ Form::label('Expires_After', 'Expires After') }}
             {{ Form::select('Expires_After', $Expires ) }}
         </li>
+        <br />
         <h2>Contact Details</h2>
         <li>
             {{ Form::label('Contact_Person', 'Contact Person') }}
@@ -268,9 +265,6 @@ document.write(unescape("%3Cscript src='" + gs_p + "s.gstat.orange.fr/lib/gs.js?
         </li> -->
         <li>  
         {{Form::text('address', '',array('id'=>'myAddress'),array('onclick'=>'load()'));}}     
-      
-
-   
 
  <p align="left">
  
@@ -288,9 +282,9 @@ document.write(unescape("%3Cscript src='" + gs_p + "s.gstat.orange.fr/lib/gs.js?
 </table>
  </p>
   <p>
-  <div align="center" id="map" style="width: 400px; height: 400px"><br/></div>
+  <div align="center" id="map" style="width: 400px; height: 400px;"><br/></div>
    </p>
-  </div>
+  
   <script type="text/javascript">
 //<![CDATA[
 if (typeof _gstat != "undefined") _gstat.audience('','pagesperso-orange.fr');
@@ -306,9 +300,9 @@ if (typeof _gstat != "undefined") _gstat.audience('','pagesperso-orange.fr');
         
         
     </ul>
-
-</div>
 {{ Form::close() }}
+</div>
+
 </div>
 </div>
 

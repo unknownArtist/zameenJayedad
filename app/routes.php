@@ -81,7 +81,7 @@ Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsea
 
 
 	Route::get('dashboard/listing/{id}',array('uses'=>'DashboardController@getListing'));
-	Route::get('dashboard/listing/{id}',array('uses'=>'DashboardController@getListingguest'));
+	Route::get('dashboard/listing/guest/{id}',array('uses'=>'DashboardController@getListingguest'));
 	Route::post('dashboard',array('uses'=>'DashboardController@postIndex'));
 	Route::get('dashboard',array('uses'=>'DashboardController@getIndex'));
 	Route::get('dashboard/guest',array('uses'=>'DashboardController@getGuest'));

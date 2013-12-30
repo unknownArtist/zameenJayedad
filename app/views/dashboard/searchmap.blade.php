@@ -4,7 +4,10 @@
     <!--search ends-->
     <div id="wrapper">
     <div id="content">
+
         <div id="map" style="width: 100%; min-height: 400px; border-radius:5px;  margin:15px auto 0; border:2px solid #68BEB6;"></div>
+
+
        <script type="text/javascript">
     // Define your locations: HTML content for the info window, latitude, longitude
      

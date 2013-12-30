@@ -1,21 +1,22 @@
 @extends('layouts.main')
 @section('content')
  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js"></script>
     <!--search ends-->
     <div id="wrapper">
     <div id="content">
-        <div id="map" style="width: 500px; height: 400px;"></div>
+        <div id="map" style="width: 100%; min-height: 400px; border-radius:5px;  margin:15px auto 0; border:2px solid #68BEB6;"></div>
        <script type="text/javascript">
     // Define your locations: HTML content for the info window, latitude, longitude
+     
        var locations = [
-        <?php foreach($records as $record)
+       <?php foreach($records as $record)
     {
       ?>
-      ['<h4><?php echo "$record->property_type";?></h4>', <?php echo "$record->latitude";?>, <?php echo "$record->longitude";?>]
-     
-      <?php }?>
+      ['<h4><?php echo "$record->property_type";?></h4>', <?php echo "$record->latitude";?>, <?php echo "$record->longitude";?>],
+     <?php }?>
+
     ];
+
  // Setup the different icons and shadows
     var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
     
@@ -31,14 +32,15 @@
     };
 
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 10,
+      
       center: new google.maps.LatLng(-37.92, 151.25),
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       mapTypeControl: false,
       streetViewControl: false,
       panControl: false,
       zoomControlOptions: {
-         position: google.maps.ControlPosition.LEFT_BOTTOM
+         position: google.maps.ControlPosition.LEFT_BOTTOM,
+
       }
     });
 

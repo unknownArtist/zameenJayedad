@@ -1,7 +1,10 @@
 @extends('layouts.login')
 @section('content')
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 <script>
+
     $(document).ready(function(){
+
         $('#Property_Type').change(function(){
 
             if($('#Property_Type').val() == "Plots")
@@ -271,7 +274,7 @@ document.write(unescape("%3Cscript src='" + gs_p + "s.gstat.orange.fr/lib/gs.js?
 
  <p align="left">
  
- <table  bgcolor="#FFFFCC" width="300" style="display:none;">
+ <table  bgcolor="#FFFFCC" width="300" >
   <tr>
     <td><b>Latitude</b></td>
     <td><b>Longitude</b></td>

@@ -10,6 +10,7 @@
 
 	{{ HTML::style('assets/css/style.css')}}
 	{{ HTML::style('assets/css/generic.css')}}
+  {{ HTML::script('assets/js/jquery.js') }}
 	{{ HTML::style('assets/js/js-image-slider.css'); }}
     
     
@@ -27,7 +28,7 @@
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Karla:400,700">
 
     
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+
     
     {{ HTML::script('assets/js/vticker.js'); }}    
     
@@ -79,7 +80,7 @@ case 'profile':
 
 <script type="text/javascript">
 
-jQuery(function(){
+jQuery(function($){
         $("#searchbtn").click(function(){
         $(".error").hide();
         var hasError = false;
@@ -235,8 +236,7 @@ $j(function() {
   		</div>
         </div>
         
-        {{ HTML::script('assets/js/jquery-1.10.2.min.js'); }}  
-        {{ HTML::script('assets/js/lightbox-2.6.min.js'); }}      
+        
 
 	<script type="text/javascript">
 	var _gaq = _gaq || [];

@@ -10,7 +10,7 @@
 
 	{{ HTML::style('assets/css/style.css')}}
 	{{ HTML::style('assets/css/generic.css')}}
-<<<<<<< HEAD
+
   {{ HTML::script('assets/js/jquery.js') }}
 	{{ HTML::style('assets/js/js-image-slider.css'); }}
     
@@ -18,11 +18,11 @@
     {{ HTML::style('assets/css/lightbox.css')}}
     
     
-=======
+
 	{{ HTML::style('assets/js/js-image-slider.css'); }}      
     {{ HTML::style('assets/css/lightbox.css')}} 
     {{ HTML::script('assets/js/jquery.js') }}  
->>>>>>> a1796bc935873fa3bd81151d5e22e19d3ed4c969
+
 	{{ HTML::script('assets/js/js-image-slider.js'); }}
 	{{ HTML::script('assets/js/mcVideoPlugin.js'); }}
 

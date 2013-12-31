@@ -268,7 +268,7 @@ document.write(unescape("%3Cscript src='" + gs_p + "s.gstat.orange.fr/lib/gs.js?
 
  <p align="left">
  
- <table  bgcolor="#FFFFCC" width="300" >
+ <table  bgcolor="#FFFFCC" width="300" style="display:none;" >
   <tr>
     <td><b>Latitude</b></td>
     <td><b>Longitude</b></td>
@@ -282,7 +282,7 @@ document.write(unescape("%3Cscript src='" + gs_p + "s.gstat.orange.fr/lib/gs.js?
 </table>
  </p>
   <p>
-  <div align="center" id="map" style="width: 400px; height: 400px;"><br/></div>
+  <div align="center" id="map" style="width: 400px; height: 400px; margin:0 auto"><br/></div>
    </p>
   
   <script type="text/javascript">

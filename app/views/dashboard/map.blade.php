@@ -1,4 +1,4 @@
-@extends('layouts.login')
+@extends('layouts.main')
 @section('content')
  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <!--search ends-->

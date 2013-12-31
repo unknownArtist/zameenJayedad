@@ -26,7 +26,7 @@ jQuery(function(){
         $("#searchbtn").click(function(){
         $(".errormain").hide();
         var hasError = false;
-        var searchReg = /^[a-zA-Z0-9-]+$/;
+        var searchReg = /^[a-zA-Z0-9- -]+$/;
         var searchVal = $("#searchtxt").val();
         if(searchVal == '') {
             $("#searchtxt").after('<span class="errormain">Please enter a search term.</span>');
@@ -37,6 +37,10 @@ jQuery(function(){
         }
         if(hasError == true) {return false;}
     });
+        $("#searchtxt").blur(function(){
+
+              $("#mapbtn").val(($('#searchtxt').val()));
+           });
 });
 
 
@@ -87,9 +91,17 @@ $j(function() {
     	
        {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn','style'=>'margin-top:29px !important; height:27px !important;')) }}
    
-    {{ Form::close() }}<br/>
+    {{ Form::close() }}
+
+    {{ Form::open(array('url'=>'dashboard/search/map'))}}
+            {{ Form::hidden('query','',array('id'=>'mapbtn','style'=>'background:#666; color:#fff;'))}}
+            {{ Form::submit('Map',array('class' => 'button','id'=>'searchbtn','style'=>'margin-top:29px!important; height:27px !important;'))}}
+        {{ Form::close() }}
+<br/>
+
     <p>e.g Islamabad, Homes, etc</p>
-  	<p style="width:29%;">Search by <a href="{{URL::to('dashboard/searchmap')}}">Map</a></p>
+
+        
    
     	</div>
     </div>

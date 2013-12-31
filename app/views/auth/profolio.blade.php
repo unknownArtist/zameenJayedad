@@ -1,28 +1,7 @@
 @extends('layouts.login')
 @section('content')
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-<script>
 
-    $(document).ready(function(){
-
-        $('#Property_Type').change(function(){
-
-            if($('#Property_Type').val() == "Plots")
-            {
-                $('#homeType').hide();
-                $('#bedRooms').hide();
-                $('#bathRooms').hide();
-
-            }else
-            {
-                $('#homeType').show();
-                $('#bedRooms').show();
-                $('#bathRooms').show();
-            }
-        });
-    });
-
-</script>
  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyCDpZbZilDNDvg7bJAGtT8426dDMZ3L30A"
       type="text/javascript"></script>
     <script type="text/javascript">
@@ -311,7 +290,7 @@ if (typeof _gstat != "undefined") _gstat.audience('','pagesperso-orange.fr');
 
         $("#map").hide();
 /*--------------------------------------------*/
-           $( "#myAddress" ).keyup(function() {
+           $( "#myAddress" ).blur(function() {
                 $("#tlat").val(($('#lat').html()));
                 $("#tlng").val(($('#lng').html()));
                 showAddress($(this).val());
@@ -330,6 +309,23 @@ if (typeof _gstat != "undefined") _gstat.audience('','pagesperso-orange.fr');
            $("#myAddress").click(function(){
                 $("#map").show(1000);
            });
+           /*--------------------------------*/
+
+            $('#Property_Type').change(function(){
+
+            if($('#Property_Type').val() == "Plot")
+            {
+                $('#homeType').hide();
+                $('#bedRooms').hide();
+                $('#bathRooms').hide();
+
+            }else
+            {
+                $('#homeType').show();
+                $('#bedRooms').show();
+                $('#bathRooms').show();
+            }
+        });
 
     });
 </script>

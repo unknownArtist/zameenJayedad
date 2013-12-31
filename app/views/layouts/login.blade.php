@@ -36,7 +36,9 @@
     
 
     
-    {{ HTML::script('assets/js/vticker.js'); }}    
+    {{ HTML::script('assets/js/vticker.js'); }}  
+
+
     
     <script type="text/javascript">
 	
@@ -90,7 +92,7 @@ jQuery(function($){
         $("#searchbtn").click(function(){
         $(".error").hide();
         var hasError = false;
-        var searchReg = /^[a-zA-Z0-9-]+$/;
+        var searchReg = /^[a-zA-Z0-9- -]+$/;
         var searchVal = $("#searchtxt").val();
         if(searchVal == '') {
             $("#searchtxt").after('<span class="error">Please enter a search term.</span>');
@@ -101,6 +103,10 @@ jQuery(function($){
         }
         if(hasError == true) {return false;}
     });
+    $("#searchtxt").blur(function(){
+
+              $("#mapbtn").val(($('#searchtxt').val()));
+           });    
 });
 
 
@@ -173,7 +179,7 @@ $j(function() {
     </div>
 	
     <div class="searchlist">
-     {{ Form::open(array('url' => 'dashboard/search')) }}
+     {{ Form::open(array('url' => 'dashboard/search','search')) }}
    
    
     
@@ -184,6 +190,11 @@ $j(function() {
 
    
     {{ Form::close() }}
+
+    {{ Form::open(array('url'=>'dashboard/searchmap'))}}
+            {{ Form::hidden('query','',array('id'=>'mapbtn','style'=>'background:#666; color:#fff;'))}}
+            {{ Form::submit('Map',array('class' => 'button','id'=>'searchbtnasd'))}}
+        {{ Form::close() }}
    
     	</div>
     </div><!--search-->

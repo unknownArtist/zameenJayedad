@@ -1,8 +1,6 @@
 @extends('layouts.login')
 @section('content')
-
-
- <div id="wrapper">
+<div id="wrapper">
     <div id="content">
     
     

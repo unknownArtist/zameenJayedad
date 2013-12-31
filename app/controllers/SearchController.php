@@ -9,8 +9,7 @@ class SearchController extends \BaseController {
 	 */
 	public function postIndex()
 	{	
-           
-	$q =Input::get('search');
+        $q =Input::get('search');
 
 	$records = Profolio::where('city', 'LIKE', '%'.$q.'%')
 					   ->orWhere('property_type', 'LIKE','%'.$q.'%')
@@ -23,7 +22,11 @@ class SearchController extends \BaseController {
 	return View::make('dashboard.search')
 					->with('name',$q)
 					->with('record',$records);
-	}
+        }
+       
+           
+	
+
 	
 	public function postGuestsearch()
 	{	
@@ -42,11 +45,35 @@ class SearchController extends \BaseController {
 					->with('name',$q)
 					->with('record',$records);
 	}
+	
 
+	public function Postsearchmap()
+	{	
+		$q =Input::get('query');
 
-	public function getsearchmap()
-	{	$records = Profolio::all();
+	$records = Profolio::where('city', 'LIKE', '%'.$q.'%')
+					   ->orWhere('property_type', 'LIKE','%'.$q.'%')
+					   ->orWhere('purpose','LIKE', '%'.$q.'%')
+					   ->orWhere('wanted','LIKE', '%'.$q.'%')
+					   ->orWhere('location','LIKE', '%'.$q.'%')
+					   ->orWhere('p_title','LIKE', '%'.$q.'%')
+					   ->orWhere('unit','LIKE', '%'.$q.'%')
+					   ->get();
 		return View::make('dashboard.searchmap')-> with('records',$records);
+	}
+	public function Postmap()
+	{	
+		$q =Input::get('query');
+
+	$records = Profolio::where('city', 'LIKE', '%'.$q.'%')
+					   ->orWhere('property_type', 'LIKE','%'.$q.'%')
+					   ->orWhere('purpose','LIKE', '%'.$q.'%')
+					   ->orWhere('wanted','LIKE', '%'.$q.'%')
+					   ->orWhere('location','LIKE', '%'.$q.'%')
+					   ->orWhere('p_title','LIKE', '%'.$q.'%')
+					   ->orWhere('unit','LIKE', '%'.$q.'%')
+					   ->get();
+		return View::make('dashboard.map')-> with('records',$records);
 	}
 
 

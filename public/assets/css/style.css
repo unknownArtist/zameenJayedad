@@ -839,9 +839,8 @@ margin-bottom: 36px;
 }
 
 #alerts{
-	border: 2px solid #68BEB6;
-	overflow: auto;
-	
+	width:80%;
+	margin:0 auto;	
 }
 
 .alerts{
@@ -853,8 +852,7 @@ margin-bottom: 36px;
 }
 
 #section{
-	width: 750px;
-	
+	width: 750px;	
 	margin: 20px 20px 20px 34px;
 	float: left;
 
@@ -865,8 +863,6 @@ margin-bottom: 36px;
 	margin-left: 16px;
 }
 
-
-
 #section p{
     padding-top: 14px;
 	margin-left: 16px;
@@ -876,8 +872,11 @@ margin-bottom: 36px;
 .total{
 	margin: 0 !important;
 	padding: 0 !important;
+}
 
-
+.totalalert
+{
+	color:#68BEB6;
 }
 
 .control{

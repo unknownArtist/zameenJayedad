@@ -4,10 +4,7 @@
  
 <div id="wrapper">
 <div id="content">
-<div id="form-wrapper">
-
-    {{ HTML::link('user/email/alerts','Manage Email ALerts') }}
-    {{ HTML::link('profile','profile') }}
+<div id="form-wrapper">   
 
 {{ Form::open(array('url' => 'user/email/alert/emailalert')) }}
 

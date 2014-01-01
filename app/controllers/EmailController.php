@@ -85,7 +85,7 @@ class EmailController extends BaseController {
 
 			        	
 
-			        	return Redirect::to('user/email/alert/create')->withErrors('errors',$v);
+			        	return Redirect::to('user/email/alert/create')->with('errors',$v);
 
 			        }
 			        $user_id = Sentry::getUser()->id;

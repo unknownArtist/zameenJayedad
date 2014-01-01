@@ -11,7 +11,9 @@
 </div>
 
 <div class="messagequantity">
+
 <p>You have <span>{{ MessageCentreController::getUnreadMessages() }}</span> unread messages.</p>
+<p style="color:red;">{{ Session::get('errors') }}</p>
 </div>
 
 <div class="createnewbtn">

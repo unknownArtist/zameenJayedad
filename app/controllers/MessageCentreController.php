@@ -31,6 +31,13 @@ class MessageCentreController extends BaseController {
 
 		$user_id = Sentry::getUser()->id;
 		$agencies_id = Agency::where('staff_id','=',$user_id)->get();
+		if ($agencies_id->isEmpty() )
+		{
+			
+			return Redirect::to('dashboard/messages')
+			->with('errors','Kindly create an Agency First');
+		}
+
 		 foreach ($agencies_id as $agency_id)
 		 	{
 		 		$my_agencyid= $agency_id->agency_id;

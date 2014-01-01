@@ -4,7 +4,7 @@
     $(document).ready(function(){
         $('#Property_Type').change(function(){
 
-            if($('#Property_Type').val() == "Plots")
+            if($('#Property_Type').val() == "Plot")
             {
                 $('#homeType').hide();
                 $('#bedRooms').hide();
@@ -16,10 +16,16 @@
                 $('#bedRooms').show();
                 $('#bathRooms').show();
             }
+           $( '#result').load(function() {
+        alert( "Load was performed." );
+        });
         });
     });
 
 </script>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyCDpZbZilDNDvg7bJAGtT8426dDMZ3L30A"
+      type="text/javascript"></script>
+ 
 
 <div id="wrapper">
 <div id="content">
@@ -27,7 +33,7 @@
 
 @foreach($records as $record)
 
-{{ Form::open(array('url' => 'profolio/listing/'.$record->id.'/edit','files' => true)) }}
+{{ Form::open(array('url' => 'profolio/listing/'.$record->id.'/edit','files' => true,'id'=>'result')) }}
 
  <h1>Post New Listings</h1>
 <p class="erorclas"> {{ Session::get('errors') }}</p>
@@ -151,10 +157,14 @@
             {{Form::text('Website',$record->website)}}
 
         </li>
+           <div align="center" id="map" style="width: 600px; height: 400px"><br/></div>
+   </p>
+  </div>
 
            <li>
             {{ Form::submit('Modify', array('class' => 'btn')) }}
         </li>
+
         
     </ul>
 
@@ -163,5 +173,51 @@
 @endforeach
 </div>
 </div>
+<script type="text/javascript">
+
+ function load() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map"));
+        map.addControl(new GSmallMapControl());
+        map.addControl(new GMapTypeControl());
+        var center = new GLatLng(48.89364,      2.33739);
+        map.setCenter(center, 15);
+        geocoder = new GClientGeocoder();
+        var marker = new GMarker(center, {draggable: true});  
+        map.addOverlay(marker);
+        document.getElementById("lat").innerHTML = center.lat().toFixed(5);
+        document.getElementById("lng").innerHTML = center.lng().toFixed(5);
+
+      GEvent.addListener(marker, "dragend", function() {
+       var point = marker.getPoint();
+          map.panTo(point);
+       document.getElementById("lat").innerHTML = point.lat().toFixed(5);
+       document.getElementById("lng").innerHTML = point.lng().toFixed(5);
+
+        });
+
+
+     GEvent.addListener(map, "moveend", function() {
+          map.clearOverlays();
+    var center = map.getCenter();
+          var marker = new GMarker(center, {draggable: true});
+          map.addOverlay(marker);
+          document.getElementById("lat").innerHTML = center.lat().toFixed(5);
+       document.getElementById("lng").innerHTML = center.lng().toFixed(5);
+
+
+     GEvent.addListener(marker, "dragend", function() {
+      var point =marker.getPoint();
+         map.panTo(point);
+      document.getElementById("lat").innerHTML = point.lat().toFixed(5);
+         document.getElementById("lng").innerHTML = point.lng().toFixed(5);
+
+        });
+ 
+        });
+
+      }
+    }
+    </script>
 
 @stop

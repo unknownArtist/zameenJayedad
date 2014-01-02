@@ -11,8 +11,15 @@ $('#agentshow').click(function() {
     } else {
         $("#agent").hide();
     }
+    
 }); 
-
+$("#agentshow").click(function(){
+     if($(this).is(':checked')){
+          $(this).val('1');
+     }else{
+          $(this).val('0');
+     }
+});
 
   });
 </script>
@@ -84,7 +91,7 @@ $('#agentshow').click(function() {
 
         <li>
             {{ Form::label('agent', 'Are you an Agent?') }}
-            <input type="checkbox" id="agentshow" name="check"/>
+            <input type="checkbox" id="agentshow" name="check" value="0"/>
              
             
         </li>

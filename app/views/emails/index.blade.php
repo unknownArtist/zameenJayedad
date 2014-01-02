@@ -19,9 +19,9 @@
         	<h4 >Properties For Rent in {{$record->location }} </h4>
         	<p>Price:{{$record->price }}; Beds: {{$record->beds }};</p>
         </div>
-     
-        {{ HTML::link('user/email/'.$record->id.'/alert/','Edit') }}
-        {{ HTML::link('user/email/'.$record->id.'/alert/delete','Delete') }}
+     <div style="float:right;">
+        {{ HTML::link('user/email/'.$record->id.'/alert/','Edit', array('class'=>"editbtn" )) }}
+        {{ HTML::link('user/email/'.$record->id.'/alert/delete','Delete', array('class'=>"editbtn" )) }}</div>
         @endforeach 
 
 {{ Form::open(array('url' => 'report')) }}

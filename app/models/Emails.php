@@ -8,5 +8,11 @@ Class Emails extends Eloquent {
          * @var string
          */
         protected $table ='email_alert';
+         public static$rules = array(
+		            
+		            'photo'         => 'required',
+		            
+		           
+		        );
         
 }

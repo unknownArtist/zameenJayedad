@@ -331,74 +331,40 @@ class AuthController extends BaseController {
 
 			{
 			
-			$fields = array(
-		            'property_type'        => Input::get('Property_Type'),
-		            'home_type' 	       => Input::get('home_type'),
-		            'purpose' 		       => Input::get('Purpose'),
-		            'Construction_status'  => Input::get('Construction_Status'),
-		            'wanted' 			   => Input::get('Wanted_For'),
-		            'city' 			       => Input::get('city'),
-		            'location' 		       => Input::get('address'),
-		            'photo'				   => $this->ImageCrop('photo','photos','200','200',''),
-		            'w_title' 		       => Input::get('Wanted_Title'),
-		            'p_title' 		       => Input::get('Property_Title'),
-		            'Description'          => Input::get('Description'),
-		            'budget'               => Input::get('Budget'),
-		            'l_area'               => Input::get('Land_Area'),
-		            'unit'				   => Input::get('unit'),
-		            'bedroom'              => Input::get('Bedrooms'),
-		            'bathroom'             => Input::get('Bathrooms'),
-		            'expires'              => Input::get('Expires_After'),
-		            'contact_p'            => Input::get('Contact_Person'),
-		            'phone'                 => Input::get('Phone'),
-		            'cell'                 => Input::get('Cell'),
-		            'fax'                  => Input::get('Fax'),
-		            'email'				   => Input::get('E-mail'),
-		            'website'              => Input::get('Website'),
-		           	'latitude'			   => Input::get('lat'),
-		            'longitude'            => Input::get('long'),
-		       
-	       		 	);
-$rules = array(
-		            'property_type' => 'required',
-		            'home_type'     => 'required',
-		            'photo'         => 'required',
-		            'w_title' 	    => 'required'
-		           
-		        );
-		        $v = Validator::make($fields, $rules);
+			$v = Validator::make(Input::all(), Emails::$rules);
+		        
 			        if ($v->fails()) 
 			        {
-			        	return Redirect::to('profolio')->with('errors',$v);
+			        	return Redirect::to('profolio')->withErrors($v);
 			        }
 			        	
 			 		 	$Profolio = new Profolio();
 			 		 	$Profolio->agent_id				=Sentry::getUser()->id;
-			            $Profolio->property_type       = $fields['property_type'];
-			            $Profolio->home_type           = $fields['home_type'];
-			            $Profolio->purpose             = $fields['purpose'];
-			            $Profolio->Construction_status = $fields['Construction_status'];
-			            $Profolio->wanted              = $fields['wanted'];
-			            $Profolio->city                = $fields['city'];
-			            $Profolio->location            = $fields['location'];
-			            $Profolio->photo            = $fields['photo'];
-			            $Profolio->w_title             = $fields['w_title'];
-			            $Profolio->p_title             = $fields['p_title'];
-			            $Profolio->Description         = $fields['Description'];
-			            $Profolio->budget              = $fields['budget'];
-			            $Profolio->l_area              = $fields['l_area'];
-			            $Profolio->unit                = $fields['unit'];
-			            $Profolio->bedroom             = $fields['bedroom'];
-			            $Profolio->bathroom            = $fields['bathroom'];
-			            $Profolio->expires             = $fields['expires'];
-			            $Profolio->contact_p           = $fields['contact_p'];
-			            $Profolio->phone               = $fields['phone'];
-			            $Profolio->cell                = $fields['cell'];
-			            $Profolio->fax                 = $fields['fax'];
-			            $Profolio->email               = $fields['email'];
-			            $Profolio->website             = $fields['website'];
-			            $Profolio->latitude               = $fields['latitude'];
-			            $Profolio->longitude             = $fields['longitude'];
+			            $Profolio->property_type       = Input::get('Property_Type');
+			            $Profolio->home_type           = Input::get('home_type');
+			            $Profolio->purpose             = Input::get('Purpose');
+			            $Profolio->Construction_status = Input::get('Construction_Status');
+			            $Profolio->wanted              = Input::get('Wanted_For');
+			            $Profolio->city                = Input::get('city');
+			            $Profolio->location            = Input::get('address');
+			            $Profolio->photo            = $this->ImageCrop('photo','photos','200','200','');
+			            $Profolio->w_title             = Input::get('Wanted_Title');
+			            $Profolio->p_title             = Input::get('Property_Title');
+			            $Profolio->Description         = Input::get('Description');
+			            $Profolio->budget              = Input::get('Budget');
+			            $Profolio->l_area              = Input::get('Land_Area');
+			            $Profolio->unit                = Input::get('unit');
+			            $Profolio->bedroom             = Input::get('Bedrooms');
+			            $Profolio->bathroom            = Input::get('Bathrooms');
+			            $Profolio->expires             = Input::get('Expires_After');
+			            $Profolio->contact_p           = Input::get('Contact_Person');
+			            $Profolio->phone               = Input::get('Phone');
+			            $Profolio->cell                = Input::get('Cell');
+			            $Profolio->fax                 = Input::get('Fax');
+			            $Profolio->email               = Input::get('E-mail');
+			            $Profolio->website             = Input::get('Website');
+			            $Profolio->latitude             = Input::get('lat');
+			            $Profolio->longitude             = Input::get('long');
 			            $Profolio->save();
 
 			        return Redirect::to('profolio/listing')->with('errors','successfully Added');
@@ -474,31 +440,33 @@ public function getProfile()
 public function posteditlisting($id)
 
 	{
+
 		$fields = array(
-			'property_type'=>Input::get('Property_Type'),
+		   'property_type'=>Input::get('Property_Type'),
 		   'home_type' => Input::get('home_type'),
 		   'purpose' => Input::get('Purpose'),
 		   'Construction_status' => Input::get('Construction_Status'),
 		   'wanted' => Input::get('Wanted_For'),
 		   'city' => Input::get('city'),
-		   'location' => Input::get('Location'),
+		   'location' => Input::get('address'),
 		   'w_title' => Input::get('Wanted_Title'),
 		   'Description' => Input::get('Description'),
 	       'budget' => Input::get('Budget'),
 		   'l_area' => Input::get('Land_Area'),
 		   'unit' => Input::get('unit'),
 		   'bedroom' => Input::get('Bedrooms'),
-		    'bathroom' => Input::get('Bathrooms'),
+		   'bathroom' => Input::get('Bathrooms'),
 	       'expires' => Input::get('Expires_After'),
 		   'contact_p' => Input::get('Contact_Person'),
 		   'phone' => Input::get('Phone'),
 		   'cell' => Input::get('Cell'),
 		   'fax' => Input::get('Fax'),
 		    'email' => Input::get('E-mail'),
-	       'website' => Input::get('Website')
+	       'website' => Input::get('Website'),
+	       'latitude'  => Input::get('lat'),
+			'longitude' => Input::get('long')
 		   );
-
-		  DB::table('property')
+	DB::table('property')
             ->where('id','=',$id)
             ->update($fields);
             return Redirect::to('profolio/listing');

@@ -65,11 +65,11 @@ class EmailController extends BaseController {
            
 			$rules = array(
 		            'receive_alert'        => 'required',
-		            'purpose' 	             => 'required',
-		            'beds'                    => 'required',
-		            'price'                   => 'required',
-		            'location'                => 'required',
-		            'keyword'                 => 'required',
+		            'purpose' 	           => 'required',
+		            'beds'                 => 'required',
+		            'price'                => 'required',
+		            'location'             => 'required',
+		            'keyword'                => 'required',
 		            'covered_area' 	          => 'required',
 		            'baths'                   => 'required',
 		            'estate_agent'            => 'required',
@@ -83,10 +83,7 @@ class EmailController extends BaseController {
 			        if ($v->fails()) 
 			        {
 
-			        	
-
-			        	return Redirect::to('user/email/alert/create')->with('errors',$v);
-
+			        return Redirect::to('user/email/alert/create')->withErrors($v);
 			        }
 			        $user_id = Sentry::getUser()->id;
 			      $id = DB::table('email_alert')->insertGetId(array('user_id'=>$user_id,

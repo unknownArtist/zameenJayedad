@@ -66,5 +66,10 @@ class DashboardController extends BaseController {
 		return View::make('dashboard.team');	
 	}
 	
+	public function getOurteam()
+	{
+		return View::make('dashboard.ourteam');	
+	}
+	
 
 }

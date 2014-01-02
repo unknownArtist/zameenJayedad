@@ -7,9 +7,13 @@
 <div id="form-wrapper">   
 
 {{ Form::open(array('url' => 'user/email/alert/emailalert')) }}
-
+ 
  <h1> Create Email Alert </h1>
-<p class="erorclas"> {{ Session::get('errors') }}</p>
+@if ($errors->any())
+  
+     {{ implode('', $errors->all('<p class="erorclas">:message</p>')) }}
+   
+   @endif
     <ul>
         <h2>Basic Alert Criteria</h2>
         <li>

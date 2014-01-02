@@ -2,6 +2,7 @@
 @section('content')
 <script>
     $(document).ready(function(){
+
         $('#Property_Type').change(function(){
 
             if($('#Property_Type').val() == "Plot")
@@ -16,11 +17,70 @@
                 $('#bedRooms').show();
                 $('#bathRooms').show();
             }
-           $( '#result').load(function() {
-        alert( "Load was performed." );
+            
         });
-        });
+         $('#myAddress').blur(function() {
+                $("#tlat").val(($('#lat').html()));
+                $("#tlng").val(($('#lng').html()));
+                showAddress($(this).val());
+
+            });
+         $('#map').click(function(){
+
+              $("#tlat").val(($('#lat').html()));
+              $("#tlng").val(($('#lng').html()));
+           });
+
     });
+    
+    $(window).load(function() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map"));
+        map.addControl(new GSmallMapControl());
+        map.addControl(new GMapTypeControl());
+         <?php foreach($records as $record)
+    {
+      ?>
+        var center =new GLatLng(<?php echo "$record->latitude";?>,      <?php echo "$record->longitude";?>);
+         <?php }?>
+        map.setCenter(center, 15);
+        geocoder = new GClientGeocoder();
+        var marker = new GMarker(center, {draggable: true});  
+        map.addOverlay(marker);
+        document.getElementById("lat").innerHTML = center.lat().toFixed(5);
+        document.getElementById("lng").innerHTML = center.lng().toFixed(5);
+
+      GEvent.addListener(marker, "dragend", function() {
+       var point = marker.getPoint();
+          map.panTo(point);
+       document.getElementById("lat").innerHTML = point.lat().toFixed(5);
+       document.getElementById("lng").innerHTML = point.lng().toFixed(5);
+
+        });
+
+
+     GEvent.addListener(map, "moveend", function() {
+          map.clearOverlays();
+    var center = map.getCenter();
+          var marker = new GMarker(center, {draggable: true});
+          map.addOverlay(marker);
+          document.getElementById("lat").innerHTML = center.lat().toFixed(5);
+       document.getElementById("lng").innerHTML = center.lng().toFixed(5);
+
+
+     GEvent.addListener(marker, "dragend", function() {
+      var point =marker.getPoint();
+         map.panTo(point);
+      document.getElementById("lat").innerHTML = point.lat().toFixed(5);
+         document.getElementById("lng").innerHTML = point.lng().toFixed(5);
+
+        });
+ 
+        });
+
+      }
+       
+        });
 
 </script>
 <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyCDpZbZilDNDvg7bJAGtT8426dDMZ3L30A"
@@ -157,16 +217,37 @@
             {{Form::text('Website',$record->website)}}
 
         </li>
-           <div align="center" id="map" style="width: 600px; height: 400px"><br/></div>
-   </p>
-  </div>
+        <h2>Address and Location</h2>
+        <li>  
+        {{Form::text('address', $record->location,array('id'=>'myAddress'))}}     
+
+ <p align="left">
+ 
+ <table  bgcolor="#FFFFCC" width="300" style="display:none;" >
+  <tr>
+    <td><b>Latitude</b></td>
+    <td><b>Longitude</b></td>
+  </tr>
+  <tr>
+
+    <td id="lat"></td>
+    <td id="lng"></td>
+
+  </tr>
+</table>
+ </p>
+</li>
+           <div align="center" id="map" style="width: 500px; margin-top:15px; height: 400px"><br/></div>
 
            <li>
+            {{ Form::hidden('lat','',array('id'=>'tlat'))}}
+            {{ Form::hidden('long','',array('id'=>'tlng'))}}
             {{ Form::submit('Modify', array('class' => 'btn')) }}
         </li>
 
         
     </ul>
+
 
 </div>
 {{ Form::close() }}
@@ -174,26 +255,30 @@
 </div>
 </div>
 <script type="text/javascript">
+ function showAddress(address) {
 
- function load() {
-      if (GBrowserIsCompatible()) {
-        var map = new GMap2(document.getElementById("map"));
-        map.addControl(new GSmallMapControl());
-        map.addControl(new GMapTypeControl());
-        var center = new GLatLng(48.89364,      2.33739);
-        map.setCenter(center, 15);
-        geocoder = new GClientGeocoder();
-        var marker = new GMarker(center, {draggable: true});  
-        map.addOverlay(marker);
-        document.getElementById("lat").innerHTML = center.lat().toFixed(5);
-        document.getElementById("lng").innerHTML = center.lng().toFixed(5);
-
-      GEvent.addListener(marker, "dragend", function() {
-       var point = marker.getPoint();
-          map.panTo(point);
-       document.getElementById("lat").innerHTML = point.lat().toFixed(5);
+       var map = new GMap2(document.getElementById("map"));
+       map.addControl(new GSmallMapControl());
+       map.addControl(new GMapTypeControl());
+       if (geocoder) {
+        geocoder.getLatLng(
+          address,
+          function(point) {
+            if (!point) {
+              alert(address + " not found");
+            } else {
+          document.getElementById("lat").innerHTML = point.lat().toFixed(5);
        document.getElementById("lng").innerHTML = point.lng().toFixed(5);
+         map.clearOverlays()
+            map.setCenter(point, 14);
+   var marker = new GMarker(point, {draggable: true});  
+         map.addOverlay(marker);
 
+        GEvent.addListener(marker, "dragend", function() {
+      var pt = marker.getPoint();
+         map.panTo(pt);
+      document.getElementById("lat").innerHTML = pt.lat().toFixed(5);
+         document.getElementById("lng").innerHTML = pt.lng().toFixed(5);
         });
 
 
@@ -205,19 +290,20 @@
           document.getElementById("lat").innerHTML = center.lat().toFixed(5);
        document.getElementById("lng").innerHTML = center.lng().toFixed(5);
 
-
      GEvent.addListener(marker, "dragend", function() {
-      var point =marker.getPoint();
-         map.panTo(point);
-      document.getElementById("lat").innerHTML = point.lat().toFixed(5);
-         document.getElementById("lng").innerHTML = point.lng().toFixed(5);
-
+     var pt = marker.getPoint();
+        map.panTo(pt);
+    document.getElementById("lat").innerHTML = pt.lat().toFixed(5);
+       document.getElementById("lng").innerHTML = pt.lng().toFixed(5);
         });
  
         });
 
+            }
+          }
+        );
       }
     }
-    </script>
+</script>
 
 @stop

@@ -116,7 +116,11 @@ document.write(unescape("%3Cscript src='" + gs_p + "s.gstat.orange.fr/lib/gs.js?
 {{ Form::open(array('url' => 'profolio','files' => true)) }}
 
  <h1>Post New Listings</h1>
-<p class="erorclas"> {{ Session::get('errors') }}</p>
+@if ($errors->any())
+  
+     {{ implode('', $errors->all('<p class="erorclas">:message</p>')) }}
+   
+   @endif
     <ul>
         <h2>Type and Purpose</h2>
         <li>

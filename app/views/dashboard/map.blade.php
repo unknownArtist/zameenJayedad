@@ -16,7 +16,9 @@
     {
       ?>
 	  
-      ['<div class="mapseting"><h2><?php echo "$record->property_type";?></h2><h4>Price:&nbsp;<?php echo "$record->budget";?></h4></div>', <?php echo "$record->latitude";?>, <?php echo "$record->longitude";?>],
+      ['<div class="mapseting"> {{HTML::image('uploads/photos/'.$record->photo, '', array('class'=>'', 'style'=>'width:165px; height:125px;'));}}
+	  <h2> <?php echo "$record->property_type";?></h2><h4>Price:&nbsp;<?php echo "$record->budget"; ?></h4><h4><?php echo "$record->bedroom"; ?> Bedrooms | <?php echo "$record->bathroom"; ?> Bathrooms</h4></div>', <?php echo "$record->latitude";?>,
+	   <?php echo "$record->longitude";?>],
      <?php }?>
 
     ];

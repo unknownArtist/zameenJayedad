@@ -39,23 +39,6 @@ jQuery(function(){
         if(hasError == true) {return false;}
     });
 	
-	
-	 $("#searchabc").click(function(){
-			
-        $(".errormain").hide();
-        var hasError = false;
-        var searchReg = /^[a-zA-Z0-9- -]+$/;
-        var searchVal = $("#searchtxtabc").val();
-        if(searchVal == '') {
-            $("#searchtxtabc").after('<span class="errormain">Please enter a search term.</span>');
-            hasError = true;
-        } else if(!searchReg.test(searchVal)) {
-            $("#searchtxtabc").after('<span class="errormain">Enter valid text.</span>');
-            hasError = true;
-        }
-        if(hasError == true) {return false;}
-    });
-	
         $("#searchtxt").blur(function(){
 
               $("#mapbtn").val(($('#searchtxt').val()));
@@ -113,8 +96,8 @@ $j(function() {
     {{ Form::close() }}
 
     {{ Form::open(array('url'=>'dashboard/search/map'))}}
-            {{ Form::hidden('query','',array('id'=>'mapbtn searchtxtabc','style'=>'background:#666; color:#fff;'))}}
-            {{ Form::submit('Map',array('class' => 'button','id'=>'searchbtn searchabc','style'=>'margin-top:29px!important; height:27px !important;'))}}
+            {{ Form::hidden('query','',array('id'=>'mapbtn','style'=>'background:#666; color:#fff;'))}}
+            {{ Form::submit('Map',array('class' => 'button','id'=>'searchbtn','style'=>'margin-top:29px!important; height:27px !important;'))}}
         {{ Form::close() }}
 <br/>
 

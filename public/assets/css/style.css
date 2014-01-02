@@ -1716,20 +1716,32 @@ p.change_link{
 
 .gm-style-iw
 {
-	width:160px !important;
-	overflow:hidden;
+	width:auto !important;
 	height:auto !important;
+}
+
+.mapseting
+{
+	width:auto;
+	float:left;
+}
+
+.mapseting img
+{
+	width:120px;
+	float:left;
+	margin-bottom:0px;
 }
 
 .mapseting h2
 {
-	text-align:center;
-	margin:20px 0 0 0;
+	width:auto;
+	margin:0 auto;
+	margin-bottom:15px;
 }
 
 .mapseting h4
 {
-	text-align:center;
-	margin-top:0;
+	width:auto;
 }
 

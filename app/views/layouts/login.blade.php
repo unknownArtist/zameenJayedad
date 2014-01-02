@@ -206,7 +206,7 @@ $j(function() {
         <li><a href="#">Property Updates</a></li>
         <li><a href="#">Featured Listings</a></li>
         <li><a href="#">Contact Zameen Jayedad</a></li>
-        <li><a href="{{URL::to('dashboard/team')}}">The Team</a></li>
+        <li><a href="{{URL::to('dashboard/ourteam')}}">The Team</a></li>
  		</ul>
                 
         </div>

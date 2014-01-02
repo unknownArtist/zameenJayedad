@@ -293,15 +293,15 @@ clear:both;
 	width:200px;
 	color:red;
 	position:absolute;
-	right:135px;
+	right:151px;
 }
 
 .errormain
 {
 	color:red;
 	position:absolute;
-	right:185px;
-	top:180px;
+	right:104px;
+	top:192px;
 }
 
 .searchlist input
@@ -1683,5 +1683,53 @@ p.change_link{
 	border: 2px solid #e3e3e3;
 	 border-radius:4px;
 	 padding:2px;
+}
+
+.team h2
+{
+	text-align:center;
+}
+
+.imgteam
+{
+	width:180px;
+	float:left;
+}
+
+.image-row a:hover img
+{
+	border:2px solid #666;
+}
+
+.imgteam p
+{
+	text-align:center;
+	color:#666;
+	font-size:16px;
+	width:156px;
+	margin-top:-3px;
+	margin-left:16px;
+	border-radius:3px;
+	padding:10px 0px;
+	background:#ddd;
+}
+
+.gm-style-iw
+{
+	width:160px !important;
+	overflow:hidden;
+	height:auto !important;
+}
+
+.mapseting h2
+{
+	text-align:center;
+	margin:20px 0 0 0;
+}
+
+.mapseting h4
+{
+	text-align:center;
+	margin-top:0;
 }
 

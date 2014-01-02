@@ -60,5 +60,11 @@ class DashboardController extends BaseController {
 
 		->with('record', $record);
 	}
+	
+	public function getTeam()
+	{
+		return View::make('dashboard.team');	
+	}
+	
 
 }

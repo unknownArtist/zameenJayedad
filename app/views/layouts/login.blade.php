@@ -10,17 +10,9 @@
 
 	{{ HTML::style('assets/css/style.css')}}
 	{{ HTML::style('assets/css/generic.css')}}
-
-  {{ HTML::script('assets/js/jquery.js') }}
-	{{ HTML::style('assets/js/js-image-slider.css'); }}
+	{{ HTML::style('assets/js/js-image-slider.css'); }}    
     
-    
-    {{ HTML::style('assets/css/lightbox.css')}}
-    
-    
-
-	{{ HTML::style('assets/js/js-image-slider.css'); }}      
-    {{ HTML::style('assets/css/lightbox.css')}} 
+    {{ HTML::style('assets/css/lightbox.css')}}   
     {{ HTML::script('assets/js/jquery.js') }}  
 
 	{{ HTML::script('assets/js/js-image-slider.js'); }}
@@ -32,7 +24,7 @@
 
 	
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Karla:400,700">
-
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
     
 
     
@@ -214,7 +206,7 @@ $j(function() {
         <li><a href="#">Property Updates</a></li>
         <li><a href="#">Featured Listings</a></li>
         <li><a href="#">Contact Zameen Jayedad</a></li>
-        <li><a href="#">The Team</a></li>
+        <li><a href="{{URL::to('dashboard/team')}}">The Team</a></li>
  		</ul>
                 
         </div>
@@ -253,8 +245,8 @@ $j(function() {
   		</div>
         </div>
         
-        
-
+   	{{ HTML::script('assets/js/jquery-1.10.2.min.js') }}     
+	 {{ HTML::script('assets/js/lightbox-2.6.min.js') }}
 	<script type="text/javascript">
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-2196019-1']);

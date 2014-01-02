@@ -50,7 +50,13 @@ class SearchController extends \BaseController {
 	public function Postsearchmap()
 	{	
 		$q =Input::get('query');
-
+		$q =Input::get('query');
+		if (!$q)
+		{
+			
+			return Redirect::to('dashboard')-> with('error','Please enter a search term.');
+		}
+		
 	$records = Profolio::where('city', 'LIKE', '%'.$q.'%')
 					   ->orWhere('property_type', 'LIKE','%'.$q.'%')
 					   ->orWhere('purpose','LIKE', '%'.$q.'%')
@@ -64,6 +70,12 @@ class SearchController extends \BaseController {
 	public function Postmap()
 	{	
 		$q =Input::get('query');
+		if (!$q)
+		{
+			
+			return Redirect::to('dashboard/guest')-> with('error','Please enter a search term.');
+		}
+
 
 	$records = Profolio::where('city', 'LIKE', '%'.$q.'%')
 					   ->orWhere('property_type', 'LIKE','%'.$q.'%')

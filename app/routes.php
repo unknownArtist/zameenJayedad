@@ -25,6 +25,7 @@ Route::get('dashboard/message/{id}/{inbox_id}/reply', array('uses'=>'MessageCent
 Route::post('dashboard/message/compose', array('uses'=>'MessageCentreController@postsendMessage'));
 Route::get('dashboard/message/compose', array('uses'=>'MessageCentreController@getmessagecompose'));
 Route::get('dashboard/messages', array('uses'=>'MessageCentreController@getIndex')); 
+
 /*------------------AGENCIES routes-----------------------------*/
 Route::post('dashboard/agencies/addnew',array('uses'=>'AgenciesController@postaddnew'));
 Route::get('dashboard/agencies/addnew',array('uses'=>'AgenciesController@getaddnew'));
@@ -86,6 +87,7 @@ Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsea
 	Route::post('dashboard',array('uses'=>'DashboardController@postIndex'));
 	Route::get('dashboard',array('uses'=>'DashboardController@getIndex'));
 	Route::get('dashboard/guest',array('uses'=>'DashboardController@getGuest'));
+	Route::get('dashboard/team',array('uses'=>'DashboardController@getTeam'));
 	Route::get('user/logout',function(){
 
 		Sentry::logout();

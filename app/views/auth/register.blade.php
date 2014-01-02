@@ -153,5 +153,7 @@ $('#agentshow').click(function() {
     </ul>
 </div>
 {{ Form::close() }}
+</div>
+
 
 @stop

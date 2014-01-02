@@ -15,7 +15,8 @@
        <?php foreach($records as $record)
     {
       ?>
-      ['<h4><?php echo "$record->property_type";?></h4>', <?php echo "$record->latitude";?>, <?php echo "$record->longitude";?>],
+	  
+      ['<div class="mapseting"><h2><?php echo "$record->property_type";?></h2><h4>Price:&nbsp;<?php echo "$record->budget";?></h4></div>', <?php echo "$record->latitude";?>, <?php echo "$record->longitude";?>],
      <?php }?>
 
     ];

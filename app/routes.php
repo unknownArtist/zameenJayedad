@@ -16,6 +16,11 @@ Route::get('/',function(){
 
 
 */
+/*---------------------admin-------------------------*/
+Route::get('dashboard/admin/main',array('uses'=>'AdminController@getMain'));
+Route::post('dashboard/admin',array('uses'=>'AdminController@PostAdmin'));
+Route::get('dashboard/admin',array('uses'=>'AdminController@getIndex'));
+/*------------------------------------------------*/
 /*------------------Message Routes---------------------------*/
 Route::get('dashboard/message/{id}/readmsg', array('uses'=>'MessageCentreController@getReadmessage'));
 Route::get('dashboard/message/create', array('uses'=>'MessageCentreController@getmessagecreate'));

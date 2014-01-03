@@ -18,6 +18,7 @@ class AuthController extends BaseController {
 	public function postRegister()
 
 	{
+		
 
 		try
 		{ 
@@ -45,16 +46,36 @@ class AuthController extends BaseController {
 		{
 		   return Redirect::to('user/register')->withInput()->with('errors','User with this login already exists');
 		}
-		$user = Sentry::findUserByLogin(Input::get('email')); 
-		$activationCode = $Users->getActivationCode();
+		$agent=Input::get('agent');
+		if($agent == 1)
+		{
+			$user = Sentry::findUserByLogin(Input::get('email')); 
+				$activationCode = $Users->getActivationCode();
+				if($activationCode)
+			    {
+			$URL ="New Agent Register To Zameen.jayedad.com.pk";
+			 $this->sendTo('rameez.ahmad013@gmail.com',array('activationCode'=>$URL));
+			    	
+			    	}
 
-		if($activationCode)
+			}
+			else
+			{
+			
+			    	$user = Sentry::findUserByLogin(Input::get('email')); 
+				$activationCode = $Users->getActivationCode();
+
+
+				if($activationCode)
 			    {
 			    	$URL = 'http://'.$_SERVER['HTTP_HOST']."/user/activation?code=".$activationCode."&email=".Input::get('email');
 			    	$this->sendTo(Input::get('email'),array('activationCode'=>$URL));
 			    	// return Redirect::to('user/register')->with('success','Email has been sent to you');
 			    }
+			}
 
+		
+		
 			    
 		  $fields = array(
 		  	'user_id' 		 => $user->id,
@@ -67,6 +88,7 @@ class AuthController extends BaseController {
             'country' 		 => Input::get('country'),
             'roles' 		 => Input::get('roles'),
             'city' 		     => Input::get('cities'),
+            'agent'			 => Input::get('agent'),
             'agency_name'    => Input::get('agency'),
             'description'    => Input::get('services'),
             'company_phone'  => Input::get('company_phone'),
@@ -99,6 +121,8 @@ class AuthController extends BaseController {
             $members->fax = $fields['fax'];
             $members->name = $fields['name'];
             $members->save();
+            if($agent == 1)
+            {
             
             DB::table('agent')->insert(
 			array('agent_id' => $fields['user_id'], 
@@ -112,6 +136,7 @@ class AuthController extends BaseController {
 			    	 'company_email' => $fields['company_email'],
 			    	 )
 			);
+        }
 
        return Redirect::to('login')->with('errors','please check your mail for activation');
 

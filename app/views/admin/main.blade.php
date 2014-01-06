@@ -37,11 +37,11 @@
 		 	    <td>{{ ($record->getAdress($record->id)); }}</td>
 		 	    <td>
                 <div class="btn-group">
-                    <a href="{{URL::to('dashboard/admin/main/'.$record->id.'/activation')}}" class="" style="margin-top:0px; margin-left:15px;">
+                    <a href="{{URL::to('dashboard/admin/main/'.$record->id.'/activation')}}" class="log" style="margin-top:0px; margin-left:15px;">
                       Activate
                     </a>
 
-                    <a href="{{URL::to('dashboard/admin/main/'.$record->id.'/deactivation')}}" class="" style="margin-top:0px; margin-left:15px;">
+                    <a href="{{URL::to('dashboard/admin/main/'.$record->id.'/deactivation')}}" class="log" style="margin-top:0px; margin-left:15px;">
                          Deactivate
                     </a>
                 </div>

@@ -85,6 +85,8 @@ $j(function() {
     <p style="Font-size:30px;margin-top: 29px;margin-left: 222px;">Welcome To Admin Panel</p>
    
     	</div>
+        <div style="float:right; margin-top:50px">
+        {{ HTML::link('user/logout','Logout',array('class'=>'log'))}}</div>
     </div>
     </div>
 	
@@ -92,50 +94,9 @@ $j(function() {
 
     	 <div id="footer">
         <div id="wrapper">
-        <div class="footerlist1">
-        <h2>Zameen Jayedad Team</h2>
-        <hr/>
-        <ul>
-        <li><a href="#">Full Customer and Technical Support</a></li>
-        <li><a href="#">No Fake properties or Fake Agents</a></li>
-        <li><a href="#">Property confirmation before getting Live</a></li>
-        <li><a href="#">Property Updates</a></li>
-        <li><a href="#">Featured Listings</a></li>
-        <li><a href="#">Contact Zameen Jayedad</a></li>
-        <li><a href="{{URL::to('dashboard/team')}}">The Team</a></li>
- 		</ul>
-                
-        </div>
         
-        <div class="footerlist1 footermargin">
-        <h2>News and Articles</h2>
-        <hr/>
-        <ul>
-        <li><a href="#">Buying a Home</a></li>
-        <li><a href="#">Selling Your Home</a></li>
-        <li><a href="#">New Developments</a></li>
-        <li><a href="#">Bahria Town & DHA Updates</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Bahria town and DHA Statistics</a></li>
-        <li><a href="#">Why Choosing US?</a></li>
- 		</ul>
-                
-        </div>
         
-        <div class="footerlist1 footermargin">
-        <h2>Tools</h2>
-        <hr/>
-        <ul>
-        <li><a href="#">Distressed Property Finder</a></li>
-        <li><a href="#">Home Evaluation</a></li>
-        <li><a href="#">Home Finder</a></li>
-        <li><a href="#">Recent Sale Prices</a></li>
-        <li><a href="#">Quotes to Build your House</a></li>
-        <li><a href="#">Interior Designing Office / House</a></li>
-        <li><a href="#">Virtual Tour of the Properties</a></li>
- 		</ul>
-                
-        </div>
+        
         
 			<p class="foot">Copyright &copy; 2013 Zameen Jayedad Inc. All Rights Reserved</p>
   		</div>

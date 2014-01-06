@@ -101,3 +101,8 @@ Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsea
 		Sentry::logout();
 		return Redirect::to('dashboard/guest');
 	});
+	Route::get('admin/logout',function(){
+
+		Sentry::logout();
+		return Redirect::to('dashboard/guest');
+	});

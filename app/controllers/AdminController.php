@@ -52,17 +52,43 @@ class AdminController extends BaseController {
 	}
 	public function getMain()
 	{
-		 // $users = AgentUser::all();
-		 // foreach ($users as $user)
-		 // 	{
-		 // 		$id=$user->agent_id;
 
-		 // 		$records = User::where('id',$id)->get();
-		 // 		print_r($records);
+		 	return View::make('admin.main');
 		 		
-		 // 	}
-		 
-		return View::make('admin.main');
+	}
+	public function getactivation($id)
+	{
+			
+		 	DB::table('users')
+				->where('id','=',$id)
+				->update(
+    		array(
+    			'activated' =>1,
+    		));
+			$records = User::where('id',$id)->get();
+		 		 foreach ($records as $record)
+		 	{
+		 		$email= $record->email;
+
+		 	}	
+		 	
+		 	$URL ="Your Account is Activated";
+			 $this->sendTo($email,array('activationCode'=>$URL));
+			return Redirect::to('dashboard/admin/main');
+		 		
+	}
+	public function getdeactivation($id)
+	{
+
+		 	
+		 	DB::table('users')
+				->where('id','=',$id)
+				->update(
+    		array(
+    			'activated' =>0,
+    		));
+			return Redirect::to('dashboard/admin/main');
+		 		
 	}
 
 }

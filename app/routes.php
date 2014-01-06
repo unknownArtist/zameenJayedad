@@ -17,6 +17,8 @@ Route::get('/',function(){
 
 */
 /*---------------------admin-------------------------*/
+Route::get('dashboard/admin/main/{id}/deactivation',array('uses'=>'AdminController@getdeactivation'));
+Route::get('dashboard/admin/main/{id}/activation',array('uses'=>'AdminController@getactivation'));
 Route::get('dashboard/admin/main',array('uses'=>'AdminController@getMain'));
 Route::post('dashboard/admin',array('uses'=>'AdminController@PostAdmin'));
 Route::get('dashboard/admin',array('uses'=>'AdminController@getIndex'));

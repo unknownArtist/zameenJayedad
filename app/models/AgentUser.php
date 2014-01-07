@@ -1,6 +1,6 @@
 <?php
 
-Class Agent extends Eloquent {
+Class AgentUser extends Eloquent {
 
 	        /**
          * The database table used by the model.

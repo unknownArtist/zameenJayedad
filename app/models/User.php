@@ -48,5 +48,39 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	{
 		return $this->email;
 	}
+	 public function getname($id)
+    { 
+        $team = Members::where('user_id','=',$id)->get();
+        foreach($team as $teams)
+        {
+            
+          return $teams->name;
+
+        }
+        
+    }
+     public function getcell($id)
+    { 
+        $team = Members::where('user_id','=',$id)->get();
+        foreach($team as $teams)
+        {
+            
+          return $teams->cell;
+
+        }
+        
+    }
+     public function getAdress($id)
+    { 
+        $team = Members::where('user_id','=',$id)->get();
+        foreach($team as $teams)
+        {
+            
+          return $teams->address;
+
+        }
+        
+    }
+
 
 }

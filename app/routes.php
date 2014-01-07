@@ -16,6 +16,13 @@ Route::get('/',function(){
 
 
 */
+/*---------------------admin-------------------------*/
+Route::get('dashboard/admin/main/{id}/deactivation',array('uses'=>'AdminController@getdeactivation'));
+Route::get('dashboard/admin/main/{id}/activation',array('uses'=>'AdminController@getactivation'));
+Route::get('dashboard/admin/main',array('uses'=>'AdminController@getMain'));
+Route::post('dashboard/admin',array('uses'=>'AdminController@PostAdmin'));
+Route::get('dashboard/admin',array('uses'=>'AdminController@getIndex'));
+/*------------------------------------------------*/
 /*------------------Message Routes---------------------------*/
 Route::get('dashboard/message/{id}/readmsg', array('uses'=>'MessageCentreController@getReadmessage'));
 Route::get('dashboard/message/create', array('uses'=>'MessageCentreController@getmessagecreate'));
@@ -90,6 +97,11 @@ Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsea
 	Route::get('dashboard/team',array('uses'=>'DashboardController@getTeam'));
 	Route::get('dashboard/ourteam',array('uses'=>'DashboardController@getOurteam'));
 	Route::get('user/logout',function(){
+
+		Sentry::logout();
+		return Redirect::to('dashboard/guest');
+	});
+	Route::get('admin/logout',function(){
 
 		Sentry::logout();
 		return Redirect::to('dashboard/guest');

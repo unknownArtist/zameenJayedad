@@ -87,6 +87,7 @@ $j(function() {
     	</div>
         
     </div>
+    </div>
 	
 	@yield('content')
 

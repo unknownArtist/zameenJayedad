@@ -1,11 +1,7 @@
 @extends('layouts.main')
 @section('content')
+    <p class="erorclas" style="position:relative; top:166px; right:163px;">{{ Session::get('error') }}</p>
     <!--search ends-->
-    <p class="erorclas" style="position: relative;
-width: 175px;
-float: right;
-top: -57px;
-right: 105px;">{{ Session::get('error') }}</p>
     <div id="wrapper">
     <div id="content">
        
@@ -30,54 +26,7 @@ right: 105px;">{{ Session::get('error') }}</p>
 
 
 
-       </div>
-      
-		<div class="live">
-        <h3>Just Listed <span> <em>Live</em> </span></h3>
-
-        <div class="section">
-
-        
-            <!--<div class="post">
-                <img class="img" src="assets/images/thumb.png" width="60px" height="47px">  
-                <h5>4602 Windsor Street, Vancouver</h5>
-                  <p>$1,398,000  - 2,485 sqft, 4 Beds, 3 Baths </p>
-                  <p><span>10 min ago</span></p>
-            </div>-->
-            
-                  
-                  <div class="recordshow">
-                  <div id="example">
-    	<ul>
-         
-            @foreach($users as $user)
-    		<li>
-           
-            {{Form::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidth'));}}
-             <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
-                 
-                <a href="{{URL::to('dashboard/listing/guest/'.$user->id)}}"> <h2> {{$user->property_type}} in {{$user->city}}</h2></a>
-                 <span> {{$user->budget}}RS</span><br />
-               <!--  <p>{{$user->Description}} </p>-->
-                 <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user-> l_area}}</span>
-                 <hr style="clear:both;">
-                
-    		 </li>
-            
-             &nbsp;
-             @endforeach
-              
-    	</ul>
-    	</div>
-    </div>
-
-		
-
-      </div><!--section ends-->
-      </div><!--live-->   
-
-       </div>     
-		   
+       </div> 
 
 		
         <div class="list">

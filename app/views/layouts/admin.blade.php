@@ -85,9 +85,7 @@ $j(function() {
     <p style="Font-size:30px;margin-top: 29px;margin-left: 222px;">Welcome To Admin Panel</p>
    
     	</div>
-        <div style="float:right; margin-top:50px">
-        {{ HTML::link('user/logout','Logout',array('class'=>'log'))}}</div>
-    </div>
+        
     </div>
 	
 	@yield('content')

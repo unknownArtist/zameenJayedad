@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'no-reply@zameenjayedad.com.pk', 'name' => 'Account Confirmation'),
+	'from' => array('address' => 'noreply@zameenjayedad.com.pk', 'name' => 'Account Confirmation'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'no-reply@zameenjayedad.com.pk',
+	'username' => 'noreply@zameenjayedad.com.pk',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'z@m33n',
+	'password' => 'zameen!@#',
 
 	/*
 	|--------------------------------------------------------------------------

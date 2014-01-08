@@ -1,12 +1,41 @@
 @extends('layouts.admin')
 @section('content')
-   
+<style>
+th
+{
+ background:#50b1a8;
+ color:#f6f6f6;
+}
+
+td
+{
+ text-align: center;
+color: #50b1a8;
+font-size: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-bottom: 1px solid #50b1a8;
+}
+
+tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+
+</style>
+  
     <div id="wrapper">
     <div id="content">    
-    <div id="form-wrapper">
-     
+    
+      <div class="agencynew" style="margin-top:25px;">
+        {{ HTML::link('user/logout','Logout')}}
+    </div>
 
-           <table cellpadding="0" cellspacing="0" border="0" class="table table-hover table-bordered margin-top15" id="companies" style="margin-bottom:15px;">
+          <h2 style="color:#50b1a8;">Total Agents </h2>
+
+    
+    
+<table width="100%" cellpadding="5" cellspacing="0" border="0" class="table table-hover table-bordered margin-top15" id="companies" style="margin-bottom:15px;">
     <thead>
 
         <tr>
@@ -20,14 +49,10 @@
     <tbody>
     	<?php
 
-    	$users = AgentUser::all();
-		 foreach ($users as $user)
-		 	{
-		 		$id=$user->agent_id;
-		 		
-
-		 		$records = User::where('id',$id)->get();
-		 		 foreach ($records as $record)
+    	
+            $records  = User::where('group', '=', 1)->orderBy('id', 'desc')->paginate(2);
+            
+            foreach ($records as $record)
 		 	{
 		 		?>
 		 		<tr class="odd gradeX">
@@ -37,17 +62,18 @@
 		 	    <td>{{ ($record->getAdress($record->id)); }}</td>
 		 	    <td>
                 <div class="btn-group">
-                    <a href="{{URL::to('dashboard/admin/main/'.$record->id.'/activation')}}" class="log" style="margin-top:0px; margin-left:15px;">
+                    <a href="{{URL::to('dashboard/admin/main/'.$record->id.'/activation')}}" class="editbtn" style="margin-top:0px; margin-left:15px;">
                       Activate
                     </a>
-
-                    <a href="{{URL::to('dashboard/admin/main/'.$record->id.'/deactivation')}}" class="log" style="margin-top:0px; margin-left:15px;">
+                    <br/><br/>
+                    <a href="{{URL::to('dashboard/admin/main/'.$record->id.'/deactivation')}}" class="editbtn" style="margin-top:0px; margin-left:15px;">
                          Deactivate
                     </a>
                 </div>
             </td>
-					 </tr>   
-		 		<?php	}
+					 </tr>  
+                   
+		 		<?php	
 		 	}
 
     	 ?>
@@ -57,7 +83,7 @@
     </table>  
     
 
-    </div>
+  <?php echo $records->links(); ?>
    </div> 
 {{ Form::close() }}
 </div>

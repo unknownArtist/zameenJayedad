@@ -55,7 +55,7 @@ right: 105px;">{{ Session::get('error') }}</p>
             {{Form::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidth'));}}
              <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
                  
-                <a href="{{URL::to('dashboard/listing/'.$user->id)}}"> <h2> {{$user->property_type}} in {{$user->city}}</h2></a>
+                <a href="{{URL::to('dashboard/listing/guest/'.$user->id)}}"> <h2> {{$user->property_type}} in {{$user->city}}</h2></a>
                  <span> {{$user->budget}}RS</span><br />
                <!--  <p>{{$user->Description}} </p>-->
                  <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user-> l_area}}</span>
@@ -135,7 +135,7 @@ right: 105px;">{{ Session::get('error') }}</p>
                    {{HTML::image('assets/images/260570453.jpg');}}
                     {{HTML::image('assets/images/260592693.jpg');}}-->
           @foreach($users as $user)           
-    <a href="{{URL::to('dashboard/listing/'.$user->id)}}" title="{{$user->budget}}RS"> 
+    <a href="{{URL::to('dashboard/listing/guest/'.$user->id)}}" title="{{$user->budget}}RS"> 
     {{HTML::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidthlist'));}}
     </a>             
              @endforeach  

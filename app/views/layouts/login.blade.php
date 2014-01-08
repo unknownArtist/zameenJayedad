@@ -142,14 +142,20 @@ $j(function() {
 	</div>
     
     <div id="search">
-   
+    <?php 
+
+        $group= Sentry::getUser()->group;
+
+    ?>
+    @if($group == 1)
+
    <div id="wrapperheader">
     <div id="sea">	
     	<!--<h2>Search Listing</h2>
     	{{ Form::text('search','',array('class'=>'span6','placeholder'=>'search by city')) }}
     	
        {{ Form::submit('Search', array('class' => 'button')) }}-->
-    
+
        <div id='cssmenu'>
        <ul>
        <li id="li_home"><a href="{{URL::to('dashboard')}}">Dashboard</a></li>
@@ -189,6 +195,30 @@ $j(function() {
         {{ Form::close() }}
    
     	</div>
+      @else
+        <div id="wrapperheader">
+    <div id="sealog"> 
+      {{ Form::open(array('url' => 'dashboard/search')) }}
+      <h2>Search Listings:</h2>
+      {{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'Search By City, Property-Type', 'onfocus'=>'this.placeholder = ""', 'onBlur'=>'this.placeholder = "Search By City, Property-Type"')) }}
+      
+       {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn','style'=>'margin-top:29px !important; height:27px !important;')) }}
+   
+    {{ Form::close() }}
+
+    {{ Form::open(array('url'=>'dashboard/searchmap'))}}
+            {{ Form::hidden('query','',array('id'=>'mapbtn','style'=>'background:#666; color:#fff;'))}}
+            {{ Form::submit('Map',array('class' => 'button','id'=>'searchbtn','style'=>'margin-top:29px!important; height:27px !important;'))}}
+        {{ Form::close() }}
+<br/>
+
+    <p>e.g Islamabad, Homes, etc</p>
+
+        
+   
+      </div>
+    </div>
+      @endif
     </div><!--search-->
     
 	@yield('content')

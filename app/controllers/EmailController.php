@@ -100,7 +100,8 @@ class EmailController extends BaseController {
 			         		                   	'occupanc_status'=>$fields['occupanc_status'],
 			         		                   	'ownership_status'=>$fields['ownership_status'],
 			         		                   	'finance_available'=>$fields['finance_available'],
-			         		                   	'occupanc_status'=>$fields['occupanc_status']
+			         		                   	'occupanc_status'=>$fields['occupanc_status'],
+			         		                   	'created_at' => date("Y-m-d H:i:s")
 			         		                   	));
 
 
@@ -152,4 +153,59 @@ class EmailController extends BaseController {
 		$emailalert->delete();
 		return Redirect::to('user/email/alerts');
 	}
+	
+	public function getTestAlert()
+	{
+		$date = date("Y-m-d");
+		
+			         		                  
+
+		 $records = Emails::all();
+
+		foreach ($records as $record)
+		 	{
+		 		$receive_alert = $record->receive_alert;
+		 	}
+		 	if($receive_alert = 'Daily')
+		 	{
+		 	$records = Emails::where('receive_alert', $receive_alert)->get();
+		 	foreach ($records as $record)
+		 	{
+		 		$id = $record->user_id;
+		 		
+		 		
+		 	
+		 	$emls =User::where('id', $id)->get();
+		 	foreach ($emls as $eml)
+		 	{
+		 		$adr = $eml->email;
+		 		
+		 	}
+
+			if($date=$date) 
+						{ 
+
+							$property = Profolio::where('created_at', $date)->get();
+		 			foreach ($property as $propertys)
+		 				{
+		 					
+		 					
+
+		 $URL ='Property type :'.$propertys->property_type.'<br/>'.'purpose :'.$propertys->purpose.'<br/>'.'location :'.$propertys->location.'<br/>'
+			                .'budget :'.$propertys->budget.'Area :'.$propertys->l_area.'<br/>'.'Contact Person :'.$propertys->contact_p.'<br/>'
+			                .'Cell Num :'.$propertys->cell.'<br/>'.'Email :'.$propertys->email;
+
+			 $this->sendTo($adr,array('activationCode'=>$URL));
+		 			    }
+		 			   
+		 			    	
+
+
+		 		       }
+		 		   }
+		 		   }
+				
+				
+			}
+			
 }

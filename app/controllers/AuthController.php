@@ -18,14 +18,16 @@ class AuthController extends BaseController {
 	public function postRegister()
 
 	{
-		
+		$agent=Input::get('agent');
+		if($agent == 1)
+		{
 
 		try
 		{ 
 	         $Users = Sentry::getUserProvider()->create(array(
 	        'email'    => Input::get('email'),
 	        'password' => Input::get('password'),
-	        'first_name' => Input::get('first_name'),
+	        'group'    => 1,
 	        'last_name' => Input::get('last_name')
 	        
 	        ));	
@@ -46,21 +48,45 @@ class AuthController extends BaseController {
 		{
 		   return Redirect::to('user/register')->withInput()->with('errors','User with this login already exists');
 		}
-		$agent=Input::get('agent');
-		if($agent == 1)
-		{
+		
 			$user = Sentry::findUserByLogin(Input::get('email')); 
 				$activationCode = $Users->getActivationCode();
 				if($activationCode)
 			    {
 			$URL ="New Agent Register To Zameen.jayedad.com.pk";
-			 $this->sendTo('rameez.ahmad013@gmail.com',array('activationCode'=>$URL));
+			 $this->sendTo('registation@zameenjayedad.com.pk',array('activationCode'=>$URL));
 			    	
 			    	}
 
 			}
 			else
-			{
+			{		
+				try
+		{ 
+	         $Users = Sentry::getUserProvider()->create(array(
+	        'email'    => Input::get('email'),
+	        'password' => Input::get('password'),
+	        'group'    => 0,
+	        'last_name' => Input::get('last_name')
+	        
+	        ));	
+	     	 
+		}
+
+
+		catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
+		{
+			    
+			return Redirect::to('user/register')->with('errors','email field is required');
+		}
+		catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
+		{
+		    return Redirect::to('user/register')->with('errors','Password field is required');
+		}
+		catch (Cartalyst\Sentry\Users\UserExistsException $e)
+		{
+		   return Redirect::to('user/register')->withInput()->with('errors','User with this login already exists');
+		}
 			
 			    	$user = Sentry::findUserByLogin(Input::get('email')); 
 				$activationCode = $Users->getActivationCode();
@@ -355,6 +381,8 @@ class AuthController extends BaseController {
 		public function postProfolio()
 
 			{
+				echo date("Y-m-d");
+				
 			
 			$v = Validator::make(Input::all(), Emails::$rules);
 		        
@@ -362,35 +390,67 @@ class AuthController extends BaseController {
 			        {
 			        	return Redirect::to('profolio')->withErrors($v);
 			        }
+			        DB::table('property')->insert(
+   					 array(
+   					 	'agent_id' => Sentry::getUser()->id,
+   					 	'property_type' =>Input::get('Property_Type'),
+   					 	'home_type' =>Input::get('home_type'),
+   					 	'purpose' => Input::get('Purpose'),
+   					 	'Construction_status' =>Input::get('Construction_Status'),
+   					 	'wanted' =>Input::get('Wanted_For'),
+   					 	'city' =>Input::get('home_type'),
+   					 	'purpose' => Input::get('city'),
+   					 	'location' =>Input::get('address'),
+   					 	'photo' =>$this->ImageCrop('photo','photos','200','200',''),
+   					 	'w_title' =>Input::get('Wanted_Title'),
+   					 	'p_title' => Input::get('Property_Title'),
+   					 	'Description' =>Input::get('Description'),
+   					 	'budget' =>Input::get('Budget'),
+   					 	'l_area' =>Input::get('Land_Area'),
+   					 	'bedroom' => Input::get('Bedrooms'),
+   					 	'bathroom' =>Input::get('Bathrooms'),
+   					 	'expires' =>Input::get('Expires_After'),
+   					 	'contact_p' =>Input::get('Contact_Person'),
+   					 	'phone' => Input::get('Phone'),
+   					 	'fax' =>Input::get('Fax'),
+   					 	'email' => Input::get('E-mail'),
+   					 	'website' =>Input::get('Website'),
+   					 	'time_at' =>date("H:i:s"),
+   					 	'latitude' =>Input::get('lat'),
+   					 	'longitude' => Input::get('long'),
+   					 	'date_at' =>date("Y-m-d")
+   					 	));
 			        	
-			 		 	$Profolio = new Profolio();
-			 		 	$Profolio->agent_id				=Sentry::getUser()->id;
-			            $Profolio->property_type       = Input::get('Property_Type');
-			            $Profolio->home_type           = Input::get('home_type');
-			            $Profolio->purpose             = Input::get('Purpose');
-			            $Profolio->Construction_status = Input::get('Construction_Status');
-			            $Profolio->wanted              = Input::get('Wanted_For');
-			            $Profolio->city                = Input::get('city');
-			            $Profolio->location            = Input::get('address');
-			            $Profolio->photo            = $this->ImageCrop('photo','photos','200','200','');
-			            $Profolio->w_title             = Input::get('Wanted_Title');
-			            $Profolio->p_title             = Input::get('Property_Title');
-			            $Profolio->Description         = Input::get('Description');
-			            $Profolio->budget              = Input::get('Budget');
-			            $Profolio->l_area              = Input::get('Land_Area');
-			            $Profolio->unit                = Input::get('unit');
-			            $Profolio->bedroom             = Input::get('Bedrooms');
-			            $Profolio->bathroom            = Input::get('Bathrooms');
-			            $Profolio->expires             = Input::get('Expires_After');
-			            $Profolio->contact_p           = Input::get('Contact_Person');
-			            $Profolio->phone               = Input::get('Phone');
-			            $Profolio->cell                = Input::get('Cell');
-			            $Profolio->fax                 = Input::get('Fax');
-			            $Profolio->email               = Input::get('E-mail');
-			            $Profolio->website             = Input::get('Website');
-			            $Profolio->latitude             = Input::get('lat');
-			            $Profolio->longitude             = Input::get('long');
-			            $Profolio->save();
+			 		 	// $Profolio = new Profolio();
+			 		 	// $Profolio->agent_id				=Sentry::getUser()->id;
+			     //        $Profolio->property_type       = Input::get('Property_Type');
+			     //        $Profolio->home_type           = Input::get('home_type');
+			     //        $Profolio->purpose             = Input::get('Purpose');
+			     //        $Profolio->Construction_status = Input::get('Construction_Status');
+			     //        $Profolio->wanted              = Input::get('Wanted_For');
+			     //        $Profolio->city                = Input::get('city');
+			     //        $Profolio->location            = Input::get('address');
+			     //        $Profolio->photo            = $this->ImageCrop('photo','photos','200','200','');
+			     //        $Profolio->w_title             = Input::get('Wanted_Title');
+			     //        $Profolio->p_title             = Input::get('Property_Title');
+			     //        $Profolio->Description         = Input::get('Description');
+			     //        $Profolio->budget              = Input::get('Budget');
+			     //        $Profolio->l_area              = Input::get('Land_Area');
+			     //        $Profolio->unit                = Input::get('unit');
+			     //        $Profolio->bedroom             = Input::get('Bedrooms');
+			     //        $Profolio->bathroom            = Input::get('Bathrooms');
+			     //        $Profolio->expires             = Input::get('Expires_After');
+			     //        $Profolio->contact_p           = Input::get('Contact_Person');
+			     //        $Profolio->phone               = Input::get('Phone');
+			     //        $Profolio->cell                = Input::get('Cell');
+			     //        $Profolio->fax                 = Input::get('Fax');
+			     //        $Profolio->email               = Input::get('E-mail');
+			     //        $Profolio->website             = Input::get('Website');
+			     //        $Profolio->time_at  		   =date("H:i:s");
+			     //        $Profolio->latitude             = Input::get('lat');
+			     //        $Profolio->longitude             = Input::get('long');
+			     //        $Profolio->date_at  		   =date("Y-m-d");
+			     //        $Profolio->save();
 
 			        return Redirect::to('profolio/listing')->with('errors','successfully Added');
 
@@ -438,7 +498,8 @@ public function getProfile()
 
 	{
 		$user_id = Sentry::getUser()->id;
-					$records = DB::table('property')->where('agent_id', $user_id)->get();
+		
+					$records = DB::table('property')->where('agent_id', $user_id)->orderBy('id', 'desc')->get();
 					$users = DB::table('property')->where('agent_id', $user_id)->count();
 					return View::make('auth.listing', compact('records','users'));
 	}

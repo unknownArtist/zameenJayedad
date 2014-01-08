@@ -11,7 +11,7 @@ class SearchController extends \BaseController {
 	{	
         $q =Input::get('search');
 
-	$records = Profolio::where('city', 'LIKE', '%'.$q.'%')
+	$records = Profolio::where('location', 'LIKE', '%'.$q.'%')
 					   ->orWhere('property_type', 'LIKE','%'.$q.'%')
 					   ->orWhere('purpose','LIKE', '%'.$q.'%')
 					   ->orWhere('wanted','LIKE', '%'.$q.'%')
@@ -33,7 +33,7 @@ class SearchController extends \BaseController {
            
 	$q =Input::get('search');
 
-	$records = Profolio::where('city', 'LIKE', '%'.$q.'%')
+	$records = Profolio::where('location', 'LIKE', '%'.$q.'%')
 					   ->orWhere('property_type', 'LIKE','%'.$q.'%')
 					   ->orWhere('purpose','LIKE', '%'.$q.'%')
 					   ->orWhere('wanted','LIKE', '%'.$q.'%')
@@ -57,7 +57,7 @@ class SearchController extends \BaseController {
 			return Redirect::to('dashboard')-> with('error','Please enter a search term.');
 		}
 		
-	$records = Profolio::where('city', 'LIKE', '%'.$q.'%')
+	$records = Profolio::where('location', 'LIKE', '%'.$q.'%')
 					   ->orWhere('property_type', 'LIKE','%'.$q.'%')
 					   ->orWhere('purpose','LIKE', '%'.$q.'%')
 					   ->orWhere('wanted','LIKE', '%'.$q.'%')
@@ -77,7 +77,7 @@ class SearchController extends \BaseController {
 		}
 
 
-	$records = Profolio::where('city', 'LIKE', '%'.$q.'%')
+	$records = Profolio::where('location', 'LIKE', '%'.$q.'%')
 					   ->orWhere('property_type', 'LIKE','%'.$q.'%')
 					   ->orWhere('purpose','LIKE', '%'.$q.'%')
 					   ->orWhere('wanted','LIKE', '%'.$q.'%')

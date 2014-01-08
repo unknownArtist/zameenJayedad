@@ -56,22 +56,28 @@ right: 105px;">{{ Session::get('error') }}</p>
        		<!-- <li><a href="dashboard/listing/{{$user->id}}">{{$user->property_type}} {{$user->city}} </a></li>-->
        		  @endforeach
               <li><a class="example-image-link" href="/assets/images/Phase_7.jpg" data-lightbox="example-set" title="Bahria Town Phase 7">Bahria town Phase 7</a></li>
-               <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_A.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector A">Bahria town Phase 8</a></li>
-                <a class="example-image-link" href="/assets/images/Phase_8_Sector_B.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector B"></a>
-                <a class="example-image-link" href="/assets/images/Phase_8_Sector_C.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector C"></a>
-                 <a class="example-image-link" href="/assets/images/Phase_8_Sector_D.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector D"></a>
-                  <a class="example-image-link" href="/assets/images/Phase_8_Sector_E.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector E"></a>
-                   <a class="example-image-link" href="/assets/images/Phase_8_Sector_F.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector F"></a>
-                    <a class="example-image-link" href="/assets/images/Phase_8_Sector_G.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector G"></a>
-                    <a class="example-image-link" href="/assets/images/Phase_8_Sector_H.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector H"></a>
-                    <a class="example-image-link" href="/assets/images/Phase_8_Sector_I.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector I"></a>
-                    <a class="example-image-link" href="/assets/images/Phase_8_Sector_J.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector J"></a>
-                    <a class="example-image-link" href="/assets/images/Phase_8_Sector_K.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector K"></a>
-                    <a class="example-image-link" href="/assets/images/Phase_8_Sector_L.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector L"></a>
-                    <a class="example-image-link" href="/assets/images/Phase_8_Sector_M.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector M"></a>
-                    <a class="example-image-link" href="/assets/images/Phase_8_Sector_N.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector N"></a>
-                    <a class="example-image-link" href="/assets/images/Phase_8_Sector_P.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector P"></a>
-                    
+             
+               <li class="sectorshow"><a>Bahria Town Phase 8</a>
+                <ul class="sectors">
+                
+                <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_A.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector A">Sector-A</a></li>
+               
+                <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_B.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector B">Sector-B</a></li>
+                <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_C.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector C">Sector-C</a></li>
+                 <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_D.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector D">Sector-D</a></li>
+                  <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_E.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector E">Sector-E</a></li>
+                   <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_F.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector F">Sector-F</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_G.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector G">Sector-G</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_H.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector H">Sector-H</a></li>
+                  <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_I.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector I">Sector-I</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_J.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector J">Sector-J</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_K.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector K">Sector-K</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_L.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector L">Sector-L</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_M.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector M">Sector-M</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_N.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector N">Sector-N</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_P.jpg" data-lightbox="example-set" title="Bahria Town Phase 8, Sector P">Sector-P</a></li>
+                   </ul>
+                    </li>
                 
                 <!--<li><a href="#">DHA 1</a></li>
                  <li><a href="#">DHA 2</a></li>-->

@@ -185,7 +185,7 @@ class EmailController extends BaseController {
 			if($date=$date) 
 						{ 
 
-							$property = Profolio::where('created_at', $date)->get();
+							$property = Profolio::where('date_at', $date)->get();
 		 			foreach ($property as $propertys)
 		 				{
 		 					

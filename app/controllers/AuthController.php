@@ -412,6 +412,7 @@ class AuthController extends BaseController {
    					 	'expires' =>Input::get('Expires_After'),
    					 	'contact_p' =>Input::get('Contact_Person'),
    					 	'phone' => Input::get('Phone'),
+   					 	'cell' =>  Input::get('Cell'),
    					 	'fax' =>Input::get('Fax'),
    					 	'email' => Input::get('E-mail'),
    					 	'website' =>Input::get('Website'),
@@ -421,37 +422,7 @@ class AuthController extends BaseController {
    					 	'date_at' =>date("Y-m-d")
    					 	));
 			        	
-			 		 	// $Profolio = new Profolio();
-			 		 	// $Profolio->agent_id				=Sentry::getUser()->id;
-			     //        $Profolio->property_type       = Input::get('Property_Type');
-			     //        $Profolio->home_type           = Input::get('home_type');
-			     //        $Profolio->purpose             = Input::get('Purpose');
-			     //        $Profolio->Construction_status = Input::get('Construction_Status');
-			     //        $Profolio->wanted              = Input::get('Wanted_For');
-			     //        $Profolio->city                = Input::get('city');
-			     //        $Profolio->location            = Input::get('address');
-			     //        $Profolio->photo            = $this->ImageCrop('photo','photos','200','200','');
-			     //        $Profolio->w_title             = Input::get('Wanted_Title');
-			     //        $Profolio->p_title             = Input::get('Property_Title');
-			     //        $Profolio->Description         = Input::get('Description');
-			     //        $Profolio->budget              = Input::get('Budget');
-			     //        $Profolio->l_area              = Input::get('Land_Area');
-			     //        $Profolio->unit                = Input::get('unit');
-			     //        $Profolio->bedroom             = Input::get('Bedrooms');
-			     //        $Profolio->bathroom            = Input::get('Bathrooms');
-			     //        $Profolio->expires             = Input::get('Expires_After');
-			     //        $Profolio->contact_p           = Input::get('Contact_Person');
-			     //        $Profolio->phone               = Input::get('Phone');
-			     //        $Profolio->cell                = Input::get('Cell');
-			     //        $Profolio->fax                 = Input::get('Fax');
-			     //        $Profolio->email               = Input::get('E-mail');
-			     //        $Profolio->website             = Input::get('Website');
-			     //        $Profolio->time_at  		   =date("H:i:s");
-			     //        $Profolio->latitude             = Input::get('lat');
-			     //        $Profolio->longitude             = Input::get('long');
-			     //        $Profolio->date_at  		   =date("Y-m-d");
-			     //        $Profolio->save();
-
+			 		 
 			        return Redirect::to('profolio/listing')->with('errors','successfully Added');
 
 

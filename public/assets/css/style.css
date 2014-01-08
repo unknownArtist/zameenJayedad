@@ -1779,3 +1779,32 @@ p.change_link{
 	width:auto;
 }
 
+.pagination
+{
+	float:right;
+}
+
+.pagination ul
+{
+	list-style:none;
+}
+
+.pagination ul li
+{
+	display:inline-block;
+	padding-left:15px;
+}
+
+.pagination ul li a, .pagination ul li span
+{
+	background:#50b1a8;
+	text-decoration:none;
+	padding:5px 8px;
+	color:#666;
+}
+
+.pagination ul li a:hover
+{
+	color:#fff;
+}
+

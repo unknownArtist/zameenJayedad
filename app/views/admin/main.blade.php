@@ -50,7 +50,7 @@ tr:nth-child(even) {
     	<?php
 
     	
-            $records  = User::where('group', '=', 1)->orderBy('id', 'desc')->paginate(10);
+            $records  = User::where('group', '=', 1)->orderBy('id', 'desc')->paginate(5);
             
             foreach ($records as $record)
 		 	{

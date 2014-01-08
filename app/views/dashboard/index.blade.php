@@ -24,49 +24,8 @@
        
 
 
-       </div>
-      
-		<div class="live">
-        <h3>Just Listed <span> <em>Live</em> </span></h3>
-
-        <div class="section">
-
-        
-            <!--<div class="post">
-                <img class="img" src="assets/images/thumb.png" width="60px" height="47px">  
-                <h5>4602 Windsor Street, Vancouver</h5>
-                  <p>$1,398,000  - 2,485 sqft, 4 Beds, 3 Baths </p>
-                  <p><span>10 min ago</span></p>
-            </div>-->
-            
-                  
-                  <div class="recordshow">
-                  <div id="example">
-    	<ul>        
-            @foreach($users as $user)
-    		<li>           
-            {{Form::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidth'));}}
-             <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
-                 
-                 <a href="{{URL::to('dashboard/listing/'.$user->id)}}"> <h2> {{$user->property_type}} in {{$user->city}}</h2></a>
-                 <span> {{$user->budget}}RS</span><br />
-               <!--  <p>{{$user->Description}} </p>-->
-                 <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user-> l_area}}</span>
-                 <hr style="clear:both;">
-                
-    		 </li>
-            
-             &nbsp;
-             @endforeach
-              
-    	</ul>
-    	</div>
-    </div>
-
-		
-
-      </div><!--section ends-->
-      </div><!--live-->   
+       </div>     
+		   
 		
         <div class="list">
        	<h1>Listings</h1>
@@ -116,6 +75,48 @@
        	</ul>     
 
        </div>  
+       
+       <div class="live">
+        <h3>Just Listed <span> <em>Live</em> </span></h3>
+
+        <div class="section">
+
+        
+            <!--<div class="post">
+                <img class="img" src="assets/images/thumb.png" width="60px" height="47px">  
+                <h5>4602 Windsor Street, Vancouver</h5>
+                  <p>$1,398,000  - 2,485 sqft, 4 Beds, 3 Baths </p>
+                  <p><span>10 min ago</span></p>
+            </div>-->
+            
+                  
+                  <div class="recordshow">
+                  <div id="example">
+    	<ul>        
+            @foreach($users as $user)
+    		<li>           
+            {{Form::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidth'));}}
+             <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
+                 
+                 <a href="{{URL::to('dashboard/listing/'.$user->id)}}"> <h2> {{$user->property_type}} in {{$user->city}}</h2></a>
+                 <span> {{$user->budget}}RS</span><br />
+               <!--  <p>{{$user->Description}} </p>-->
+                 <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user-> l_area}}</span>
+                 <hr style="clear:both;">
+                
+    		 </li>
+            
+             &nbsp;
+             @endforeach
+              
+    	</ul>
+    	</div>
+    </div>
+
+		
+
+      </div><!--section ends-->
+      </div><!--live-->
 
     <div class="sec-2">
 

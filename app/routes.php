@@ -101,6 +101,8 @@ Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsea
 	Route::get('dashboard/faq',array('uses'=>'DashboardController@getFaq'));
 	Route::get('dashboard/chooseus',array('uses'=>'DashboardController@getChooseus'));
 	Route::get('dashboard/alert/test',array('uses'=>'EmailController@getTestAlert'));
+	Route::get('dashboard/alert/weekly',array('uses'=>'EmailController@getWeekly'));
+	Route::get('dashboard/alert/monthly',array('uses'=>'EmailController@getMonthly'));
 	Route::get('user/logout',function(){
 
 		Sentry::logout();

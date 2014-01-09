@@ -169,35 +169,62 @@ class EmailController extends BaseController {
 		 	if($receive_alert = 'Daily')
 		 	{
 		 	$records = Emails::where('receive_alert', $receive_alert)->get();
-		 	foreach ($records as $record)
-		 	{
-		 		$id = $record->user_id;
-		 		
-		 		
+		 	$id = $records[0]->user_id;
 		 	
-		 	$emls =User::where('id', $id)->get();
-		 	foreach ($emls as $eml)
-		 	{
-		 		$adr = $eml->email;
-		 		
-		 	}
-
+		 	$emls = User::where('id', $id)->get();
 			if($date=$date) 
-						{ 
+			{ 
+				$property = Profolio::where('date_at', $date)->get();
 
-							$property = Profolio::where('date_at', $date)->get();
-		 			foreach ($property as $propertys)
-		 				{
+				$to =$emls[0]->email;
+				$subject = 'New property Add on zameen jayedad';
+				$message = null;
+				foreach ($property as $propertys)
+				{
+		 			$message .=  '<html>
+			
+			<body>
+			<table width="740px;" class="MsoTableLightShadingAccent1" border="1"  cellspacing="0" cellpadding="0" style="color:#333; border-collapse:collapse;border:none; font-family: Helvetica, Arial, sans-serif; text-align: center; width=740px;">
+           
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> App Type </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " >' . $propertys->property_type .'</td>
+			</tr>
+
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> purpose </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " >' .$propertys->purpose .'</td>
+			</tr>
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> Address </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " >' .$propertys->location.'</td>
+			</tr>
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> App Logo </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " > <a href="http://zameenjayedad.com.pk/dashboard/listing/guest/'.$propertys->id.'">Detail</a></td>
+			</tr>
+          
+			
+			
+			</table>
+			</body>
+			</html> <br/>';
+
+		}
+
 		 					
-		 					
 
-		 $URL ='Property type :'.$propertys->property_type.'<br/>'.'purpose :'.$propertys->purpose.'<br/>'.'location :'.$propertys->location.'<br/>'
-			                .'budget :'.$propertys->budget.'Area :'.$propertys->l_area.'<br/>'.'Contact Person :'.$propertys->contact_p.'<br/>'
-			                .'Cell Num :'.$propertys->cell.'<br/>'.'Email :'.$propertys->email;
+		 // $URL ='Property type :'.$propertys->property_type.'<br/>'.'purpose :'.$propertys->purpose.'<br/>'.'location :'.$propertys->location.'<br/>'
+			//                 .'budget :'.$propertys->budget.'Area :'.$propertys->l_area.'<br/>'.'Contact Person :'.$propertys->contact_p.'<br/>'
+			//                 .'Cell Num :'.$propertys->cell.'<br/>'.'Email :'.$propertys->email;
 
-			 $this->sendTo($adr,array('activationCode'=>$URL));
-		 			    }
+			//  $this->sendTo($adr,array('activationCode'=>$URL));
 		 			   
+		 			   $headers = "From: " . strip_tags('zameenjayedad.com') . "\r\n";
+						$headers .= "Reply-To: ". strip_tags('zameenjayedad.com') . "\r\n";
+						$headers .= "MIME-Version: 1.0\r\n";
+						$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+						mail($to, $subject, $message, $headers);
 		 			    	
 
 
@@ -206,6 +233,188 @@ class EmailController extends BaseController {
 		 		   }
 				
 				
-			}
+
+	public function getWeekly()
+
+	{
+		
+		$records = Emails::all();
+
+		foreach ($records as $record)
+		 	{
+		 		$receive_alert = $record->receive_alert;
+		 	}
+		 	if($receive_alert = 'Weekly')
+		 	{
+		 	$records = Emails::where('receive_alert', $receive_alert)->get();
+		 	foreach ($records as $record)
+		 	{
+		 		$id = $record->user_id;
+		 		
+		 		
+		 		
+		 	
+		 	$emls =User::where('id', $id)->get();
+		 	foreach ($emls as $eml)
+		 	{
+		 		$adr = $eml->email;
+		 	
+		 		
+		 	}
+		 	$date = date("Y-m-d");
+		$lastWeek = date("Y-m-d", strtotime("-7 days"));
+	
+		 	$property = Profolio::whereBetween('date_at', array($lastWeek, $date))->get();
+		 	$to =$adr;
+				$subject = 'New property Add on zameen jayedad';
+				$message = null;
+				foreach ($property as $propertys)
+				{
+		 			$message .=  '<html>
 			
+			<body>
+			<table width="740px;" class="MsoTableLightShadingAccent1" border="1"  cellspacing="0" cellpadding="0" style="color:#333; border-collapse:collapse;border:none; font-family: Helvetica, Arial, sans-serif; text-align: center; width=740px;">
+           
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> App Type </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " >' . $propertys->property_type .'</td>
+			</tr>
+
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> purpose </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " >' .$propertys->purpose .'</td>
+			</tr>
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> Address </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " >' .$propertys->location.'</td>
+			</tr>
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> App Logo </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " > <a href="http://zameenjayedad.com.pk/dashboard/listing/guest/'.$propertys->id.'">Detail</a></td>
+			</tr>
+          
+			
+			
+			</table>
+			</body>
+			</html> <br/>';
+
+		}
+		
+		 					
+
+		 // $URL ='Property type :'.$propertys->property_type.'<br/>'.'purpose :'.$propertys->purpose.'<br/>'.'location :'.$propertys->location.'<br/>'
+			//                 .'budget :'.$propertys->budget.'Area :'.$propertys->l_area.'<br/>'.'Contact Person :'.$propertys->contact_p.'<br/>'
+			//                 .'Cell Num :'.$propertys->cell.'<br/>'.'Email :'.$propertys->email;
+
+			//  $this->sendTo($adr,array('activationCode'=>$URL));
+		 			   
+		 			   $headers = "From: " . strip_tags('zameenjayedad.com') . "\r\n";
+						$headers .= "Reply-To: ". strip_tags('zameenjayedad.com') . "\r\n";
+						$headers .= "MIME-Version: 1.0\r\n";
+						$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+						mail($to, $subject, $message, $headers);
+		 			    	
+
+		 }
+		 }
+
+		
+
+
+	}
+	
+	public function getMonthly()
+
+	
+	{
+		
+		$records = Emails::all();
+
+		foreach ($records as $record)
+		 	{
+		 		$receive_alert = $record->receive_alert;
+		 	}
+		 	if($receive_alert = 'Monthly')
+		 	{
+		 	$records = Emails::where('receive_alert', $receive_alert)->get();
+		 	foreach ($records as $record)
+		 	{
+		 		$id = $record->user_id;
+		 		
+		 		
+		 		
+		 	
+		 	$emls =User::where('id', $id)->get();
+		 	foreach ($emls as $eml)
+		 	{
+		 		$adr = $eml->email;
+		 	
+		 		
+		 	}
+		 	$date = date("Y-m-d");
+		$lastWeek = date("Y-m-d", strtotime("-30 days"));
+	
+		 	$property = Profolio::whereBetween('date_at', array($lastWeek, $date))->get();
+		 	
+		 	
+		 			$to =$adr;
+				$subject = 'New property Add on zameen jayedad';
+				$message = null;
+				foreach ($property as $propertys)
+				{
+		 			$message .=  '<html>
+			
+			<body>
+			<table width="740px;" class="MsoTableLightShadingAccent1" border="1"  cellspacing="0" cellpadding="0" style="color:#333; border-collapse:collapse;border:none; font-family: Helvetica, Arial, sans-serif; text-align: center; width=740px;">
+           
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> App Type </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " >' . $propertys->property_type .'</td>
+			</tr>
+
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> purpose </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " >' .$propertys->purpose .'</td>
+			</tr>
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> Address </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " >' .$propertys->location.'</td>
+			</tr>
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> App Logo </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " > <a href="http://zameenjayedad.com.pk/dashboard/listing/guest/'.$propertys->id.'">Detail</a></td>
+			</tr>
+          
+			
+			
+			</table>
+			</body>
+			</html> <br/>';
+
+		}
+
+		 					
+
+		 // $URL ='Property type :'.$propertys->property_type.'<br/>'.'purpose :'.$propertys->purpose.'<br/>'.'location :'.$propertys->location.'<br/>'
+			//                 .'budget :'.$propertys->budget.'Area :'.$propertys->l_area.'<br/>'.'Contact Person :'.$propertys->contact_p.'<br/>'
+			//                 .'Cell Num :'.$propertys->cell.'<br/>'.'Email :'.$propertys->email;
+
+			//  $this->sendTo($adr,array('activationCode'=>$URL));
+		 			   
+		 			   $headers = "From: " . strip_tags('zameenjayedad.com') . "\r\n";
+						$headers .= "Reply-To: ". strip_tags('zameenjayedad.com') . "\r\n";
+						$headers .= "MIME-Version: 1.0\r\n";
+						$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+						mail($to, $subject, $message, $headers);
+		 			    	
+
+		 }
+		 }
+
+		
+
+
+	}
+	
 }

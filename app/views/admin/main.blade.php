@@ -27,7 +27,7 @@ tr:nth-child(even) {
     <div id="wrapper">
     <div id="content">    
     
-      <div class="agencynew" style="margin-top:35px;">
+      <div class="agencynew" style="margin-top:25px;">
         {{ HTML::link('user/logout','Logout')}}
     </div>
 
@@ -50,7 +50,7 @@ tr:nth-child(even) {
     	<?php
 
     	
-            $records  = User::where('group', '=', 1)->orderBy('id', 'desc')->paginate(5);
+    $records  = User::where('group', '=', 1)->orderBy('id', 'desc')->paginate(10);
             
             foreach ($records as $record)
 		 	{

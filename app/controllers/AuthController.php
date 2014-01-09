@@ -381,7 +381,7 @@ class AuthController extends BaseController {
 		public function postProfolio()
 
 			{
-				echo date("Y-m-d");
+				
 				
 			
 			$v = Validator::make(Input::all(), Emails::$rules);

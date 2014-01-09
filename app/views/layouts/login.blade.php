@@ -160,9 +160,9 @@ $j(function() {
        <ul>
        <li id="li_home"><a href="{{URL::to('dashboard')}}">Dashboard</a></li>
        <li id="li_agency"><a href="{{URL::to('dashboard/agencies')}}">Agency</a></li>
-       <li id="li_profile"><a href="">My Account</a>
+       <li id="li_profile"><a href="{{URL::to('viewprofile')}}">My Account</a>
         <ul class="innermenu" style="">
-         <li id="li_changepass"><a href="{{URL::to('profile')}}">Profile</a></li>
+         <li id="li_changepass"><a href="{{URL::to('profile')}}">Edit Profile</a></li>
         <li id="li_changepass"><a href="{{URL::to('changepass')}}">Change Password</a></li>        
         </ul>
         </li>

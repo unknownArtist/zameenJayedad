@@ -1808,3 +1808,52 @@ p.change_link{
 	color:#fff;
 }
 
+.profileview
+{
+	width:50%;
+	float:left;
+	border:1px solid #e7e7e7;
+	border-top:none;
+	border-bottom:none;
+}
+
+.companylogo
+{
+	width:50%;
+	float:left;
+	margin-left:20px;
+}
+
+.profileview img
+{
+	margin-top:20px;
+}
+
+.profileview h4
+{
+	color:#50b1a8;
+	padding-top:40px;
+}
+
+.profileview h5
+{
+	color:#666;
+	margin-top:15px;
+}
+
+.profilecontact
+{
+	width:48%;
+	float:left;
+}
+
+.companycontact
+{
+	margin-left:20px;
+}
+
+.companycontact h3
+{
+	color:#50b1a8;
+}
+

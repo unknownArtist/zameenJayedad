@@ -1,7 +1,5 @@
 @extends('layouts.login')
-@section('content')
-</div>
- 
+@section('content') 
  
 <div id="wrapper">
 <div id="content">
@@ -9,7 +7,7 @@
 
 {{ Form::open(array('url' =>'profile/update')) }}
 
- <h1>My Profile</h1>
+ <h1>Edit Profile</h1>
 <p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
  <li>

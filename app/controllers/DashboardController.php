@@ -71,5 +71,20 @@ class DashboardController extends BaseController {
 		return View::make('dashboard.ourteam');	
 	}
 	
+	public function getBahriaupdates()
+	{
+		return View::make('dashboard.bahriaupdates');	
+	}
+	
+	public function getFaq()
+	{
+		return View::make('dashboard.faq');	
+	}
+	
+	public function getChooseus()
+	{
+		return View::make('dashboard.chooseus');	
+	}
+	
 
 }

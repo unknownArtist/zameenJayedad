@@ -65,6 +65,7 @@ Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsea
 /*------------------End of email alert routes-----------------------*/
 	Route::post('profile/update',array('uses'=>'AuthController@postProfile'));
 	Route::get('profile',array('uses'=>'AuthController@getProfile'));
+	Route::get('viewprofile',array('uses'=>'AuthController@getViewProfile'));
     Route::get('dashboard/reports',array('uses'=>'ReportController@getReport'));
   	Route::get('profolio/listing/{id}/delete',array('uses'=>'AuthController@getdeletelisting'));
     Route::post('profolio/listing/{id}/edit',array('uses'=>'AuthController@posteditlisting'));

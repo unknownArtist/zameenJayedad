@@ -439,6 +439,19 @@ public function getProfile()
 					->with('countries', Config::get('listconfig.countries'));
 
 	}	
+	
+	public function getViewProfile()
+
+	{
+		
+					$user_id = Sentry::getUser()->id;
+					$records = DB::table('registration')->where('user_id', $user_id)->get();
+					$users = DB::table('users')->where('id', $user_id)->get();
+					return View::make('auth.viewprofile', compact('records','users'))
+					->with('countries', Config::get('listconfig.countries'));
+
+	}	
+	
 	public function postProfile()
 
 	{

@@ -461,8 +461,7 @@ return array(
                 ),
         'alert' => array(
                         'Please select'=>'Please select',
-                        'ASAP'=>'ASAP',
-                        'Daily'=>'Daily',
+                       'Daily'=>'Daily',
                         'Weekly'=>'Weekly',
                         'Monthly'=>'Monthly',
                 ),

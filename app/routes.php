@@ -97,6 +97,8 @@ Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsea
 	Route::get('dashboard/team',array('uses'=>'DashboardController@getTeam'));
 	Route::get('dashboard/ourteam',array('uses'=>'DashboardController@getOurteam'));
 	Route::get('dashboard/alert/test',array('uses'=>'EmailController@getTestAlert'));
+	Route::get('dashboard/alert/weekly',array('uses'=>'EmailController@getWeekly'));
+	Route::get('dashboard/alert/monthly',array('uses'=>'EmailController@getMonthly'));
 	Route::get('user/logout',function(){
 
 		Sentry::logout();

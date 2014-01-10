@@ -219,7 +219,7 @@ class EmailController extends BaseController {
 			</tr>
 			<tr>
 			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> photo </b></td>
-			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><img src="http://zameenjayedad.com.pk/uploads/photos/'.$propertys->photo.'"</td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><img width="200" height="150" src="http://zameenjayedad.com.pk/uploads/photos/'.$propertys->photo.'"</td>
 			</tr>
 			<tr>
 			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> App Logo </b></td>
@@ -320,7 +320,7 @@ class EmailController extends BaseController {
 			</tr>
 			<tr>
 			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> photo </b></td>
-			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><img src="http://zameenjayedad.com.pk/uploads/photos/'.$propertys->photo.'"</td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><img width="200" height="150" src="http://zameenjayedad.com.pk/uploads/photos/'.$propertys->photo.'"</td>
 			</tr>
 			<tr>
 			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> App Logo </b></td>
@@ -423,7 +423,7 @@ class EmailController extends BaseController {
 			</tr>
 			<tr>
 			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> photo </b></td>
-			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><img src="http://zameenjayedad.com.pk/uploads/photos/'.$propertys->photo.'"</td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><img width="200" height="150" src="http://zameenjayedad.com.pk/uploads/photos/'.$propertys->photo.'"</td>
 			</tr>
 			<tr>
 			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> App Logo </b></td>

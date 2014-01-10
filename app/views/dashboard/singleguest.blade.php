@@ -42,19 +42,22 @@
                  
                  
                  <h2 style="margin-top:20px">Contact Info:</h2>
-                 <p> Cell:&nbsp;&nbsp; {{$records->cell}}</p>
-                <p> Fax: &nbsp;&nbsp; {{$records->fax}}</p>
-                <p> Email: &nbsp; {{$records->email}}</p>
+                 <p>Zameen Jayedad Team
+                 <p> Cell: <span style="padding-left:35px;">03225050989</span></p>
+                 <p style="padding-left:83px; margin-top:-8px;">  03355257555</p>
+                <p> Landline: <span style="padding-left:6px;">051-5172562</span></p>
+                <p style="padding-left:83px; margin-top:-8px;">  051-5172563</p>
+                <p> Email:   &nbsp;&nbsp;<span>contact@zameenjayedad.com</span></p>
                 
                 <div class="image-row">
                 
 			<div class="image-set">
            		<h2 style="margin-top:20px;">More Pictures:</h2>
-                <a class="example-image-link" href="/assets/images/home1.jpg" data-lightbox="example-set" title="Outer View">
+                <a class="example-image-link" href="/assets/images/home1.jpg" data-lightbox="example-set1" rel="gallery2" title="Outer View">
                 {{HTML::image('assets/images/home1.jpg','', array('style'=>'width:150px; height:150px;'));}}</a>
-				<a class="example-image-link" href="/assets/images/kitchen2.jpg" data-lightbox="example-set" title="Kicthen View">
+				<a class="example-image-link" href="/assets/images/kitchen2.jpg" data-lightbox="example-set1" rel="gallery2" title="Kicthen View">
                 {{HTML::image('assets/images/kitchen2.jpg','', array('style'=>'width:150px; height:150px;'));}}</a>
-				<a class="example-image-link" href="/assets/images/slide3.png" data-lightbox="example-set" title="Bedroom">
+				<a class="example-image-link" href="/assets/images/slide3.png" data-lightbox="example-set1" rel="gallery2" title="Bedroom">
                 {{HTML::image('assets/images/slide3.png','', array('style'=>'width:150px; height:150px;'));}}</a>
 				
 			</div>

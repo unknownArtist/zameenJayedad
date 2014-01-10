@@ -45,7 +45,7 @@ clear:both;
 .logo{
 	float:left;
 	width: 168px;
-	height: 104px;
+	height: 114px;
 	padding-top: 10px;
 }
 
@@ -75,6 +75,7 @@ clear:both;
 	color:#68BEB6;
 	font-weight: bolder;
 	margin-top:2px;
+	margin-bottom:0px;
 }
 
 .log{
@@ -300,8 +301,8 @@ clear:both;
 {
 	color:red;
 	position:absolute;
-	right:104px;
-	top:192px;
+	right:107px;
+	top:182px;
 }
 
 .searchlist input
@@ -1902,5 +1903,37 @@ p.change_link{
 {
 	padding-top:0px !important;
 }
+
+.bahriaupdate h4
+{
+	color:#666;
+	font-style:italic;
+	margin-bottom:0px;
+}
+
+.bahriaupdate h5
+{
+	margin-top:10px;
+}
+
+.bahriaupdate p span
+{
+	color:#50b1a8;
+}
+
+.radiobtn2
+{
+	width:50px !important;
+	margin-left:50px;
+	
+}
+
+.radiobtn2 label
+{
+	width:20px !important;
+	padding:0 !important;
+	margin:0 !important;
+}
+
 
 

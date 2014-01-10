@@ -30,12 +30,15 @@
         <div class="list">
        	<h1>Listings</h1>
        	<h3>Rawalpindi / Islamabad</h3>
-       
+        <div class="image-row">
+                
+			<div class="image-set">
        	<ul class="l1">
            @foreach($users as $user)
        		<!-- <li><a href="dashboard/listing/{{$user->id}}">{{$user->property_type}} {{$user->city}} </a></li>-->
        		  @endforeach
               
+             
            	
                 
               <li><a class="example-image-link" href="/assets/images/bahria phase 1.jpg" data-lightbox="example-set" title="Being the earliest projects, Phases 1-7 have benefited from all the following developments of
@@ -251,7 +254,9 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
         
                  
                    
-       	</ul>     
+       	</ul>   
+        </div>
+        </div>  
 
        </div>  
        

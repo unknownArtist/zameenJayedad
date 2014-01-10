@@ -169,14 +169,32 @@ class EmailController extends BaseController {
 		 	if($receive_alert = 'Daily')
 		 	{
 		 	$records = Emails::where('receive_alert', $receive_alert)->get();
-		 	$id = $records[0]->user_id;
+		 	foreach ($records as $record)
+		 	{
+		 		$id = $record->user_id;
+		 		
+		 		
+		 		
 		 	
-		 	$emls = User::where('id', $id)->get();
+		 	$emls =User::where('id', $id)->get();
+		 	foreach ($emls as $eml)
+		 	{
+		 		$adr = $eml->email;
+		 	
+		 		
+		 	}
+		 	
 			if($date=$date) 
 			{ 
 				$property = Profolio::where('date_at', $date)->get();
-
-				$to =$emls[0]->email;
+				if ($property->isEmpty() )
+		{
+			
+			echo "no property added";
+		}
+			else
+			{
+				$to =$adr;
 				$subject = 'New property Add on zameen jayedad';
 				$message = null;
 				foreach ($property as $propertys)
@@ -198,6 +216,10 @@ class EmailController extends BaseController {
 			<tr>
 			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> Address </b></td>
 			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " >' .$propertys->location.'</td>
+			</tr>
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> photo </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><img src="http://zameenjayedad.com.pk/uploads/photos/'.$propertys->photo.'"</td>
 			</tr>
 			<tr>
 			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> App Logo </b></td>
@@ -226,11 +248,12 @@ class EmailController extends BaseController {
 						$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 						mail($to, $subject, $message, $headers);
 		 			    	
-
+					}
 
 		 		       }
 		 		   }
 		 		   }
+		 		}
 				
 				
 
@@ -265,6 +288,13 @@ class EmailController extends BaseController {
 		$lastWeek = date("Y-m-d", strtotime("-7 days"));
 	
 		 	$property = Profolio::whereBetween('date_at', array($lastWeek, $date))->get();
+		 	if ($property->isEmpty() )
+		{
+			
+			echo "no property added";
+		}
+			else
+			{
 		 	$to =$adr;
 				$subject = 'New property Add on zameen jayedad';
 				$message = null;
@@ -287,6 +317,10 @@ class EmailController extends BaseController {
 			<tr>
 			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> Address </b></td>
 			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " >' .$propertys->location.'</td>
+			</tr>
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> photo </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><img src="http://zameenjayedad.com.pk/uploads/photos/'.$propertys->photo.'"</td>
 			</tr>
 			<tr>
 			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> App Logo </b></td>
@@ -315,7 +349,7 @@ class EmailController extends BaseController {
 						$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 						mail($to, $subject, $message, $headers);
 		 			    	
-
+		}
 		 }
 		 }
 
@@ -356,7 +390,13 @@ class EmailController extends BaseController {
 		$lastWeek = date("Y-m-d", strtotime("-30 days"));
 	
 		 	$property = Profolio::whereBetween('date_at', array($lastWeek, $date))->get();
-		 	
+		 	if ($property->isEmpty() )
+		{
+			
+			echo "no property added";
+		}
+			else
+			{
 		 	
 		 			$to =$adr;
 				$subject = 'New property Add on zameen jayedad';
@@ -380,6 +420,10 @@ class EmailController extends BaseController {
 			<tr>
 			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> Address </b></td>
 			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " >' .$propertys->location.'</td>
+			</tr>
+			<tr>
+			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> photo </b></td>
+			<td align="center" style="border: 1px solid #333; width=370px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><img src="http://zameenjayedad.com.pk/uploads/photos/'.$propertys->photo.'"</td>
 			</tr>
 			<tr>
 			<td align="center" width="250px;" style="border: 1px solid #333; width=150px; transition: all 0.3s; background: #FAFAFA; text-align: center; " ><b> App Logo </b></td>
@@ -408,7 +452,7 @@ class EmailController extends BaseController {
 						$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 						mail($to, $subject, $message, $headers);
 		 			    	
-
+		}
 		 }
 		 }
 

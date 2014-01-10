@@ -31,7 +31,7 @@
 
 
         <li>
-            {{ Form::label('cell', 'Cell/mobile') }}
+            {{ Form::label('cell', 'Cell / Mobile') }}
             {{ Form::text('cell',$record->cell) }}
         </li>
 

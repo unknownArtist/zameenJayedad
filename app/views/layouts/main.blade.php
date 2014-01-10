@@ -135,10 +135,10 @@ $j(function() {
         <li><a href="#">Buying a Home</a></li>
         <li><a href="#">Selling Your Home</a></li>
         <li><a href="#">New Developments</a></li>
-        <li><a href="#">Bahria Town & DHA Updates</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="{{URL::to('dashboard/bahriaupdates')}}">Bahria Town & DHA Updates</a></li>
+        <li><a href="{{URL::to('dashboard/faq')}}">FAQ</a></li>
         <li><a href="#">Bahria town and DHA Statistics</a></li>
-        <li><a href="#">Why Choosing US?</a></li>
+        <li><a href="{{URL::to('dashboard/chooseus')}}">Why Choosing US?</a></li>
  		</ul>
                 
         </div>

@@ -519,7 +519,7 @@ margin-top:20px;
 
 
 .l2{
-	width:29%;
+	
 	float:left;	
 	list-style-type: none;
 	padding: 0;
@@ -562,6 +562,7 @@ margin-top:20px;
 .sectorshow
 {
 	cursor:pointer;
+	width:140px !important;
 }
 
 .sectorshow:hover ul.sectors
@@ -1721,9 +1722,9 @@ p.change_link{
 	 padding:2px;
 }
 
-.team h2
+.team
 {
-	text-align:center;
+	margin-left:47px;
 }
 
 .imgteam
@@ -1827,6 +1828,7 @@ p.change_link{
 .profileview img
 {
 	margin-top:20px;
+	margin-left:20px;
 }
 
 .profileview h4
@@ -1855,5 +1857,50 @@ p.change_link{
 .companycontact h3
 {
 	color:#50b1a8;
+	margin-bottom:6px;
 }
+
+.companycontact h5
+{
+	margin:0px 0 0 10px;
+	color:#666;
+}
+
+.companycontact h5 span
+{
+	margin-left:35px;
+}
+
+.bahriaupdate h3
+{
+	color:#666;
+}
+
+.bahriaupdate p
+{
+	text-align:justify;
+	margin-left:15px;
+}
+
+.bahriaupdate ul
+{
+	
+	width:100% !important;
+	border:none !important;
+	-webkit-box-shadow:none !important;
+	padding:0 0 0 40px !important;
+	
+}
+
+.bahriaupdate ul li
+{
+	list-style:disc !important;
+	padding:10px 0 0 15px !important;
+}
+
+.bahriaupdate ul li:nth-child(1)
+{
+	padding-top:0px !important;
+}
+
 

@@ -30,6 +30,7 @@
         <div class="list">
        	<h1>Listings</h1>
        	<h3>Rawalpindi / Islamabad</h3>
+       
        	<ul class="l1">
            @foreach($users as $user)
        		<!-- <li><a href="dashboard/listing/{{$user->id}}">{{$user->property_type}} {{$user->city}} </a></li>-->
@@ -85,14 +86,8 @@ Phases 1-7 offer the most lucrative transaction benefits due to the increased mo
 in house building and private construction activities....
 
 Plot Price '10 Marla 55 Lac'. '20 Marla 95 Lac'">Bahria town Phase 6</a></li>
-                   
-       	</ul>   
-        
-        <ul class="l2">
-           @foreach($users as $user)
-       		<!-- <li><a href="dashboard/listing/{{$user->id}}">{{$user->property_type}} {{$user->city}} </a></li>-->
-       		  @endforeach
-              <li><a class="example-image-link" href="/assets/images/Phase_7.jpg" data-lightbox="example-set" title="Being the earliest projects, Phases 1-7 have benefited from all the following developments of
+
+<li><a class="example-image-link" href="/assets/images/Phase_7.jpg" data-lightbox="example-set" title="Being the earliest projects, Phases 1-7 have benefited from all the following developments of
 Bahria Town. With every new idea in landscaping, every new monument design and creation of 
 possibilities with the import of most modern machinery, Phases 1-7 have been value added with 
 awe-inspiring landscaped islands, pagodas, village scenes and thoughtful monuments.
@@ -100,6 +95,14 @@ Phases 1-7 offer the most lucrative transaction benefits due to the increased mo
 in house building and private construction activities....
 
 Plot Price '10 Marla 55 Lac'. '20 Marla 95 Lac'">Bahria town Phase 7</a></li>
+                   
+       	</ul>   
+        
+        <ul class="l2">
+           @foreach($users as $user)
+       		<!-- <li><a href="dashboard/listing/{{$user->id}}">{{$user->property_type}} {{$user->city}} </a></li>-->
+       		  @endforeach
+              
              
                <li class="sectorshow"><a>Bahria Town Phase 8</a>
                 <ul class="sectors">
@@ -227,6 +230,21 @@ designer cabinetry. Add to this, the Villa is fully air conditioned for your con
 Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Sector-P</a></li>
                    </ul>
                     </li>
+                    <li class="sectorshow"> <a class="example-image-link" href="/assets/images/safari valley.jpg" data-lightbox="example-set" title="Bahria 8 Safari Valley">Phase 8 Safari Valley</a>
+                    
+                    <ul class="sectors" style="width:167px;">
+                
+                <li><a class="example-image-link" href="" data-lightbox="example-set" title="">Abu Bakr Block</a></li>
+                 <li><a class="example-image-link" href="" data-lightbox="example-set" title="">Umer Farooq Block</a></li>
+                  <li><a class="example-image-link" href="" data-lightbox="example-set" title="">Usman-e-Ghani Block</a></li>
+                   <li><a class="example-image-link" href="" data-lightbox="example-set" title="">Ali Block</a></li>
+                    </ul>
+                    </li>
+                    <li> <a class="example-image-link" href="" data-lightbox="example-set" title="">Rafi Block</a></li>
+                    <li> <a class="example-image-link" href="" data-lightbox="example-set" title="">Khalid Block</a></li>
+                    <li> <a class="example-image-link" href="/assets/images/Bahria_Overseas_Enclave_Islamabad.jpg" data-lightbox="example-set" title="Bahria Overseas Enclave Islamabad">Bahria Overseas Enclave Islamabad</a></li>
+                     <li> <a class="example-image-link" href="" data-lightbox="example-set" title="">DHA 1</a></li>
+                     <li> <a class="example-image-link" href="" data-lightbox="example-set" title="">DHA 2</a></li>
                 
                 <!--<li><a href="#">DHA 1</a></li>
                  <li><a href="#">DHA 2</a></li>-->

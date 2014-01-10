@@ -3,9 +3,10 @@
 
 <div id="wrapper">
     <div id="content">
+    <div id="form-wrapper" style="width:100%;">
+<h1>Meet Our Team</h1>
     
-    <div class="team">
-    <h2>Meet Our Team</h2>
+    <div class="team">    
     
     <div class="image-row">
                 
@@ -85,6 +86,7 @@
     </div>
     
     
+    </div>
     </div>
     </div>
 

@@ -14,7 +14,7 @@
         <li>
         
         <div class="deatilimg">
-        {{HTML::image('uploads/photos/'.$records->photo, '', array('class'=>''));}}
+        {{HTML::image('uploads/photos/'.$records->photo, '', array('style'=>'width:200px; height:150px;'));}}
              <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
              </div>
              <div class="propername">

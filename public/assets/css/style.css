@@ -94,6 +94,7 @@ clear:both;
 	background-image: url(../images/search_background.png);
 	background-repeat: repeat;
 	float:left;
+	min-width:987px;
 	width:100%;
 	height:105px;
 	float: left;
@@ -976,6 +977,7 @@ margin-bottom: 36px;
 #footer{
 	float:left;
 	clear: both;
+	min-width:987px;
 	width:100%;
 	text-align: justify;
 	background-color: #68BEB6;

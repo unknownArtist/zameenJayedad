@@ -281,7 +281,7 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
             {{Form::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidth'));}}
              <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
                  
-                <a href="{{URL::to('dashboard/listing/'.$user->id)}}"> <h2> {{$user->property_type}} in {{$user->city}}</h2></a>
+                <a href="{{URL::to('dashboard/listing/guest/'.$user->id)}}"> <h2> {{$user->property_type}} in {{$user->city}}</h2></a>
                  <span> {{$user->budget}}RS</span><br />
                <!--  <p>{{$user->Description}} </p>-->
                  <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user-> l_area}}</span>

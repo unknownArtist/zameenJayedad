@@ -620,7 +620,7 @@ margin-top:20px;
 
 .recordshow ul, .recordshow ul li
 {
-	list-style:none;
+	list-style:none !important;
 	padding:0px 10px;
 }
 
@@ -1047,7 +1047,7 @@ margin-bottom: 36px;
 	text-align: center;
 	clear:both;
 	font-family: sans-serif;
-	padding:30px 0 10px 0;
+	padding:0px 0 10px 0;
 }
 
 
@@ -1883,7 +1883,7 @@ p.change_link{
 	margin-left:15px;
 }
 
-.bahriaupdate ul
+.bahriaupdate ul, .bahriaupdate2 ul
 {
 	
 	width:100% !important;
@@ -1933,6 +1933,76 @@ p.change_link{
 	width:20px !important;
 	padding:0 !important;
 	margin:0 !important;
+}
+
+.contactus img
+{
+	margin-top:25px;
+}
+
+.contactus h3
+{
+	text-align:center;
+}
+
+.contactus h3:nth-child(4)
+{
+	margin-left:40px;
+	margin-top:-20px;
+}
+
+.contactus h3:nth-child(6)
+{
+	margin-left:77px;
+	margin-top:-20px;
+}
+
+.bahriaupdate a
+{
+	text-decoration:none !important;
+	color:#50b1a8 !important;
+	border-bottom:1px #50b1a8 dotted;
+}
+
+.bahriaupdate a:hover
+{
+	color:#00a651 !important;
+	border-bottom:1px solid #00a651;
+}
+
+.bahriaupdate ol li
+{
+	padding-top:10px;
+}
+
+.bahriaupdate2 ul li a
+{
+	text-decoration:underline !important;
+	color:#50b1a8 !important;
+}
+
+.bahriaupdate2 ul li a:hover
+{
+	text-decoration:none !important;
+}
+
+.socials
+{
+	
+}
+
+.socials ul
+{
+	display:inline-block;
+	float:right;	
+	margin-bottom:5px;	
+}
+
+.socials ul li
+{
+	list-style:none;
+	display:inline-block;
+	margin-left:5px;
 }
 
 

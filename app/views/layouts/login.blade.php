@@ -465,7 +465,7 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
          <div class="socials">
         <ul>
         <li><a href="https://www.facebook.com/zameenjayedadteam"><img src="/assets/images/facebook.png"></a></li>
-        <li><a href="pk.linkedin.com/pub/zameen-jayedad/89/333/43b/"><img src="/assets/images/linkedin.png"></a></li>
+        <li><a href="https://pk.linkedin.com/pub/zameen-jayedad/89/333/43b/"><img src="/assets/images/linkedin.png"></a></li>
         <li><a href="https://twitter.com/mohsinmajeed91"><img src="/assets/images/twitter.png"></a></li>
         </ul>
         

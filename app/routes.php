@@ -112,6 +112,7 @@ Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsea
 	Route::get('dashboard/homefinder',array('uses'=>'DashboardController@getHomefinder'));
 	Route::get('dashboard/homeevaluation',array('uses'=>'DashboardController@getHomeevaluation'));
 	Route::get('dashboard/careers',array('uses'=>'DashboardController@getCareers'));
+	Route::get('dashboard/newdevelopments',array('uses'=>'DashboardController@getNewdevelopments'));
 	Route::get('dashboard/chooseus',array('uses'=>'DashboardController@getChooseus'));
 	Route::get('dashboard/alert/test',array('uses'=>'EmailController@getTestAlert'));
 	Route::get('dashboard/alert/weekly',array('uses'=>'EmailController@getWeekly'));

@@ -1047,7 +1047,7 @@ margin-bottom: 36px;
 	text-align: center;
 	clear:both;
 	font-family: sans-serif;
-	padding:30px 0 10px 0;
+	padding:0px 0 10px 0;
 }
 
 
@@ -1984,6 +1984,25 @@ p.change_link{
 .bahriaupdate2 ul li a:hover
 {
 	text-decoration:none !important;
+}
+
+.socials
+{
+	
+}
+
+.socials ul
+{
+	display:inline-block;
+	float:right;	
+	margin-bottom:5px;	
+}
+
+.socials ul li
+{
+	list-style:none;
+	display:inline-block;
+	margin-left:5px;
 }
 
 

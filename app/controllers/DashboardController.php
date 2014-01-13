@@ -156,5 +156,10 @@ class DashboardController extends BaseController {
 		->with('users', $users);
 	}
 	
+	public function getNewdevelopments()
+	{
+		return View::make('dashboard.newdevelopments');	
+	}
+	
 
 }

@@ -122,7 +122,7 @@ $j(function() {
 			<div class="image-set">
         <ul style="margin-top:7px;">
         <li><a href="{{URL::to('dashboard/customerservices')}}">Full Customer and Technical Support</a></li>
-        <li><a href="#">No Fake properties or Fake Agents</a></li>
+        
         <li><a class="example-image-link" href="/assets/images/bahria phase 1.jpg" data-lightbox="example-set4" title="Maps">Maps</a></li>
         <div style="display:none">
                <li><a class="example-image-link" href="/assets/images/Phase_2.jpg" data-lightbox="example-set4" title="Being the earliest projects, Phases 1-7 have benefited from all the following developments of
@@ -321,7 +321,7 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
         <ul>
         <li><a href="{{URL::to('dashboard/buyinghome')}}">Buying a Home</a></li>
         <li><a href="{{URL::to('dashboard/sellinghome')}}">Selling Your Home</a></li>
-        <li><a href="#">New Developments</a></li>
+        <li><a href="{{URL::to('dashboard/newdevelopments')}}">New Developments</a></li>
         <li><a href="{{URL::to('dashboard/bahriaupdates')}}">Bahria Town & DHA Updates</a></li>
         <li><a href="{{URL::to('dashboard/faq')}}">FAQ</a></li>
         <li><a href="{{URL::to('dashboard/careers')}}">Career Opportunities</a></li>
@@ -341,11 +341,21 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
         <li><a href="{{URL::to('dashboard/recentsale')}}">Recent Sale Prices</a></li>
         <li><a href="{{URL::to('dashboard/buildhouse')}}">Quotes to Build your House</a></li>
         <li><a href="{{URL::to('dashboard/designing')}}">Interior Designing Office / House</a></li>
-        <li><a href="#">Virtual Tour of the Properties</a></li>
+       
  		</ul>
                 
         </div>
         
+        <div class="socials">
+        <ul>
+        <li><a href="https://www.facebook.com/zameenjayedadteam"><img src="/assets/images/facebook.png"></a></li>
+        <li><a href="pk.linkedin.com/pub/zameen-jayedad/89/333/43b/"><img src="/assets/images/linkedin.png"></a></li>
+        <li><a href="https://twitter.com/mohsinmajeed91"><img src="/assets/images/twitter.png"></a></li>
+        </ul>
+        
+        </div>
+        
+        <hr style="clear:both;">
 			<p class="foot">Copyright &copy; 2013 Zameen Jayedad Inc. All Rights Reserved</p>
   		</div>
         </div>

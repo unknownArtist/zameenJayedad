@@ -149,48 +149,8 @@ $j(function() {
     <?php 
 
         $group= Sentry::getUser()->group;
-        $staff= Sentry::getUser()->staff;
+
     ?>
-    @if($staff == 1)
-
-   <div id="wrapperheader">
-    <div id="sea">  
-      <!--<h2>Search Listing</h2>
-      {{ Form::text('search','',array('class'=>'span6','placeholder'=>'search by city')) }}
-      
-       {{ Form::submit('Search', array('class' => 'button')) }}-->
-
-       <div id='cssmenu'>
-       <ul>
-       <li id="li_home"><a href="{{URL::to('dashboard')}}">Dashboard</a></li>
-       <li id="li_message"><a href="{{URL::to('dashboard/messages')}}">Message Center</a></li>
-       
-       </ul>
-       </div>
-     
-    </div>
-    </div>
-  
-    <div class="searchlist">
-     {{ Form::open(array('url' => 'dashboard/search','search')) }}
-   
-   
-    
-       <!-- <h2>Search Listing</h2>-->
-        {{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'City, Property-type...', 'onfocus'=>'this.placeholder = ""', 'onBlur'=>'this.placeholder = "City, Property-type..."')) }}
-        
-       {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn')) }}
-
-   
-    {{ Form::close() }}
-
-    {{ Form::open(array('url'=>'dashboard/searchmap'))}}
-            {{ Form::hidden('query','',array('id'=>'mapbtn','style'=>'background:#666; color:#fff;'))}}
-            {{ Form::submit('Map',array('class' => 'button','id'=>'searchbtnasd'))}}
-        {{ Form::close() }}
-   
-      </div>
-      @endif
     @if($group == 1)
 
    <div id="wrapperheader">
@@ -239,8 +199,7 @@ $j(function() {
         {{ Form::close() }}
    
     	</div>
-      @endif
-      @if($group == 0 & $staff == 0 )
+      @else
         <div id="wrapperheader">
     <div id="sealog"> 
       {{ Form::open(array('url' => 'dashboard/search')) }}
@@ -279,7 +238,7 @@ $j(function() {
 			<div class="image-set">
         <ul style="margin-top:7px;">
         <li><a href="{{URL::to('dashboard/customerservices')}}">Full Customer and Technical Support</a></li>
-        <li><a href="#">No Fake properties or Fake Agents</a></li>
+       
         <li><a class="example-image-link" href="/assets/images/bahria phase 1.jpg" data-lightbox="example-set3" title="Maps">Maps</a></li>
         <div style="display:none">
                <li><a class="example-image-link" href="/assets/images/Phase_2.jpg" data-lightbox="example-set3" title="Being the earliest projects, Phases 1-7 have benefited from all the following developments of
@@ -464,7 +423,7 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
                     <li class="sectorshow"> <a class="example-image-link" href="/assets/images/safari valley.jpg" data-lightbox="example-set3" title="Bahria 8 Safari Valley"></a></li>
         </div>
         <li><a href="{{URL::to('dashboard/projectupdates')}}">Property Updates</a></li>
-        <li><a href="#">Featured Listings</a></li>
+        <li><a href="{{URL::to('dashboard/featuredlistings')}}">Featured Listings</a></li>
         <li><a href="{{URL::to('dashboard/contactus')}}">Contact Zameen Jayedad</a></li>
         <li><a href="{{URL::to('dashboard/ourteam')}}">The Team</a></li>
  		</ul>
@@ -479,7 +438,7 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
         <ul>
         <li><a href="{{URL::to('dashboard/buyinghome')}}">Buying a Home</a></li>
         <li><a href="{{URL::to('dashboard/sellinghome')}}">Selling Your Home</a></li>
-        <li><a href="#">New Developments</a></li>
+        <li><a href="{{URL::to('dashboard/newdevelopments')}}">New Developments</a></li>
         <li><a href="{{URL::to('dashboard/bahriaupdates')}}">Bahria Town & DHA Updates</a></li>
         <li><a href="{{URL::to('dashboard/faq')}}">FAQ</a></li>
         <li><a href="{{URL::to('dashboard/careers')}}">Career Opportunities</a></li>
@@ -498,10 +457,21 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
         <li><a href="{{URL::to('dashboard/recentsale')}}">Recent Sale Prices</a></li>
         <li><a href="{{URL::to('dashboard/buildhouse')}}">Quotes to Build your House</a></li>
         <li><a href="{{URL::to('dashboard/designing')}}">Interior Designing Office / House</a></li>
-        <li><a href="#">Virtual Tour of the Properties</a></li>
+      
  		</ul>
                 
         </div>
+        
+         <div class="socials">
+        <ul>
+        <li><a href="https://www.facebook.com/zameenjayedadteam"><img src="/assets/images/facebook.png"></a></li>
+        <li><a href="pk.linkedin.com/pub/zameen-jayedad/89/333/43b/"><img src="/assets/images/linkedin.png"></a></li>
+        <li><a href="https://twitter.com/mohsinmajeed91"><img src="/assets/images/twitter.png"></a></li>
+        </ul>
+        
+        </div>
+        
+        <hr style="clear:both;">
         
 			<p class="foot">Copyright &copy; 2013 Zameen Jayedad Inc. All Rights Reserved</p>
   		</div>

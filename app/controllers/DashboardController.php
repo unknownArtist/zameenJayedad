@@ -111,5 +111,10 @@ class DashboardController extends BaseController {
 		return View::make('dashboard.chooseus');	
 	}
 	
+	public function getContactus()
+	{
+		return View::make('dashboard.contactus');	
+	}
+	
 
 }

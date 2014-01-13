@@ -123,7 +123,7 @@ class AgencyController extends \BaseController {
 	public function getIndex($id)
 	{
 		
-		$records = AgentUser::where('agent_id',$id)->get();
+		$records = AgentUser::where('id',$id)->get();
 		foreach($records as $record)
 					{
 

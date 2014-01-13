@@ -53,7 +53,7 @@ tr:nth-child(even) {
 
                 <div class="btn-group">
 
-                    <a href="{{URL::to('dashboard/agencies/view/'.$records->agent_id)}}" class="editbtn" alt="View">
+                    <a href="{{URL::to('dashboard/agencies/view/'.$records->id)}}" class="editbtn" alt="View">
                         <i class="icon-remove"></i> view
                     </a>
                     &nbsp;

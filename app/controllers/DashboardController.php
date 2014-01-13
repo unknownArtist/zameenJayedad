@@ -116,5 +116,45 @@ class DashboardController extends BaseController {
 		return View::make('dashboard.contactus');	
 	}
 	
+	public function getCustomerservices()
+	{
+		return View::make('dashboard.customerservices');	
+	}
+	
+	public function getDesigning()
+	{
+		return View::make('dashboard.designing');	
+	}
+	
+	public function getBuildhouse()
+	{
+		return View::make('dashboard.buildhouse');	
+	}
+	
+	public function getProjectupdates()
+	{
+		return View::make('dashboard.projectupdates');	
+	}
+	
+	public function getBuyinghome()
+	{
+		return View::make('dashboard.buyinghome');	
+	}
+	
+	public function getSellinghome()
+	{
+		return View::make('dashboard.sellinghome');	
+	}
+	
+	public function getFeaturedlistings()
+	{
+		$users = DB::table('property')
+                    ->orderBy('id', 'desc')
+                    ->take(10)
+          			->get();
+		return View::make('dashboard.featuredlistings')
+		->with('users', $users);
+	}
+	
 
 }

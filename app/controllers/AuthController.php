@@ -455,9 +455,9 @@ public function getProfile()
 	public function postProfile()
 
 	{
+
 		$fields = array(
-			
-		   'name' => Input::get('name'),
+			'name' => Input::get('name'),
 		   'phone' => Input::get('phone'),
 		   'cell' => Input::get('cell'),
 		   'fax' => Input::get('fax'),
@@ -466,8 +466,10 @@ public function getProfile()
 		   'country' => Input::get('country')
 		   );
 
+		$id = Sentry::getUser()->id;
+
 		  DB::table('registration')
-            ->where('id','=',Sentry::getUser()->id)
+            ->where('user_id','=',$id)
             ->update($fields);
          $fieldsname = array(
             	       'email' => Input::get('email')
@@ -475,7 +477,7 @@ public function getProfile()
             DB::table('users')
             ->where('id','=',Sentry::getUser()->id)
             ->update($fieldsname);
-            return Redirect::to('profile');
+            return Redirect::to('viewprofile');
 	}
 
 	public function getlisting()

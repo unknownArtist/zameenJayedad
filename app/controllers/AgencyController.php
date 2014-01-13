@@ -36,8 +36,8 @@ class AgencyController extends \BaseController {
 	         $Users = Sentry::getUserProvider()->create(array(
 	        'email'    => Input::get('email'),
 	        'password' => Input::get('password'),
-	        'activated'=> 1
-	        'staff'=> 1
+	        'activated'=> 1,
+	        'staff'=> 1,
 
 	        
 	        ));	

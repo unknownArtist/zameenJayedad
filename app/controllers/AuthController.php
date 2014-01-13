@@ -86,7 +86,7 @@ class AuthController extends BaseController {
  			'country' => Input::get('country'),
  				);
 
- 		DB::table('agencystaff')->insert($fields);
+ 		DB::table('Agencystaff')->insert($fields);
 
 			}
 			else

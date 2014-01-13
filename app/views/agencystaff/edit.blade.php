@@ -6,10 +6,15 @@
 <div id="form-wrapper">
 
 
- 
 
 @foreach($record as $records)
-{{ Form::open(array('url' =>'dashboard/agencystaff/'.$records->agency_id.'/edit','POST')) }}
+<?php 
+$user = Sentry::findUserByLogin($records->email);
+         $staff_id=$user->id;
+        
+?>
+
+{{ Form::open(array('url' =>'dashboard/agencystaff/'.$records->agency_id.'/edit/'.$staff_id,'POST')) }}
 
  <h1>Agency Staff </h1>
  <p class="erorclas"> {{ Session::get('errors') }}</p>

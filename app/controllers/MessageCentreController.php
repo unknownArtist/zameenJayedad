@@ -31,12 +31,15 @@ class MessageCentreController extends BaseController {
 
 		$user_id = Sentry::getUser()->id;
 		$agencies_id = Agency::where('staff_id','=',$user_id)->get();
+		
 		if ($agencies_id->isEmpty() )
 		{
 			
 			return Redirect::to('dashboard/messages')
 			->with('errors','Kindly create an Agency First');
 		}
+		else
+		{
 
 		 foreach ($agencies_id as $agency_id)
 		 	{
@@ -57,6 +60,7 @@ class MessageCentreController extends BaseController {
 		}
 
         return View::make('message.messagecompose')->with('teams',$allTeamsMember);
+    }
 	}
 
 	 public  function postsendMessage()

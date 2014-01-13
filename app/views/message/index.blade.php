@@ -45,8 +45,8 @@
   </div>
   <div class="inboxwidth">
   
-  <div class="readmsg">
     @if($inbox->notification == 0)
+  <div class="readmsg">
     
     <p>{{HTML::link('dashboard/message/'.$inbox->id.'/readmsg',$inbox->subject)}}</p>
     </div>
@@ -55,26 +55,31 @@
      <div class="unreadmessage">
      <p>{{HTML::link('dashboard/message/'.$inbox->id.'/readmsg',$inbox->subject)}}</p>
      </div>
-     @endif
-     
-     </div>
-  
- 
+       
+   @endif 
+      </div> 
+
   
   <div class="mesgbtns">
   {{ HTML::link('dashboard/message/'.$inbox->from_user.'/'.$inbox->id.'/reply','Reply',array('class'=>'editbtn','style'=>''))}}
    {{ HTML::link('dashboard/message/'.$inbox->id.'/delete','Delete',array('class'=>'editbtn','style'=>''))}}
   </div> 
-   </div> 
+   
  
-  <hr class="" />
-    @endforeach
+  <hr style="clear:both;" />
+    
     
     
 </div>
+@endforeach
+</div>
+
+
 
 <hr class="userchathr" />
 
+
+</div>
 </div>
 </div>
 @stop

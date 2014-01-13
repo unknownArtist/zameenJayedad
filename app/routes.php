@@ -99,6 +99,7 @@ Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsea
 	Route::get('dashboard/ourteam',array('uses'=>'DashboardController@getOurteam'));
 	Route::get('dashboard/bahriaupdates',array('uses'=>'DashboardController@getBahriaupdates'));
 	Route::get('dashboard/faq',array('uses'=>'DashboardController@getFaq'));
+	Route::get('dashboard/contactus',array('uses'=>'DashboardController@getContactus'));
 	Route::get('dashboard/propertyfinder',array('uses'=>'DashboardController@getPropertyfinder'));
 	Route::get('dashboard/recentsale',array('uses'=>'DashboardController@getRecentsale'));
 	Route::get('dashboard/homefinder',array('uses'=>'DashboardController@getHomefinder'));

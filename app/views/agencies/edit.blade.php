@@ -12,10 +12,7 @@
  <p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
      <h2>User Details</h2>
-        <li>
-            {{ Form::label('agency_owner', 'Owner Name') }}
-            {{ Form::text('agency_owner',$records->agency_owner) }}
-        </li>
+      
 
 
         <li>

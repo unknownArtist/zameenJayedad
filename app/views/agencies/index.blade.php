@@ -46,14 +46,14 @@ tr:nth-child(even) {
         <tr class="odd gradeX">
         @foreach($record as $records)
            
-            <td>{{ $records->agency_owner}}</td>
-            <td>{{ $records->agency_name }}</td>
-           
+            <td> {{$records->getName($records->agent_id)}}</td>
+            <td>{{ $records->agency_name}}</td>
+         
             <td>
 
                 <div class="btn-group">
 
-                    <a href="{{URL::to('dashboard/agencies/view')}}" class="editbtn" alt="View">
+                    <a href="{{URL::to('dashboard/agencies/view/'.$records->agent_id)}}" class="editbtn" alt="View">
                         <i class="icon-remove"></i> view
                     </a>
                     &nbsp;

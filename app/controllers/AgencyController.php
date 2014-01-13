@@ -9,8 +9,10 @@ class AgencyController extends \BaseController {
 	 */
 	public function getAddNewuser()
 
-	{		 $staffs = AgencyName::all();	
-					$allTeamsMember = array();
+	{	
+
+		$staffs = AgentUser::all();	
+			$allTeamsMember = array();
 					foreach($staffs as $staff)
 					{
 
@@ -19,6 +21,7 @@ class AgencyController extends \BaseController {
 						
 							
 						}	
+						
 					return View::make('auth.addnewuser')
 					->with('countries', Config::get('listconfig.countries'))
 					->with('allTeamsMember',$allTeamsMember);
@@ -33,7 +36,8 @@ class AgencyController extends \BaseController {
 	         $Users = Sentry::getUserProvider()->create(array(
 	        'email'    => Input::get('email'),
 	        'password' => Input::get('password'),
-	        'activated'=> 1
+	        'activated'=> 1,
+	        'staff'=> 1,
 
 	        
 	        ));	
@@ -110,17 +114,28 @@ class AgencyController extends \BaseController {
 											'hot_quota' => Input::get('hot_quota')));
 
 
-			            return Redirect::to('dashboard/agencies/view')->with('success','successfully Added');        		
+			            return Redirect::to('dashboard/agencies')->with('success','successfully Added');        		
 	}
 
 
 
 
-	public function getIndex()
+	public function getIndex($id)
 	{
 		
-	$records = Agency::all();
-	$total= DB::table('Agencystaff')
+		$records = AgentUser::where('agent_id',$id)->get();
+		foreach($records as $record)
+					{
+
+							
+				$agency_id = $record->id;
+						
+							
+						}	
+
+
+	$records = Agency::where('agency_id',$agency_id)->get();
+	$total= DB::table('Agencystaff')->where('agency_id',$agency_id)
           			->count();
 		
 	return View::make('agencystaff.index')
@@ -137,8 +152,11 @@ class AgencyController extends \BaseController {
 
 	}
 	public function postEdit($id)
-	{
+	{	
+		$staff_id = Request::segment(5);
 		
+
+
 		$fields = array(
 			'email'=>Input::get('email'),
 		   'name' => Input::get('name'),
@@ -152,20 +170,36 @@ class AgencyController extends \BaseController {
 		   'hot_quota' => Input::get('hot_quota')
 		   );
 
-		  DB::table('Agencystaff')
-            ->where('id','=',$id)
+		  Agency::where('agency_id','=',$id)
             ->update($fields);
 
-		return Redirect::to('dashboard/agencies/view');
+            $fields1 = array(
+			'email'=>Input::get('email'),
+		   
+		   );
+            DB::table('users')
+            ->where('id','=',$staff_id)
+            ->update($fields1);
+            
+
+		return Redirect::to('dashboard/agencies');
 
 	}
 
 	public function getDelete($id)
 	{
+		$users = Agency::where('id','=',$id)->get();
+		foreach ($users as $user)
+			{
+				$user_id = $user->staff_id;
+
+			}
+		$userdelete = User::find($user_id);
+		$userdelete->delete();
 		$agencystaff = Agency::find($id);
 		$agencystaff->delete();
 
-		return Redirect::to('dashboard/agencies/view');
+		return Redirect::to('dashboard/agencies');
 
 
 	}

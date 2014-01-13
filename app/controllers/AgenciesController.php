@@ -10,9 +10,9 @@ class AgenciesController extends \BaseController {
 	
 	public function getIndex()
 	{
-	
-$records = AgencyName::all();
-	$total= DB::table('agencies')
+	$user_id = Sentry::getUser()->id;
+$records = AgentUser::where('agent_id','=',$user_id)->get();
+	$total= DB::table('agent')->where('agent_id','=',$user_id)
           			->count();
 		
 	return View::make('agencies.index')
@@ -40,7 +40,7 @@ $records = AgencyName::all();
 
 	       
 		        $rules = array(
-		            'agency_owner' => 'required',
+		            
 		            'agency_name'    => 'required'
 		      	 );
 		        $v = Validator::make($fields, $rules);
@@ -49,9 +49,8 @@ $records = AgencyName::all();
 			        	return Redirect::to('dashboard/agencies/addnew')->with('errors',$v);
 			        }
 			        	
-			 		 	$agency = new AgencyName ();
-			 		 	$agency->user_id	=Sentry::getUser()->id;
-			            $agency->agency_owner   = $fields['agency_owner'];
+			 		 	$agency = new AgentUser ();
+			 		 	$agency->agent_id	=Sentry::getUser()->id;
 			            $agency->agency_name     = $fields['agency_name'];
 			            $agency->save();
 			           
@@ -62,7 +61,7 @@ $records = AgencyName::all();
 
 	public function getEdit($id)
 	{
-		$records = AgencyName::where('id',$id)->get();
+		$records = AgentUser::where('id',$id)->get();
 
 	return View::make('agencies.edit')
 					->with('record',$records);
@@ -71,12 +70,13 @@ $records = AgencyName::all();
 	public function postEdit($id)
 	{
 
+		
 	$fields = array(
-			'agency_owner'=>Input::get('agency_owner'),
+			
 		   'agency_name' => Input::get('agency_name')
 		    );
 
-		  DB::table('agencies')
+		  DB::table('agent')
             ->where('id','=',$id)
             ->update($fields);
 		
@@ -85,7 +85,7 @@ $records = AgencyName::all();
 
 	public function getDelete($id)
 	{
-	$agencystaff = AgencyName::find($id);
+	$agencystaff = AgentUser::find($id);
 		$agencystaff->delete();
 		return Redirect::to('dashboard/agencies');
 	}

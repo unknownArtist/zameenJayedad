@@ -31,6 +31,8 @@ class AuthController extends BaseController {
 	        'last_name' => Input::get('last_name')
 	        
 	        ));	
+	         
+
 	     	 
 		}
 
@@ -57,6 +59,34 @@ class AuthController extends BaseController {
 			 $this->sendTo('registation@zameenjayedad.com.pk',array('activationCode'=>$URL));
 			    	
 			    	}
+
+			$agency_id = DB::table('agent')->insertGetId(
+			array('agent_id' =>$user->id,
+			    	 'city' => Input::get('cities'),
+			    	 'agency_name' => Input::get('agency'),
+			    	 'description' => Input::get('services'),
+			    	 'company_phone' => Input::get('company_phone'),
+			    	 'company_mobile' => Input::get('company_mobile'),
+			    	 'company_fax' => Input::get('company_fax'),
+			    	 'company_address' => Input::get('company_address'),
+			    	 'company_email' => Input::get('company_email')
+			    	 )
+			);
+			
+			$fields = array(
+ 			'staff_id'	 =>	$Users->id,
+ 			'agency_id'  => $agency_id,
+ 			'email'      => Input::get('email'),
+ 			'name'       => Input::get('name'),
+ 			'phone'      =>  Input::get('phone'),
+ 			'cell'       => Input::get('cell'),
+ 			'fax'		=> Input::get('fax'),
+ 			'address'   =>  Input::get('address'),
+ 			'zip'      =>  Input::get('zip'),
+ 			'country' => Input::get('country'),
+ 				);
+
+ 		DB::table('agencystaff')->insert($fields);
 
 			}
 			else
@@ -147,22 +177,7 @@ class AuthController extends BaseController {
             $members->fax = $fields['fax'];
             $members->name = $fields['name'];
             $members->save();
-            if($agent == 1)
-            {
             
-            DB::table('agent')->insert(
-			array('agent_id' => $fields['user_id'], 
-			    	 'city' => $fields['city'], 
-			    	 'agency_name' => $fields['city'],
-			    	 'description' => $fields['description'],
-			    	 'company_phone' => $fields['company_phone'],
-			    	 'company_mobile' => $fields['company_mobile'],
-			    	 'company_fax' => $fields['company_fax'],
-			    	 'company_address' => $fields['company_address'],
-			    	 'company_email' => $fields['company_email'],
-			    	 )
-			);
-        }
 
        return Redirect::to('login')->with('errors','please check your mail for activation');
 
@@ -455,9 +470,9 @@ public function getProfile()
 	public function postProfile()
 
 	{
+
 		$fields = array(
-			
-		   'name' => Input::get('name'),
+			'name' => Input::get('name'),
 		   'phone' => Input::get('phone'),
 		   'cell' => Input::get('cell'),
 		   'fax' => Input::get('fax'),
@@ -466,8 +481,10 @@ public function getProfile()
 		   'country' => Input::get('country')
 		   );
 
+		$id = Sentry::getUser()->id;
+
 		  DB::table('registration')
-            ->where('id','=',Sentry::getUser()->id)
+            ->where('user_id','=',$id)
             ->update($fields);
          $fieldsname = array(
             	       'email' => Input::get('email')
@@ -475,7 +492,7 @@ public function getProfile()
             DB::table('users')
             ->where('id','=',Sentry::getUser()->id)
             ->update($fieldsname);
-            return Redirect::to('profile');
+            return Redirect::to('viewprofile');
 	}
 
 	public function getlisting()

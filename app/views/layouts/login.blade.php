@@ -149,8 +149,59 @@ $j(function() {
     <?php 
 
         $group= Sentry::getUser()->group;
+        $staff = Sentry::getUser()->staff;
 
     ?>
+    @if($staff == 1)
+
+   <div id="wrapperheader">
+    <div id="sea">  
+      <!--<h2>Search Listing</h2>
+      {{ Form::text('search','',array('class'=>'span6','placeholder'=>'search by city')) }}
+      
+       {{ Form::submit('Search', array('class' => 'button')) }}-->
+
+       <div id='cssmenu'>
+       <ul>
+       <li id="li_home"><a href="{{URL::to('dashboard')}}">Dashboard</a></li>
+     
+       <li id="li_profile"><a href="{{URL::to('viewprofile')}}">My Account</a>
+        <ul class="innermenu" style="">
+         <li id="li_changepass"><a href="{{URL::to('profile')}}">Edit Profile</a></li>
+        <li id="li_changepass"><a href="{{URL::to('changepass')}}">Change Password</a></li>        
+        </ul>
+        </li>
+       
+       <li id="li_message"><a href="{{URL::to('dashboard/messages')}}">Message Center</a></li>
+       
+       </ul>
+       </div>
+     
+    </div>
+    </div>
+  
+    <div class="searchlist">
+     {{ Form::open(array('url' => 'dashboard/search','search')) }}
+   
+   
+    
+       <!-- <h2>Search Listing</h2>-->
+        {{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'City, Property-type...', 'onfocus'=>'this.placeholder = ""', 'onBlur'=>'this.placeholder = "City, Property-type..."')) }}
+        
+       {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn')) }}
+
+   
+    {{ Form::close() }}
+
+    {{ Form::open(array('url'=>'dashboard/searchmap'))}}
+            {{ Form::hidden('query','',array('id'=>'mapbtn','style'=>'background:#666; color:#fff;'))}}
+            {{ Form::submit('Map',array('class' => 'button','id'=>'searchbtnasd'))}}
+        {{ Form::close() }}
+   
+      </div>
+      @endif
+
+
     @if($group == 1)
 
    <div id="wrapperheader">
@@ -199,7 +250,8 @@ $j(function() {
         {{ Form::close() }}
    
     	</div>
-      @else
+      @endif
+      @if($group == 0 & $staff == 0)
         <div id="wrapperheader">
     <div id="sealog"> 
       {{ Form::open(array('url' => 'dashboard/search')) }}
@@ -422,7 +474,7 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
                    
                     <li class="sectorshow"> <a class="example-image-link" href="/assets/images/safari valley.jpg" data-lightbox="example-set3" title="Bahria 8 Safari Valley"></a></li>
         </div>
-        <li><a href="{{URL::to('dashboard/projectupdates')}}">Property Updates</a></li>
+        <li><a href="{{URL::to('dashboard/projectupdates')}}">Project Updates</a></li>
         <li><a href="{{URL::to('dashboard/featuredlistings')}}">Featured Listings</a></li>
         <li><a href="{{URL::to('dashboard/contactus')}}">Contact Zameen Jayedad</a></li>
         <li><a href="{{URL::to('dashboard/ourteam')}}">The Team</a></li>

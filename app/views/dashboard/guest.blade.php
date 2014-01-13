@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    <p class="erorclas" style="position:relative; top:166px; right:163px;">{{ Session::get('error') }}</p>
+    <p class="erorclas" style="width:390px; float:right; margin-top:-43px;">{{ Session::get('error') }}</p>
     <!--search ends-->
     <div id="wrapper">
     <div id="content">
@@ -232,7 +232,7 @@ designer cabinetry. Add to this, the Villa is fully air conditioned for your con
 Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Sector-P</a></li>
                    </ul>
                     </li>
-                    <li class="sectorshow"> <a class="example-image-link" href="/assets/images/safari valley.jpg" data-lightbox="example-set" title="Bahria 8 Safari Valley">Phase 8 Safari Valley</a>
+                    <li class="sectorshow"> <a class="example-image-link" href="/assets/images/safari valley.jpg" data-lightbox="example-set" title="Safari Valley Bahria 8">Safari Valley Phase 8</a>
                     
                     <ul class="sectors" style="width:167px;">
                 
@@ -242,11 +242,11 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
                    <li><a class="example-image-link" href="" data-lightbox="example-set" title="">Ali Block</a></li>
                     </ul>
                     </li>
-                    <li> <a class="example-image-link" href="" data-lightbox="example-set" title="">Rafi Block</a></li>
-                    <li> <a class="example-image-link" href="" data-lightbox="example-set" title="">Khalid Block</a></li>
+                    <li> <a class="example-image-link" href="" data-lightbox="example-set" title="Rafi Block Phase 8">Rafi Block Phase 8</a></li>
+                    <li> <a class="example-image-link" href="" data-lightbox="example-set" title="Khalid Block Phase 8">Khalid Block Phase 8</a></li>
                     <li> <a class="example-image-link" href="/assets/images/Bahria_Overseas_Enclave_Islamabad.jpg" data-lightbox="example-set" title="Bahria Overseas Enclave Islamabad">Bahria Overseas Enclave Islamabad</a></li>
-                     <li> <a class="example-image-link" href="" data-lightbox="example-set" title="">DHA 1</a></li>
-                     <li> <a class="example-image-link" href="" data-lightbox="example-set" title="">DHA 2</a></li>
+                     <li> <a class="example-image-link" href="" data-lightbox="example-set" title="DHA 1">DHA 1</a></li>
+                     <li> <a class="example-image-link" href="" data-lightbox="example-set" title="DHA 2">DHA 2</a></li>
                 
                 <!--<li><a href="#">DHA 1</a></li>
                  <li><a href="#">DHA 2</a></li>-->

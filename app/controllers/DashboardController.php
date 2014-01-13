@@ -81,6 +81,31 @@ class DashboardController extends BaseController {
 		return View::make('dashboard.faq');	
 	}
 	
+	public function getCareers()
+	{
+		return View::make('dashboard.careers');	
+	}
+	
+	public function getHomeevaluation()
+	{
+		return View::make('dashboard.homeevaluation');	
+	}
+	
+	public function getHomefinder()
+	{
+		return View::make('dashboard.homefinder');	
+	}
+	
+	public function getRecentsale()
+	{
+		return View::make('dashboard.recentsale');	
+	}
+	
+	public function getPropertyfinder()
+	{
+		return View::make('dashboard.propertyfinder');	
+	}
+	
 	public function getChooseus()
 	{
 		return View::make('dashboard.chooseus');	

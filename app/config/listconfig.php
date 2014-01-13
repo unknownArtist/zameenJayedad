@@ -464,6 +464,7 @@ return array(
                        'Daily'=>'Daily',
                         'Weekly'=>'Weekly',
                         'Monthly'=>'Monthly',
+                        'ASAP'  =>'ASAP',
                 ),
         'price' => array(
                         'Please select'=>'Please select',

@@ -103,6 +103,7 @@ Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsea
 	Route::get('dashboard/alert/test',array('uses'=>'EmailController@getTestAlert'));
 	Route::get('dashboard/alert/weekly',array('uses'=>'EmailController@getWeekly'));
 	Route::get('dashboard/alert/monthly',array('uses'=>'EmailController@getMonthly'));
+	Route::get('dashboard/alert/asap',array('uses'=>'EmailController@getAsap'));
 	Route::get('user/logout',function(){
 
 		Sentry::logout();

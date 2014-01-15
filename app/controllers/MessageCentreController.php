@@ -44,13 +44,16 @@ class MessageCentreController extends BaseController {
 		 foreach ($agencies_id as $agency_id)
 		 	{
 		 		$my_agencyid= $agency_id->agency_id;
+		 		$owner_id= $agency_id->owner_id;
+
 		 		
 		 	}
-		 	$profiles = Agency::where('agency_id','=',$my_agencyid)->get();
+		 	
+		 	// $profiles = Agency::where('agency_id','=',$my_agencyid)->get();
 
-		 // $profiles = DB::table('agent')->where('agent_id',$user_id)
-		 // 					  ->join('agencystaff','agent.agent_id','=','agencystaff.chat_id')
-		 // 					  ->get();
+		 $profiles = DB::table('agent')->where('agent_id',$owner_id)
+		 					  ->join('agencystaff','agent.agent_id','=','agencystaff.owner_id')
+		 					  ->get();
 
 		$allTeamsMember = array();
 		foreach($profiles as $profile)

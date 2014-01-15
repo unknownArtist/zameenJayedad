@@ -23,11 +23,79 @@ class SearchController extends \BaseController {
 					->with('name',$q)
 					->with('record',$records);
         }
-       
-           
-	
+ public function getBahriatownPhase1()
+	{	
+        $q ='Bahria town Phase 1';
 
+	$records = Profolio::where('location', 'LIKE', '%'.$q.'%')
+					   ->get();
+	return View::make('dashboard.search')
+					->with('name',$q)
+					->with('record',$records);
+        }
+       
+   public function getBahriatownPhase2()
+	{	
+        $q ='Bahria town Phase 2';
+
+	$records = Profolio::where('location', 'LIKE', '%'.$q.'%')
+					   ->get();
+	return View::make('dashboard.search')
+					->with('name',$q)
+					->with('record',$records);
+        }         
 	
+public function getBahriatownPhase3()
+	{	
+        $q ='Bahria town Phase 3';
+
+	$records = Profolio::where('location', 'LIKE', '%'.$q.'%')
+					   ->get();
+	return View::make('dashboard.search')
+					->with('name',$q)
+					->with('record',$records);
+        }         
+	public function getBahriatownPhase4()
+	{	
+        $q ='Bahria town Phase 4';
+
+	$records = Profolio::where('location', 'LIKE', '%'.$q.'%')
+					   ->get();
+	return View::make('dashboard.search')
+					->with('name',$q)
+					->with('record',$records);
+        } 
+        public function getBahriatownPhase5()
+	{	
+        $q ='Bahria town Phase 5';
+
+	$records = Profolio::where('location', 'LIKE', '%'.$q.'%')
+					   ->get();
+	return View::make('dashboard.search')
+					->with('name',$q)
+					->with('record',$records);
+        }    
+        public function getBahriatownPhase6()
+	{	
+        $q ='Bahria town Phase 6';
+
+	$records = Profolio::where('location', 'LIKE', '%'.$q.'%')
+					   ->get();
+	return View::make('dashboard.search')
+					->with('name',$q)
+					->with('record',$records);
+        }
+        public function getBahriatownPhase7()
+	{	
+        $q ='Bahria town Phase 7';
+
+	$records = Profolio::where('location', 'LIKE', '%'.$q.'%')
+					   ->get();
+	return View::make('dashboard.search')
+					->with('name',$q)
+					->with('record',$records);
+        }  
+       
 	public function postGuestsearch()
 	{	
            

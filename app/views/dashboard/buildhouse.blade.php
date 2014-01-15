@@ -13,7 +13,7 @@
 <p>Complete this form to find out the best quote to build your house.</p>
  
 </div>
-{{ Form::open(array('url' => 'user/register')) }}
+{{ Form::open(array('url' => 'dashboard/buildhouse')) }}
 
  <p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>

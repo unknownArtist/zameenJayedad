@@ -21,7 +21,7 @@
  <p>We understand that you may be in the information gathering stage. If you are not comfortable providing all your contact information just enter your email address and we will send you the material you requested.</p>
  </div>
 <div id="form-wrapper">
-{{ Form::open(array('url' => 'user/register')) }}
+{{ Form::open(array('url' => 'dashboard/homefinder')) }}
 
  <p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
@@ -57,13 +57,13 @@ Calls may be recorded for quality control.</p>
          <li>
             {{ Form::label('mortage', 'Are you pre-qualified for a mortgage?', array('style'=>'padding-top:0;')) }}
              <div class="radiobtn2">
-             {{ Form::radio('deadline') }}
+             {{ Form::radio('deadline1') }}
             {{ Form::label('Yes', '', array('class'=>'')) }}
            
             </div>
              <div class="radiobtn2">
             
-            {{ Form::radio('deadline') }}
+            {{ Form::radio('deadline1') }}
             {{ Form::label('No', '', array('class'=>'')) }}
             </div>
         </li>
@@ -77,7 +77,7 @@ Calls may be recorded for quality control.</p>
             </div>
              <div class="radiobtn2">
             
-            {{ Form::radio('deadline') }}
+            {{ Form::radio('deadline1') }}
             {{ Form::label('No', '', array('class'=>'')) }}
             </div>
         </li>
@@ -90,7 +90,7 @@ Calls may be recorded for quality control.</p>
         
          <li>
             {{ Form::label('home_type', 'Home Type') }}
-            {{ Form::select('home_type' )}}
+            {{ Form::select('home_type',$Type_of_Homes)}}
         </li>
         
          <li>

@@ -13,7 +13,7 @@
 
 <div id="form-wrapper">
 
-{{ Form::open(array('url' => 'user/register')) }}
+{{ Form::open(array('url' => 'dashboard/propertyfinder')) }}
 
  <p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>

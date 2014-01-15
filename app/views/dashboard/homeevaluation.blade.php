@@ -13,7 +13,7 @@
 <p>For your property evaluation, complete the form below.</p>
 </div>
 <div id="form-wrapper">
-{{ Form::open(array('url' => 'user/register')) }}
+{{ Form::open(array('url' => 'dashboard/homeevaluation')) }}
 
  <p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>
@@ -67,7 +67,7 @@ Calls may be recorded for quality control.</p>
         
          <li>
             {{ Form::label('home_type', 'Home Type') }}
-            {{ Form::select('home_type' )}}
+            {{ Form::select('home_type', $Type_of_Homes)}}
         </li>
         
         <li>

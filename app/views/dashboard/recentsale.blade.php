@@ -12,7 +12,7 @@
 <p></p>
  <p>Complete this form to find out how much properties in your desired area are selling for. </p>
 </div>
-{{ Form::open(array('url' => 'user/register')) }}
+{{ Form::open(array('url' => 'dashboard/recentsale')) }}
 
  <p class="erorclas"> {{ Session::get('errors') }}</p>
     <ul>

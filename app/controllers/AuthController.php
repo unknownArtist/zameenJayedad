@@ -75,6 +75,7 @@ class AuthController extends BaseController {
 			
 			$fields = array(
  			'staff_id'	 =>	$Users->id,
+ 			'owner_id'   => $Users->id,
  			'agency_id'  => $agency_id,
  			'email'      => Input::get('email'),
  			'name'       => Input::get('name'),

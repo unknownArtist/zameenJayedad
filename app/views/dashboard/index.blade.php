@@ -39,65 +39,16 @@
        		  @endforeach
               
              
-           	
+           <li>	<a href="{{URL::to('dashboard/BahriatownPhase1')}}">Bahria town Phase 1</a></li>
                 
-              <li><a class="example-image-link" href="/assets/images/bahria phase 1.jpg" data-lightbox="example-set" title="Being the earliest projects, Phases 1-7 have benefited from all the following developments of
-Bahria Town. With every new idea in landscaping, every new monument design and creation of 
-possibilities with the import of most modern machinery, Phases 1-7 have been value added with 
-awe-inspiring landscaped islands, pagodas, village scenes and thoughtful monuments.
-Phases 1-7 offer the most lucrative transaction benefits due to the increased momentum
-in house building and private construction activities....
+             
+                <li>  <a href="{{URL::to('dashboard/BahriatownPhase2')}}">Bahria town Phase 2</a></li>
+                <li>  <a href="{{URL::to('dashboard/BahriatownPhase3')}}">Bahria town Phase 3</a></li>
+                 <li>  <a href="{{URL::to('dashboard/BahriatownPhase4')}}">Bahria town Phase 4</a></li>
+                  <li>  <a href="{{URL::to('dashboard/BahriatownPhase5')}}">Bahria town Phase 5</a></li>
+                   <li>  <a href="{{URL::to('dashboard/BahriatownPhase6')}}">Bahria town Phase 6</a></li>
 
-Plot Price '10 Marla 55 Lac'. '20 Marla 95 Lac'">Bahria town Phase 1</a></li>
-               <li><a class="example-image-link" href="/assets/images/Phase_2.jpg" data-lightbox="example-set" title="Being the earliest projects, Phases 1-7 have benefited from all the following developments of
-Bahria Town. With every new idea in landscaping, every new monument design and creation of 
-possibilities with the import of most modern machinery, Phases 1-7 have been value added with 
-awe-inspiring landscaped islands, pagodas, village scenes and thoughtful monuments.
-Phases 1-7 offer the most lucrative transaction benefits due to the increased momentum
-in house building and private construction activities....
-
-Plot Price '10 Marla 55 Lac'. '20 Marla 95 Lac'">Bahria town Phase 2</a></li>
-                <li><a class="example-image-link" href="/assets/images/Phase_3.jpg" data-lightbox="example-set" title="Being the earliest projects, Phases 1-7 have benefited from all the following developments of
-Bahria Town. With every new idea in landscaping, every new monument design and creation of 
-possibilities with the import of most modern machinery, Phases 1-7 have been value added with 
-awe-inspiring landscaped islands, pagodas, village scenes and thoughtful monuments.
-Phases 1-7 offer the most lucrative transaction benefits due to the increased momentum
-in house building and private construction activities....
-
-Plot Price '10 Marla 55 Lac'. '20 Marla 95 Lac'">Bahria town Phase 3</a></li>
-                 <li><a class="example-image-link" href="/assets/images/Phase_4.jpg" data-lightbox="example-set" title="Being the earliest projects, Phases 1-7 have benefited from all the following developments of
-Bahria Town. With every new idea in landscaping, every new monument design and creation of 
-possibilities with the import of most modern machinery, Phases 1-7 have been value added with 
-awe-inspiring landscaped islands, pagodas, village scenes and thoughtful monuments.
-Phases 1-7 offer the most lucrative transaction benefits due to the increased momentum
-in house building and private construction activities....
-
-Plot Price '10 Marla 55 Lac'. '20 Marla 95 Lac'">Bahria town Phase 4</a></li>
-                  <li><a class="example-image-link" href="/assets/images/Phase_5.jpg" data-lightbox="example-set" title="Being the earliest projects, Phases 1-7 have benefited from all the following developments of
-Bahria Town. With every new idea in landscaping, every new monument design and creation of 
-possibilities with the import of most modern machinery, Phases 1-7 have been value added with 
-awe-inspiring landscaped islands, pagodas, village scenes and thoughtful monuments.
-Phases 1-7 offer the most lucrative transaction benefits due to the increased momentum
-in house building and private construction activities....
-
-Plot Price '10 Marla 55 Lac'. '20 Marla 95 Lac'">Bahria town Phase 5</a></li>
-                   <li><a class="example-image-link" href="/assets/images/Phase_6.jpg" data-lightbox="example-set" title="Being the earliest projects, Phases 1-7 have benefited from all the following developments of
-Bahria Town. With every new idea in landscaping, every new monument design and creation of 
-possibilities with the import of most modern machinery, Phases 1-7 have been value added with 
-awe-inspiring landscaped islands, pagodas, village scenes and thoughtful monuments.
-Phases 1-7 offer the most lucrative transaction benefits due to the increased momentum
-in house building and private construction activities....
-
-Plot Price '10 Marla 55 Lac'. '20 Marla 95 Lac'">Bahria town Phase 6</a></li>
-
-<li><a class="example-image-link" href="/assets/images/Phase_7.jpg" data-lightbox="example-set" title="Being the earliest projects, Phases 1-7 have benefited from all the following developments of
-Bahria Town. With every new idea in landscaping, every new monument design and creation of 
-possibilities with the import of most modern machinery, Phases 1-7 have been value added with 
-awe-inspiring landscaped islands, pagodas, village scenes and thoughtful monuments.
-Phases 1-7 offer the most lucrative transaction benefits due to the increased momentum
-in house building and private construction activities....
-
-Plot Price '10 Marla 55 Lac'. '20 Marla 95 Lac'">Bahria town Phase 7</a></li>
+              <li>  <a href="{{URL::to('dashboard/BahriatownPhase7')}}">Bahria town Phase 7</a></li>
                    
        	</ul>   
         

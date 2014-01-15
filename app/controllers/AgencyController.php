@@ -17,18 +17,22 @@ class AgencyController extends \BaseController {
 					{
 
 							
-					$allTeamsMember[$staff->id] = $staff->agency_name;
-						
+					$allTeamsMember[$staff->id]= $staff->agency_name;
+
+						$owner[$staff->agent_id] = $staff->agency_name;
 							
 						}	
 						
+
+
 					return View::make('auth.addnewuser')
 					->with('countries', Config::get('listconfig.countries'))
 					->with('allTeamsMember',$allTeamsMember);
 	}	
 		public function postAddnewUser()
 
-	{	
+	{	 
+
 		
 
 		try
@@ -97,11 +101,22 @@ class AgencyController extends \BaseController {
 			        {
 			        	return Redirect::to('addnewuser')->with('errors',$v);
 			        }
+			        $agency_id = Input::get('agency_name');
+			   $ownerids =AgentUser::where('id','=',$agency_id)->get();
+			    foreach ($ownerids as $ownerid)
+		 	   {
+		 		
+		 	   	$owner_id= $ownerid->agent_id;
 
-			       
+		 		
+		 	}
+		 	
+
+
 					 DB::table('Agencystaff')->insertGetId(array(
 					 						'agency_id' =>Input::get('agency_name'),
 											'staff_id'  =>$staff_id,
+											'owner_id'	=>$owner_id,
 											'email'     => Input::get('email'),
 											'name'		=> Input::get('name'),
 											'phone'     =>  Input::get('phone'),

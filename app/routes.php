@@ -52,7 +52,14 @@ Route::post('dashboard/search/map',array('uses'=>'SearchController@Postmap'));
 Route::post('dashboard/searchmap',array('uses'=>'SearchController@Postsearchmap'));
 Route::post('dashboard/search',array('uses'=>'SearchController@postIndex'));
 Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsearch'));
-
+Route::get('dashboard/BahriatownPhase1',array('uses'=>'SearchController@getBahriatownPhase1'));
+Route::get('dashboard/BahriatownPhase2',array('uses'=>'SearchController@getBahriatownPhase2'));
+Route::get('dashboard/BahriatownPhase3',array('uses'=>'SearchController@getBahriatownPhase3'));
+Route::get('dashboard/BahriatownPhase4',array('uses'=>'SearchController@getBahriatownPhase4'));
+Route::get('dashboard/BahriatownPhase5',array('uses'=>'SearchController@getBahriatownPhase5'));
+Route::get('dashboard/BahriatownPhase6',array('uses'=>'SearchController@getBahriatownPhase6'));
+Route::get('dashboard/BahriatownPhase5',array('uses'=>'SearchController@getBahriatownPhase7'));
+Route::get('dashboard/BahriatownPhase6',array('uses'=>'SearchController@getBahriatownPhase8'));
 /*------------------End of Search routes-----------------------------*/
 
 /*------------------Email alerts routes-----------------------------*/
@@ -104,13 +111,19 @@ Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsea
 	Route::get('dashboard/featuredlisting',array('uses'=>'DashboardController@getFeaturedlisting'));
 	Route::get('dashboard/buyinghome',array('uses'=>'DashboardController@getBuyinghome'));
 	Route::get('dashboard/projectupdates',array('uses'=>'DashboardController@getProjectupdates'));
+	Route::post('dashboard/buildhouse',array('uses'=>'DashboardController@postBuildhouse'));
 	Route::get('dashboard/buildhouse',array('uses'=>'DashboardController@getBuildhouse'));
+	Route::post('dashboard/designing',array('uses'=>'DashboardController@postDesigning'));
 	Route::get('dashboard/designing',array('uses'=>'DashboardController@getDesigning'));
 	Route::get('dashboard/customerservices',array('uses'=>'DashboardController@getCustomerservices'));
 	Route::get('dashboard/contactus',array('uses'=>'DashboardController@getContactus'));
+	Route::post('dashboard/propertyfinder',array('uses'=>'DashboardController@postPropertyfinder'));
 	Route::get('dashboard/propertyfinder',array('uses'=>'DashboardController@getPropertyfinder'));
+	Route::post('dashboard/recentsale',array('uses'=>'DashboardController@postRecentsale'));
 	Route::get('dashboard/recentsale',array('uses'=>'DashboardController@getRecentsale'));
+	Route::post('dashboard/homefinder',array('uses'=>'DashboardController@postHomefinder'));
 	Route::get('dashboard/homefinder',array('uses'=>'DashboardController@getHomefinder'));
+	Route::post('dashboard/homeevaluation',array('uses'=>'DashboardController@postHomeevaluation'));
 	Route::get('dashboard/homeevaluation',array('uses'=>'DashboardController@getHomeevaluation'));
 	Route::get('dashboard/careers',array('uses'=>'DashboardController@getCareers'));
 	Route::get('dashboard/newdevelopments',array('uses'=>'DashboardController@getNewdevelopments'));

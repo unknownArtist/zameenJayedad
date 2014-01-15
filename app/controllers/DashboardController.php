@@ -156,6 +156,16 @@ class DashboardController extends BaseController {
 		->with('users', $users);
 	}
 	
+	public function getFeaturedlisting()
+	{
+		$users = DB::table('property')
+                    ->orderBy('id', 'desc')
+                    ->take(10)
+          			->get();
+		return View::make('dashboard.featuredlisting')
+		->with('users', $users);
+	}
+	
 	public function getNewdevelopments()
 	{
 		return View::make('dashboard.newdevelopments');	

@@ -101,6 +101,7 @@ Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsea
 	Route::get('dashboard/sellinghome',array('uses'=>'DashboardController@getSellinghome'));
 	Route::get('dashboard/faq',array('uses'=>'DashboardController@getFaq'));
 	Route::get('dashboard/featuredlistings',array('uses'=>'DashboardController@getFeaturedlistings'));
+	Route::get('dashboard/featuredlisting',array('uses'=>'DashboardController@getFeaturedlisting'));
 	Route::get('dashboard/buyinghome',array('uses'=>'DashboardController@getBuyinghome'));
 	Route::get('dashboard/projectupdates',array('uses'=>'DashboardController@getProjectupdates'));
 	Route::get('dashboard/buildhouse',array('uses'=>'DashboardController@getBuildhouse'));

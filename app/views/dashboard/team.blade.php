@@ -72,8 +72,12 @@ Realtor he is specilized in Plots Safari Valley including Abu Baker, Usman, Ali 
     
      <div style="clear:both;">
  <h3 style="padding-top:35px;">Khawaja Usman</h3>
-                <img src="//styles.anu.edu.au/_anu/4/images/placeholders/person.png" width="112" height="144"  />
-                <p></p>
+                <img src="/assets/images/Khawaja Usman.jpg" width="112" height="144"  />
+                <p>Khawaja Usman was born in 3/3/1988 he joined Khawaja & Sons Real Estate and Builders in
+Jan 2009 as an assistant realtor. He has sold over 100 properties of Bahira town. After
+getting a great experience now he is working as a realtor with Khawaja & Son's. He is 
+expert in Residential and commercial plotting.
+</p>
     </div>   
                 
                 <h2 style="clear:both; padding-top:40px;">ZAMEEN JAYEDAD PROFESSIONAL ENGINEERS:</h2>
@@ -81,24 +85,26 @@ Realtor he is specilized in Plots Safari Valley including Abu Baker, Usman, Ali 
                  <div style="clear:both;">
  <h3 style="">Nasir Saeed</h3>
                 <img src="/assets/images/Nasir.jpg" width="112" height="144"  />
-                <p></p>
+                <p>Mr. Saeed has joined Khawaja & Sons Real Estate and Builders from Dec 01 2013 he taking care of complete management including
+                 Marketing, Constructions and towns before joining Khawaja & Sons he was working with a Company name Legal Affairs as a Deputy
+                  General Manager.</p>
     </div>
     
      <div style="clear:both;">
  <h3 style="padding-top:35px;">Nasarullah Khan</h3>
-                <img src="//styles.anu.edu.au/_anu/4/images/placeholders/person.png" width="112" height="144"  />
+                <img src="/assets/images/Nasarullah-Khan.jpg" width="112" height="144"  />
                 <p></p>
     </div>
     
      <div style="clear:both;">
  <h3 style="padding-top:35px;">Saqib Qureshi</h3>
-                <img src="//styles.anu.edu.au/_anu/4/images/placeholders/person.png" width="112" height="144"  />
+                <img src="/assets/images/Saqib Qureshi.jpg" width="112" height="144"  />
                 <p></p>
     </div>
     
      <div style="clear:both;">
  <h3 style="padding-top:35px;">Hammid Hamdani</h3>
-                <img src="//styles.anu.edu.au/_anu/4/images/placeholders/person.png" width="112" height="144"  />
+                <img src="/assets/images/Hammid Hamdani.jpg" width="112" height="144"  />
                 <p></p>
     </div>
                 
@@ -119,7 +125,7 @@ Realtor he is specilized in Plots Safari Valley including Abu Baker, Usman, Ali 
     
     <div style="clear:both;">
  <h3 style="padding-top:35px;">Muhammad Zubair</h3>
-                <img src="//styles.anu.edu.au/_anu/4/images/placeholders/person.png" width="112" height="144"  />
+                <img src="/assets/images/Muhammad Zubair.jpg" width="112" height="144"  />
                 <p>He has been working with Khawaja & Sons since March 2009 he is managing
 Zameen Jayedad Account as well he is the head of the Finance Department.</p>
     </div>

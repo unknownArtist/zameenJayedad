@@ -9,16 +9,36 @@
          <div id="sliderFrame">
         <div id="slider">
             <a href="{{URL::to('dashboard/featuredlisting')}}">
-                <img src="assets/images/slide1.png" alt="Welcome to Zameen Jayedad" />
+                <img src="assets/images/slide-1.png" alt="Welcome to Zameen Jayedad" />
             </a>
 
             <a href="{{URL::to('dashboard/featuredlisting')}}">
-                <img src="assets/images/slide2.png" alt="Welcome to Zameen Jayedad" />
+                <img src="assets/images/slide-2.png" alt="Welcome to Zameen Jayedad" />
             </a>
             
              <a href="{{URL::to('dashboard/featuredlisting')}}">
-                <img src="assets/images/slide3.png" alt="Welcome to Zameen Jayedad" />
+                <img src="assets/images/slide-3.png" alt="Welcome to Zameen Jayedad" />
             </a>
+             <a href="{{URL::to('dashboard/featuredlisting')}}">
+                <img src="assets/images/slide-4.png" alt="Welcome to Zameen Jayedad" />
+            </a>
+
+            <a href="{{URL::to('dashboard/featuredlisting')}}">
+                <img src="assets/images/slide-5.png" alt="Welcome to Zameen Jayedad" />
+            </a>
+            
+             <a href="{{URL::to('dashboard/featuredlisting')}}">
+                <img src="assets/images/slide-6.png" alt="Welcome to Zameen Jayedad" />
+            </a>
+             <a href="{{URL::to('dashboard/featuredlisting')}}">
+                <img src="assets/images/slide-7.png" alt="Welcome to Zameen Jayedad" />
+            </a>
+
+            <a href="{{URL::to('dashboard/featuredlisting')}}">
+                <img src="assets/images/slide-8.png" alt="Welcome to Zameen Jayedad" />
+            </a>
+            
+             
         </div>
     </div>
        
@@ -58,7 +78,7 @@
        		  @endforeach
               
              
-               <li class="sectorshow"><a>Bahria Town Phase 8</a>
+               <li class="sectorshow"><a>Bahria Town Phase 8 (Sectors)</a>
                 <ul class="sectors">
                 
                 <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_A.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
@@ -184,6 +204,142 @@ designer cabinetry. Add to this, the Villa is fully air conditioned for your con
 Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Sector-P</a></li>
                    </ul>
                     </li>
+                    
+                    <li class="sectorshow"><a>Bahria Town Phase 8 (Blocks)</a>
+                <ul class="sectors">
+                
+                <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_A.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-A</a></li>
+               
+                <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_B.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-B</a></li>
+                <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_C.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-C</a></li>
+                 <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_D.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-D</a></li>
+                  <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_E.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-E</a></li>
+                   <li><a class="example-image-link" href="/assets/images/Phase_8_Sector_F.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-F</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_G.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-G</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_H.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-H</a></li>
+                  <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_I.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-I</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_J.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-J</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_K.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-K</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_L.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-L</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_M.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-M</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_N.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-N</a></li>
+<li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_P.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-O</a></li>
+                   <li> <a class="example-image-link" href="/assets/images/Phase_8_Sector_P.jpg" data-lightbox="example-set" title="Bahria Town, offer a totally unique chance to own an impressive luxurious residence at a few 
+minutes' drive from GT Road Rawalpindi and located besides DHA Phase III. Bahria Homes
+are available in two different sizes of 5 and 8 Marla to suit the requirements of both small and 
+large families. They are especially designed on grid frame structure which makes them seismic
+proof. The villa is lavishly furnished with ceramic tiles, imported fixtures and fitted kitchen with 
+designer cabinetry. Add to this, the Villa is fully air conditioned for your convenience.....
+
+Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single story Price 60 Lakh'">Block-P</a></li>
+                   </ul>
+                    </li>
+                    
                     <li class="sectorshow"> <a class="example-image-link" href="/assets/images/safari valley.jpg" data-lightbox="example-set" title="Bahria 8 Safari Valley">Phase 8 Safari Valley</a>
                     
                     <ul class="sectors" style="width:167px;">

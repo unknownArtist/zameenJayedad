@@ -378,13 +378,15 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
 	</script>
     
     <!-- mibew button -->
-   <!-- <a href="/public/support/client.php?locale=en" target="_blank" onClick="if(navigator.userAgent.toLowerCase().indexOf('opera') != -1 &amp;&amp;
+  <!-- <a href="/public/support/client.php?locale=en" style="position:fixed; bottom:0;" target="_blank" onClick="if(navigator.userAgent.toLowerCase().indexOf('opera') != -1 &amp;&amp;
      window.event.preventDefault) window.event.preventDefault();this.newWindow = window.open(&#039;/public/support/client.php?locale=en&amp;url=&#039;+escape(document.location.href)+&#039;&amp;referrer=&#039;+escape(document.referrer),
-      'mibew', 'toolbar=0,scrollbars=0,location=0,status=1,menubar=0,width=640,height=480,resizable=1');this.newWindow.focus();this.newWindow.opener=window;return false;">
+      'Zameen Jayedad', 'toolbar=0,scrollbars=0,location=0,status=1,menubar=0,width=640,height=480,resizable=1');this.newWindow.focus();this.newWindow.opener=window;return false;">
       <img src="/public/support/b.php?i=mibew&amp;lang=en" border="0" width="163" height="61" style="position:fixed; bottom:5px; right:5px;" alt=""/></a><!-- / mibew button -->
 
-<!--Add the following script at the bottom of the web page (before </html>)-->
-<script type="text/javascript" src="https://mylivechat.com/chatinline.aspx?hccid=92479932"></script>
+<!--Add the following script at the bottom of the web page-->
+<script type="text/javascript" src="https://mylivechat.com/chatinline.aspx?hccid=28988909"></script>
+
+
 
 
 </body>

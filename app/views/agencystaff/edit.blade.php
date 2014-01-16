@@ -14,7 +14,7 @@ $user = Sentry::findUserByLogin($records->email);
         
 ?>
 
-{{ Form::open(array('url' =>'dashboard/agencystaff/'.$records->agency_id.'/edit/'.$staff_id,'POST')) }}
+{{ Form::open(array('url' =>'dashboard/agencystaff/'.$records->agency_id.'/edit/'.$staff_id,'files' => true,'POST')) }}
 
  <h1>Agency Staff </h1>
  <p class="erorclas"> {{ Session::get('errors') }}</p>
@@ -31,6 +31,10 @@ $user = Sentry::findUserByLogin($records->email);
         <li>
             {{ Form::label('name', 'Name') }}
             {{ Form::text('name', $records->name)}}
+        </li>
+       <li>
+            {{ Form::label('photo', 'Photo') }}
+            {{ Form::file('photo')}}
         </li>
         <!-- <li>
             {{ Form::label('agency_name', ' Agency Name') }}

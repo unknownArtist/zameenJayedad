@@ -16,8 +16,8 @@
 <h5> Company Name</h5>
 <h5> {{  $record->address }}<br>{{  $record->zip }}<br>{{  $record->country }}</h5>
 </div>
-
-<img src="//styles.anu.edu.au/_anu/4/images/placeholders/person.png" alt="no photo available" class="" width="150" height="150" />
+{{Form::image('uploads/photos/'.$record->photo,'',array('style'=>'width:150px; height:150px;'))}}
+<!-- <img src="//styles.anu.edu.au/_anu/4/images/placeholders/person.png" alt="no photo available" class="" width="150" height="150" /> -->
 
 </div>
 

@@ -4,7 +4,7 @@
 <div id="wrapper">
 <div id="form-wrapper">
 
-{{ Form::open(array('url' => 'dashboard/agencies/view/addnewuser')) }}
+{{ Form::open(array('url' => 'dashboard/agencies/view/addnewuser','files' => true)) }}
 
  <h1>Agency Staff </h1>
 <p class="erorclas"> {{ Session::get('errors') }}</p>
@@ -30,6 +30,10 @@
         <li>
             {{ Form::label('name', 'Name') }}
             {{ Form::text('name' )}}
+        </li>
+        <li>
+            {{ Form::label('photo', 'Photo') }}
+            {{ Form::file('photo')}}
         </li>
         <li>
             {{ Form::label('agency_name', ' Please Select Agency') }}

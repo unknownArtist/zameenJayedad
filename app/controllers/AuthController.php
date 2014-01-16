@@ -142,6 +142,7 @@ class AuthController extends BaseController {
             'fax' 			 => Input::get('fax'),
             'address' 		 => Input::get('address'),
             'zip' 			 => Input::get('zip'),
+            'photo'			=>	Input::file('photo'),
             'country' 		 => Input::get('country'),
             'roles' 		 => Input::get('roles'),
             'city' 		     => Input::get('cities'),
@@ -158,9 +159,11 @@ class AuthController extends BaseController {
         $rules = array(
             'phone' 	=> 'required',
             'cell'      => 'required',
-            'address' 	=> 'required'
+            'address' 	=> 'required',
+            'photo'     => 'required',
            
         );
+
         $v = Validator::make($fields, $rules);
         if ($v->fails()) 
         {
@@ -177,6 +180,7 @@ class AuthController extends BaseController {
             $members->user_id = $fields['user_id'];
             $members->fax = $fields['fax'];
             $members->name = $fields['name'];
+             $members->photo = $this->ImageCrop('photo','photos','200','200','');
             $members->save();
             
 
@@ -484,9 +488,21 @@ public function getProfile()
 
 		$id = Sentry::getUser()->id;
 
+
 		  DB::table('registration')
             ->where('user_id','=',$id)
             ->update($fields);
+
+            $proimg=Input::file('photo');
+			if($proimg)
+	            {
+	          $fieldsimg= array(
+				'photo'=>$this->ImageCrop('photo','photos','200','200','')
+			   	);
+	          DB::table('registration')
+	            ->where('user_id','=',$id)
+	            ->update($fieldsimg);
+	        }
          $fieldsname = array(
             	       'email' => Input::get('email')
 		                );

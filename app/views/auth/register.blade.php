@@ -28,7 +28,7 @@ $("#agentshow").click(function(){
 <div id="wrapper">
 <div id="form-wrapper">
 
-{{ Form::open(array('url' => 'user/register')) }}
+{{ Form::open(array('url' => 'user/register','files' => true)) }}
 
  <h1>Registration</h1>
  <p class="erorclas"> {{ Session::get('errors') }}</p>
@@ -36,6 +36,10 @@ $("#agentshow").click(function(){
         <li>
             {{ Form::label('name', 'Name') }}
             {{ Form::text('name')}}
+        </li>
+        <li>
+            {{ Form::label('photo', 'Photo') }}
+            {{ Form::file('photo')}}
         </li>
 
 

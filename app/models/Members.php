@@ -8,6 +8,7 @@ Class Members extends Eloquent {
          * @var string
          */
         protected $table ='registration';
+        
 
        
         

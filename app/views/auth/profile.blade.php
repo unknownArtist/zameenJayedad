@@ -5,7 +5,7 @@
 <div id="content">
 <div id="form-wrapper">
 
-{{ Form::open(array('url' =>'profile/update')) }}
+{{ Form::open(array('url' =>'profile/update','files' => true)) }}
 
  <h1>Edit Profile</h1>
 <p class="erorclas"> {{ Session::get('errors') }}</p>
@@ -21,6 +21,10 @@
         <li>
             {{ Form::label('name', 'Name') }}
             {{ Form::text('name',$record->name )}}
+        </li>
+        <li>
+            {{ Form::label('photo', 'Photo') }}
+            {{ Form::file('photo')}}
         </li>
 
          <li>

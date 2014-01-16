@@ -128,6 +128,21 @@ class AgencyController extends \BaseController {
 											'listing_quota' => Input::get('listing_quota'),
 											'hot_quota' => Input::get('hot_quota')));
 
+					 DB::table('registration')->insertGetId(array(
+					 						
+											'user_id'  =>$staff_id,
+											'name'		=> Input::get('name'),
+											'phone'     =>  Input::get('phone'),
+											'cell'      => Input::get('cell'),
+											'fax'       => Input::get('fax'),
+											'address'   => Input::get('address'),
+											'zip'       => Input::get('zip'),
+											'country'   => Input::get('country'),
+											'photo'=>$this->ImageCrop('photo','photos','200','200','')
+											));
+					  $proimg=Input::file('photo');
+					
+
 
 			            return Redirect::to('dashboard/agencies')->with('success','successfully Added');        		
 	}
@@ -169,6 +184,7 @@ class AgencyController extends \BaseController {
 	public function postEdit($id)
 	{	
 		$staff_id = Request::segment(5);
+
 		
 
 
@@ -195,6 +211,29 @@ class AgencyController extends \BaseController {
             DB::table('users')
             ->where('id','=',$staff_id)
             ->update($fields1);
+
+            $fieldsreg = array(
+			'name' => Input::get('name'),
+		   'phone' => Input::get('phone'),
+		   'cell' => Input::get('cell'),
+		   'fax' => Input::get('fax'),
+		   'address' => Input::get('address'),
+		   'zip' => Input::get('zip'),
+		   'country' => Input::get('country')
+		   
+		   );
+            Members::where('user_id','=',$staff_id)
+            ->update($fieldsreg);
+             $proimg=Input::file('photo');
+			if($proimg)
+	            {
+	          $fieldsimg= array(
+				'photo'=>$this->ImageCrop('photo','photos','200','200','')
+			   	);
+	          DB::table('registration')
+	            ->where('user_id','=',$staff_id)
+	            ->update($fieldsimg);
+	        }
             
 
 		return Redirect::to('dashboard/agencies');

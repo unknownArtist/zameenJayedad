@@ -65,6 +65,7 @@ public function getBahriatownPhase3()
 					->with('name',$q)
 					->with('record',$records);
         } 
+        
         public function getBahriatownPhase5()
 	{	
         $q ='Bahria town Phase 5';

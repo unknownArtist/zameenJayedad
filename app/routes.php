@@ -58,8 +58,8 @@ Route::get('dashboard/BahriatownPhase3',array('uses'=>'SearchController@getBahri
 Route::get('dashboard/BahriatownPhase4',array('uses'=>'SearchController@getBahriatownPhase4'));
 Route::get('dashboard/BahriatownPhase5',array('uses'=>'SearchController@getBahriatownPhase5'));
 Route::get('dashboard/BahriatownPhase6',array('uses'=>'SearchController@getBahriatownPhase6'));
-Route::get('dashboard/BahriatownPhase5',array('uses'=>'SearchController@getBahriatownPhase7'));
-Route::get('dashboard/BahriatownPhase6',array('uses'=>'SearchController@getBahriatownPhase8'));
+Route::get('dashboard/BahriatownPhase7',array('uses'=>'SearchController@getBahriatownPhase7'));
+Route::get('dashboard/BahriatownPhase8',array('uses'=>'SearchController@getBahriatownPhase8'));
 /*------------------End of Search routes-----------------------------*/
 
 /*------------------Email alerts routes-----------------------------*/

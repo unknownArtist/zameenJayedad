@@ -383,9 +383,8 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
       'mibew', 'toolbar=0,scrollbars=0,location=0,status=1,menubar=0,width=640,height=480,resizable=1');this.newWindow.focus();this.newWindow.opener=window;return false;">
       <img src="/public/support/b.php?i=mibew&amp;lang=en" border="0" width="163" height="61" style="position:fixed; bottom:5px; right:5px;" alt=""/></a><!-- / mibew button -->
 
-<!--Add the following script at the bottom of the web page-->
+<!--Add the following script at the bottom of the web page (before </html>)-->
 <script type="text/javascript" src="https://mylivechat.com/chatinline.aspx?hccid=92479932"></script>
-
 
 
 </body>

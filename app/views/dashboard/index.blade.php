@@ -8,15 +8,15 @@
        <div class="slider">
          <div id="sliderFrame">
         <div id="slider">
-            <a href="#">
+            <a href="{{URL::to('dashboard/featuredlisting')}}">
                 <img src="assets/images/slide1.png" alt="Welcome to Zameen Jayedad" />
             </a>
 
-            <a href="#">
+            <a href="{{URL::to('dashboard/featuredlisting')}}">
                 <img src="assets/images/slide2.png" alt="Welcome to Zameen Jayedad" />
             </a>
             
-             <a href="#">
+             <a href="{{URL::to('dashboard/featuredlisting')}}">
                 <img src="assets/images/slide3.png" alt="Welcome to Zameen Jayedad" />
             </a>
         </div>
@@ -255,19 +255,37 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
 
     <div class="sec-2">
 
-                <h3>Listings</h3>
+                <h3>Video Tutorials</h3>
                
 
       <div class="eco">
-				 <!--{{HTML::image('assets/images/260333193.jpg');}}
-                  {{HTML::image('assets/images/260528737.jpg');}}
-                   {{HTML::image('assets/images/260570453.jpg');}}
-                    {{HTML::image('assets/images/260592693.jpg');}}-->
-          @foreach($users as $user)           
-    <a href="{{URL::to('dashboard/listing/'.$user->id)}}" title="{{$user->budget}}RS"> 
+				
+         <!-- @foreach($users as $user)           
+    <a href="{{URL::to('dashboard/listing/guest/'.$user->id)}}" title="{{$user->budget}}RS"> 
     {{HTML::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidthlist'));}}
     </a>             
-             @endforeach  
+             @endforeach  -->
+             
+             <a class="myPlayer"
+    href="http://stream.flowplayer.org/KimAronson-TwentySeconds58192.mp4"
+    style="background-image:url(/assets/images/58192.jpg)">
+    <img src="/assets/images/play_large.png" alt="Demo video 1" style="margin-top:19px;"/>
+</a>
+<a class="myPlayer"
+    href="http://stream.flowplayer.org/KimAronson-TwentySeconds71844.mp4"
+    style="background-image:url(/assets/images/71844.jpg)">
+    <img src="/assets/images/play_large.png" alt="Demo video 2" style="margin-top:19px;" />
+</a>
+<a class="myPlayer"
+    href="http://stream.flowplayer.org/KimAronson-TwentySeconds63617.mp4"
+    style="background-image:url(/assets/images/63617.jpg)">
+    <img src="/assets/images/play_large.png" alt="Demo video 3" style="margin-top:19px;" />
+</a>
+<a class="myPlayer"
+    href="http://stream.flowplayer.org/KimAronson-TwentySeconds70930.mp4"
+    style="background-image:url(/assets/images/70930.jpg)">
+    <img src="/assets/images/play_large.png" alt="Demo video 4" style="margin-top:19px;" />
+</a>
               </div>
 
     

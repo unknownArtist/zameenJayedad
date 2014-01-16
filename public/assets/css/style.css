@@ -680,24 +680,45 @@ margin-top:20px;
 	width:201px;
 	margin-left: 98px;
     margin-bottom: 2px;
-    margin-top: 42px;
+    margin-top: 36px;
 }
 
 .sec-2 h3{
-    color:#00a651;
+    color: #00a651;
+float: left;
+width: 200px;
+padding: 0;
+margin: 0;
 }
 
 .eco{
 	float:left;
-	border:2px solid #e3e3e3;
-	width:204px;
-	height:161px;
+	width:420px;
+	height:290px;
 	overflow:hidden;
+	border: 11px solid #e3e3e3;
+border-radius: 6px;
+margin-top:10px;
 
 }
 
-.eco img{
-	float:left;
+a.myPlayer {
+    display:block;
+    width: 178px;
+    height:121px;
+    text-align:center;
+    margin:15px 15px 0 15px;
+    float:left;
+    border:1px solid #999;
+}
+ 
+
+a.myPlayer:hover {
+    border:1px solid #000;
+}
+
+.eco img:hover{
+	
 }
 
 .sec-3{
@@ -1728,6 +1749,26 @@ p.change_link{
 .team
 {
 	margin-left:47px;
+}
+
+.team img
+{
+	width:112px;
+	float:left;
+}
+
+.team h3
+{
+	margin-bottom:5px;
+}
+
+.team p
+{
+	width:84%;
+	float:left;
+	margin-left:30px;
+	margin-top:0px;
+	text-align:justify;
 }
 
 .imgteam

@@ -475,7 +475,7 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
                     <li class="sectorshow"> <a class="example-image-link" href="/assets/images/safari valley.jpg" data-lightbox="example-set3" title="Bahria 8 Safari Valley"></a></li>
         </div>
         <li><a href="{{URL::to('dashboard/projectupdates')}}">Project Updates</a></li>
-        <li><a href="{{URL::to('dashboard/featuredlistings')}}">Featured Listings</a></li>
+        <li><a href="{{URL::to('dashboard/featuredlisting')}}">Featured Listings</a></li>
         <li><a href="{{URL::to('dashboard/contactus')}}">Contact Zameen Jayedad</a></li>
         <li><a href="{{URL::to('dashboard/ourteam')}}">The Team</a></li>
  		</ul>
@@ -519,6 +519,7 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
         <li><a href="https://www.facebook.com/zameenjayedadteam"><img src="/assets/images/facebook.png"></a></li>
         <li><a href="https://pk.linkedin.com/pub/zameen-jayedad/89/333/43b/"><img src="/assets/images/linkedin.png"></a></li>
         <li><a href="https://twitter.com/mohsinmajeed91"><img src="/assets/images/twitter.png"></a></li>
+         <li><a href=""><img src="/assets/images/youtube.png"></a></li>
         </ul>
         
         </div>

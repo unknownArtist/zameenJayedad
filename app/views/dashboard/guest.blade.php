@@ -14,32 +14,32 @@
             </a>
 
             <a href="{{URL::to('dashboard/featuredlistings')}}">
-                 {{HTML::image('assets/images/slide-2.png', 'Welcome to Zameen Jayedad');}}
+                 {{HTML::image('assets/images/slide-2.png', 'Market Your Property with Zameen Jayedad Team');}}
             </a>
             
              <a href="{{URL::to('dashboard/featuredlistings')}}">
-                {{HTML::image('assets/images/slide-3.png', 'Welcome to Zameen Jayedad');}}
+                {{HTML::image('assets/images/slide-3.png', 'Market Your Property with Zameen Jayedad Team');}}
             </a>
             
              <a href="{{URL::to('dashboard/featuredlistings')}}">
-                 {{HTML::image('assets/images/slide-4.png', 'Welcome to Zameen Jayedad');}}
+                 {{HTML::image('assets/images/slide-4.png', 'Market Your Property with Zameen Jayedad Team');}}
             </a>
             
             
             <a href="{{URL::to('dashboard/featuredlistings')}}">
-                 {{HTML::image('assets/images/slide-5.png', 'Welcome to Zameen Jayedad');}}
+                 {{HTML::image('assets/images/slide-5.png', '');}}
             </a>
             
              <a href="{{URL::to('dashboard/featuredlistings')}}">
-                 {{HTML::image('assets/images/slide-6.png', 'Welcome to Zameen Jayedad');}}
+                 {{HTML::image('assets/images/slide-6.png', 'Market Your Property with Zameen Jayedad Team');}}
             </a>
             
              <a href="{{URL::to('dashboard/featuredlistings')}}">
-                 {{HTML::image('assets/images/slide-7.png', 'Welcome to Zameen Jayedad');}}
+                 {{HTML::image('assets/images/slide-7.png', 'Market Your Property with Zameen Jayedad Team');}}
             </a>
             
              <a href="{{URL::to('dashboard/featuredlistings')}}">
-                 {{HTML::image('assets/images/slide-8.png', 'Welcome to Zameen Jayedad');}}
+                 {{HTML::image('assets/images/slide-8.png', 'Market Your Property with Zameen Jayedad Team');}}
             </a>
             
         </div>

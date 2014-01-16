@@ -13,29 +13,29 @@
             </a>
 
             <a href="{{URL::to('dashboard/featuredlisting')}}">
-                <img src="assets/images/slide-2.png" alt="Welcome to Zameen Jayedad" />
+                <img src="assets/images/slide-2.png" alt="Market Your Property with Zameen Jayedad Team" />
             </a>
             
              <a href="{{URL::to('dashboard/featuredlisting')}}">
-                <img src="assets/images/slide-3.png" alt="Welcome to Zameen Jayedad" />
+                <img src="assets/images/slide-3.png" alt="Market Your Property with Zameen Jayedad Team" />
             </a>
              <a href="{{URL::to('dashboard/featuredlisting')}}">
-                <img src="assets/images/slide-4.png" alt="Welcome to Zameen Jayedad" />
+                <img src="assets/images/slide-4.png" alt="Market Your Property with Zameen Jayedad Team" />
             </a>
 
             <a href="{{URL::to('dashboard/featuredlisting')}}">
-                <img src="assets/images/slide-5.png" alt="Welcome to Zameen Jayedad" />
+                <img src="assets/images/slide-5.png" alt="" />
             </a>
             
              <a href="{{URL::to('dashboard/featuredlisting')}}">
-                <img src="assets/images/slide-6.png" alt="Welcome to Zameen Jayedad" />
+                <img src="assets/images/slide-6.png" alt="Market Your Property with Zameen Jayedad Team" />
             </a>
              <a href="{{URL::to('dashboard/featuredlisting')}}">
-                <img src="assets/images/slide-7.png" alt="Welcome to Zameen Jayedad" />
+                <img src="assets/images/slide-7.png" alt="Market Your Property with Zameen Jayedad Team" />
             </a>
 
             <a href="{{URL::to('dashboard/featuredlisting')}}">
-                <img src="assets/images/slide-8.png" alt="Welcome to Zameen Jayedad" />
+                <img src="assets/images/slide-8.png" alt="Market Your Property with Zameen Jayedad Team" />
             </a>
             
              

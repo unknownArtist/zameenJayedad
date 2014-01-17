@@ -11,9 +11,9 @@
 @foreach ($records as $record )
 <div class="profileview">
 <div class="companylogo">
-<h3>Company Logo</h3>
+<!-- <h3>Company Logo</h3> -->
 <h4>{{  $record->name }}</h4>
-<h5> Company Name</h5>
+<h5>{{$record->getImage($record->user_id) }}</h5>
 <h5> {{  $record->address }}<br>{{  $record->zip }}<br>{{  $record->country }}</h5>
 </div>
 {{Form::image('uploads/photos/'.$record->photo,'',array('style'=>'width:150px; height:150px;'))}}

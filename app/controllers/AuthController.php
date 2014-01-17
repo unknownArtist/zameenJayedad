@@ -509,6 +509,19 @@ public function getProfile()
             DB::table('users')
             ->where('id','=',Sentry::getUser()->id)
             ->update($fieldsname);
+
+            $fieldsstaff = array(
+            'email' => Input::get('email'),
+			'name' => Input::get('name'),
+		   'phone' => Input::get('phone'),
+		   'cell' => Input::get('cell'),
+		   'fax' => Input::get('fax'),
+		   'address' => Input::get('address'),
+		   'zip' => Input::get('zip'),
+		   'country' => Input::get('country')
+		   );
+            Agency::where('staff_id','=',Sentry::getUser()->id)
+            ->update($fieldsstaff);
             return Redirect::to('viewprofile');
 	}
 

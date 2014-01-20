@@ -21,6 +21,17 @@ Class Members extends Eloquent {
         }
         }
 
-       
+    public function getEmail($id)
+    { 
+        
+        $team = User::where('id','=',$id)->get();
+        foreach($team as $teams)
+        {
+            
+          return $teams->email;
+
+        }
+        }
+   
         
 }

@@ -168,7 +168,8 @@ $j(function() {
        <li id="li_profile"><a href="{{URL::to('viewprofile')}}">My Account</a>
         <ul class="innermenu" style="">
          <li id="li_changepass"><a href="{{URL::to('profile')}}">Edit Profile</a></li>
-        <li id="li_changepass"><a href="{{URL::to('changepass')}}">Change Password</a></li>        
+        <li id="li_changepass"><a href="{{URL::to('changepass')}}">Change Password</a></li>
+        <li id="li_changepass"><a href="{{URL::to('dashboard/alluser')}}">ALL Users</a></li>        
         </ul>
         </li>
        
@@ -218,7 +219,8 @@ $j(function() {
        <li id="li_profile"><a href="{{URL::to('viewprofile')}}">My Account</a>
         <ul class="innermenu" style="">
          <li id="li_changepass"><a href="{{URL::to('profile')}}">Edit Profile</a></li>
-        <li id="li_changepass"><a href="{{URL::to('changepass')}}">Change Password</a></li>        
+        <li id="li_changepass"><a href="{{URL::to('changepass')}}">Change Password</a></li>
+         <li id="li_changepass"><a href="{{URL::to('dashboard/alluser')}}">ALL Users</a></li>        
         </ul>
         </li>
        <li id="li_reports"><a href="{{URL::to('dashboard/reports')}}">Reports</a></li>

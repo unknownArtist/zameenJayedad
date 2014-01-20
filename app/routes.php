@@ -97,8 +97,8 @@ Route::get('dashboard/BahriatownPhase8',array('uses'=>'SearchController@getBahri
 	
 
 /*------------------End of Auth Routes------------------------------*/
-
-
+	Route::get('dashboard/alluser/{id}',array('uses'=>'AuthController@getAlluserprofile'));
+	Route::get('dashboard/alluser',array('uses'=>'AuthController@getAlluser'));
 	Route::get('dashboard/listing/{id}',array('uses'=>'DashboardController@getListing'));
 	Route::get('dashboard/listing/guest/{id}',array('uses'=>'DashboardController@getListingguest'));
 	Route::post('dashboard',array('uses'=>'DashboardController@postIndex'));

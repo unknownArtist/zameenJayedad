@@ -88,6 +88,57 @@ class AuthController extends BaseController {
  				);
 
  		DB::table('Agencystaff')->insert($fields);
+ 		$fields = array(
+		  	'user_id' 		 => $user->id,
+            'phone' 		 => Input::get('phone'),
+            'cell' 			 => Input::get('cell'),
+            'name' 			 => Input::get('name'),
+            'fax' 			 => Input::get('fax'),
+            'address' 		 => Input::get('address'),
+            'zip' 			 => Input::get('zip'),
+            'photo'			=>	Input::file('photo'),
+            'country' 		 => Input::get('country'),
+            'roles' 		 => Input::get('roles'),
+            'city' 		     => Input::get('cities'),
+            'agent'			 => Input::get('agent'),
+            'agency_name'    => Input::get('agency'),
+            'description'    => Input::get('services'),
+            'company_phone'  => Input::get('company_phone'),
+            'company_mobile' => Input::get('company_mobile'),
+            'company_fax'    => Input::get('company_fax'),
+            'company_address'=> Input::get('company_address'),
+            'company_email'  => Input::get('company_email')
+        );
+
+        $rules = array(
+            'phone' 	=> 'required',
+            'cell'      => 'required',
+            'address' 	=> 'required',
+            'photo'     => 'required',
+           
+        );
+
+        $v = Validator::make($fields, $rules);
+        if ($v->fails()) 
+        {
+        	return Redirect::to('user/register')->with('errors',$v);
+        }
+
+ 		 	$members = new Members();
+            $members->phone = $fields['phone'];
+            $members->cell = $fields['cell'];
+            $members->address = $fields['address'];
+            $members->zip = $fields['zip'];
+            $members->country = $fields['country'];
+            $members->roles = $fields['roles'];
+            $members->user_id = $fields['user_id'];
+            $members->fax = $fields['fax'];
+            $members->name = $fields['name'];
+             $members->photo = $this->ImageCrop('photo','photos','200','200','');
+            $members->save();
+            
+
+       return Redirect::to('login')->with('errors','Email has been sent to representative for your Authentication');
 
 			}
 			else
@@ -596,6 +647,29 @@ public function posteditlisting($id)
 		$profile = Profolio::find($id);
 		 $profile->delete();
 		 return Redirect::to('profolio/listing');
+	}
+
+	
+	public function getAlluser()
+
+	{
+		$records = Members::all();
+
+		return View::make('auth.alluser')
+		
+					->with('record',$records);
+
+	}
+	public function getAlluserprofile($id)
+
+	{
+
+		$records = Members::where('id', $id)->get();
+
+		return View::make('auth.alluserprofile')
+		
+					->with('records',$records);
+
 	}
 
 }

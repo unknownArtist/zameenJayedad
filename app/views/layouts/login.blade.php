@@ -229,7 +229,7 @@ $j(function() {
        <li id="li_email"><a href="{{URL::to('user/email/alerts')}}">Email Alerts</a></li>
        </ul>
        </div>
-     
+    
     </div>
     </div>
 	

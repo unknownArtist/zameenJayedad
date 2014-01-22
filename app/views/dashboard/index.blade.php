@@ -420,29 +420,17 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
     <a href="{{URL::to('dashboard/listing/guest/'.$user->id)}}" title="{{$user->budget}}RS"> 
     {{HTML::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidthlist'));}}
     </a>             
-             @endforeach  -->
+             @endforeach  -->          
+           
+       
+              
+             <iframe frameborder="0" width="185" height="120" src="http://www.dailymotion.com/embed/video/x19zn0o" allowfullscreen></iframe>
              
-             <a class="myPlayer"
-    href="http://stream.flowplayer.org/KimAronson-TwentySeconds58192.mp4"
-    style="background-image:url(/assets/images/58192.jpg)">
-    <img src="/assets/images/play_large.png" alt="Demo video 1" style="margin-top:19px;"/>
-</a>
-<a class="myPlayer"
-    href="http://stream.flowplayer.org/KimAronson-TwentySeconds71844.mp4"
-    style="background-image:url(/assets/images/71844.jpg)">
-    <img src="/assets/images/play_large.png" alt="Demo video 2" style="margin-top:19px;" />
-</a>
-<a class="myPlayer"
-    href="http://stream.flowplayer.org/KimAronson-TwentySeconds63617.mp4"
-    style="background-image:url(/assets/images/63617.jpg)">
-    <img src="/assets/images/play_large.png" alt="Demo video 3" style="margin-top:19px;" />
-</a>
-<a class="myPlayer"
-    href="http://stream.flowplayer.org/KimAronson-TwentySeconds70930.mp4"
-    style="background-image:url(/assets/images/70930.jpg)">
-    <img src="/assets/images/play_large.png" alt="Demo video 4" style="margin-top:19px;" />
-</a>
-              </div>
+             <iframe frameborder="0" width="480" height="270" src="http://www.dailymotion.com/embed/video/x19zvsf" allowfullscreen></iframe>
+             
+             <iframe frameborder="0" width="480" height="270" src="http://www.dailymotion.com/embed/video/x19zsxj" allowfullscreen></iframe>
+
+    </div>
 
     
     

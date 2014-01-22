@@ -109,6 +109,127 @@
             {{ Form::label('home_type', 'Type of Homes') }}
             {{ Form::select('home_type', $Type_of_Homes ,$record->home_type)}}
         </li>
+        <li>
+            {{ Form::label('photo', 'Photos') }}
+            {{ Form::file('photo')}}
+             <div class="addanother">
+            <a id="serviceshow">Add another</a>
+            </div>
+            
+            <div id="services">
+            {{ Form::label('photo', 'Title') }}
+             {{ Form::text('title1','',array('id'=>'headshowa')) }}
+               <p class="addanotherp">e.g Kicthen View, Bedroom, etc</p>
+            <input type="file" name="photo1" />
+          
+            
+             <div class="addanother">
+            <a id="serviceshow1">Add another</a>
+            </div>
+            </div>
+            
+           <div id="services1">
+            {{ Form::label('photo', 'Title') }}
+             {{ Form::text('title2','',array('id'=>'headshowb')) }}
+              <p class="addanotherp">e.g Kicthen View, Bedroom, etc</p>
+            <input type="file" name="photo2" />
+           
+            
+             <div class="addanother">
+            <a id="serviceshow2">Add another</a>
+            </div>
+            </div>
+            
+           <div id="services2">
+            {{ Form::label('photo', 'Title') }}
+             {{ Form::text('title3','',array('id'=>'headshowc')) }}
+              <p class="addanotherp">e.g Kicthen View, Bedroom, etc</p>
+            <input type="file" name="photo3" />
+           
+            
+             <div class="addanother">
+            <a id="serviceshow3">Add another</a>
+            </div>
+            </div>
+           <div id="services3">
+            {{ Form::label('photo', 'Title') }}
+             {{ Form::text('title4','',array('id'=>'headshowd')) }}
+             <p class="addanotherp">e.g Kicthen View, Bedroom, etc</p>
+            <input type="file" name="photo4" />
+            
+            
+             <div class="addanother">
+            <a id="serviceshow4">Add another</a>
+            </div>
+            </div>
+            <div id="services4">
+             {{ Form::label('photo', 'Title') }}
+             {{ Form::text('title5','',array('id'=>'headshowe')) }}
+               <p class="addanotherp">e.g Kicthen View, Bedroom, etc</p>
+            <input type="file" name="photo5" />
+            <div class="addanother">
+            <a id="serviceshow5">Add another</a>
+            </div>
+           
+            </div>
+
+             <div id="services5">
+            {{ Form::label('photo', 'Title') }}
+             {{ Form::text('title6','',array('id'=>'headshowf')) }}
+               <p class="addanotherp">e.g Kicthen View, Bedroom, etc</p>
+            <input type="file" name="photo6" />
+          
+            
+             <div class="addanother">
+            <a id="serviceshow6">Add another</a>
+            </div>
+            </div>
+            
+           <div id="services6">
+            {{ Form::label('photo', 'Title') }}
+             {{ Form::text('title7','',array('id'=>'headshowg')) }}
+              <p class="addanotherp">e.g Kicthen View, Bedroom, etc</p>
+            <input type="file" name="photo7" />
+           
+            
+             <div class="addanother">
+            <a id="serviceshow7">Add another</a>
+            </div>
+            </div>
+            
+           <div id="services7">
+            {{ Form::label('photo', 'Title') }}
+             {{ Form::text('title8','',array('id'=>'headshowh')) }}
+              <p class="addanotherp">e.g Kicthen View, Bedroom, etc</p>
+            <input type="file" name="photo8" />
+           
+            
+             <div class="addanother">
+            <a id="serviceshow8">Add another</a>
+            </div>
+            </div>
+           <div id="services8">
+            {{ Form::label('photo', 'Title') }}
+             {{ Form::text('title9','',array('id'=>'headshowi')) }}
+             <p class="addanotherp">e.g Kicthen View, Bedroom, etc</p>
+            <input type="file" name="photo9" />
+            
+            
+             <div class="addanother">
+            <a id="serviceshow9">Add another</a>
+            </div>
+            </div>
+            <div id="services9">
+             {{ Form::label('photo', 'Title') }}
+             {{ Form::text('title10','',array('id'=>'headshowj')) }}
+               <p class="addanotherp">e.g Kicthen View, Bedroom, etc</p>
+            <input type="file" name="photo10" />
+            
+           
+            </div>
+            
+            
+        </li>
 
         <li>
             {{ Form::label('Purpose', 'Purpose') }}
@@ -304,6 +425,94 @@
         );
       }
     }
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('#services').hide(); //Initially form wil be hidden.
+
+  $('#serviceshow').click(function() {
+   $('#services').show();//Form shows on button click
+   $('#serviceshow').hide();
+   $('#headshowa').focus();
+   
+     });
+   
+   $('#services1').hide(); //Initially form wil be hidden.
+
+  $('#serviceshow1').click(function() {
+   $('#services1').show();//Form shows on button click
+   $('#serviceshow1').hide();
+    $('#headshowb').focus();
+     });
+   
+   $('#services2').hide(); //Initially form wil be hidden.
+
+  $('#serviceshow2').click(function() {
+   $('#services2').show();//Form shows on button click
+   $('#serviceshow2').hide();
+    $('#headshowc').focus();
+     });
+   
+   $('#services3').hide(); //Initially form wil be hidden.
+
+  $('#serviceshow3').click(function() {
+   $('#services3').show();//Form shows on button click
+   $('#serviceshow3').hide();
+    $('#headshowd').focus();
+     });
+   
+   $('#services4').hide(); //Initially form wil be hidden.
+
+  $('#serviceshow4').click(function() {
+   $('#services4').show();//Form shows on button click
+   $('#serviceshow4').hide();
+    $('#headshowe').focus();
+     });
+
+
+   $('#services5').hide(); //Initially form wil be hidden.
+
+  $('#serviceshow5').click(function() {
+   $('#services5').show();//Form shows on button click
+   $('#serviceshow5').hide();
+   $('#headshowf').focus();
+   
+     });
+   
+   $('#services6').hide(); //Initially form wil be hidden.
+
+  $('#serviceshow6').click(function() {
+   $('#services6').show();//Form shows on button click
+   $('#serviceshow6').hide();
+    $('#headshowg').focus();
+     });
+   
+   $('#services7').hide(); //Initially form wil be hidden.
+
+  $('#serviceshow7').click(function() {
+   $('#services7').show();//Form shows on button click
+   $('#serviceshow7').hide();
+    $('#headshowh').focus();
+     });
+   
+   $('#services8').hide(); //Initially form wil be hidden.
+
+  $('#serviceshow8').click(function() {
+   $('#services8').show();//Form shows on button click
+   $('#serviceshow8').hide();
+    $('#headshowi').focus();
+     });
+   
+   $('#services9').hide(); //Initially form wil be hidden.
+
+  $('#serviceshow9').click(function() {
+   $('#services9').show();//Form shows on button click
+   $('#serviceshow9').hide();
+    $('#headshowj').focus();
+     });
+
+    }); 
+
 </script>
 
 @stop

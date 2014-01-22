@@ -53,13 +53,86 @@
                 
 			<div class="image-set">
            		<h2 style="margin-top:20px;">More Pictures:</h2>
-                <a class="example-image-link" href="/assets/images/home1.jpg" data-lightbox="example-set2" rel="gallery1" title="Outer View">
-                {{HTML::image('assets/images/home1.jpg','', array('style'=>'width:150px; height:150px;'));}}</a>
-				<a class="example-image-link" href="/assets/images/kitchen2.jpg" data-lightbox="example-set2" rel="gallery1" title="Kicthen View">
-                {{HTML::image('assets/images/kitchen2.jpg','', array('style'=>'width:150px; height:150px;'));}}</a>
-				<a class="example-image-link" href="/assets/images/slide3.png" data-lightbox="example-set2" rel="gallery1" title="Bedroom">
-                {{HTML::image('assets/images/slide3.png','', array('style'=>'width:150px; height:150px;'));}}</a>
-				
+               <?php  $photo1=$records->photo1;?>
+                @if ($photo1 == '')
+                @else
+
+        
+                <a class="example-image-link" href="/uploads/photos/<?php echo $records->photo1; ?>" data-lightbox="example-set2" rel="gallery1" title="<?php echo $records->ph1title;?> ">
+                {{HTML::image('uploads/photos/'.$records->photo1,'', array('style'=>'width:150px; height:150px;'));}}</a>
+                @endif
+				<?php  $photo2=$records->photo2;?>
+                @if ($photo2 == '')
+                @else
+
+        
+                <a class="example-image-link" href="/uploads/photos/<?php echo $records->photo2; ?>" data-lightbox="example-set2" rel="gallery1" title="<?php echo $records->ph2title;?>">
+                {{HTML::image('uploads/photos/'.$records->photo2,'', array('style'=>'width:150px; height:150px;'));}}</a>
+                @endif
+				<?php  $photo3=$records->photo3;?>
+                @if ($photo3 == '')
+                @else
+
+        
+                <a class="example-image-link" href="/uploads/photos/<?php echo $records->photo3; ?>" data-lightbox="example-set2" rel="gallery1" title="<?php echo $records->ph3title;?>">
+                {{HTML::image('uploads/photos/'.$records->photo3,'', array('style'=>'width:150px; height:150px;'));}}</a>
+                @endif
+                <?php  $photo4=$records->photo4;?>
+                @if ($photo4 == '')
+                @else
+
+        
+                <a class="example-image-link" href="/uploads/photos/<?php echo $records->photo4; ?>" data-lightbox="example-set2" rel="gallery1" title="<?php echo $records->ph4title;?>">
+                {{HTML::image('uploads/photos/'.$records->photo4,'', array('style'=>'width:150px; height:150px;'));}}</a>
+                @endif
+                <?php  $photo5=$records->photo5;?>
+                @if ($photo5 == '')
+                @else
+
+        
+                <a class="example-image-link" href="/uploads/photos/<?php echo $records->photo5; ?>" data-lightbox="example-set2" rel="gallery1" title="<?php echo $records->ph5title;?>">
+                {{HTML::image('uploads/photos/'.$records->photo5,'', array('style'=>'width:150px; height:150px;'));}}</a>
+                @endif
+				<?php  $photo6=$records->photo6;?>
+                @if ($photo6 == '')
+                @else
+
+        
+                <a class="example-image-link" href="/uploads/photos/<?php echo $records->photo6; ?>" data-lightbox="example-set2" rel="gallery1" title="<?php echo $records->ph6title;?>">
+                {{HTML::image('uploads/photos/'.$records->photo6,'', array('style'=>'width:150px; height:150px;'));}}</a>
+                @endif
+                <?php  $photo7=$records->photo7;?>
+                @if ($photo7 == '')
+                @else
+
+        
+                <a class="example-image-link" href="/uploads/photos/<?php echo $records->photo7; ?>" data-lightbox="example-set2" rel="gallery1" title="<?php echo $records->ph7title;?>">
+                {{HTML::image('uploads/photos/'.$records->photo7,'', array('style'=>'width:150px; height:150px;'));}}</a>
+                @endif
+                <?php  $photo8=$records->photo8;?>
+                @if ($photo8 == '')
+                @else
+
+        
+                <a class="example-image-link" href="/uploads/photos/<?php echo $records->photo8; ?>" data-lightbox="example-set2" rel="gallery1" title="<?php echo $records->ph8title;?>">
+                {{HTML::image('uploads/photos/'.$records->photo8,'', array('style'=>'width:150px; height:150px;'));}}</a>
+                @endif
+                <?php  $photo9=$records->photo9;?>
+                @if ($photo9 == '')
+                @else
+
+        
+                <a class="example-image-link" href="/uploads/photos/<?php echo $records->photo9; ?>" data-lightbox="example-set2" rel="gallery1" title="<?php echo $records->ph9title;?>">
+                {{HTML::image('uploads/photos/'.$records->photo9,'', array('style'=>'width:150px; height:150px;'));}}</a>
+                @endif
+                <?php  $photo10=$records->photo10;?>
+                @if ($photo10 == '')
+                @else
+
+        
+                <a class="example-image-link" href="/uploads/photos/<?php echo $records->photo10; ?>" data-lightbox="example-set2" rel="gallery1" title="<?php echo $records->ph10title;?>">
+                {{HTML::image('uploads/photos/'.$records->photo10,'', array('style'=>'width:150px; height:150px;'));}}</a>
+                @endif
 			</div>
 		</div>
                

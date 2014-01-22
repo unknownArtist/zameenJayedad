@@ -69,18 +69,18 @@ $("#agentshow").click(function(){
             {{ Form::label('cell', 'Cell/mobile') }}
             {{ Form::text('cell') }}
         </li>
-        <li>
+       <!--  <li>
             {{ Form::label('fax', 'Fax') }}
             {{ Form::text('fax') }}
-        </li>
+        </li> -->
         <li>
             {{ Form::label('address', 'Address') }}
             {{ Form::text('address') }}
         </li>
-        <li>
+        <!-- <li>
             {{ Form::label('zip', 'Zipcode') }}
             {{ Form::text('zip') }}
-        </li>   
+        </li>   --> 
         <li>
             {{ Form::label('country', 'Country') }}
             {{ Form::select('country', $countries)}}
@@ -118,7 +118,7 @@ $("#agentshow").click(function(){
 
         
         <li>
-            {{ Form::label('services', 'Description of Servicess*') }}
+            {{ Form::label('services', 'Description of Services') }}
             {{Form::textarea('services')}}
 
         </li>

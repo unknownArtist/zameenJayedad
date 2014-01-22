@@ -49,6 +49,7 @@ class MessageCentreController extends BaseController {
 		 		
 		 	}
 		 	
+		 	
 		 	// $profiles = Agency::where('agency_id','=',$my_agencyid)->get();
 
 		 $profiles = DB::table('agent')->where('agent_id',$owner_id)

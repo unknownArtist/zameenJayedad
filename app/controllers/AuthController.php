@@ -93,9 +93,9 @@ class AuthController extends BaseController {
             'phone' 		 => Input::get('phone'),
             'cell' 			 => Input::get('cell'),
             'name' 			 => Input::get('name'),
-            'fax' 			 => Input::get('fax'),
+            // 'fax' 			 => Input::get('fax'),
             'address' 		 => Input::get('address'),
-            'zip' 			 => Input::get('zip'),
+            // 'zip' 			 => Input::get('zip'),
             'photo'			=>	Input::file('photo'),
             'country' 		 => Input::get('country'),
             'roles' 		 => Input::get('roles'),
@@ -190,9 +190,9 @@ class AuthController extends BaseController {
             'phone' 		 => Input::get('phone'),
             'cell' 			 => Input::get('cell'),
             'name' 			 => Input::get('name'),
-            'fax' 			 => Input::get('fax'),
+            // 'fax' 			 => Input::get('fax'),
             'address' 		 => Input::get('address'),
-            'zip' 			 => Input::get('zip'),
+            // 'zip' 			 => Input::get('zip'),
             'photo'			=>	Input::file('photo'),
             'country' 		 => Input::get('country'),
             'roles' 		 => Input::get('roles'),
@@ -452,8 +452,8 @@ class AuthController extends BaseController {
 		public function postProfolio()
 
 			{
-				
-				
+
+				 
 			
 			$v = Validator::make(Input::all(), Emails::$rules);
 		        
@@ -461,7 +461,7 @@ class AuthController extends BaseController {
 			        {
 			        	return Redirect::to('profolio')->withErrors($v);
 			        }
-			        DB::table('property')->insert(
+			       $id = DB::table('property')->insertGetId(
    					 array(
    					 	'agent_id' => Sentry::getUser()->id,
    					 	'property_type' =>Input::get('Property_Type'),
@@ -472,7 +472,6 @@ class AuthController extends BaseController {
    					 	'city' =>Input::get('home_type'),
    					 	'purpose' => Input::get('city'),
    					 	'location' =>Input::get('address'),
-   					 	'photo' =>$this->ImageCrop('photo','photos','200','200',''),
    					 	'w_title' =>Input::get('Wanted_Title'),
    					 	'p_title' => Input::get('Property_Title'),
    					 	'Description' =>Input::get('Description'),
@@ -492,9 +491,130 @@ class AuthController extends BaseController {
    					 	'longitude' => Input::get('long'),
    					 	'date_at' =>date("Y-m-d")
    					 	));
-			        	
-			 		 
-			        return Redirect::to('profolio/listing')->with('errors','successfully Added');
+			$proimg=Input::file('photo');
+				if($proimg)
+	            {
+	          $fieldsimg= array(
+				'photo'=>$this->ImageCrop('photo','photos','200','200',''),
+				
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg);
+	        }
+	        $proimg1 = Input::file('photo1');
+	        if($proimg1)
+	            {
+	          $fieldsimg1= array(
+				'photo1'=>$this->ImageCrop('photo1','photos','200','200',''),
+				'ph1title' =>Input::get('title1')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg1);
+	        }
+	        $proimg2 = Input::file('photo2');
+	        if($proimg2)
+	            {
+	          $fieldsimg2= array(
+				'photo2'=>$this->ImageCrop('photo1','photos','200','200',''),
+				'ph2title' =>Input::get('title2')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg2);
+	        }
+	        $proimg3 = Input::file('photo3');
+	        if($proimg3)
+	            {
+	          $fieldsimg3= array(
+				'photo3'=>$this->ImageCrop('photo3','photos','200','200',''),
+				'ph3title' =>Input::get('title3')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg3);
+	        }
+	         $proimg4 = Input::file('photo4');
+	        if($proimg4)
+	            {
+	          $fieldsimg4= array(
+				'photo4'=>$this->ImageCrop('photo4','photos','200','200',''),
+				'ph4title' =>Input::get('title4')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg4);
+	        }
+	        $proimg5 = Input::file('photo5');
+	        if($proimg5)
+	            {
+	          $fieldsimg5= array(
+				'photo5'=>$this->ImageCrop('photo5','photos','200','200',''),
+				'ph5title' =>Input::get('title5')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg5);
+	        }
+
+	         $proimg6 = Input::file('photo6');
+	        if($proimg6)
+	            {
+	          $fieldsimg6= array(
+				'photo6'=>$this->ImageCrop('photo6','photos','200','200',''),
+				'ph6title' =>Input::get('title6')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg6);
+	        }
+	        $proimg7 = Input::file('photo7');
+	        if($proimg7)
+	            {
+	          $fieldsimg7= array(
+				'photo7'=>$this->ImageCrop('photo7','photos','200','200',''),
+				'ph7title' =>Input::get('title7')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg7);
+	        }
+	        $proimg8 = Input::file('photo8');
+	        if($proimg8)
+	            {
+	          $fieldsimg8= array(
+				'photo8'=>$this->ImageCrop('photo8','photos','200','200',''),
+				'ph8title' =>Input::get('title8')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg8);
+	        }
+	         $proimg9 = Input::file('photo9');
+	        if($proimg9)
+	            {
+	          $fieldsimg9= array(
+				'photo9'=>$this->ImageCrop('photo9','photos','200','200',''),
+				'ph9title' =>Input::get('title9')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg9);
+	        }
+	        $proimg10 = Input::file('photo10');
+	        if($proimg10)
+	            {
+	          $fieldsimg10= array(
+				'photo10'=>$this->ImageCrop('photo10','photos','200','200',''),
+				'ph10title' =>Input::get('title10')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg10);
+	        }
+
+			 return Redirect::to('profolio/listing')->with('errors','successfully Added');
 
 
 			}
@@ -608,6 +728,7 @@ public function getProfile()
 public function posteditlisting($id)
 
 	{
+		
 
 		$fields = array(
 		   'property_type'=>Input::get('Property_Type'),
@@ -637,7 +758,132 @@ public function posteditlisting($id)
 	DB::table('property')
             ->where('id','=',$id)
             ->update($fields);
-            return Redirect::to('profolio/listing');
+            $proimg=Input::file('photo');
+				if($proimg)
+	            {
+	          $fieldsimg= array(
+				'photo'=>$this->ImageCrop('photo','photos','200','200',''),
+				
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg);
+	        }
+           
+
+            $proimg1 = Input::file('photo1');
+	        if($proimg1)
+	            {
+	          $fieldsimg1= array(
+				'photo1'=>$this->ImageCrop('photo1','photos','200','200',''),
+				'ph1title' =>Input::get('title1')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg1);
+	        }
+	        $proimg2 = Input::file('photo2');
+	        if($proimg2)
+	            {
+	          $fieldsimg2= array(
+				'photo2'=>$this->ImageCrop('photo1','photos','200','200',''),
+				'ph2title' =>Input::get('title2')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg2);
+	        }
+	        $proimg3 = Input::file('photo3');
+	        if($proimg3)
+	            {
+	          $fieldsimg3= array(
+				'photo3'=>$this->ImageCrop('photo3','photos','200','200',''),
+				'ph3title' =>Input::get('title3')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg3);
+	        }
+	         $proimg4 = Input::file('photo4');
+	        if($proimg4)
+	            {
+	          $fieldsimg4= array(
+				'photo4'=>$this->ImageCrop('photo4','photos','200','200',''),
+				'ph4title' =>Input::get('title4')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg4);
+	        }
+	        $proimg5 = Input::file('photo5');
+	        if($proimg5)
+	            {
+	          $fieldsimg5= array(
+				'photo5'=>$this->ImageCrop('photo5','photos','200','200',''),
+				'ph5title' =>Input::get('title5')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg5);
+	        }
+
+	         $proimg6 = Input::file('photo6');
+	        if($proimg6)
+	            {
+	          $fieldsimg6= array(
+				'photo6'=>$this->ImageCrop('photo6','photos','200','200',''),
+				'ph6title' =>Input::get('title6')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg6);
+	        }
+	        $proimg7 = Input::file('photo7');
+	        if($proimg7)
+	            {
+	          $fieldsimg7= array(
+				'photo7'=>$this->ImageCrop('photo7','photos','200','200',''),
+				'ph7title' =>Input::get('title7')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg7);
+	        }
+	        $proimg8 = Input::file('photo8');
+	        if($proimg8)
+	            {
+	          $fieldsimg8= array(
+				'photo8'=>$this->ImageCrop('photo8','photos','200','200',''),
+				'ph8title' =>Input::get('title8')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg8);
+	        }
+	         $proimg9 = Input::file('photo9');
+	        if($proimg9)
+	            {
+	          $fieldsimg9= array(
+				'photo9'=>$this->ImageCrop('photo9','photos','200','200',''),
+				'ph9title' =>Input::get('title9')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg9);
+	        }
+	        $proimg10 = Input::file('photo10');
+	        
+	        if($proimg10)
+	            {
+	          $fieldsimg10= array(
+				'photo10'=>$this->ImageCrop('photo10','photos','200','200',''),
+				'ph10title' =>Input::get('title10')
+			   	);
+	          DB::table('property')
+	            ->where('id','=',$id)
+	            ->update($fieldsimg10);
+	        }
+	         return Redirect::to('profolio/listing');
 
 		}
 

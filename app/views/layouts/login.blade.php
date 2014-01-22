@@ -124,7 +124,7 @@ $j(function() {
 
 		<div id="header">
 			<div class="logo">
-			 <a href="{{URL::to('dashboard')}}"><img  src="/assets/images/eri_logo_02.png"></a>
+			 <a href="{{URL::to('dashboard')}}"><img  src="/assets/images/eri_logo_03.png"></a>
 			
 			</div><!--logo-img ends-->
             <div class="threeimages">

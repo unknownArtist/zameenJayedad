@@ -388,7 +388,7 @@ return array(
                         'Please Select'=>'Please Select',
                         'For Sale'=>'For Sale',
                         'For Rent'=>'For Rent',
-                        'Wanted'=>'Wanted',
+                        // 'Wanted'=>'Wanted',
 
                 ),
 

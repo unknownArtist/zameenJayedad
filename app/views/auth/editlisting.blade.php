@@ -242,10 +242,10 @@
             {{ Form::select('Construction_Status', $Construction_Status ,$record->Construction_status )}}
         </li>
 
-        <li>
+        <!-- <li>
             {{ Form::label('Wanted_For', 'Wanted For') }}
             {{ Form::select('Wanted_For', $Wanted_For ,$record->wanted   )}}
-        </li>
+        </li> -->
 
         <h2>Address and Location</h2>
 
@@ -261,7 +261,7 @@
             {{ Form::label('Location', 'Choose Location') }}
             {{ Form::select('Location', $Location ,$record->location ) }}
         </li>
-         <h2>Wanted Details</h2>
+        <!--  <h2>Wanted Details</h2>
         <li>
             {{ Form::label('Wanted_Title', 'Wanted Title') }}
             {{ Form::text('Wanted_Title',$record->w_title) }}
@@ -274,7 +274,7 @@
             {{Form::textarea('Description',$record->Description)}}
 
         </li>
-
+ -->
         <li>
             {{ Form::label('Budget', 'Budget: (PKR)') }}
             {{ Form::text('Budget' ,$record->budget) }}

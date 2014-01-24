@@ -1773,6 +1773,8 @@ p.change_link{
 	margin-left:30px;
 	margin-top:0px;
 	text-align:justify;
+	line-height:20px;
+	margin-bottom:0px !important;
 }
 
 .imgteam
@@ -2072,6 +2074,23 @@ p.change_link{
 	color:#666;
 	font-style:italic;
 	margin-top:0px;
+}
+
+ul.rehmatbox
+{
+	width: auto !important;
+border: 0 !important;
+-webkit-box-shadow: none !important;
+margin-left: 50px;
+float: left;
+margin-top: 0;
+padding: 0 !important;
+}
+
+.rehmatbox li
+{
+	list-style:disc !important;
+	padding-top:5px !important;
 }
 
 

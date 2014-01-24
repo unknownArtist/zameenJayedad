@@ -6,14 +6,14 @@
     <div id="form-wrapper" style="width:100%;">
 <h1>Meet Our Team</h1>
     
-    <div class="team">    
+    <div class="team">  
     
-   
-           		<h2>ZAMEEN JAYEDAD REAL ESTATE PROFESSIONALS:</h2>
-                <h3>Mumtaz Hussain</h3>
+    			<h2>ZAMEEN JAYEDAD CEO:</h2> 
+                
+                <h3>Khawaja Mumtaz Hussain</h3>
                 <div>
                 <img src="/assets/images/Mumtaz hussian1.jpg" width="112" height="144"  />
-                <p>Khawaja Mumtaz the head of the Realtors stepped into Real Estate Industry in March 2000
+                <p>Khawaja Mumtaz Hussain the head of the Realtors stepped into Real Estate Industry in March 2000
 and made a company with the name of KHawaja & Sons. After getting a great success in Property 
 bussiness he started working as a builder. Hesold thousands of properties in his 13 Years work 
 experience. Currently he own 9 Businesstowers and numerous residential properties.</p>
@@ -23,9 +23,22 @@ he has 10 Realtors working under him and many assistant Realtors he is great sup
 project 'Zameen Jayedad Team' His commitment, honesty and unique ideas made him one of the 
 best Realtors in Bahria town.</p>
 </div>
-
+ 				
+                <h2 style="clear:both; padding-top:40px;">ZAMEEN JAYEDAD GENERAL MANAGER:</h2>
+                
+                 <div style="clear:both;">
+ <h3 style="">Nasir Saeed</h3>
+                <img src="/assets/images/Nasir.jpg" width="112" height="144"  />
+                <p>Mr. Saeed has joined Khawaja & Sons Real Estate and Builders from Dec 01 2013 he taking care of complete management including
+                 Marketing, Constructions and towns before joining Khawaja & Sons he was working with a Company name Legal Affairs as a
+                  General Manager.</p>
+    </div>
+    
+   
+           		<h2 style="clear:both; padding-top:40px;">ZAMEEN JAYEDAD REAL ESTATE PROFESSIONALS:</h2>
+                
 <div style="clear:both;">
- <h3 style="padding-top:35px;">Jabran Samuel</h3>
+ <h3>Jabran Samuel</h3>
                 <img src="/assets/images/Jabran Samuel.jpg" width="112" height="144"  />
                 <p>Jabran Samuel resident of Rawalpindi completed his graduation degree in Psychology and Started his marketing 
 Career back in 2006 as Promoter of the Local Food Brand called 'National Food' He was motivated from the marketing
@@ -56,9 +69,12 @@ which he is going to use to develop business with Zameen Jayedad team.</p>
     </div>   
     
      <div style="clear:both;">
- <h3 style="padding-top:35px;">Waqas Nasir</h3>
-                <img src="/assets/images/Waqas Nasir.jpg" width="112" height="144"  />
-                <p>Zameen Jaedad Welcomes Waqas Nasir, Who has recently joined our Real Estate Team as an Assistant Realtor.</p>
+ <h3 style="padding-top:35px;">Mohammad Uzair</h3>
+                <img src="/assets/images/Mohammad Uzair.jpg" width="112" height="144"  />
+                <p>Mohammad Uzair resident of DG khan.He  has done MBA (Marketing) from FUUAST Islamabad . He started his career in 2010.
+                 He has a 2 year experience in Oasis Insight Pvt Ltd as a Supervisor in several research Projects of Research. His Last experience
+                  is with Pepsi in Islamabad. He is supervising a project there. Now he is implementing his marketing expertise into Real estate
+                   Sector with Zameen Jayedad Team.</p>
     </div> 
     
     <div style="clear:both;">
@@ -82,17 +98,11 @@ expert in Residential and commercial plotting.
                 
                 <h2 style="clear:both; padding-top:40px;">ZAMEEN JAYEDAD PROFESSIONAL ENGINEERS:</h2>
                 
-                 <div style="clear:both;">
- <h3 style="">Nasir Saeed</h3>
-                <img src="/assets/images/Nasir.jpg" width="112" height="144"  />
-                <p>Mr. Saeed has joined Khawaja & Sons Real Estate and Builders from Dec 01 2013 he taking care of complete management including
-                 Marketing, Constructions and towns before joining Khawaja & Sons he was working with a Company name Legal Affairs as a Deputy
-                  General Manager.</p>
-    </div>
+               
     
      <div style="clear:both;">
- <h3 style="padding-top:35px;">Nasarullah Khan</h3>
-                <img src="/assets/images/Nasarullah-Khan.jpg" width="112" height="144"  />
+ <h3>Nasarullah Khan</h3>
+                <img src="/assets/images/Nasrullah khan.jpg" width="112" height="144"  />
                 <p></p>
     </div>
     
@@ -129,6 +139,26 @@ expert in Residential and commercial plotting.
                 <p>He has been working with Khawaja & Sons since March 2009 he is managing
 Zameen Jayedad Account as well he is the head of the Finance Department.</p>
     </div>
+    			
+                <h2 style="clear:both; padding-top:40px;">ZAMEEN JAYEDAD IT PROFESSIONALS:</h2>
+                
+                 <div style="clear:both;">
+ <h3>Rehmat Ullah Khan Marwat</h3>
+                <img src="/assets/images/Rehmat Ullah Khan Marwat.jpg" width="112" height="144"  />
+                <p>Rehmat Ullah Khan Marwat resident of District D.I.Khan working as an IT professional in Our Team. He completed his graduation
+                 in BS(CS) from COMSATS Institute of Information technology Attock Campus. Now he is doing MS (CS) from COMSATS Institute of
+                  information Technology Islamabad. He joined our Team since 04th Jan, 2014. He is
+                  <ul class="rehmatbox">
+                  	<li>Running the Backend of Company regarding IT.</li>
+                    <li>Develop and/or update content</li>
+                    <li>Monitor, assess, and report on website performance</li>
+                    <li>Ensure domain registration and hosting</li>
+                    <li>Search Engine Optimization</li>
+                    <li>Maintaining the Database</li>
+                    <li>Handles Online and Offline Customers about Technical Issues</li>
+                  
+                  </ul></p>
+    </div>
                 
                 <h2 style="clear:both; padding-top:40px;">ZAMEEN JAYEDAD FULL TEAM:</h2>
                 <img src="/assets/images/Full Team.jpg" width="112" height="144" style="margin:15px;" title="Full Team" />
@@ -137,10 +167,11 @@ Zameen Jayedad Account as well he is the head of the Finance Department.</p>
                
 				
 			</div>
-    
+		</div>
     
     </div>
-    </div>
+    
+    
     </div>
 
 @stop

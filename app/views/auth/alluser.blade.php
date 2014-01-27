@@ -21,7 +21,7 @@
 
 
                <h4> {{$records->getEmail($records->user_id)}}</h4><br />
-                 <a href="{{URL::to('dashboard/sendmessage/'.$records->user_id)}}">  Send Message</a>
+                 <a class="editbtn" style="text-decoration:none !important;" href="{{URL::to('dashboard/sendmessage/'.$records->user_id)}}">  Send Message</a>
                  <hr style="clear:both;">
                 
              </li>

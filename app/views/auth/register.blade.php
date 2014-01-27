@@ -137,11 +137,11 @@ $("#agentshow").click(function(){
            
         </li>
 
-         <li>
+        <!--  <li>
             {{ Form::label('company_fax', 'Company Fax') }}
             {{ Form::text('company_fax') }}
            
-        </li>
+        </li> -->
 
          <li>
             {{ Form::label('company_address', 'Company Address') }}

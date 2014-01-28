@@ -896,6 +896,33 @@ public function posteditlisting($id)
 					->with('records',$records);
 
 	}
+	public function getSendmessage($id)
+
+	{
+
+
+		$records = Members::where('user_id', $id)->get();
+
+		return View::make('auth.sendmessage')
+		
+					->with('records',$records);
+
+	}
+	 public  function postSendmessage()
+  {	 
+ 		$fields = array(
+ 			'from_user'	 =>	Sentry::getUser()->id,
+ 			'to_user'		 =>	Input::get('to'),
+ 			'subject'		 =>	Input::get('subject'),
+ 			'body'			 =>	Input::get('body'),
+      		'created_at' => date("Y-m-d H:i:s"),
+ 		);
+
+ 		DB::table('inbox')->insert($fields);
+
+    
+ 	return Redirect::to('dashboard/alluser');
+  }
 
 }
 

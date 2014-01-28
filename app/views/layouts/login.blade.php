@@ -181,12 +181,12 @@ $j(function() {
     </div>
     </div>
   
-    <div class="searchlist">
+    <!--<div class="searchlist">
      {{ Form::open(array('url' => 'dashboard/search','search')) }}
    
    
     
-       <!-- <h2>Search Listing</h2>-->
+       <!-- <h2>Search Listing</h2>
         {{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'City, Property-type...', 'onfocus'=>'this.placeholder = ""', 'onBlur'=>'this.placeholder = "City, Property-type..."')) }}
         
        {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn')) }}
@@ -199,7 +199,7 @@ $j(function() {
             {{ Form::submit('Map',array('class' => 'button','id'=>'searchbtnasd'))}}
         {{ Form::close() }}
    
-      </div>
+      </div>-->
       @endif
 
 
@@ -233,12 +233,12 @@ $j(function() {
     </div>
     </div>
 	
-    <div class="searchlist">
+    <!--<div class="searchlist">
      {{ Form::open(array('url' => 'dashboard/search','search')) }}
    
    
     
-       <!-- <h2>Search Listing</h2>-->
+       <!-- <h2>Search Listing</h2>
         {{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'City, Property-type...', 'onfocus'=>'this.placeholder = ""', 'onBlur'=>'this.placeholder = "City, Property-type..."')) }}
         
        {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn')) }}
@@ -251,7 +251,7 @@ $j(function() {
             {{ Form::submit('Map',array('class' => 'button','id'=>'searchbtnasd'))}}
         {{ Form::close() }}
    
-    	</div>
+    	</div>-->
       @endif
       @if($group == 0 & $staff == 0)
         <div id="wrapperheader">
@@ -514,6 +514,29 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
       
  		</ul>
                 
+        </div>
+        
+        <div class="footersearch">
+        <div class="searchlist">
+        
+     {{ Form::open(array('url' => 'dashboard/search','search')) }}
+   
+   
+    
+       <!-- <h2>Search Listing</h2>-->
+        {{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'City, Property-type...', 'onfocus'=>'this.placeholder = ""', 'onBlur'=>'this.placeholder = "City, Property-type..."')) }}
+        
+       {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn')) }}
+
+   
+    {{ Form::close() }}
+
+    {{ Form::open(array('url'=>'dashboard/searchmap'))}}
+            {{ Form::hidden('query','',array('id'=>'mapbtn','style'=>'background:#666; color:#fff;'))}}
+            {{ Form::submit('Map',array('class' => 'button','id'=>'searchbtnasd'))}}
+        {{ Form::close() }}
+   
+    	</div>
         </div>
         
          <div class="socials">

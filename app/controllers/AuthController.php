@@ -67,7 +67,6 @@ class AuthController extends BaseController {
 			    	 'description' => Input::get('services'),
 			    	 'company_phone' => Input::get('company_phone'),
 			    	 'company_mobile' => Input::get('company_mobile'),
-			    	 'company_fax' => Input::get('company_fax'),
 			    	 'company_address' => Input::get('company_address'),
 			    	 'company_email' => Input::get('company_email')
 			    	 )
@@ -81,9 +80,9 @@ class AuthController extends BaseController {
  			'name'       => Input::get('name'),
  			'phone'      =>  Input::get('phone'),
  			'cell'       => Input::get('cell'),
- 			'fax'		=> Input::get('fax'),
+ 			
  			'address'   =>  Input::get('address'),
- 			'zip'      =>  Input::get('zip'),
+ 			
  			'country' => Input::get('country'),
  				);
 
@@ -93,9 +92,7 @@ class AuthController extends BaseController {
             'phone' 		 => Input::get('phone'),
             'cell' 			 => Input::get('cell'),
             'name' 			 => Input::get('name'),
-            // 'fax' 			 => Input::get('fax'),
             'address' 		 => Input::get('address'),
-            // 'zip' 			 => Input::get('zip'),
             'photo'			=>	Input::file('photo'),
             'country' 		 => Input::get('country'),
             'roles' 		 => Input::get('roles'),
@@ -105,7 +102,6 @@ class AuthController extends BaseController {
             'description'    => Input::get('services'),
             'company_phone'  => Input::get('company_phone'),
             'company_mobile' => Input::get('company_mobile'),
-            'company_fax'    => Input::get('company_fax'),
             'company_address'=> Input::get('company_address'),
             'company_email'  => Input::get('company_email')
         );
@@ -128,11 +124,9 @@ class AuthController extends BaseController {
             $members->phone = $fields['phone'];
             $members->cell = $fields['cell'];
             $members->address = $fields['address'];
-            $members->zip = $fields['zip'];
             $members->country = $fields['country'];
             $members->roles = $fields['roles'];
             $members->user_id = $fields['user_id'];
-            $members->fax = $fields['fax'];
             $members->name = $fields['name'];
              $members->photo = $this->ImageCrop('photo','photos','200','200','');
             $members->save();
@@ -190,9 +184,7 @@ class AuthController extends BaseController {
             'phone' 		 => Input::get('phone'),
             'cell' 			 => Input::get('cell'),
             'name' 			 => Input::get('name'),
-            // 'fax' 			 => Input::get('fax'),
             'address' 		 => Input::get('address'),
-            // 'zip' 			 => Input::get('zip'),
             'photo'			=>	Input::file('photo'),
             'country' 		 => Input::get('country'),
             'roles' 		 => Input::get('roles'),
@@ -202,7 +194,6 @@ class AuthController extends BaseController {
             'description'    => Input::get('services'),
             'company_phone'  => Input::get('company_phone'),
             'company_mobile' => Input::get('company_mobile'),
-            'company_fax'    => Input::get('company_fax'),
             'company_address'=> Input::get('company_address'),
             'company_email'  => Input::get('company_email')
         );
@@ -225,11 +216,9 @@ class AuthController extends BaseController {
             $members->phone = $fields['phone'];
             $members->cell = $fields['cell'];
             $members->address = $fields['address'];
-            $members->zip = $fields['zip'];
             $members->country = $fields['country'];
             $members->roles = $fields['roles'];
             $members->user_id = $fields['user_id'];
-            $members->fax = $fields['fax'];
             $members->name = $fields['name'];
              $members->photo = $this->ImageCrop('photo','photos','200','200','');
             $members->save();
@@ -648,9 +637,7 @@ public function getProfile()
 			'name' => Input::get('name'),
 		   'phone' => Input::get('phone'),
 		   'cell' => Input::get('cell'),
-		   'fax' => Input::get('fax'),
 		   'address' => Input::get('address'),
-		   'zip' => Input::get('zip'),
 		   'country' => Input::get('country')
 		   );
 
@@ -683,9 +670,7 @@ public function getProfile()
 			'name' => Input::get('name'),
 		   'phone' => Input::get('phone'),
 		   'cell' => Input::get('cell'),
-		   'fax' => Input::get('fax'),
 		   'address' => Input::get('address'),
-		   'zip' => Input::get('zip'),
 		   'country' => Input::get('country')
 		   );
             Agency::where('staff_id','=',Sentry::getUser()->id)
@@ -732,11 +717,8 @@ public function posteditlisting($id)
 		   'home_type' => Input::get('home_type'),
 		   'purpose' => Input::get('Purpose'),
 		   'Construction_status' => Input::get('Construction_Status'),
-		   // 'wanted' => Input::get('Wanted_For'),
 		   'city' => Input::get('city'),
 		   'location' => Input::get('address'),
-		   // 'w_title' => Input::get('Wanted_Title'),
-		   // 'Description' => Input::get('Description'),
 	       'budget' => Input::get('Budget'),
 		   'l_area' => Input::get('Land_Area'),
 		   'unit' => Input::get('unit'),

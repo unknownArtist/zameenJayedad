@@ -1,10 +1,10 @@
 @extends('layouts.login')
 @section('content')
-	<p class="erorclas" style="position:relative; top:166px; right:163px;">{{ Session::get('error') }}</p>
+	
     <!--search ends-->
     <div id="wrapper">
     <div id="content">
-       
+       <p class="erorclas" style="">{{ Session::get('error') }}</p>
        <div class="slider">
          <div id="sliderFrame">
         <div id="slider">

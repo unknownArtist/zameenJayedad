@@ -161,7 +161,7 @@ $j(function() {
       
        {{ Form::submit('Search', array('class' => 'button')) }}-->
 
-       <div id='cssmenu'>
+       <div id='cssmenu' class="srchinmenu">
        <ul>
        <li id="li_home"><a href="{{URL::to('dashboard')}}">Dashboard</a></li>
      
@@ -174,6 +174,26 @@ $j(function() {
         </li>
        
        <li id="li_message"><a href="{{URL::to('dashboard/messages')}}">Message Center</a></li>
+       
+       <li><div class="searchlist">
+     {{ Form::open(array('url' => 'dashboard/search','search')) }}
+   
+   
+    
+       <!-- <h2>Search Listing</h2>-->
+        {{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'City, Property-type...', 'onfocus'=>'this.placeholder = ""', 'onBlur'=>'this.placeholder = "City, Property-type..."')) }}
+        
+       {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn','style'=>'font-weight:normal;padding-left:5px;')) }}
+
+   
+    {{ Form::close() }}
+
+    {{ Form::open(array('url'=>'dashboard/searchmap'))}}
+            {{ Form::hidden('query','',array('id'=>'mapbtn','style'=>'background:#666; color:#fff;'))}}
+            {{ Form::submit('Map',array('class' => 'button','id'=>'searchbtnasd','style'=>'font-weight:normal; padding-left:5px;'))}}
+        {{ Form::close() }}
+   
+      </div></li>
        
        </ul>
        </div>
@@ -227,6 +247,26 @@ $j(function() {
        <li id="li_property"><a href="{{URL::to('profolio/listing')}}">Property Management</a></li>
        <li id="li_message"><a href="{{URL::to('dashboard/messages')}}">Message Center</a></li>
        <li id="li_email"><a href="{{URL::to('user/email/alerts')}}">Email Alerts</a></li>
+       <li><a style="cursor:pointer;">Search</a><ul class="innermenu"><li style="width:350px; background:#68BEB6; margin-left:-280px;
+        border:1px solid #666; padding:0px 0px 10px 10px; border-top:none;"><div class="searchlist">
+     {{ Form::open(array('url' => 'dashboard/search','search')) }}
+   
+   
+    
+       <!-- <h2>Search Listing</h2>-->
+        {{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'City, Property-type...', 'onfocus'=>'this.placeholder = ""', 'onBlur'=>'this.placeholder = "City, Property-type..."')) }}
+        
+       {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn','style'=>'font-weight:normal; padding-left:5px; margin-top:15px !important;')) }}
+
+   
+    {{ Form::close() }}
+
+    {{ Form::open(array('url'=>'dashboard/searchmap'))}}
+            {{ Form::hidden('query','',array('id'=>'mapbtn','style'=>'background:#666; color:#fff;'))}}
+            {{ Form::submit('Map',array('class' => 'button','id'=>'searchbtnasd','style'=>'font-weight:normal; padding-left:5px; margin-top:15px !important;'))}}
+        {{ Form::close() }}
+   
+    	</div></li></ul></li>
        </ul>
        </div>
     
@@ -517,13 +557,13 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
         </div>
         
         <div class="footersearch">
-        <div class="searchlist">
+        <!--<div class="searchlist">
         
      {{ Form::open(array('url' => 'dashboard/search','search')) }}
    
    
     
-       <!-- <h2>Search Listing</h2>-->
+       <!-- <h2>Search Listing</h2>
         {{ Form::text('search','',array('class'=>'span6','id'=>'searchtxt','placeholder'=>'City, Property-type...', 'onfocus'=>'this.placeholder = ""', 'onBlur'=>'this.placeholder = "City, Property-type..."')) }}
         
        {{ Form::submit('Search', array('class' => 'button','id'=>'searchbtn')) }}
@@ -536,7 +576,7 @@ Bahria Home, '8 Marla double story Price 1 crore 20 Lakh' and '5 Marla single st
             {{ Form::submit('Map',array('class' => 'button','id'=>'searchbtnasd'))}}
         {{ Form::close() }}
    
-    	</div>
+    	</div>-->
         </div>
         
          <div class="socials">

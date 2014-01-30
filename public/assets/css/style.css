@@ -332,7 +332,8 @@ margin-top:15px !important;
 	width:200px;
 	color:red;
 	position:absolute;
-	left:10px;
+	left:717px;
+	top:187px;
 }
 
 .errormain
@@ -340,7 +341,7 @@ margin-top:15px !important;
 	color:red;
 	position:absolute;
 	right:107px;
-	top:182px;
+	top:187px;
 }
 
 .searchlist input
@@ -504,7 +505,7 @@ margin-top:20px;
 	border: 11px solid #e3e3e3;
 	width: 420px;
 	height: 290px;
-	margin-top: 40px;
+	margin-top: 15px;
 	border-radius: 6px
 }
 
@@ -517,7 +518,6 @@ margin-top:20px;
 .list{
 	float: right;
 	width: 50%;
-	margin-top: 20px;
 }
 
 .list h1{
@@ -2130,6 +2130,28 @@ padding: 0 !important;
 {
 	list-style:disc !important;
 	padding-top:5px !important;
+}
+
+.newssec
+{
+	margin-top:-1px;
+	background:#68BEB6;
+	border:1px solid #666;
+	border-top:none;
+	padding:6px 0;
+	clear:both;
+}
+
+.newssec a
+{
+	color:#fff;
+	text-decoration:none;
+	letter-spacing:1px;
+}
+
+.newssec a:hover
+{
+	text-decoration:underline;
 }
 
 

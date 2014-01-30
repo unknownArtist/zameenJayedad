@@ -3,8 +3,16 @@
     <p class="erorclas" style="width:390px; float:right; margin-top:-43px;">{{ Session::get('error') }}</p>
     <!--search ends-->
     <div id="wrapper">
-    <div id="content">
+    <div id="content">       
        
+       <div class="newssec">
+<marquee behavior="scroll" direction="left" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+
+<a href="#">Welcome to zameenjayedad.com...</a>
+
+</marquee>
+</div>
+
        <div class="slider">
          <div id="sliderFrame">
         <div id="slider">

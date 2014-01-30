@@ -48,7 +48,7 @@ Route::get('dashboard/agencystaff/{id}/delete',array('before'=>'auth','uses'=>'A
 Route::post('dashboard/agencystaff/{id}/edit/{staf_id}',array('before'=>'auth','uses'=>'AgencyController@postEdit'));
 Route::get('dashboard/agencystaff/{id}/edit',array('before'=>'auth','uses'=>'AgencyController@getEdit'));
 Route::get('dashboard/agencies/view/{id}',array('before'=>'auth','uses'=>'AgencyController@getIndex'));
-Route::post('dashboard/search/map',array('before'=>'auth','uses'=>'SearchController@Postmap'));
+Route::post('dashboard/search/map',array('uses'=>'SearchController@Postmap'));
 Route::post('dashboard/searchmap',array('before'=>'auth','uses'=>'SearchController@Postsearchmap'));
 Route::post('dashboard/search',array('before'=>'auth','uses'=>'SearchController@postIndex'));
 Route::post('dashboard/searchguest',array('uses'=>'SearchController@postGuestsearch'));
@@ -199,8 +199,8 @@ Route::get('dashboard/DHA 2/guest',array('uses'=>'SearchController@getDHA2guest'
 	Route::post('dashboard',array('before'=>'auth','uses'=>'DashboardController@postIndex'));
 	Route::get('dashboard',array('before'=>'auth','uses'=>'DashboardController@getIndex'));
 	Route::get('dashboard/guest',array('uses'=>'DashboardController@getGuest'));
-	Route::get('dashboard/team',array('before'=>'auth','uses'=>'DashboardController@getTeam'));
-	Route::get('dashboard/ourteam',array('uses'=>'DashboardController@getOurteam'));
+	Route::get('dashboard/team',array('uses'=>'DashboardController@getTeam'));
+	Route::get('dashboard/ourteam',array('before'=>'auth','uses'=>'DashboardController@getOurteam'));
 	Route::get('dashboard/bahriaupdates',array('uses'=>'DashboardController@getBahriaupdates'));
 	Route::get('dashboard/sellinghome',array('uses'=>'DashboardController@getSellinghome'));
 	Route::get('dashboard/faq',array('uses'=>'DashboardController@getFaq'));

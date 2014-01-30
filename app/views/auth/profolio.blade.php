@@ -285,13 +285,13 @@ document.write(unescape("%3Cscript src='" + gs_p + "s.gstat.orange.fr/lib/gs.js?
         <li>
             {{ Form::label('Property_Title ', 'Property Title ') }}
             {{ Form::text('Property_Title') }}
-        </li>
+        </li>-->
        
         <li>
             {{ Form::label('Description', 'Description') }}
             {{Form::textarea('Description')}}
 
-        </li> -->
+        </li> 
 
         <li>
             {{ Form::label('Budget', 'Budget: (PKR)') }}

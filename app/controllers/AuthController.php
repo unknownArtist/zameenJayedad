@@ -729,6 +729,7 @@ public function posteditlisting($id)
 		   'contact_p' => Input::get('Contact_Person'),
 		   'phone' => Input::get('Phone'),
 		   'cell' => Input::get('Cell'),
+		   'Description' =>  Input::get('Description'),
 		   'fax' => Input::get('Fax'),
 		    'email' => Input::get('E-mail'),
 	       'website' => Input::get('Website'),

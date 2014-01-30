@@ -269,12 +269,12 @@
         </li>
       
        
-        <li>
+        <li> -->
             {{ Form::label('Description', 'Description') }}
             {{Form::textarea('Description',$record->Description)}}
 
         </li>
- -->
+
         <li>
             {{ Form::label('Budget', 'Budget: (PKR)') }}
             {{ Form::text('Budget' ,$record->budget) }}

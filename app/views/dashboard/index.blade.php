@@ -4,6 +4,14 @@
     <!--search ends-->
     <div id="wrapper">
     <div id="content">
+    
+     <div class="newssec">
+<marquee behavior="scroll" direction="left" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+
+<a href="#">Welcome to zameenjayedad.com...</a>
+
+</marquee>
+</div>
        <p class="erorclas" style="">{{ Session::get('error') }}</p>
        <div class="slider">
          <div id="sliderFrame">

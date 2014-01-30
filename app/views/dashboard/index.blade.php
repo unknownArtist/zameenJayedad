@@ -7,9 +7,10 @@
     
      <div class="newssec">
 <marquee behavior="scroll" direction="left" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+@foreach($latestnews as $latestnews)
 
-<a href="#">Welcome to zameenjayedad.com...</a>
-
+<a href="{{URL::to('dashboard/latestnews/'.$latestnews->id)}}">{{$latestnews->title}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+@endforeach
 </marquee>
 </div>
        <p class="erorclas" style="">{{ Session::get('error') }}</p>

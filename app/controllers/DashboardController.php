@@ -11,9 +11,16 @@ class DashboardController extends BaseController {
                     ->orderBy('id', 'desc')
                     ->take(10)
           			->get();
-		
+       $latestnews =  Slide::orderBy('id', 'desc')
+                    ->take(5)
+          			->get(); 
+		$jobs     =  Career::orderBy('id', 'desc')
+                    ->take(5)
+          			->get();
 		return View::make('dashboard.index')
-		->with('users', $users);
+		->with('users', $users)
+		->with('latestnews', $latestnews)
+		->with('latestjobs', $latestjobs);
 				   
 	}
 	public function getGuest()
@@ -22,10 +29,29 @@ class DashboardController extends BaseController {
                     ->orderBy('id', 'desc')
                     ->take(10)
           			->get();
+       $latestnews =  Slide::orderBy('id', 'desc')
+                    ->take(5)
+          			->get(); 
+        $latestjobs     =  Career::orderBy('id', 'desc')
+                    ->take(5)
+          			->get();
 		return View::make('dashboard.guest')
-		->with('users', $users);	
+		->with('users', $users)
+		->with('latestnews', $latestnews)
+		->with('latestjobs', $latestjobs);
 		
 	}
+	public function getLatestnews($id)
+	{
+
+       $latestnews =  Slide::Where('id', $id)
+                    
+          			->get(); 
+		return View::make('dashboard.Latestnew')
+		->with('latestnews', $latestnews);
+		
+	}
+
 	public function postIndex()
 	{
 		return "Post function";
@@ -81,9 +107,13 @@ class DashboardController extends BaseController {
 		return View::make('dashboard.faq');	
 	}
 	
-	public function getCareers()
+	public function getCareers($id)
 	{
-		return View::make('dashboard.careers');	
+		 $latestnews =  Career::Where('id', $id)
+                    
+          			->get(); 
+		return View::make('dashboard.careers')
+		->with('latestnews',$latestnews);	
 	}
 	
 	public function getHomeevaluation()

@@ -54,6 +54,36 @@ $j(function() {
   $j('#example').vTicker();
 });
 </script>
+<script type="text/javascript">
+    
+function GetCurrentPageName() { 
+//method to get Current page name from url. 
+var PageURL = document.location.href; 
+var PageName = PageURL.substring(PageURL.lastIndexOf('/') + 1); 
+ 
+return PageName.toLowerCase() ;
+}
+ 
+$(document).ready(function(){
+var CurrPage = GetCurrentPageName();
+ 
+switch(CurrPage){
+case 'main':
+ $('#li_home').addClass('active') ;
+ break;
+case 'alljobs':
+ $('#li_message').addClass('active') ;
+ break;
+case 'latestnews':
+ $('#li_profile').addClass('active') ;
+ break;
+
+
+}
+
+});
+
+</script> 
 
 
 </head>
@@ -80,13 +110,31 @@ $j(function() {
     
     <div id="search">
    
-   <div id="wrapperheader">
-    <div id="sealog">	
-    <p style="Font-size:30px;margin-top: 29px;margin-left: 222px;">Welcome To Admin Panel</p>
-   
-    	</div>
-        
+    <div id="wrapperheader">
+    <div id="sea">  
+      <!--<h2>Search Listing</h2>
+      {{ Form::text('search','',array('class'=>'span6','placeholder'=>'search by city')) }}
+      
+       {{ Form::submit('Search', array('class' => 'button')) }}-->
+
+       <div id='cssmenu' class="srchinmenu">
+       <ul>
+       <li id="li_home"><a href="{{URL::to('dashboard/admin/main')}}">Dashboard</a></li>
+     
+       <li id="li_profile"><a href="{{URL::to('dashboard/admin/latestnews')}}">News</a>
+       
+         
+                
+        <li id="li_message"><a href="{{URL::to('dashboard/admin/alljobs')}}">jobs</a></li>
+       
+      
+       
+       </ul>
+       </div>
+     
     </div>
+    </div>
+  
     </div>
 	
 	@yield('content')

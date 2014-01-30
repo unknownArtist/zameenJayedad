@@ -17,6 +17,18 @@ Route::get('/',function(){
 
 */
 /*---------------------admin-------------------------*/
+Route::get('dashboard/admin/alljobs/{id}/delete',array('uses'=>'AdminController@getdeletejobs'));
+Route::post('dashboard/admin/alljobs/{id}/edit',array('uses'=>'AdminController@posteditjobs'));
+Route::get('dashboard/admin/alljobs/{id}/edit',array('uses'=>'AdminController@geteditjobs'));
+Route::get('dashboard/admin/alljobs',array('uses'=>'AdminController@getAlljobs'));
+Route::post('dashboard/admin/jobs',array('uses'=>'AdminController@postJobs'));
+Route::get('dashboard/admin/jobs',array('uses'=>'AdminController@getJobs'));
+Route::get('dashboard/admin/latestnews/{id}/delete',array('uses'=>'AdminController@getdelete'));
+Route::post('dashboard/admin/latestnews/{id}/edit',array('uses'=>'AdminController@postedit'));
+Route::get('dashboard/admin/latestnews/{id}/edit',array('uses'=>'AdminController@getedit'));
+Route::get('dashboard/admin/latestnews',array('uses'=>'AdminController@getlatestnews'));
+Route::post('dashboard/admin/news',array('uses'=>'AdminController@postNews'));
+Route::get('dashboard/admin/news',array('uses'=>'AdminController@getNews'));
 Route::get('dashboard/admin/main/{id}/deactivation',array('uses'=>'AdminController@getdeactivation'));
 Route::get('dashboard/admin/main/{id}/activation',array('uses'=>'AdminController@getactivation'));
 Route::get('dashboard/admin/main',array('uses'=>'AdminController@getMain'));
@@ -190,6 +202,7 @@ Route::get('dashboard/DHA 2/guest',array('uses'=>'SearchController@getDHA2guest'
 	
 
 /*------------------End of Auth Routes------------------------------*/
+	Route::get('dashboard/latestnews/{id}',array('uses'=>'DashboardController@getLatestnews'));
 	Route::post('dashboard/sendmessage/compose',array('before'=>'auth','uses'=>'AuthController@postSendmessage'));
 	Route::get('dashboard/sendmessage/{id}',array('before'=>'auth','uses'=>'AuthController@getSendmessage'));
 	Route::get('dashboard/alluser/{id}',array('before'=>'auth','uses'=>'AuthController@getAlluserprofile'));
@@ -222,7 +235,7 @@ Route::get('dashboard/DHA 2/guest',array('uses'=>'SearchController@getDHA2guest'
 	Route::get('dashboard/homefinder',array('uses'=>'DashboardController@getHomefinder'));
 	Route::post('dashboard/homeevaluation',array('uses'=>'DashboardController@postHomeevaluation'));
 	Route::get('dashboard/homeevaluation',array('uses'=>'DashboardController@getHomeevaluation'));
-	Route::get('dashboard/careers',array('uses'=>'DashboardController@getCareers'));
+	Route::get('dashboard/careers/{id}',array('uses'=>'DashboardController@getCareers'));
 	Route::get('dashboard/newdevelopments',array('uses'=>'DashboardController@getNewdevelopments'));
 	Route::get('dashboard/chooseus',array('uses'=>'DashboardController@getChooseus'));
 	Route::get('dashboard/alert/test',array('uses'=>'EmailController@getTestAlert'));

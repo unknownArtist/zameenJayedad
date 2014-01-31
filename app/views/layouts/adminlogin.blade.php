@@ -99,12 +99,9 @@ case 'latestnews':
 			
 			</div><!--logo-img ends-->
             
-            <div class="threeimages">
+            <div class="threeimages" style="float:right;">
             <img src="/assets/images/banner_photos_2.png">
             </div>
-            <div class="agencynew" style="margin-top:25px;">
-        {{ HTML::link('user/logout','Logout')}}
-    </div>
 			
 			
    
@@ -115,26 +112,17 @@ case 'latestnews':
    
     <div id="wrapperheader">
 
+      <h2 style="width:715px; padding-top:32px; text-align:center;">Welcome To Zameen Jayedad Admin Panel</h2>
+
     <div id="sea">  
       <!--<h2>Search Listing</h2>
       {{ Form::text('search','',array('class'=>'span6','placeholder'=>'search by city')) }}
       
        {{ Form::submit('Search', array('class' => 'button')) }}-->
      
-       <div id='cssmenu' class="srchinmenu">
-       <ul>
-       <li id="li_home"><a href="{{URL::to('dashboard/admin/main')}}">Dashboard</a></li>
-     
-       <li id="li_profile"><a href="{{URL::to('dashboard/admin/latestnews')}}">News</a>
-       
-         
-                
-        <li id="li_message"><a href="{{URL::to('dashboard/admin/alljobs')}}">jobs</a></li>
-       
       
        
-       </ul>
-       </div>
+       
     
      
     </div>

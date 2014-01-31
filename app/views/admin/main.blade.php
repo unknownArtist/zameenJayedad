@@ -27,9 +27,7 @@ tr:nth-child(even) {
     <div id="wrapper">
     <div id="content">    
     
-      <div class="agencynew" style="margin-top:25px;">
-        {{ HTML::link('user/logout','Logout')}}
-    </div>
+      
 
           <h2 style="color:#50b1a8; margin-bottom:10px; margin-left:0; padding-left:0;">Total Agents </h2>
 

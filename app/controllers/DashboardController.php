@@ -14,7 +14,7 @@ class DashboardController extends BaseController {
        $latestnews =  Slide::orderBy('id', 'desc')
                     ->take(5)
           			->get(); 
-		$jobs     =  Career::orderBy('id', 'desc')
+		$latestjobs     =  Career::orderBy('id', 'desc')
                     ->take(5)
           			->get();
 		return View::make('dashboard.index')

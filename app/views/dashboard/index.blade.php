@@ -7,10 +7,18 @@
     
      <div class="newssec">
 <marquee behavior="scroll" direction="left" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+   @if ($latestnews->isEmpty() & $latestjobs->isEmpty() )
+   <a href="#">Welcome to zameenjayedad.com...</a>
+   @else
 @foreach($latestnews as $latestnews)
 
 <a href="{{URL::to('dashboard/latestnews/'.$latestnews->id)}}">{{$latestnews->title}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 @endforeach
+@foreach($latestjobs as $latestjobs)
+
+<a href="{{URL::to('dashboard/careers/'.$latestjobs->id)}}">{{$latestjobs->title}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+@endforeach
+@endif
 </marquee>
 </div>
        <p class="erorclas" style="">{{ Session::get('error') }}</p>

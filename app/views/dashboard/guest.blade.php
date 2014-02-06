@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    <p class="erorclas" style="width:390px; float:right; margin-top:-43px;">{{ Session::get('error') }}</p>
+    <p class="erorclas" style="width:282px; float:right; text-align:left; margin-top:-43px;">{{ Session::get('error') }}</p>
     <!--search ends-->
     <div id="wrapper">
     <div id="content">       
@@ -185,15 +185,17 @@
                   
                   <div class="recordshow">
                   <div id="example">
-    	<ul>
+    	<ul class="listingspan">
          
             @foreach($users as $user)
-    		<li>
+    		<li style="height:auto !important;">
            
+           <div class="listingimg">
             {{Form::image('uploads/photos/'.$user->photo, '', array('class'=>'imagewidth'));}}
              <!-- <img src="/assets/images/thumb_2599676370.jpg " width="100px" height="78px"> -->
+             </div>
                  
-                <a href="{{URL::to('dashboard/listing/guest/'.$user->id)}}"> <h2> {{$user->property_type}} in {{$user->city}}</h2></a>
+                <a href="{{URL::to('dashboard/listing/guest/'.$user->id)}}"> <h2> {{$user->property_type}} in {{$user->location}}</h2></a>
                  <span> {{$user->budget}}RS</span><br />
                <!--  <p>{{$user->Description}} </p>-->
                  <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user-> l_area}}</span>

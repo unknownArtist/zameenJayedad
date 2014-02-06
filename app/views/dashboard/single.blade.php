@@ -19,7 +19,7 @@
              </div>
              <div class="propername">
              <h2> {{$records->property_type}} in </h2>
-                 <h3>{{$records->city}}</h3>
+                 <h3>{{$records->location}}</h3>
                  <span class="otherinfo">Bedrooms:&nbsp;{{$records->bedroom}} | Bathrooms:&nbsp;{{$records->bathroom}} |
                   Land Area:&nbsp;{{$records-> l_area}}&nbsp;{{$records-> unit}}</span><br />
                   <span style="font-weight:bold;">Price: {{$records->budget}}RS </span> 

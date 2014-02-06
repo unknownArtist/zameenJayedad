@@ -21,6 +21,8 @@
                 <a href="{{URL::to('dashboard/listing/guest/'.$user->id)}}"> <h2> {{$user->property_type}} in {{$user->city}}</h2></a>
                  <span> {{$user->budget}}RS</span><br />
                <!--  <p>{{$user->Description}} </p>-->
+
+              @if($user->bedroom && $user->bathroom =='Please select')
                  <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user-> l_area}}</span>
                  <hr style="clear:both;">
                 

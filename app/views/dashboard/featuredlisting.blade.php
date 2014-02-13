@@ -21,7 +21,7 @@
                 <a href="{{URL::to('dashboard/listing/'.$user->id)}}"> <h2> {{$user->property_type}} in {{$user->location}}</h2></a>
                  <span> {{$user->budget}}RS</span><br />
                <!--  <p>{{$user->Description}} </p>-->
-                 <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user-> l_area}}</span>
+                 <span>{{$user->bedroom}} bedrooms | {{$user->bathroom}} bathrooms | {{$user->l_area}}</span>
                  <hr style="clear:both;">
                 
     		 </li>

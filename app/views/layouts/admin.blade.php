@@ -77,6 +77,9 @@ case 'alljobs':
 case 'latestnews':
  $('#li_profile').addClass('active') ;
  break;
+ case 'listing':
+ $('#li_property').addClass('active') ;
+ break;
 
 
 }
@@ -125,11 +128,10 @@ case 'latestnews':
        <ul>
        <li id="li_home"><a href="{{URL::to('dashboard/admin/main')}}">Dashboard</a></li>
      
-       <li id="li_profile"><a href="{{URL::to('dashboard/admin/latestnews')}}">News</a>
-       
-         
-                
-        <li id="li_message"><a href="{{URL::to('dashboard/admin/alljobs')}}">jobs</a></li>
+       <li id="li_profile"><a href="{{URL::to('dashboard/admin/latestnews')}}">News</a></li>
+       <li id="li_message"><a href="{{URL::to('dashboard/admin/alljobs')}}">Jobs</a></li>
+       <li></li>
+        <li id="li_property"><a href="{{URL::to('dashboard/admin/listing')}}">Properties</a></li>
        
       
        

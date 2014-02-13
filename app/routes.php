@@ -17,6 +17,7 @@ Route::get('/',function(){
 
 */
 /*---------------------admin-------------------------*/
+Route::get('dashboard/admin/listing',array('uses'=>'AdminController@getlisting'));
 Route::get('dashboard/admin/alljobs/{id}/delete',array('uses'=>'AdminController@getdeletejobs'));
 Route::post('dashboard/admin/alljobs/{id}/edit',array('uses'=>'AdminController@posteditjobs'));
 Route::get('dashboard/admin/alljobs/{id}/edit',array('uses'=>'AdminController@geteditjobs'));

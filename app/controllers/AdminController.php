@@ -248,6 +248,13 @@ class AdminController extends BaseController {
 		 $profile->delete();
 		 return Redirect::to('dashboard/admin/alljobs');
 	}
+	public function getlisting()
+
+	{
+	$records = DB::table('property')->orderBy('id', 'desc')->get();
+					$users = DB::table('property')->count();
+					return View::make('admin.listing', compact('records','users'));
+	}
 		 		
 	}
 

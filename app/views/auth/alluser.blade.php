@@ -14,9 +14,11 @@
          
             @foreach($record as $records)
             <li>
-           
+           @if($records->photo)
             {{Form::image('uploads/photos/'.$records->photo, '', array('class'=>'imagewidth', 'style'=>'width:200px; height:150px;'));}}
-             
+            @else
+             {{Form::image('assets/images/download.jpg', '', array('class'=>'imagewidth', 'style'=>'width:200px; height:150px;'));}}
+             @endif
                 <a href="{{URL::to('dashboard/alluser/'.$records->id)}}"> <h2> {{$records->name}}</h2></a><br />
 
 

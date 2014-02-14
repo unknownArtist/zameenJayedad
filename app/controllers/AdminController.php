@@ -251,9 +251,8 @@ class AdminController extends BaseController {
 	public function getlisting()
 
 	{
-	$records = DB::table('property')->orderBy('id', 'desc')->get();
-					$users = DB::table('property')->count();
-					return View::make('admin.listing', compact('records','users'));
+	
+					return View::make('admin.listing');
 	}
 		 		
 	}

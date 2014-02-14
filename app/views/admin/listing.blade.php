@@ -37,7 +37,7 @@ $(document).ready(function()
 <div id="">
 
 
-
+<?php  $users = DB::table('property')->count(); ?>
     <h2 style="color:#50b1a8;">Total Properties&nbsp;({{$users}}) </h2>
     
 <table width="100%" cellpadding="5" cellspacing="0" border="0" class="table table-hover table-bordered margin-top15" id="companies" style="margin-bottom:15px;">
@@ -59,6 +59,9 @@ $(document).ready(function()
         </tr>
     </thead>
     <tbody>
+        <?php $records = DB::table('property')->orderBy('id', 'desc')->paginate(10);
+                   
+                     ?>
    
         <tr class="odd gradeX">
         @foreach($records as $record)
@@ -93,7 +96,8 @@ $(document).ready(function()
     @endforeach
     
     </tbody>
-    </table>  
+    </table> 
+     <?php echo $records->links(); ?> 
     </div>
 </div>
 </div>
